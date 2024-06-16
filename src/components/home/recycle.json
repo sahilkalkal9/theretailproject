@@ -1,0 +1,38 @@
+[
+    {
+        "name" : "T-shirts/Shirts",
+        "img" : "shirts.png"
+    },
+    {
+        "name" : "Blankets",
+        "img" : "blanket.png"
+    },
+    {
+        "name" : "Christman Caps",
+        "img" : "ccap.png"
+    },
+    {
+        "name" : "Denims",
+        "img" : "denim.png"
+    },
+    {
+        "name" : "Rope",
+        "img" : "rope.png"
+    },
+    {
+        "name" : "Socks/Stockings",
+        "img" : "socks.png"
+    },
+    {
+        "name" : "Sweatshirts",
+        "img" : "sweatshirt.png"
+    },
+    {
+        "name" : "Towel",
+        "img" : "towel.png"
+    },
+    {
+        "name" : "Tennis Ball",
+        "img" : "tennis.png"
+    }
+]
