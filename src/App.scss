@@ -933,7 +933,7 @@ html {
 }
 
 .OcollectionsM {
-
+  margin-top: .5cm;
   column-count: 2;
   justify-content: center;
   column-gap: .3cm;
@@ -961,12 +961,12 @@ html {
   &::before {
     content: "";
     position: absolute;
-    background-image: url("./components/home/bed.png");
+    background-image: url("./components/home/wear.png");
     inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(60%);
+    filter: brightness(70%);
     z-index: -1;
   }
 
@@ -982,12 +982,12 @@ html {
   &::before {
     content: "";
     position: absolute;
-    background-image: url("./components/home/bed.png");
+    background-image: url("./components/home/play.png");
     inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(60%);
+    filter: brightness(80%);
     z-index: -1;
   }
 
@@ -1008,7 +1008,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(60%);
+    filter: brightness(70%);
     z-index: -1;
   }
 
@@ -1025,12 +1025,12 @@ html {
   &::before {
     content: "";
     position: absolute;
-    background-image: url("./components/home/bed.png");
+    background-image: url("./components/home/walk.png");
     inset: 0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    filter: brightness(60%);
+    filter: brightness(80%);
     z-index: -1;
   }
 
