@@ -59,6 +59,26 @@ function Home() {
                     </marquee>
                 </div>
 
+                <div className="content-div">
+                    <p className="head" >Our Collections</p>
+                    <div className=" OcollectionsM ">
+
+                        <div className="collection fc">
+                            <p className="ctext"> Wear</p>
+                        </div>
+                        <div className="collection sc">
+                            <p className="ctext"> Play</p>
+                        </div>
+                        <div className="collection tc">
+                            <p className="ctext"> Sleep</p>
+                        </div>
+                        <div className="collection foc">
+                            <p className="ctext"> Walk</p>
+                        </div>
+
+                    </div>
+                </div>
+
                 <div id="whywe" className="content-div ">
                     <p className="head" >Why ReTail ?</p>
                     <div className="content" >

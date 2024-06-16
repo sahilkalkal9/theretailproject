@@ -931,3 +931,117 @@ html {
   background-color: rgb(248, 248, 248);
   padding: .3cm;
 }
+
+.OcollectionsM {
+
+  column-count: 2;
+  justify-content: center;
+  column-gap: .3cm;
+
+
+  // border: 1px solid black;
+  // background-color: rgb(255, 191, 255);
+
+
+  /* Add padding for better visualization */
+
+}
+
+.collection {
+  // border: 1px solid black;
+  padding: .3cm;
+}
+
+.fc {
+  width: 10cm;
+  height: 8cm;
+  // background-color: rgb(231, 231, 231);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./components/home/bed.png");
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1;
+  }
+
+}
+
+.sc {
+  width: 10cm;
+  height: 5cm;
+  // background-color: rgb(231, 231, 231);
+  margin-top: .3cm;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./components/home/bed.png");
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1;
+  }
+
+
+}
+
+.tc {
+  width: 10cm;
+  height: 5cm;
+  // background-color: rgb(231, 231, 231);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./components/home/bed.png");
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1;
+  }
+
+
+}
+
+.foc {
+  margin-top: .3cm;
+  width: 10cm;
+  height: 8cm;
+  // background-color: rgb(231, 231, 231);
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-image: url("./components/home/bed.png");
+    inset: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(60%);
+    z-index: -1;
+  }
+
+}
+
+
+.ctext {
+  color: white;
+  background-color: $primarycolor;
+  font-size: 15px;
+  width: fit-content;
+  padding: .1cm .4cm;
+  border-radius: 1000px;
+}
