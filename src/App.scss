@@ -1044,3 +1044,60 @@ html {
   padding: .1cm .4cm;
   border-radius: 1000px;
 }
+
+.fproducts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5cm;
+  justify-content: center;
+  margin-top: .5cm;
+}
+
+.fprod {
+  width: 6cm;
+  background-color: rgb(238, 238, 238);
+  padding: .5cm;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: .2cm;
+  justify-content: space-between;
+
+}
+
+.fptext {
+  text-align: center;
+}
+
+.fprodimg {
+  width: 100%;
+  height: auto;
+}
+
+.fprodname {
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+}
+
+.fprodprice {
+  font-size: 17px;
+}
+
+.fprodlower {
+  display: flex;
+  flex-direction: column;
+  gap: .1cm;
+  align-items: center;
+}
+
+
+.fprodcart {
+  background-color: #D1C8C1;
+  padding: .15cm .6cm;
+  margin-top: .2cm;
+  border: none;
+  cursor: pointer;
+  color: black;
+  border-radius: 10px;
+}

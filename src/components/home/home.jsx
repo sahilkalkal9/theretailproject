@@ -7,6 +7,10 @@ import petbed from "./pet-bed.png"
 import harness from "./hdd.png"
 import shirtd from "./shirt.png"
 import scrunchie from "./scrunchie.png"
+import walk from "./walk.png"
+import wear from "./wear.png"
+import sleep from "./bed.png"
+import play from "./play.png"
 
 import handcraft from "./tie.png"
 import heart from "./heart.png"
@@ -80,12 +84,49 @@ function Home() {
                 </div>
 
                 <div id="whywe" className="content-div ">
-                    <p className="head" >Why ReTail ?</p>
+                    <p className="head" >Featured Products</p>
                     <div className="content" >
-                        <p className="tag-main">
-                            “We offers customizable, eco-friendly pet products, meticulously crafted from recycled materials to suit your furry friend's unique style and needs
-                            ”
+                        <p className="fptext">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                         </p>
+
+
+
+                        <div className="fproducts">
+                            <div className="fprod">
+                                <img src={walk} alt="product image" className="fprodimg" />
+                                <div className="fprodlower">
+                                    <p className="fprodname">Leash and Collar</p>
+                                    <p className="fprodprice">$35</p>
+                                    <button className="fprodcart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div className="fprod">
+                                <img src={wear} alt="product image" className="fprodimg" />
+                                <div className="fprodlower">
+                                    <p className="fprodname">Bandana</p>
+                                    <p className="fprodprice">$50</p>
+                                    <button className="fprodcart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div className="fprod">
+                                <img src={play} alt="product image" className="fprodimg" />
+                                <div className="fprodlower">
+                                    <p className="fprodname">Soft Bone Toy</p>
+                                    <p className="fprodprice">$30</p>
+                                    <button className="fprodcart">Add to cart</button>
+                                </div>
+                            </div>
+                            <div className="fprod">
+                                <img src={sleep} alt="product image" className="fprodimg" />
+                                <div className="fprodlower">
+                                    <p className="fprodname">Comfortable Warm Dog Bed</p>
+                                    <p className="fprodprice">$60</p>
+                                    <button className="fprodcart">Add to cart</button>
+                                </div>
+                            </div>
+                    
+                        </div>
 
 
 
