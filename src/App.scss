@@ -1093,11 +1093,64 @@ html {
 
 
 .fprodcart {
-  background-color: #D1C8C1;
+  background-color: $primarycolor;
   padding: .15cm .6cm;
   margin-top: .2cm;
   border: none;
   cursor: pointer;
-  color: black;
+  color: rgb(255, 255, 255);
   border-radius: 10px;
+}
+
+.gramMaim {
+  display: flex;
+  justify-content: center;
+  margin-top: .5cm;
+}
+
+.gramBox {
+  column-count: 3;
+  row-gap: .5cm;
+  column-gap: .2cm;
+  // background-color: purple;
+  width: fit-content;
+}
+
+.gram {
+  width: 8cm;
+}
+
+.gramImg {
+  width: 100%;
+}
+
+.fmimg {
+  width: 2cm;
+}
+
+.featuresM {
+  display: flex;
+  justify-content: center;
+  gap: .5cm;
+  margin-top: .5cm;
+}
+
+.featureM {
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  width: 4cm;
+  height: 4cm;
+  flex-direction: column;
+  align-items: center;
+  gap: .2cm;
+  padding: .5cm;
+  border-radius: 100000px;
+  background-color: $primarycolor;
+
+}
+
+.ftext {
+  color: white;
+  font-size: 20px;
 }
