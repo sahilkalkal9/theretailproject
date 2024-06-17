@@ -5,7 +5,7 @@ import sleep from "./bed.png";
 import play from "./play.png";
 import gwalk from "./gwalk.png"
 import renewal from "./rew.png"
-import hcf from "./hcf.png"
+import hcf from "./tailoring.png"
 
 function Home() {
     return (
@@ -46,10 +46,7 @@ function Home() {
                             <img className="fmimg" src={renewal} />
                             <p className="ftext">Sustainable</p>
                         </div>
-                        <div className="featureM">
-                            <img className="fmimg" src={renewal} />
-                            <p className="ftext">Sustainable</p>
-                        </div>
+                       
 
 
 

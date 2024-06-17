@@ -1122,6 +1122,13 @@ html {
 
 .gramImg {
   width: 100%;
+  filter: brightness(70%);
+  transition: .15s;
+  cursor: pointer;
+
+  &:hover {
+    filter: brightness(100%);
+  }
 }
 
 .fmimg {
