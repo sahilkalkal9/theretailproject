@@ -6,6 +6,8 @@ import play from "./play.png";
 import gwalk from "./gwalk.png"
 import renewal from "./rew.png"
 import hcf from "./tailoring.png"
+import csp from "./lcp.png"
+import cor from "./cor.png"
 
 function Home() {
     return (
@@ -39,14 +41,14 @@ function Home() {
                             <p className="ftext">Handcrafted</p>
                         </div>
                         <div className="featureM">
-                            <img className="fmimg" src={renewal} />
-                            <p className="ftext">Sustainable</p>
+                            <img className="fmimg" src={csp} />
+                            <p className="ftext">Local Craftsmenship</p>
                         </div>
                         <div className="featureM">
-                            <img className="fmimg" src={renewal} />
-                            <p className="ftext">Sustainable</p>
+                            <img className="fmimg" src={cor} />
+                            <p className="ftext">Custom Order</p>
                         </div>
-                       
+
 
 
 
