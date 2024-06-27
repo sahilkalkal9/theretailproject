@@ -8,6 +8,7 @@ import Blogs from './components/blogs/blogs';
 import Contact from './components/contact/contact';
 import Profile from './components/profile/profile';
 import Nav from './components/nav/nav';
+import Signup from './components/signup/signup';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/signup' element={<Signup />} />
         <Route path='/profile' element={<Profile />} />
       </Routes>
     </div>

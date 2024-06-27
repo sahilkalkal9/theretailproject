@@ -32,25 +32,28 @@ function Nav() {
                     </div>
                     <div className="onav-menu">
                         <Link to='/' >
-                            <p className="menu-item"> Home </p>
+                            <p onClick={closeNav} className="menu-item"> Home </p>
                         </Link>
                         <Link to='/our-story' >
-                            <p className="menu-item"> Our Story </p>
+                            <p onClick={closeNav} className="menu-item"> Our Story </p>
                         </Link>
                         <Link to='/about' >
-                            <p className="menu-item"> About TRP </p>
+                            <p onClick={closeNav} className="menu-item"> About TRP </p>
                         </Link>
                         <Link to='/shop' >
-                            <p className="menu-item"> Shop </p>
+                            <p onClick={closeNav} className="menu-item"> Shop </p>
                         </Link>
                         <Link to='/transformations' >
-                            <p className="menu-item"> Transformations </p>
+                            <p onClick={closeNav} className="menu-item"> Transformations </p>
                         </Link>
                         <Link to='/service-projects' >
-                            <p className="menu-item"> Service Projects </p>
+                            <p onClick={closeNav} className="menu-item"> Service Projects </p>
                         </Link>
                         <Link to='/contact' >
-                            <p className="menu-item"> Contact </p>
+                            <p onClick={closeNav} className="menu-item"> Contact </p>
+                        </Link>
+                        <Link to='/login' >
+                            <p onClick={closeNav} className="menu-item login-button"> Login </p>
                         </Link>
 
                     </div>

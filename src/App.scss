@@ -1162,3 +1162,15 @@ html {
   font-size: 18px;
   text-align: center;
 }
+
+.login-button{
+  padding: .3cm;
+  background-color: $primarycolor;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.SignUp{
+  padding: 1cm 10vw;
+}
