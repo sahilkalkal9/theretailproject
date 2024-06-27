@@ -9,14 +9,12 @@ function Shop() {
     return (
         <div className="Home">
             <div className="home-upper-main">
-               
+
                 <div className="home-upper">
                     <div className="page-head-box">
                         <p className="page-head">Shop</p>
                         <p className="page-path">home/shop</p>
                     </div>
-
-
                 </div>
             </div>
 

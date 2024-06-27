@@ -16,7 +16,7 @@ function Home() {
 
             </div>
             <div className="home-lower">
-                <div className="content-div">
+                {/* <div className="content-div">
                     <marquee className="marquee" direction="left" scrollamount="5" >
                         <div className="features">
                             <p className="feature">First feature</p>
@@ -26,34 +26,37 @@ function Home() {
                             <p className="feature">Five feature</p>
                         </div>
                     </marquee>
-                </div>
+                </div> */}
 
                 <div className="content-div">
                     <p className="head" >Our Features</p>
-                    <div className="featuresM ">
+                    <marquee className="marqueea" direction="left" scrollamount="10" >
+                        <div className="featuresM ">
 
-                        <div className="featureM">
-                            <img className="fmimg" src={renewal} />
-                            <p className="ftext">Sustainable</p>
+                            <div className="featureM">
+                                <img className="fmimg" src={renewal} />
+                                <p className="ftext">Sustainable</p>
+                            </div>
+                            <div className="featureM">
+                                <img className="fmimg" src={hcf} />
+                                <p className="ftext">Handcrafted</p>
+                            </div>
+                            <div className="featureM">
+                                <img className="fmimg" src={csp} />
+                                <p className="ftext">Local Craftsmenship</p>
+                            </div>
+                            <div className="featureM">
+                                <img className="fmimg" src={cor} />
+                                <p className="ftext">Custom Order</p>
+                            </div>
+
+
+
+
+
                         </div>
-                        <div className="featureM">
-                            <img className="fmimg" src={hcf} />
-                            <p className="ftext">Handcrafted</p>
-                        </div>
-                        <div className="featureM">
-                            <img className="fmimg" src={csp} />
-                            <p className="ftext">Local Craftsmenship</p>
-                        </div>
-                        <div className="featureM">
-                            <img className="fmimg" src={cor} />
-                            <p className="ftext">Custom Order</p>
-                        </div>
+                    </marquee>
 
-
-
-
-
-                    </div>
                 </div>
 
                 <div className="content-div">
