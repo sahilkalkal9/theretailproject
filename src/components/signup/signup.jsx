@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { auth, firebase, firestore } from '../../firebase.js';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -10,6 +11,8 @@ const Signup = () => {
     const [userName, setUsername] = useState('')
     const [userAddress, setUserAddress] = useState('')
     const [useremail, setuseremail] = useState('')
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         // Render the reCAPTCHA widget
@@ -80,6 +83,9 @@ const Signup = () => {
                         "address": userAddress,
                         "username": userName
                     })
+
+                    navigate("/profile")
+
                     console.log("User signed in successfully:", result.user);
                     // Save additional user info to database
 
@@ -113,9 +119,9 @@ const Signup = () => {
 
                 <form onSubmit={handleSendOtp} className='register-box' >
 
-                    <input type="text" className="regInp" placeholder='Full Name' required />
-                    <input type="email" className="regInp" placeholder='Email address' required />
-                    <input type="text" className="regInp" placeholder='Address' required />
+                    <input type="text" value={userName} onChange={(e) => { setUsername(e.target.value) }} className="regInp" placeholder='Full Name' required />
+                    <input type="email" value={useremail} onChange={(e) => { setuseremail(e.target.value) }} className="regInp" placeholder='Email address' required />
+                    <input type="text" value={userAddress} onChange={(e) => { setUserAddress(e.target.value) }} className="regInp" placeholder='Address' required />
 
                     <input
                         type="text"

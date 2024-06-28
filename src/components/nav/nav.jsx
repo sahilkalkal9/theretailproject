@@ -87,9 +87,9 @@ function Nav() {
                         <Link className="cartLink" to='/cart' >
                             <img className="menu-item-img " src={cart} />
                         </Link>
-                        {/* <Link className="cartLink" to='/profile' >
+                        <Link className="cartLink" to='/profile' >
                             <img className="menu-item-img" src={user} />
-                        </Link> */}
+                        </Link>
 
 
 
