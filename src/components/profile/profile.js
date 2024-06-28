@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom"
 import "../../App.scss"
 import { auth, firestore } from "../../firebase"
 import Nav from "../nav/nav"
@@ -7,6 +8,12 @@ function Profile() {
 
     const usersRef = firestore.collection("users")
     const [users] = useCollectionData(usersRef)
+
+    const navigate = useNavigate()
+
+    const signOut = () => {
+        auth.signOut()
+    }
 
 
 
@@ -26,6 +33,7 @@ function Profile() {
 
 
             <div className="home-lower">
+                <p className="signout" onClick={signOut}>Sign Out</p>
                 {
                     auth.currentUser ?
                         (

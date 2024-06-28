@@ -1,18 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import { auth, firebase, firestore } from '../../firebase.js';
+import React, { useEffect, useState } from 'react';
+import firebase from 'firebase/compat/app';
+import { auth, firestore } from '../../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
-const Signup = () => {
+const Login = () => {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [otp, setOtp] = useState('');
-    const [isOtpSent, setIsOtpSent] = useState(false);
     const [confirmationResult, setConfirmationResult] = useState(null);
-    const [notification, setNotification] = useState('');
-    const [userName, setUsername] = useState('')
-    const [userAddress, setUserAddress] = useState('')
-    const [useremail, setuseremail] = useState('')
-
+    const [isOtpSent, setIsOtpSent] = useState(false)
+    const [notification, setNotification] = useState("")
     const navigate = useNavigate()
+
 
     useEffect(() => {
         // Render the reCAPTCHA widget
@@ -47,10 +45,8 @@ const Signup = () => {
             .get()
             .then(querySnapshot => {
                 if (!querySnapshot.empty) {
-                    // Phone number already exists, show error message
-                    setNotification('Phone number already exists. Please use a different number.');
-                } else {
-                    // Phone number does not exist, proceed with sending OTP
+
+
                     auth.signInWithPhoneNumber(phoneNumberWithCountryCode, appVerifier)
                         .then(confirmationResult => {
                             setConfirmationResult(confirmationResult);
@@ -61,6 +57,9 @@ const Signup = () => {
                             console.error("SMS not sent", error);
                             setNotification('SMS not sent. Please try again.');
                         });
+                } else {
+                    // Phone number already exists, show error message
+                    setNotification('Account does not exist. Please register');
                 }
             })
             .catch(error => {
@@ -72,17 +71,12 @@ const Signup = () => {
 
 
 
-    const handleVerifyOtp = () => {
+    const handleVerifyOtp = (e) => {
+        e.preventDefault()
         if (confirmationResult) {
             confirmationResult.confirm(otp)
                 .then(result => {
-                    firestore.collection("users").doc(auth.currentUser?.uid).set({
-                        "phone": `+91${phoneNumber}`,
-                        uid: auth.currentUser?.uid,
-                        "email": useremail,
-                        "address": userAddress,
-                        "username": userName
-                    })
+
 
                     navigate("/profile")
 
@@ -101,52 +95,47 @@ const Signup = () => {
 
     return (
         <div className='SignUp' >
-            <h2>Signup</h2>
+            <h2>Login</h2>
             <br /><br />
-            <div id="recaptcha-container"></div>
-            {notification && <p>{notification}</p>}
-            {isOtpSent ? (
-                <div>
-                    <input
-                        type="text"
-                        placeholder="Enter OTP"
-                        value={otp}
-                        onChange={(e) => setOtp(e.target.value)}
-                    />
-                    <button onClick={handleVerifyOtp}>Verify OTP</button>
-                </div>
-            ) : (
+            <p>{notification}</p>
+            {
+                isOtpSent
+                    ? <form onSubmit={handleVerifyOtp}>
+                        <input
+                            type="text"
+                            placeholder="OTP"
+                            value={otp}
+                            onChange={(e) => setOtp(e.target.value)}
+                        />
+                        <button type="submit">Verify OTP</button>
+                    </form>
+                    :
+                    <form className='register-box' onSubmit={handleSendOtp}>
+                        <input
+                            type="text"
+                            inputMode="numeric"
+                            pattern="[0-9]*"
+                            placeholder="Phone Number"
+                            value={phoneNumber}
+                            onChange={(e) => {
+                                if (e.target.value.length <= 10) {
+                                    setPhoneNumber(e.target.value);
+                                }
+                            }}
+                            className='regInp no-arrows'
+                            required
+                        />
+                        <div id="recaptcha-container"></div>
+                        <button type="submit" className='regInp subInp' >Send OTP</button>
+                        <Link to="/signup">
+                            <p className='st' >Signup</p>
+                        </Link>
+                    </form>
+            }
 
-                <form onSubmit={handleSendOtp} className='register-box' >
-
-                    <input type="text" value={userName} onChange={(e) => { setUsername(e.target.value) }} className="regInp" placeholder='Full Name' required />
-                    <input type="email" value={useremail} onChange={(e) => { setuseremail(e.target.value) }} className="regInp" placeholder='Email address' required />
-                    <input type="text" value={userAddress} onChange={(e) => { setUserAddress(e.target.value) }} className="regInp" placeholder='Address' required />
-
-                    <input
-                        type="text"
-                        inputMode="numeric"
-                        pattern="[0-9]*"
-                        placeholder="Phone Number"
-                        value={phoneNumber}
-                        onChange={(e) => {
-                            if (e.target.value.length <= 10) {
-                                setPhoneNumber(e.target.value);
-                            }
-                        }}
-                        className='regInp no-arrows'
-                        required
-                    />
-                    <input type="submit" className='regInp subInp' value="Send Otp" />
-                    <Link to="/login">
-                        <p className='st' >Login</p>
-                    </Link>
-                </form>
-
-            )}
 
         </div>
     );
 };
 
-export default Signup;
+export default Login;
