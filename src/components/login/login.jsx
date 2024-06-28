@@ -55,7 +55,7 @@ const Login = () => {
                         })
                         .catch(error => {
                             console.error("SMS not sent", error);
-                            setNotification('SMS not sent. Please try again.');
+                            setNotification(error);
                         });
                 } else {
                     // Phone number already exists, show error message
