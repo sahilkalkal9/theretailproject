@@ -13,6 +13,7 @@ function Profile() {
 
     const signOut = () => {
         auth.signOut()
+        navigate("/login")
     }
 
 

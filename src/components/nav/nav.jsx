@@ -5,6 +5,7 @@ import fullLogo from "./full-logo.jpg"
 import cart from "./shopping-bag.png"
 import user from "./user.png"
 import close from "./close.png"
+import { auth } from "../../firebase"
 
 
 
@@ -52,6 +53,9 @@ function Nav() {
                         <Link to='/contact' >
                             <p onClick={closeNav} className="menu-item"> Contact </p>
                         </Link>
+                        <Link to='/signup' >
+                            <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                        </Link>
                         <Link to='/login' >
                             <p onClick={closeNav} className="menu-item login-button"> Login </p>
                         </Link>
@@ -87,9 +91,13 @@ function Nav() {
                         <Link className="cartLink" to='/cart' >
                             <img className="menu-item-img " src={cart} />
                         </Link>
-                        <Link className="cartLink" to='/profile' >
-                            <img className="menu-item-img" src={user} />
-                        </Link>
+                        {
+                            auth.currentUser ?
+                                <Link className="cartLink" to='/profile' >
+                                    <img className="menu-item-img" src={user} />
+                                </Link>
+                                : null
+                        }
 
 
 
