@@ -1,35 +1,41 @@
-import logo from "./pawb.png"
-import "../../App.scss"
-import { Link, useLocation } from "react-router-dom"
-import fullLogo from "./full-logo.jpg"
-import cart from "./shopping-bag.png"
-import user from "./user.png"
-import close from "./close.png"
-import { auth } from "../../firebase"
-
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { auth } from "../../firebase";
+import logo from "./pawb.png";
+import fullLogo from "./full-logo.jpg";
+import cart from "./shopping-bag.png";
+import user from "./user.png";
+import close from "./close.png";
+import "../../App.scss";
 
 
 function Nav() {
-
     const location = useLocation();
+    const [currentUser, setCurrentUser] = useState(null);
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged((user) => {
+            setCurrentUser(user);
+        });
+        return () => unsubscribe();
+    }, []);
 
     const isActive = (path) => location.pathname === path;
 
     const openNav = () => {
-        document.getElementById("overlay-nav").style.display = "flex"
-    }
+        document.getElementById("overlay-nav").style.display = "flex";
+    };
 
     const closeNav = () => {
-        document.getElementById("overlay-nav").style.display = "none"
-    }
-
+        document.getElementById("overlay-nav").style.display = "none";
+    };
 
     return (
         <>
             <div id="overlay-nav" className="overlayNav">
                 <div className="overlay-box">
                     <div className="onav-head">
-                        <img className="close" onClick={closeNav} src={close} />
+                        <img className="close" onClick={closeNav} src={close} alt="close" />
                     </div>
                     <div className="onav-menu">
                         <Link to='/' >
@@ -59,7 +65,6 @@ function Nav() {
                         <Link to='/login' >
                             <p onClick={closeNav} className="menu-item login-button"> Login </p>
                         </Link>
-
                     </div>
                 </div>
             </div>
@@ -76,40 +81,19 @@ function Nav() {
                         </p>
                     </div>
                     <div className="menu">
-                        {/* <Link to='/' >
-                            <p className="menu-item"> Home </p>
-                        </Link>
-                        <Link to='/shop' >
-                            <p className="menu-item"> Shop </p>
-                        </Link>
-                        <Link to='/blogs' >
-                            <p className="menu-item"> Blogs </p>
-                        </Link>
-                        <Link to='/contact' >
-                            <p className="menu-item"> Contact </p>
-                        </Link> */}
                         <Link className="cartLink" to='/cart' >
-                            <img className="menu-item-img " src={cart} />
+                            <img className="menu-item-img " src={cart} alt="cart" />
                         </Link>
-                        {
-                            auth.currentUser ?
-                                <Link className="cartLink" to='/profile' >
-                                    <img className="menu-item-img" src={user} />
-                                </Link>
-                                : null
-                        }
-
-
-
-
-                        {/* <button className="login">Log In</button> */}
-
-
+                        {currentUser ? (
+                            <Link className="cartLink" to='/profile' >
+                                <img className="menu-item-img" src={user} alt="user" />
+                            </Link>
+                        ) : null}
                     </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Nav
+export default Nav;

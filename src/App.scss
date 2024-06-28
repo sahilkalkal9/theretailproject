@@ -1196,18 +1196,40 @@ html {
   padding: .5cm 1cm;
 }
 
-.subInp{
+.subInp {
   cursor: pointer;
 }
 
-.signout{
+.signout {
   cursor: pointer;
 }
 
-.regInp{
+.regInp {
   padding: .2cm .4cm;
   font-size: 16px;
 }
-.st{
+
+.st {
   width: fit-content;
+}
+
+.notification {
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  margin-top: -2cm;
+  left: 45%;
+  padding: .3cm 1cm;
+  border-radius: 10px;
+  background-color: blueviolet;
+  transition: .4s;
+
+  p {
+    color: white;
+  }
+}
+
+.error {
+  background-color: rgb(217, 0, 0);
 }

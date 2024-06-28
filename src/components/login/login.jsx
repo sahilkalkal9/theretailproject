@@ -100,14 +100,15 @@ const Login = () => {
             <p>{notification}</p>
             {
                 isOtpSent
-                    ? <form onSubmit={handleVerifyOtp}>
+                    ? <form className='register-box' onSubmit={handleVerifyOtp}>
                         <input
                             type="text"
                             placeholder="OTP"
                             value={otp}
+                             className='regInp'
                             onChange={(e) => setOtp(e.target.value)}
                         />
-                        <button type="submit">Verify OTP</button>
+                        <button className='regInp subInp' type="submit">Verify OTP</button>
                     </form>
                     :
                     <form className='register-box' onSubmit={handleSendOtp}>
