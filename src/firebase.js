@@ -8,8 +8,8 @@ firebase.initializeApp({
   projectId: "trp1-284bb",
   storageBucket: "trp1-284bb.appspot.com",
   messagingSenderId: "918926952258",
-  appId: "1:918926952258:web:e3ff270a16a52a7715aadb",
-  measurementId: "G-FRTW26MCF0"
+  appId: "1:918926952258:web:9f0a3e29ad1bfdef15aadb",
+  measurementId: "G-3P4TMSPKY3"
 
     
 });
