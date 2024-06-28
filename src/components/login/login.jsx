@@ -63,8 +63,8 @@ const Login = () => {
                 }
             })
             .catch(error => {
-                console.error('Error checking phone number:', error);
-                setNotification('Error checking phone number. Please try again.');
+               setNotification(error);
+                
             });
     };
 
