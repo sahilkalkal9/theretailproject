@@ -3,6 +3,18 @@ $secondarycolor : #e4af47;
 
 
 
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide the arrows in Firefox */
+.no-arrows[type='number'] {
+  -moz-appearance: textfield;
+}
+
+
 
 * {
   margin: 0;
@@ -1163,7 +1175,7 @@ html {
   text-align: center;
 }
 
-.login-button{
+.login-button {
   padding: .3cm;
   background-color: $primarycolor;
   border-radius: 10px;
@@ -1171,6 +1183,24 @@ html {
   color: white;
 }
 
-.SignUp{
+.SignUp {
   padding: 1cm 10vw;
+}
+
+.register-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(212, 212, 212);
+  width: 8cm;
+  gap: .3cm;
+  padding: .5cm 1cm;
+}
+
+.subInp{
+  cursor: pointer;
+}
+
+.regInp{
+  padding: .2cm .4cm;
+  font-size: 16px;
 }

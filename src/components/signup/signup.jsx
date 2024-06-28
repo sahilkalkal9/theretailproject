@@ -7,6 +7,9 @@ const Signup = () => {
     const [isOtpSent, setIsOtpSent] = useState(false);
     const [confirmationResult, setConfirmationResult] = useState(null);
     const [notification, setNotification] = useState('');
+    const [userName, setUsername] = useState('')
+    const [userAddress, setUserAddress] = useState('')
+    const [useremail, setuseremail] = useState('')
 
     useEffect(() => {
         // Render the reCAPTCHA widget
@@ -35,23 +38,33 @@ const Signup = () => {
         const phoneNumberWithCountryCode = `+91${phoneNumber}`; // Adjust country code as needed
         const appVerifier = window.recaptchaVerifier;
 
-        // If email is available, check if the email is already registered
-
-
-
-
-        auth.signInWithPhoneNumber(phoneNumberWithCountryCode, appVerifier)
-            .then(confirmationResult => {
-                setConfirmationResult(confirmationResult);
-                setIsOtpSent(true);
-                setNotification('OTP sent.');
+        // Check if the phone number already exists in Firestore
+        const usersRef = firestore.collection('users');
+        usersRef.where('phone', '==', phoneNumberWithCountryCode)
+            .get()
+            .then(querySnapshot => {
+                if (!querySnapshot.empty) {
+                    // Phone number already exists, show error message
+                    setNotification('Phone number already exists. Please use a different number.');
+                } else {
+                    // Phone number does not exist, proceed with sending OTP
+                    auth.signInWithPhoneNumber(phoneNumberWithCountryCode, appVerifier)
+                        .then(confirmationResult => {
+                            setConfirmationResult(confirmationResult);
+                            setIsOtpSent(true);
+                            setNotification('OTP sent.');
+                        })
+                        .catch(error => {
+                            console.error("SMS not sent", error);
+                            setNotification('SMS not sent. Please try again.');
+                        });
+                }
             })
             .catch(error => {
-                console.error("SMS not sent", error);
-                setNotification('SMS not sent. Please try again.');
+                console.error('Error checking phone number:', error);
+                setNotification('Error checking phone number. Please try again.');
             });
-
-    }
+    };
 
 
 
@@ -61,8 +74,11 @@ const Signup = () => {
             confirmationResult.confirm(otp)
                 .then(result => {
                     firestore.collection("users").doc(auth.currentUser?.uid).set({
-                        "phone": phoneNumber,
-                        uid: auth.currentUser?.uid
+                        "phone": `+91${phoneNumber}`,
+                        uid: auth.currentUser?.uid,
+                        "email": useremail,
+                        "address": userAddress,
+                        "username": userName
                     })
                     console.log("User signed in successfully:", result.user);
                     // Save additional user info to database
@@ -78,8 +94,9 @@ const Signup = () => {
     };
 
     return (
-        <div>
+        <div className='SignUp' >
             <h2>Signup</h2>
+            <br /><br />
             <div id="recaptcha-container"></div>
             {notification && <p>{notification}</p>}
             {isOtpSent ? (
@@ -94,20 +111,31 @@ const Signup = () => {
                 </div>
             ) : (
 
-                <div>
+                <form onSubmit={handleSendOtp} className='register-box' >
+
+                    <input type="text" className="regInp" placeholder='Full Name' required />
+                    <input type="email" className="regInp" placeholder='Email address' required />
+                    <input type="text" className="regInp" placeholder='Address' required />
+
                     <input
                         type="text"
+                        inputMode="numeric"
+                        pattern="[0-9]*"
                         placeholder="Phone Number"
                         value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        onChange={(e) => {
+                            if (e.target.value.length <= 10) {
+                                setPhoneNumber(e.target.value);
+                            }
+                        }}
+                        className='regInp no-arrows'
+                        required
                     />
-                    <button onClick={handleSendOtp}>Send OTP</button>
-                </div>
+                    <input type="submit" className='regInp subInp' value="Send Otp" />
+                </form>
 
             )}
-            {
-                auth.currentUser ? <p>Hello, {auth.currentUser.displayName} {auth.currentUser.age} {auth.currentUser.email}</p> : null
-            }
+
         </div>
     );
 };

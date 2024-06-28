@@ -3,13 +3,13 @@ import "firebase/compat/firestore"
 import "firebase/compat/auth"
 
 firebase.initializeApp({
-    apiKey: "AIzaSyDdyapAH2x1zC5pSLg-CkGAGdSzOCgMX_k",
-  authDomain: "theretailproject-c92a9.firebaseapp.com",
-  projectId: "theretailproject-c92a9",
-  storageBucket: "theretailproject-c92a9.appspot.com",
-  messagingSenderId: "69661042474",
-  appId: "1:69661042474:web:b0640ee18dcdded090e053",
-  measurementId: "G-T074DTYK74"
+  apiKey: "AIzaSyDrkh-R6MQsc1-Am40ars54HsIY5ztzHzo",
+  authDomain: "trp1-284bb.firebaseapp.com",
+  projectId: "trp1-284bb",
+  storageBucket: "trp1-284bb.appspot.com",
+  messagingSenderId: "918926952258",
+  appId: "1:918926952258:web:e3ff270a16a52a7715aadb",
+  measurementId: "G-FRTW26MCF0"
 
     
 });
