@@ -13,8 +13,8 @@ const Signup = () => {
     const [userAddress, setUserAddress] = useState('');
     const [useremail, setuseremail] = useState('');
     const [pincode, setpincode] = useState('');
-    const [stateName, setStateName] = useState('');
-    const [district, setDistrict] = useState('');
+    const [stateName, setStateName] = useState('State');
+    const [district, setDistrict] = useState('District');
     const [isPincodeValid, setIsPincodeValid] = useState(false);
 
     const navigate = useNavigate();
@@ -104,12 +104,12 @@ const Signup = () => {
 
     const handlePincodeChange = async (e) => {
         const newPincode = e.target.value;
-    
+
         if (newPincode.length <= 6) {
             setpincode(newPincode);
-    
+
             const matchedPincode = pincodes.find(p => p.Pincode == newPincode);
-    
+
             if (matchedPincode) {
                 setDistrict(matchedPincode.District);
                 setStateName(matchedPincode.StateName);
@@ -121,7 +121,7 @@ const Signup = () => {
             }
         }
     };
-    
+
 
 
     return (
@@ -177,6 +177,7 @@ const Signup = () => {
                         className='regInp no-arrows'
                         required
                     />
+                    <p className="pinData">{district}, {stateName}</p>
                     <input
                         type="text"
                         inputMode="numeric"
@@ -192,7 +193,8 @@ const Signup = () => {
                         required
                     />
 
-                    <input
+
+                    {/* <input
                         type="text"
                         value={district}
                         className="regInp"
@@ -205,7 +207,7 @@ const Signup = () => {
                         className="regInp"
                         placeholder='State'
                         readOnly
-                    />
+                    /> */}
                     <input
                         type="submit"
                         className='regInp subInp'

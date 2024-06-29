@@ -4,10 +4,15 @@ import { auth, firestore } from "../../firebase";
 import Nav from "../nav/nav";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useEffect, useState } from "react";
+import pincodes from "../signup/pincode.json"
 
 function Profile() {
     const usersRef = firestore.collection("users");
     const [users] = useCollectionData(usersRef);
+
+    const [isvalidpincode, setisvalidpincode] = useState(false)
+    const [stateName, setStateName] = useState('');
+    const [district, setDistrict] = useState('');
 
     const [userData, setUserData] = useState({
         username: "",
@@ -62,12 +67,41 @@ function Profile() {
         document.getElementById("editPet").style.display = "none";
     };
 
+    const [message, setMessage] = useState("")
+
+
     const handleUserDataChange = (e) => {
         const { name, value } = e.target;
-        setUserData((prevData) => ({
-            ...prevData,
-            [name]: value
-        }));
+
+        if (name == "pincode") {
+            const newPincode = value;
+
+            if (newPincode.length <= 6) {
+                setUserData((prevData) => ({
+                    ...prevData,
+                    ["pincode"]: newPincode
+                }));
+
+                const matchedPincode = pincodes.find(p => p.Pincode == newPincode);
+
+                if (matchedPincode) {
+                    setDistrict(matchedPincode.District);
+                    setStateName(matchedPincode.StateName);
+                    setMessage(district + ", " + stateName);
+                    setisvalidpincode(true);
+                } else {
+                    setMessage('Please enter a valid pincode.');
+                    setisvalidpincode(false);
+                }
+            }
+        }
+        else {
+
+            setUserData((prevData) => ({
+                ...prevData,
+                [name]: value
+            }));
+        }
     };
 
     const handlePetDataChange = (e) => {
@@ -81,8 +115,14 @@ function Profile() {
     const handleUserSubmit = async (e) => {
         e.preventDefault();
         if (auth.currentUser) {
-            await firestore.collection("users").doc(auth.currentUser.uid).set(userData, { merge: true });
-            closeUserEdit();
+            if (!isvalidpincode) {
+                setMessage("Please enter valid pincode")
+                return
+            }
+            else {
+                await firestore.collection("users").doc(auth.currentUser.uid).set(userData, { merge: true });
+                closeUserEdit();
+            }
         }
     };
 
@@ -133,6 +173,7 @@ function Profile() {
                             <div className="inp-div">
                                 <label className="label">Pincode</label>
                                 <input className="edit-inp" name="pincode" value={userData.pincode} onChange={handleUserDataChange} />
+                                <p className="pinData">{message}</p>
                             </div>
                             <input type="submit" className="subInpEP" value="Save" />
                         </form>
@@ -206,6 +247,7 @@ function Profile() {
                                     <div className="user-det">
                                         <p className="user-det-head">Pincode</p>
                                         <p className="user-det-text">{userData.pincode}</p>
+                                        <p className="pinData">{district}, {stateName}</p>
                                     </div>
                                 </div>
                             </div>
