@@ -1,146 +1,249 @@
-import { useNavigate } from "react-router-dom"
-import "../../App.scss"
-import { auth, firestore } from "../../firebase"
-import Nav from "../nav/nav"
-import { useCollectionData } from "react-firebase-hooks/firestore"
+import { useNavigate } from "react-router-dom";
+import "../../App.scss";
+import { auth, firestore } from "../../firebase";
+import Nav from "../nav/nav";
+import { useCollectionData } from "react-firebase-hooks/firestore";
+import { useEffect, useState } from "react";
 
 function Profile() {
+    const usersRef = firestore.collection("users");
+    const [users] = useCollectionData(usersRef);
 
-    const usersRef = firestore.collection("users")
-    const [users] = useCollectionData(usersRef)
+    const [userData, setUserData] = useState({
+        username: "",
+        phone: "",
+        email: "",
+        address: "",
+        pincode: 0,
+        state: "",
+        district: "",
+        petname: "",
+        petdob: "",
+        petage: "",
+        petbreed: "",
+        petgender: ""
+    });
 
-    const navigate = useNavigate()
+    useEffect(() => {
+        const fetchUserData = async () => {
+            if (auth.currentUser) {
+                const userDoc = await firestore.collection("users").doc(auth.currentUser.uid).get();
+                if (userDoc.exists) {
+                    setUserData(userDoc.data());
+                } else {
+                    console.log("No such document!");
+                }
+            }
+        };
+
+        fetchUserData();
+    }, [auth.currentUser]);
+
+    const navigate = useNavigate();
 
     const signOut = () => {
-        auth.signOut()
-        navigate("/login")
-    }
+        auth.signOut();
+        navigate("/login");
+    };
 
+    const openUserEdit = () => {
+        document.getElementById("editUser").style.display = "flex";
+    };
 
+    const closeUserEdit = () => {
+        document.getElementById("editUser").style.display = "none";
+    };
+
+    const openPetEdit = () => {
+        document.getElementById("editPet").style.display = "flex";
+    };
+
+    const closePetEdit = () => {
+        document.getElementById("editPet").style.display = "none";
+    };
+
+    const handleUserDataChange = (e) => {
+        const { name, value } = e.target;
+        setUserData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handlePetDataChange = (e) => {
+        const { name, value } = e.target;
+        setUserData((prevData) => ({
+            ...prevData,
+            [name]: value
+        }));
+    };
+
+    const handleUserSubmit = async (e) => {
+        e.preventDefault();
+        if (auth.currentUser) {
+            await firestore.collection("users").doc(auth.currentUser.uid).set(userData, { merge: true });
+            closeUserEdit();
+        }
+    };
+
+    const handlePetSubmit = async (e) => {
+        e.preventDefault();
+        if (auth.currentUser) {
+            await firestore.collection("users").doc(auth.currentUser.uid).set(userData, { merge: true });
+            closePetEdit();
+        }
+    };
+
+    const [dateT, setDateT] = useState("");
+    const [minDate, setMinDate] = useState('');
+
+    useEffect(() => {
+        const today = new Date();
+        const formattedToday = today.toISOString().split('T')[0];
+        setMinDate(formattedToday);
+    }, []);
 
     return (
         <>
-
+            <div id="editUser" className="edit-user">
+                <div className="edit-box">
+                    <div className="edit-upper">
+                        <h3>Edit your details</h3>
+                        <p onClick={closeUserEdit} className="close">Close</p>
+                    </div>
+                    <br />
+                    <div className="edit-inputs">
+                        <form className="edit-form" onSubmit={handleUserSubmit}>
+                            <div className="inp-div">
+                                <label className="label">Name</label>
+                                <input className="edit-inp" name="username" value={userData.username} onChange={handleUserDataChange} />
+                            </div>
+                            <div className="inp-div">
+                                <label className="label">Email</label>
+                                <input className="edit-inp" name="email" value={userData.email} onChange={handleUserDataChange} />
+                            </div>
+                            <div className="inp-div">
+                                <label className="label">Mobile Number</label>
+                                <input className="edit-inp" name="phone" value={userData.phone} readOnly />
+                            </div>
+                            <div className="inp-div">
+                                <label className="label">Address</label>
+                                <input className="edit-inp" name="address" value={userData.address} onChange={handleUserDataChange} />
+                            </div>
+                            <div className="inp-div">
+                                <label className="label">Pincode</label>
+                                <input className="edit-inp" name="pincode" value={userData.pincode} onChange={handleUserDataChange} />
+                            </div>
+                            <input type="submit" className="subInpEP" value="Save" />
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div id="editPet" className="edit-user">
                 <div className="edit-box">
+                    <div className="edit-upper">
+                        <h3>Edit pet details</h3>
+                        <p onClick={closePetEdit} className="close">Close</p>
+                    </div>
+                    <br />
                     <div className="edit-inputs">
-                        <form className="edit-form">
-                            <div>
-                                <label>Name</label>
-                                <input className="edit-inp" />
+                        <form className="edit-form" onSubmit={handlePetSubmit}>
+                            <div className="inp-div">
+                                <label className="label">Name</label>
+                                <input className="edit-inp" name="petname" value={userData.petname} onChange={handlePetDataChange} />
                             </div>
-                            <div>
-                                <label>Email</label>
-                                <input className="edit-inp" />
+                            <div className="inp-div">
+                                <label className="label">DOB  *You can't change it in lifetime*</label>
+                                <input type="date" readOnly={userData.petdob} max={minDate} className="edit-inp" placeholder="Todo deadline (optional)" value={userData.petdob} onChange={(e) => setUserData(prevData => ({ ...prevData, petdob: e.target.value }))} />
                             </div>
-                            <div>
-                                <label>Mobile Number</label>
-                                <input className="edit-inp" />
+                            <div className="inp-div">
+                                <label className="label">Breed</label>
+                                <input className="edit-inp" name="petbreed" value={userData.petbreed} onChange={handlePetDataChange} />
                             </div>
-                            <div>
-                                <label>Address</label>
-                                <input className="edit-inp" />
+                            <div className="inp-div">
+                                <label className="label">Age</label>
+                                <input className="edit-inp" name="petage" value={userData.petage} onChange={handlePetDataChange} />
                             </div>
-                            <div>
-                                <label>Pincode</label>
-                                <input className="edit-inp" />
+                            <div className="inp-div">
+                                <label className="label">Gender</label>
+                                <input className="edit-inp" name="petgender" value={userData.petgender} onChange={handlePetDataChange} />
                             </div>
+                            <input type="submit" className="subInpEP" value="Save" />
                         </form>
                     </div>
                 </div>
             </div>
 
             <div className="Home">
-                {/* <div className="home-upper-main">
-
-                <div className="home-upper">
-                    <div className="page-head-box">
-                        <p className="page-head">Profile</p>
-                        <p className="page-path">home/profile</p>
-                    </div>
-
-
-                </div>
-            </div> */}
-
-
                 <div className="home-lower">
                     <p className="signout" onClick={signOut}>Sign Out</p>
-                    {
-                        auth.currentUser ?
-                            (
-                                users && users.map((u) => (
+                    {auth.currentUser ? (
+                        <div className="profile-box">
+                            <div className="user-box">
+                                <div className="ub-head">
+                                    <h3>Your details</h3>
+                                    <p onClick={openUserEdit} className="edit">Edit</p>
+                                </div>
+                                <div className="user-dets">
+                                    <div className="user-det">
+                                        <p className="user-det-head">Name</p>
+                                        <p className="user-det-text">{userData.username}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Email</p>
+                                        <p className="user-det-text">{userData.email}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Mobile Number</p>
+                                        <p className="user-det-text">{userData.phone}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Address</p>
+                                        <p className="user-det-text">{userData.address}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Pincode</p>
+                                        <p className="user-det-text">{userData.pincode}</p>
+                                    </div>
+                                </div>
+                            </div>
 
-                                    auth.currentUser?.uid == u.uid
-                                        ? (
-                                            <div className="profile-box">
-                                                <div className="user-box">
-                                                    <h3>Your details</h3>
-                                                    <div className="user-dets">
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Name</p>
-                                                            <p className="user-det-text">{u.username}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Email</p>
-                                                            <p className="user-det-text">{u.email}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Mobile Number</p>
-                                                            <p className="user-det-text">{u.phone}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Address</p>
-                                                            <p className="user-det-text">{u.address}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Pincode</p>
-                                                            <p className="user-det-text">{u.pincode}</p>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-
-                                                <div className="user-box">
-                                                    <h3>Pet details</h3>
-                                                    <div className="user-dets">
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Name</p>
-                                                            <p className="user-det-text">{u.petname}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">DOB</p>
-                                                            <p className="user-det-text">{u.petdob}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Breed</p>
-                                                            <p className="user-det-text">{u.petbreed}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Gender</p>
-                                                            <p className="user-det-text">{u.petgender}</p>
-                                                        </div>
-                                                        <div className="user-det">
-                                                            <p className="user-det-head">Age</p>
-                                                            <p className="user-det-text">{u.petage}</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        )
-                                        : null
-                                ))
-                            )
-                            : <p>Loading....</p>
-                    }
+                            <div className="user-box">
+                                <div className="ub-head">
+                                    <h3>Pet details</h3>
+                                    <p className="edit" onClick={openPetEdit}>Edit</p>
+                                </div>
+                                <div className="user-dets">
+                                    <div className="user-det">
+                                        <p className="user-det-head">Name</p>
+                                        <p className="user-det-text">{userData.petname}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">DOB</p>
+                                        <p className="user-det-text">{userData.petdob}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Breed</p>
+                                        <p className="user-det-text">{userData.petbreed}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Gender</p>
+                                        <p className="user-det-text">{userData.petgender}</p>
+                                    </div>
+                                    <div className="user-det">
+                                        <p className="user-det-head">Age</p>
+                                        <p className="user-det-text">{userData.petage}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    ) : (
+                        <p>Loading....</p>
+                    )}
                 </div>
-
-
-
-
             </div>
         </>
-    )
+    );
 }
 
-export default Profile
+export default Profile;
