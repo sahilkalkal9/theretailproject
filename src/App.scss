@@ -1203,6 +1203,11 @@ html {
 
 .signout {
   cursor: pointer;
+  color: white;
+  background-color: red;
+  padding: .2cm .5cm;
+  width: fit-content;
+  border-radius: 10px;
 }
 
 .regInp {
@@ -1252,6 +1257,7 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   gap: .5cm;
+  margin-top: 1cm;
 }
 
 .user-box {
@@ -1329,6 +1335,11 @@ h3 {
   }
 }
 
+.signout-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
 #editPet,
 #editUser {
   display: none;
@@ -1339,6 +1350,10 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.Profile {
+  padding: 1cm 10vw;
 }
 
 .close {

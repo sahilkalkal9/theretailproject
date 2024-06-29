@@ -174,9 +174,11 @@ function Profile() {
                 </div>
             </div>
 
-            <div className="Home">
-                <div className="home-lower">
-                    <p className="signout" onClick={signOut}>Sign Out</p>
+            <div className="Profile">
+                <div className="profile-lower">
+                    <div className="signout-box">
+                        <p className="signout" onClick={signOut}>Sign Out</p>
+                    </div>
                     {auth.currentUser ? (
                         <div className="profile-box">
                             <div className="user-box">
