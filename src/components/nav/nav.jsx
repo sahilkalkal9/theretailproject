@@ -88,7 +88,9 @@ function Nav() {
                             <Link className="cartLink" to='/profile' >
                                 <img className="menu-item-img" src={user} alt="user" />
                             </Link>
-                        ) : null}
+                        ) : <Link to='/login' >
+                            <p onClick={closeNav} className="menu-item login-button mainL"> Login </p>
+                        </Link>}
                     </div>
                 </div>
             </div>

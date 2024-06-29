@@ -113,75 +113,82 @@ function Cart() {
                 </div>
             </div>
 
-            <div className="cart-lower ">
-                <div className="cart-products">
-                    {
-                        cart && cart.map((c) => (
-                            <div className="cart-product" key={c.oid}>
-                                <div className="cart-product-zero">
-                                    <input
-                                        type="checkbox"
-                                        className="cart-checkbox"
-                                        onChange={() => handleCheckboxChange(c)}
+            {
+                auth.currentUser ?
+                    <div className="cart-lower ">
+                        <div className="cart-products">
+                            {
+                                cart && cart.map((c) => (
+                                    <div className="cart-product" key={c.oid}>
+                                        <div className="cart-product-zero">
+                                            <input
+                                                type="checkbox"
+                                                className="cart-checkbox"
+                                                onChange={() => handleCheckboxChange(c)}
 
-                                    />
-                                </div>
-                                <div className="cart-product-left">
-                                    <img className="cart-product-img" src={require(`../shop/${c.image}`)} alt={c.name} />
-                                </div>
-                                <div className="cart-product-right">
-                                    <div className="cart-product-right-one">
-                                        <p className="cart-product-name">
-                                            {c.name}
-                                        </p>
-                                        <p className="cart-product-price">
-                                            {c.price}
-                                        </p>
-                                    </div>
-
-                                    <div className="cart-product-right-one">
-                                        <div className="quantity-box">
-                                            <img onClick={(e) => { reduceCart(e, c) }} className={c.quantity === 1 ? "qminus qdis" : "qminus"} src={qmin} alt="Decrease quantity" />
-                                            <div className="qnum-box">
-                                                <p className="qnum">
-                                                    {c.quantity}
+                                            />
+                                        </div>
+                                        <div className="cart-product-left">
+                                            <img className="cart-product-img" src={require(`../shop/${c.image}`)} alt={c.name} />
+                                        </div>
+                                        <div className="cart-product-right">
+                                            <div className="cart-product-right-one">
+                                                <p className="cart-product-name">
+                                                    {c.name}
+                                                </p>
+                                                <p className="cart-product-price">
+                                                    ₹ {c.price}
                                                 </p>
                                             </div>
-                                            <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} alt="Increase quantity" />
-                                        </div>
-                                        <div className="options-box">
-                                            <p onClick={() => { deleteProd(c) }} className="option">
-                                                Delete
-                                            </p>
-                                            <p className="option">
-                                                Share
-                                            </p>
+
+                                            <div className="cart-product-right-one">
+                                                <div className="quantity-box">
+                                                    <img onClick={(e) => { reduceCart(e, c) }} className={c.quantity === 1 ? "qminus qdis" : "qminus"} src={qmin} alt="Decrease quantity" />
+                                                    <div className="qnum-box">
+                                                        <p className="qnum">
+                                                            {c.quantity}
+                                                        </p>
+                                                    </div>
+                                                    <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} alt="Increase quantity" />
+                                                </div>
+                                                <div className="options-box">
+                                                    <p onClick={() => { deleteProd(c) }} className="option">
+                                                        Delete
+                                                    </p>
+                                                    <p className="option">
+                                                        Share
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                ))
+                            }
+                        </div>
+                        <div className="cart-checkout">
+                            <div className="cart-checkout-box">
+                                <p className="cart-checkout-text scarttext">
+                                    {selectedProducts.length} items selected
+                                </p>
+                                <div className="total-box">
+                                    <p className="total-text">
+                                        Total :
+                                    </p>
+                                    <p className="total-price">
+                                        ₹ {calculateTotalPrice()}
+                                    </p>
                                 </div>
+                                <p className="shipText">Shipping charges will be added on checkout</p>
                             </div>
-                        ))
-                    }
-                </div>
-                <div className="cart-checkout">
-                    <div className="cart-checkout-box">
-                        <p className="cart-checkout-text scarttext">
-                            {selectedProducts.length} items selected
-                        </p>
-                        <div className="total-box">
-                            <p className="total-text">
-                                Total :
-                            </p>
-                            <p className="total-price">
-                                ₹ {calculateTotalPrice()}
-                            </p>
+                            {
+                                selectedProducts != 0 ? <button className="ptc">Proceed to checkout</button> : null
+                            }
                         </div>
                     </div>
-                    {
-                        selectedProducts != 0 ? <button className="ptc">Proceed to checkout</button> : null
-                    }
-                </div>
-            </div>
+                    : <div className="cart-lower">
+                        <p>Please login or register to add items to cart</p>
+                    </div>
+            }
         </div>
     )
 }

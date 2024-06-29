@@ -1190,7 +1190,8 @@ html {
 .register-box {
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(212, 212, 212);
+  border: 1px solid rgb(235, 235, 235);
+  border-radius: 10px;
   width: 8cm;
   gap: .3cm;
   padding: .5cm 1cm;
@@ -1207,6 +1208,8 @@ html {
 .regInp {
   padding: .2cm .4cm;
   font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid rgb(192, 192, 192);
 }
 
 .st {
@@ -1218,12 +1221,12 @@ html {
   position: fixed;
   z-index: 1;
   top: 0;
-  margin-top: -2cm;
+  margin-top: -1cm;
   left: 45%;
   padding: .3cm 1cm;
   border-radius: 10px;
   background-color: blueviolet;
-  transition: .4s;
+  transition: .3s;
 
   p {
     color: white;
@@ -1232,4 +1235,61 @@ html {
 
 .error {
   background-color: rgb(217, 0, 0);
+}
+
+.mainL {
+  background-color: $secondarycolor;
+  color: $primarycolor;
+  padding: .2cm .8cm;
+}
+
+.shipText {
+  font-size: 11px;
+}
+
+.profile-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .5cm;
+}
+
+.user-box {
+  background-color: rgb(240, 240, 240);
+  padding: .3cm;
+  width: 10cm;
+  border-radius: 10px;
+}
+
+.user-dets {
+  margin-top: .3cm;
+  display: flex;
+  flex-direction: column;
+  gap: .3cm;
+}
+
+.user-det-head {
+  font-size: 14px;
+  color: rgb(139, 139, 139);
+}
+
+h3 {
+  font-size: 500;
+}
+
+.edit-user {
+  inset: 0;
+  padding: 1cm 10vw;
+  position: fixed;
+  z-index: 30;
+  backdrop-filter: blur(10px);
+}
+
+.edit-box {
+  border: 1px solid red;
+  width: 20cm;
+  background-color: rgb(240, 240, 240);
+  padding: .3cm;
+  border-radius: 10px;
+
 }
