@@ -73,23 +73,12 @@ function Shop() {
 
                         {
                             products.map((p) => (
-                                <div className="product-new">
-                                    <div className={`product-upper-new ${p.class}`} >
-                                        <img className="product-image" src={require(`./${p.image}`)} alt="Product Image" />
-                                        <div className="cart-like-box">
-                                            <img className="heart" src={heart} />
-                                            <img className="heart" onClick={() => { addToCart(p) }} src={cartttt} />
-                                        </div>
-                                    </div>
-                                    <div className="product-lower-new">
-                                        <p className="product-caption-new">
-                                            {p.name}
-                                        </p>
-                                        <div className="price-cart">
-                                            <p className="price-new">₹ {p.price}</p>
-
-                                        </div>
-
+                                <div className="fprod">
+                                    <img src={require(`./${p.image}`)} alt="product image" className="fprodimg" />
+                                    <div className="fprodlower">
+                                        <p className="fprodname">{p.name}</p>
+                                        <p className="fprodprice">₹ {p.price}</p>
+                                        <button onClick={() => { addToCart(p) }} className="fprodcart">Add to cart</button>
                                     </div>
                                 </div>
                             ))

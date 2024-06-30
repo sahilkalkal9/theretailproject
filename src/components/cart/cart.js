@@ -9,10 +9,12 @@ import qplus from "./add.png"
 import { useState, useEffect } from "react"
 import { auth, firestore, firebase } from "../../firebase"
 import { useCollectionData } from "react-firebase-hooks/firestore"
+import { useNavigate } from "react-router-dom"
 
 function Cart() {
     const [selectedProducts, setSelectedProducts] = useState([])
     const [totalPrice, setTotalPrice] = useState(0)
+    const navigate = useNavigate()
 
     const cartRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("cart")
     const [cart] = useCollectionData(cartRef)
@@ -30,6 +32,8 @@ function Cart() {
             }
         })
     }
+
+    console.log(selectedProducts)
 
     const reduceCart = (e, c) => {
         e.preventDefault()
@@ -98,6 +102,14 @@ function Cart() {
         }
     }
 
+    const proceedToCheckout = () => {
+        const checkoutRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("checkout")
+        selectedProducts.forEach(product => {
+            checkoutRef.doc(product.oid).set(product)
+        })
+        navigate("/checkout")
+    }
+
     return (
         <div className="Home">
             <div className="home-upper-main">
@@ -147,7 +159,7 @@ function Cart() {
                                                             <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} />
                                                         </div>
                                                         <div className="cart-buttons">
-                                                            <p onClick={()=>{deleteProd(c)}} className="delQ">
+                                                            <p onClick={() => { deleteProd(c) }} className="delQ">
                                                                 Delete
                                                             </p>
                                                             <p className="delQ">
@@ -182,7 +194,7 @@ function Cart() {
 
                                         </div>
                                         {
-                                            selectedProducts.length > 0 ? <button className="ptc">Proceed to checkout</button> : null
+                                            selectedProducts.length > 0 ? <button className="ptc" onClick={proceedToCheckout} >Proceed to checkout</button> : null
                                         }
                                     </div>
                                 )

@@ -10,6 +10,7 @@ import Profile from './components/profile/profile';
 import Nav from './components/nav/nav';
 import Signup from './components/signup/signup';
 import Login from './components/login/login';
+import Checkout from './components/checkout/checkout';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/checkout' element={<Checkout />} />
       </Routes>
     </div>
   );
