@@ -11,8 +11,46 @@ import Nav from './components/nav/nav';
 import Signup from './components/signup/signup';
 import Login from './components/login/login';
 import Checkout from './components/checkout/checkout';
+import { auth, firestore } from './firebase';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const usersRef = firestore.collection("users");
+  const [users] = useCollectionData(usersRef);
+
+  const [userData, setUserData] = useState({
+    username: "",
+    phone: "",
+    email: "",
+    address: "",
+    pincode: 0,
+    state: "",
+    district: "",
+    petname: "",
+    petdob: "",
+    petage: "",
+    petbreed: "",
+    petgender: ""
+  });
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      if (auth.currentUser) {
+        const userDoc = await firestore.collection("users").doc(auth.currentUser.uid).get();
+        if (userDoc.exists) {
+          setUserData(userDoc.data());
+        } else {
+          console.log("No such document!");
+        }
+      }
+    };
+
+    fetchUserData();
+  }, [auth.currentUser]);
+
+
   return (
     <div className="App">
       <Nav />
@@ -24,11 +62,12 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/checkout' element={<Checkout />} />
+        <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
+        <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
       </Routes>
     </div>
   );
 }
+
 
 export default App;

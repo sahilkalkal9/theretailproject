@@ -6,46 +6,17 @@ import { useCollectionData } from "react-firebase-hooks/firestore";
 import { useEffect, useState } from "react";
 import pincodes from "../signup/pincode.json"
 
-function Profile() {
-    const usersRef = firestore.collection("users");
-    const [users] = useCollectionData(usersRef);
+function Profile({ userData, setUserData }) {
+
 
     const [isvalidpincode, setisvalidpincode] = useState(false)
 
-
-    const [userData, setUserData] = useState({
-        username: "",
-        phone: "",
-        email: "",
-        address: "",
-        pincode: 0,
-        state: "",
-        district: "",
-        petname: "",
-        petdob: "",
-        petage: "",
-        petbreed: "",
-        petgender: ""
-    });
 
     const [stateName, setStateName] = useState(userData.district);
     const [district, setDistrict] = useState(userData.state);
 
 
-    useEffect(() => {
-        const fetchUserData = async () => {
-            if (auth.currentUser) {
-                const userDoc = await firestore.collection("users").doc(auth.currentUser.uid).get();
-                if (userDoc.exists) {
-                    setUserData(userDoc.data());
-                } else {
-                    console.log("No such document!");
-                }
-            }
-        };
 
-        fetchUserData();
-    }, [auth.currentUser]);
 
     const navigate = useNavigate();
 

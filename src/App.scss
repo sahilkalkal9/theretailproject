@@ -1411,3 +1411,40 @@ h3 {
   align-items: center;
   gap: .3cm;
 }
+
+.Checkout {
+  padding: 1cm 10vw;
+}
+
+.headC {
+  font-size: 28px;
+  // font-weight: 600;
+}
+
+.cdetbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: .3cm;
+}
+
+.cheadtext {
+  font-size: 20px;
+}
+
+.checkout-dets {
+  margin-top: 1cm;
+
+}
+
+.checkoutdet {
+  background-color: rgb(241, 241, 241);
+  padding: .3cm;
+  border-radius: 10px;
+}
+
+.checkout-left {
+  display: flex;
+  flex-direction: column;
+  gap: .3cm;
+}
