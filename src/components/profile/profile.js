@@ -11,8 +11,7 @@ function Profile() {
     const [users] = useCollectionData(usersRef);
 
     const [isvalidpincode, setisvalidpincode] = useState(false)
-    const [stateName, setStateName] = useState('');
-    const [district, setDistrict] = useState('');
+
 
     const [userData, setUserData] = useState({
         username: "",
@@ -28,6 +27,10 @@ function Profile() {
         petbreed: "",
         petgender: ""
     });
+
+    const [stateName, setStateName] = useState(userData.district);
+    const [district, setDistrict] = useState(userData.state);
+
 
     useEffect(() => {
         const fetchUserData = async () => {
@@ -247,7 +250,7 @@ function Profile() {
                                     <div className="user-det">
                                         <p className="user-det-head">Pincode</p>
                                         <p className="user-det-text">{userData.pincode}</p>
-                                        <p className="pinData">{district}, {stateName}</p>
+                                        <p className="pinData">{userData.district}, {userData.state}</p>
                                     </div>
                                 </div>
                             </div>
