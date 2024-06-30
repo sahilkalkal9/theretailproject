@@ -4,11 +4,17 @@ import { auth, firestore } from "../../firebase"
 import firebase from "firebase/compat/app"
 import qmin from "./minus.png"
 import qplus from "./add.png"
+import { useEffect, useState } from "react"
 
 function Checkout({ userData, setUserData }) {
 
     const checoutRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("checkout")
     const [checkout] = useCollectionData(checoutRef)
+    const [totalPrice, setTotalPrice] = useState(0)
+
+    useEffect(() => {
+        setTotalPrice(calculateTotalPrice())
+    }, [checkout])
 
 
     const reduceCart = (e, c) => {
@@ -57,6 +63,10 @@ function Checkout({ userData, setUserData }) {
     }
 
 
+    const calculateTotalPrice = () => {
+        return checkout && checkout.reduce((acc, product) => acc + (product.price * product.quantity), 0)
+    }
+
 
 
 
@@ -94,6 +104,11 @@ function Checkout({ userData, setUserData }) {
                                     Review Items
                                 </p>
                                 <div className="cdetboxs">
+
+                                    <p className="arrdatetext">
+                                        Arriving on 10 July
+                                    </p>
+
                                     {
                                         checkout && checkout.map((c) => (
                                             <div className="cart-product" key={c.oid}>
@@ -129,6 +144,41 @@ function Checkout({ userData, setUserData }) {
                                         ))
                                     }
                                 </div>
+
+                            </div>
+                        </div>
+                        <div className="checkoutdet">
+                            <div className="checkoutdethead">
+                                <p className="cheadtext">
+                                    Order Summary
+                                </p>
+                                <div className="osbox">
+                                    <div className="osdiv">
+                                        <p className="ostext">
+                                            Items:
+                                        </p>
+                                        <p className="ostext">
+                                            ₹ {totalPrice}
+                                        </p>
+                                    </div>
+                                    <div className="osdiv">
+                                        <p className="ostext">
+                                            Delivery:
+                                        </p>
+                                        <p className="ostext">
+                                            ₹ 80
+                                        </p>
+                                    </div>
+                                    <div className="osdiv">
+                                        <p className="ostext">
+                                            Total:
+                                        </p>
+                                        <p className="ostext">
+                                            ₹ {totalPrice + 80}
+                                        </p>
+                                    </div>
+                                </div>
+                                <button className="ptc cbp">Proceed to pay ₹ 1680</button>
 
                             </div>
                         </div>

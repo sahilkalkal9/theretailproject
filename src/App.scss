@@ -1448,3 +1448,35 @@ h3 {
   flex-direction: column;
   gap: .3cm;
 }
+
+.cdetboxs {
+  margin-top: .3cm;
+}
+
+.arrdatetext {
+  font-size: 18px;
+}
+
+.osbox {
+  display: flex;
+  flex-direction: column;
+  gap: .1cm;
+  margin-top: .3cm;
+}
+
+.osdiv {
+  width: 8cm;
+  display: flex;
+  gap: .2cm;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.ostext {
+  font-size: 14px;
+}
+
+.cbp {
+  margin-top: 1cm;
+}
