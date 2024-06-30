@@ -846,8 +846,9 @@ html {
 }
 
 .quantity-box {
-  margin-top: .2cm;
+  // margin-top: .2cm;
   display: flex;
+  gap: .3cm;
   align-items: center;
 }
 
@@ -1250,6 +1251,8 @@ html {
 
 .shipText {
   font-size: 11px;
+  // text-align: right;
+  margin-bottom: .1cm;
 }
 
 .profile-box {
@@ -1382,6 +1385,28 @@ h3 {
   cursor: pointer;
 }
 
-.pinData{
+.cart-product-right-two {
+  display: flex;
+  flex-direction: column;
+  gap: .3cm;
+}
+
+.pinData {
   font-size: 12px;
+}
+
+.delQ {
+  font-size: 13px;
+  cursor: pointer;
+  width: fit-content;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  gap: .3cm;
 }

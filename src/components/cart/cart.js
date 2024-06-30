@@ -6,20 +6,24 @@ import dogf from "./dog-food.png"
 import products from "./products.json"
 import qmin from "./minus.png"
 import qplus from "./add.png"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { auth, firestore, firebase } from "../../firebase"
 import { useCollectionData } from "react-firebase-hooks/firestore"
 
 function Cart() {
-    var tprice = Number(0)
     const [selectedProducts, setSelectedProducts] = useState([])
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const cartRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("cart")
     const [cart] = useCollectionData(cartRef)
 
+    useEffect(() => {
+        setTotalPrice(calculateTotalPrice())
+    }, [selectedProducts])
+
     const handleCheckboxChange = (product) => {
         setSelectedProducts((prevSelectedProducts) => {
-            if (prevSelectedProducts.includes(product)) {
+            if (prevSelectedProducts.some(p => p.oid === product.oid)) {
                 return prevSelectedProducts.filter(p => p.oid !== product.oid)
             } else {
                 return [...prevSelectedProducts, product]
@@ -28,77 +32,69 @@ function Cart() {
     }
 
     const reduceCart = (e, c) => {
-        e.preventDefault();
+        e.preventDefault()
 
-        const cartRefQ = firestore.collection("users").doc(auth.currentUser?.uid).collection('cart').where('oid', '==', c.oid);
+        const cartRefQ = firestore.collection("users").doc(auth.currentUser?.uid).collection('cart').where('oid', '==', c.oid)
 
         cartRefQ.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                const newQuantity = c.quantity - 1;
+                const newQuantity = c.quantity - 1
                 doc.ref.update({
                     quantity: firebase.firestore.FieldValue.increment(-1)
-                });
+                })
 
-                if (selectedProducts.find(p => p.oid === c.oid)) {
+                if (selectedProducts.some(p => p.oid === c.oid)) {
                     setSelectedProducts((prevSelectedProducts) =>
                         prevSelectedProducts.map(p =>
                             p.oid === c.oid ? { ...p, quantity: newQuantity } : p
                         )
-                    );
+                    )
                 }
-            });
+            })
         }).catch((error) => {
-            console.error("Error updating document: ", error);
-        });
+            console.error("Error updating document: ", error)
+        })
     }
 
     const increaseCart = (e, c) => {
-        e.preventDefault();
+        e.preventDefault()
 
-        const cartRefQ = firestore.collection("users").doc(auth.currentUser?.uid).collection('cart').where('oid', '==', c.oid);
+        const cartRefQ = firestore.collection("users").doc(auth.currentUser?.uid).collection('cart').where('oid', '==', c.oid)
 
         cartRefQ.get().then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-                const newQuantity = c.quantity + 1;
+                const newQuantity = c.quantity + 1
                 doc.ref.update({
                     quantity: firebase.firestore.FieldValue.increment(1)
-                });
+                })
 
-                if (selectedProducts.find(p => p.oid === c.oid)) {
+                if (selectedProducts.some(p => p.oid === c.oid)) {
                     setSelectedProducts((prevSelectedProducts) =>
                         prevSelectedProducts.map(p =>
                             p.oid === c.oid ? { ...p, quantity: newQuantity } : p
                         )
-                    );
+                    )
                 }
-            });
+            })
         }).catch((error) => {
-            console.error("Error updating document: ", error);
-        });
+            console.error("Error updating document: ", error)
+        })
     }
 
-
-    // console.log(selectedProducts)
-
     const calculateTotalPrice = () => {
-        return selectedProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0);
-
+        return selectedProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0)
     }
 
     const deleteProd = (c) => {
-        if (selectedProducts.find(p => p.oid == c.oid)) {
+        if (selectedProducts.some(p => p.oid === c.oid)) {
             firestore.collection("users").doc(auth.currentUser?.uid).collection("cart").doc(c.oid).delete()
             setSelectedProducts((prevSelectedProducts) =>
                 prevSelectedProducts.filter((p) => p.oid !== c.oid)
-            );
+            )
             console.log("both deleted")
-            calculateTotalPrice()
-            console.log(selectedProducts)
-        }
-        else {
+        } else {
             firestore.collection("users").doc(auth.currentUser?.uid).collection("cart").doc(c.oid).delete()
             console.log("deleted")
-            calculateTotalPrice()
         }
     }
 
@@ -115,10 +111,10 @@ function Cart() {
 
             {
                 auth.currentUser ?
-                    <div className="cart-lower ">
+                    <div className="cart-lower">
                         <div className="cart-products">
                             {
-                                cart == 0
+                                cart && cart.length === 0
                                     ? <p>cart is empty</p>
                                     : (
                                         cart && cart.map((c) => (
@@ -128,7 +124,7 @@ function Cart() {
                                                         type="checkbox"
                                                         className="cart-checkbox"
                                                         onChange={() => handleCheckboxChange(c)}
-
+                                                        checked={selectedProducts.some(p => p.oid === c.oid)}
                                                     />
                                                 </div>
                                                 <div className="cart-product-left">
@@ -144,7 +140,21 @@ function Cart() {
                                                         </p>
                                                     </div>
 
-
+                                                    <div className="cart-product-right-two">
+                                                        <div className="quantity-box">
+                                                            <img onClick={(e) => { reduceCart(e, c) }} className={c.quantity === 1 ? "qminus qdis" : "qminus"} src={qmin} />
+                                                            <p className="qnum">{c.quantity}</p>
+                                                            <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} />
+                                                        </div>
+                                                        <div className="cart-buttons">
+                                                            <p onClick={()=>{deleteProd(c)}} className="delQ">
+                                                                Delete
+                                                            </p>
+                                                            <p className="delQ">
+                                                                Share
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         ))
@@ -152,11 +162,12 @@ function Cart() {
                             }
                         </div>
                         {
-                            cart == 0
+                            cart && cart.length === 0
                                 ? null
                                 : (
                                     <div className="cart-checkout">
                                         <div className="cart-checkout-box">
+                                            <p className="shipText">*Shipping charges will be added on checkout*</p>
                                             <p className="cart-checkout-text scarttext">
                                                 {selectedProducts.length} items selected
                                             </p>
@@ -165,13 +176,13 @@ function Cart() {
                                                     Total :
                                                 </p>
                                                 <p className="total-price">
-                                                    ₹ {calculateTotalPrice()}
+                                                    ₹ {totalPrice}
                                                 </p>
                                             </div>
-                                            <p className="shipText">Shipping charges will be added on checkout</p>
+
                                         </div>
                                         {
-                                            selectedProducts != 0 ? <button className="ptc">Proceed to checkout</button> : null
+                                            selectedProducts.length > 0 ? <button className="ptc">Proceed to checkout</button> : null
                                         }
                                     </div>
                                 )
