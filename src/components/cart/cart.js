@@ -33,7 +33,7 @@ function Cart() {
         })
     }
 
-    console.log(selectedProducts)
+    // console.log(selectedProducts)
 
     const reduceCart = (e, c) => {
         e.preventDefault()
