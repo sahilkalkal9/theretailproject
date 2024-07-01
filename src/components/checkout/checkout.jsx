@@ -115,135 +115,139 @@ function Checkout({ userData, setUserData }) {
     return (
         <div className="Checkout">
             {
-                orderplaced === false
-                    ? <div className="checkout-box">
-                        <p className="headC">Checkout</p>
-                        <div className="checkout-dets">
-                            <div className="checkout-left">
-                                <div className="checkoutdet">
-                                    <div className="checkoutdethead">
-                                        <p className="cheadtext">
-                                            Delivery & Contact Details
-                                        </p>
-                                        <div className="cdetbox">
-                                            <p className="cdetboxtext">
-                                                for {userData.petname}<br />
-                                                by {userData.username}<br />
-                                                {userData.phone}<br />
-                                                {userData.address}
-                                            </p>
+                checkout == 0 ?
+                    <p>No item to checout</p>
+                    : (
+                        orderplaced === false
+                            ? <div className="checkout-box">
+                                <p className="headC">Checkout</p>
+                                <div className="checkout-dets">
+                                    <div className="checkout-left">
+                                        <div className="checkoutdet">
+                                            <div className="checkoutdethead">
+                                                <p className="cheadtext">
+                                                    Delivery & Contact Details
+                                                </p>
+                                                <div className="cdetbox">
+                                                    <p className="cdetboxtext">
+                                                        for {userData.petname}<br />
+                                                        by {userData.username}<br />
+                                                        {userData.phone}<br />
+                                                        {userData.address}
+                                                    </p>
 
-                                            <p className="editT">Edit</p>
+                                                    <p className="editT">Edit</p>
+                                                </div>
+
+                                            </div>
                                         </div>
+                                        <div className="checkoutdet">
+                                            <div className="checkoutdethead">
+                                                <p className="cheadtext">
+                                                    Review Items
+                                                </p>
+                                                <div className="cdetboxs">
 
-                                    </div>
-                                </div>
-                                <div className="checkoutdet">
-                                    <div className="checkoutdethead">
-                                        <p className="cheadtext">
-                                            Review Items
-                                        </p>
-                                        <div className="cdetboxs">
+                                                    <p className="arrdatetext">
+                                                        Arriving on 10 July
+                                                    </p>
 
-                                            <p className="arrdatetext">
-                                                Arriving on 10 July
-                                            </p>
+                                                    {
+                                                        checkout && checkout.map((c) => (
+                                                            <div className="cart-product" key={c.oid}>
 
-                                            {
-                                                checkout && checkout.map((c) => (
-                                                    <div className="cart-product" key={c.oid}>
-
-                                                        <div className="cart-product-left">
-                                                            <img className="cart-product-img" src={require(`../shop/${c.image}`)} alt={c.name} />
-                                                        </div>
-                                                        <div className="cart-product-right">
-                                                            <div className="cart-product-right-one">
-                                                                <p className="cart-product-name">
-                                                                    {c.name}
-                                                                </p>
-                                                                <p className="cart-product-price">
-                                                                    ₹ {c.price}
-                                                                </p>
-                                                            </div>
-
-                                                            <div className="cart-product-right-two">
-                                                                <div className="quantity-box">
-                                                                    <img onClick={(e) => { reduceCart(e, c) }} className={c.quantity === 1 ? "qminus qdis" : "qminus"} src={qmin} />
-                                                                    <p className="qnum">{c.quantity}</p>
-                                                                    <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} />
+                                                                <div className="cart-product-left">
+                                                                    <img className="cart-product-img" src={require(`../shop/${c.image}`)} alt={c.name} />
                                                                 </div>
-                                                                <div className="cart-buttons">
-                                                                    <p onClick={() => { deleteProd(c) }} className="delQ">
-                                                                        Delete
-                                                                    </p>
+                                                                <div className="cart-product-right">
+                                                                    <div className="cart-product-right-one">
+                                                                        <p className="cart-product-name">
+                                                                            {c.name}
+                                                                        </p>
+                                                                        <p className="cart-product-price">
+                                                                            ₹ {c.price}
+                                                                        </p>
+                                                                    </div>
 
+                                                                    <div className="cart-product-right-two">
+                                                                        <div className="quantity-box">
+                                                                            <img onClick={(e) => { reduceCart(e, c) }} className={c.quantity === 1 ? "qminus qdis" : "qminus"} src={qmin} />
+                                                                            <p className="qnum">{c.quantity}</p>
+                                                                            <img onClick={(e) => { increaseCart(e, c) }} className="qminus" src={qplus} />
+                                                                        </div>
+                                                                        <div className="cart-buttons">
+                                                                            <p onClick={() => { deleteProd(c) }} className="delQ">
+                                                                                Delete
+                                                                            </p>
+
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        ))
+                                                    }
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div className="checkoutdet">
+                                            <div className="checkoutdethead">
+                                                <p className="cheadtext">
+                                                    Order Summary
+                                                </p>
+                                                <div className="osbox">
+                                                    <div className="osdiv">
+                                                        <p className="ostext">
+                                                            Items:
+                                                        </p>
+                                                        <p className="ostext">
+                                                            ₹ {totalPrice}
+                                                        </p>
                                                     </div>
-                                                ))
-                                            }
-                                        </div>
+                                                    <div className="osdiv">
+                                                        <p className="ostext">
+                                                            Delivery:
+                                                        </p>
+                                                        <p className="ostext">
+                                                            ₹ 80
+                                                        </p>
+                                                    </div>
+                                                    <div className="osdiv">
+                                                        <p className="ostext">
+                                                            Total:
+                                                        </p>
+                                                        <p className="ostext">
+                                                            ₹ {totalPrice + 80}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <button onClick={handlePayment} className="ptc cbp">Proceed to pay ₹ {totalPrice + 80}</button>
 
-                                    </div>
-                                </div>
-                                <div className="checkoutdet">
-                                    <div className="checkoutdethead">
-                                        <p className="cheadtext">
-                                            Order Summary
-                                        </p>
-                                        <div className="osbox">
-                                            <div className="osdiv">
-                                                <p className="ostext">
-                                                    Items:
-                                                </p>
-                                                <p className="ostext">
-                                                    ₹ {totalPrice}
-                                                </p>
-                                            </div>
-                                            <div className="osdiv">
-                                                <p className="ostext">
-                                                    Delivery:
-                                                </p>
-                                                <p className="ostext">
-                                                    ₹ 80
-                                                </p>
-                                            </div>
-                                            <div className="osdiv">
-                                                <p className="ostext">
-                                                    Total:
-                                                </p>
-                                                <p className="ostext">
-                                                    ₹ {totalPrice + 80}
-                                                </p>
                                             </div>
                                         </div>
-                                        <button onClick={handlePayment} className="ptc cbp">Proceed to pay ₹ {totalPrice + 80}</button>
+                                    </div>
+                                    <div className="checkout-right">
 
                                     </div>
                                 </div>
                             </div>
-                            <div className="checkout-right">
+                            :
+                            <div className="checkout-box">
+                                <p className="headC">Order Placed</p>
+                                <div className="order-placed-box">
+                                    <p>
+                                        Thank you very much for shopping with us.
 
+                                    </p>
+
+                                    <p>
+                                        Arriving on 12 July
+                                    </p>
+                                </div>
+
+                                <button className="ptc cbp">View orders</button>
                             </div>
-                        </div>
-                    </div>
-                    :
-                    <div className="checkout-box">
-                        <p className="headC">Order Placed</p>
-                        <div className="order-placed-box">
-                            <p>
-                                Thank you very much for shopping with us.
-
-                            </p>
-
-                            <p>
-                                Arriving on 12 July
-                            </p>
-                        </div>
-
-                        <button className="ptc cbp">View orders</button>
-                    </div>
+                    )
             }
         </div>
     );

@@ -50,6 +50,9 @@ function Nav() {
                         <Link to='/shop' >
                             <p onClick={closeNav} className="menu-item"> Shop </p>
                         </Link>
+                        <Link to='/orders' >
+                            <p onClick={closeNav} className="menu-item"> Orders </p>
+                        </Link>
                         <Link to='/transformations' >
                             <p onClick={closeNav} className="menu-item"> Transformations </p>
                         </Link>

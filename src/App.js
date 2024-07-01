@@ -14,6 +14,7 @@ import Checkout from './components/checkout/checkout';
 import { auth, firestore } from './firebase';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useEffect, useState } from 'react';
+import Orders from './components/orders/orders';
 
 function App() {
 
@@ -61,6 +62,7 @@ function App() {
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signup' element={<Signup />} />
+        <Route path='/orders' element={<Orders />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
         <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />

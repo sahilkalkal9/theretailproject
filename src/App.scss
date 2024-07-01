@@ -1487,3 +1487,47 @@ h3 {
   flex-direction: column;
   gap: 1cm;
 }
+
+.order {
+  display: flex;
+  gap: .3cm;
+  align-items: flex-start;
+  background-color: whitesmoke;
+  padding: .3cm;
+  border-radius: 10px;
+}
+
+.order-left {
+  width: 5cm;
+  height: auto;
+}
+
+.oImg {
+  width: 100%;
+}
+
+.order-name {
+  font-size: 20px;
+}
+
+.order-text {
+  font-size: 14px;
+}
+
+.orders-lower {
+  margin-top: 1cm;
+  display: flex;
+  flex-direction: column;
+  gap: .3cm;
+}
+
+.order-arriving {
+  font-size: 18px;
+  margin-top: 1cm;
+  width: fit-content;
+  border: 1px solid rgb(199, 199, 199);
+  padding: .1cm .3cm;
+  color: black;
+  border-radius: 10px;
+  background-color: rgb(199, 199, 199);
+}
