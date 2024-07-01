@@ -65,7 +65,7 @@ const Signup = () => {
                         })
                         .catch(error => {
                             console.error("SMS not sent", error);
-                            setNotification('SMS not sent. Please try again.');
+                            setNotification(`SMS not sent. Error : ${error}`);
                         });
                 }
             })
