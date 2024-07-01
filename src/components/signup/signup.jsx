@@ -20,9 +20,9 @@ const Signup = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
-            'size': 'invisible',
-            'callback': (response) => {
+        const recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+            size: 'invisible',
+            callback: (response) => {
                 handleSendOtp();
             },
             'expired-callback': () => {
@@ -30,14 +30,15 @@ const Signup = () => {
             }
         });
 
-        window.recaptchaVerifier.render().then(function (widgetId) {
-            window.recaptchaWidgetId = widgetId;
-        }).catch(error => {
-            console.error("reCAPTCHA rendering failed", error);
-        });
+        recaptchaVerifier.render()
+            .then(widgetId => {
+                window.recaptchaVerifier = recaptchaVerifier;
+                window.recaptchaWidgetId = widgetId;
+            })
+            .catch(error => {
+                console.error("reCAPTCHA rendering failed", error);
+            });
     }, []);
-
-
 
     const handleSendOtp = (e) => {
         e.preventDefault();
@@ -122,8 +123,6 @@ const Signup = () => {
         }
     };
 
-
-
     return (
         <div className='SignUp'>
             <h2>Signup</h2>
@@ -192,22 +191,6 @@ const Signup = () => {
                         className='regInp no-arrows'
                         required
                     />
-
-
-                    {/* <input
-                        type="text"
-                        value={district}
-                        className="regInp"
-                        placeholder='District'
-                        readOnly
-                    />
-                    <input
-                        type="text"
-                        value={stateName}
-                        className="regInp"
-                        placeholder='State'
-                        readOnly
-                    /> */}
                     <input
                         type="submit"
                         className='regInp subInp'
