@@ -1480,3 +1480,10 @@ h3 {
 .cbp {
   margin-top: 1cm;
 }
+
+.order-placed-box {
+  display: flex;
+  margin-top: 1cm;
+  flex-direction: column;
+  gap: 1cm;
+}
