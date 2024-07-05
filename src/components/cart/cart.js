@@ -21,7 +21,7 @@ function Cart() {
 
     useEffect(() => {
         setTotalPrice(calculateTotalPrice())
-    }, [selectedProducts])
+    }, [cart])
 
     const handleCheckboxChange = (product) => {
         setSelectedProducts((prevSelectedProducts) => {
@@ -86,7 +86,7 @@ function Cart() {
     }
 
     const calculateTotalPrice = () => {
-        return selectedProducts.reduce((acc, product) => acc + (product.price * product.quantity), 0)
+        return cart && cart.reduce((acc, product) => acc + (product.price * product.quantity), 0)
     }
 
     const deleteProd = (c) => {
@@ -104,7 +104,7 @@ function Cart() {
 
     const proceedToCheckout = () => {
         const checkoutRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("checkout")
-        selectedProducts.forEach(product => {
+        cart && cart.forEach(product => {
             checkoutRef.doc(product.oid).set(product)
         })
         navigate("/checkout")
@@ -131,14 +131,14 @@ function Cart() {
                                     : (
                                         cart && cart.map((c) => (
                                             <div className="cart-product" key={c.oid}>
-                                                <div className="cart-product-zero">
+                                                {/* <div className="cart-product-zero">
                                                     <input
                                                         type="checkbox"
                                                         className="cart-checkbox"
                                                         onChange={() => handleCheckboxChange(c)}
                                                         checked={selectedProducts.some(p => p.oid === c.oid)}
                                                     />
-                                                </div>
+                                                </div> */}
                                                 <div className="cart-product-left">
                                                     <img className="cart-product-img" src={require(`../shop/${c.image}`)} alt={c.name} />
                                                 </div>
@@ -181,7 +181,7 @@ function Cart() {
                                         <div className="cart-checkout-box">
                                             <p className="shipText">*Shipping charges will be added on checkout*</p>
                                             <p className="cart-checkout-text scarttext">
-                                                {selectedProducts.length} items selected
+                                                {cart && cart.length} items total
                                             </p>
                                             <div className="total-box">
                                                 <p className="total-text">
@@ -194,7 +194,7 @@ function Cart() {
 
                                         </div>
                                         {
-                                            selectedProducts.length > 0 ? <button className="ptc" onClick={proceedToCheckout} >Proceed to checkout</button> : null
+                                            cart && cart.length > 0 ? <button className="ptc" onClick={proceedToCheckout} >Proceed to checkout</button> : null
                                         }
                                     </div>
                                 )
