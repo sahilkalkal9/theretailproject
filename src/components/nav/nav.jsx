@@ -25,7 +25,13 @@ function Nav() {
         return () => unsubscribe();
     }, []);
 
-    const [nitems, setnitems] = useState(cart && cart.length)
+    const [nitems, setnitems] = useState(0)
+
+    useEffect(() => {
+        if (cart) {
+            setnitems(cart.length)
+        }
+    }, [cart])
 
     const isActive = (path) => location.pathname === path;
 
@@ -94,7 +100,7 @@ function Nav() {
                         <Link className="cartLink" to='/cart' >
                             <div>
                                 <img className="menu-item-img  carti" src={ccart} alt="cart" />
-                                <p className='cnum' >0</p>
+                                <p className='cnum' >{nitems}</p>
                             </div>
                         </Link>
                         {currentUser ? (
