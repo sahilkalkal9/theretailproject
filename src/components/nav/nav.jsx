@@ -1,17 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { auth } from "../../firebase";
+import { auth, firestore } from "../../firebase";
 import logo from "./pawb.png";
 import fullLogo from "./full-logo.jpg";
-import cart from "./shopping-bag.png";
+import ccart from "./shopping-bag.png";
 import user from "./user.png";
 import close from "./close.png";
 import "../../App.scss";
+import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 
 function Nav() {
     const location = useLocation();
     const [currentUser, setCurrentUser] = useState(null);
+
+    const cartRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("cart")
+    const [cart] = useCollectionData(cartRef)
+
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -19,6 +24,8 @@ function Nav() {
         });
         return () => unsubscribe();
     }, []);
+
+    const [nitems, setnitems] = useState(cart && cart.length)
 
     const isActive = (path) => location.pathname === path;
 
@@ -85,7 +92,10 @@ function Nav() {
                     </div>
                     <div className="menu">
                         <Link className="cartLink" to='/cart' >
-                            <img className="menu-item-img " src={cart} alt="cart" />
+                            <div>
+                                <img className="menu-item-img  carti" src={ccart} alt="cart" />
+                                <p className='cnum' >0</p>
+                            </div>
                         </Link>
                         {currentUser ? (
                             <Link className="cartLink" to='/profile' >

@@ -1531,3 +1531,18 @@ h3 {
   border-radius: 10px;
   background-color: rgb(199, 199, 199);
 }
+.carti{
+  position: relative;
+}
+.cnum {
+  position: absolute;
+  background-color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 0cm .05cm;
+  font-size: 11px;
+  // aspect-ratio: 1;
+  border-radius: 10000px;
+  margin-top: -.9cm;
+  margin-left: .4cm;
+}

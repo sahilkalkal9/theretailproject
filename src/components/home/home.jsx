@@ -93,7 +93,7 @@ function Home() {
                                 <img src={walk} alt="product image" className="fprodimg" />
                                 <div className="fprodlower">
                                     <p className="fprodname">Leash and Collar</p>
-                                    <p className="fprodprice">$35</p>
+                                    <p className="fprodprice">₹350</p>
                                     <button className="fprodcart">Add to cart</button>
                                 </div>
                             </div>
@@ -101,7 +101,7 @@ function Home() {
                                 <img src={wear} alt="product image" className="fprodimg" />
                                 <div className="fprodlower">
                                     <p className="fprodname">Bandana</p>
-                                    <p className="fprodprice">$50</p>
+                                    <p className="fprodprice">₹500</p>
                                     <button className="fprodcart">Add to cart</button>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ function Home() {
                                 <img src={play} alt="product image" className="fprodimg" />
                                 <div className="fprodlower">
                                     <p className="fprodname">Soft Bone Toy</p>
-                                    <p className="fprodprice">$30</p>
+                                    <p className="fprodprice">₹300</p>
                                     <button className="fprodcart">Add to cart</button>
                                 </div>
                             </div>
@@ -117,7 +117,7 @@ function Home() {
                                 <img src={sleep} alt="product image" className="fprodimg" />
                                 <div className="fprodlower">
                                     <p className="fprodname">Comfortable Warm Dog Bed</p>
-                                    <p className="fprodprice">$60</p>
+                                    <p className="fprodprice">₹600</p>
                                     <button className="fprodcart">Add to cart</button>
                                 </div>
                             </div>
