@@ -10,7 +10,7 @@ function Story() {
                         <img className="simg" src={simgg} />
                     </div>
                     <div className="story-right">
-                        <p className="head fh">
+                        <p className="contact-head">
                             Our Story
                         </p>
                         <p className="story-content">
@@ -26,7 +26,7 @@ function Story() {
                         <img className="simg" src={simgg} />
                     </div>
                     <div className="story-right">
-                        <p className="head fh">
+                        <p className="contact-head">
                             Who are we ?
                         </p>
                         <p className="story-content">
