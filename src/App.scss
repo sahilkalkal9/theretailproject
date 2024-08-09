@@ -1586,32 +1586,33 @@ h3 {
   gap: 1cm;
 }
 
-.con-form{
+.con-form {
   display: flex;
   flex-direction: column;
   gap: .3cm;
 }
 
-.conInp{
+.conInp {
   padding: .3cm;
   border-radius: 10px;
   background-color: $primarycolor;
   border: 2px solid $primarycolor;
   color: $secondarycolor;
-font-size: 16px;
-  &::placeholder{
+  font-size: 16px;
+
+  &::placeholder {
     color: rgb(211, 211, 211);
 
   }
 
-  &:focus{
+  &:focus {
     border: 2px solid $secondarycolor;
     outline: none;
   }
 
 }
 
-.conMess{
+.conMess {
   padding: .3cm;
   background-color: $primarycolor;
   color: $secondarycolor;
@@ -1620,22 +1621,71 @@ font-size: 16px;
   height: 4cm;
   font-size: 16px;
 
-  &::placeholder{
+  &::placeholder {
     color: rgb(211, 211, 211);
 
   }
 
-  &:focus{
+  &:focus {
     border: 2px solid $secondarycolor;
     outline: none;
   }
 }
 
-.sendM{
+.sendM {
   border: 2px solid $primarycolor;
   background-color: $primarycolor;
   color: $secondarycolor;
   border-radius: 10px;
   padding: .3cm;
+  font-size: 16px;
+}
+
+.story-box {
+  padding: 1cm 10vw;
+}
+
+
+.fh {
+  width: fit-content;
+}
+
+.story-section {
+  display: flex;
+  gap: 1cm;
+  align-items: flex-start;
+}
+
+.story-left {
+  width: 15cm;
+  border: 1px solid red;
+}
+
+.story-content {
+  text-align: center;
+}
+
+.story-right {
+  width: 100%;
+  border: 1px solid green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5cm;
+
+}
+
+.simg {
+  width: 100%;
+  height: auto;
+  border-radius: 1000px 1000px 0px 0px;
+}
+
+.view-more{
+  background-color: $primarycolor;
+  padding: .3cm 1.2cm;
+  border-radius: 1000px;
+  border: 1px solid $primarycolor;
+  color: $secondarycolor;
   font-size: 16px;
 }

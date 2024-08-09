@@ -15,6 +15,7 @@ import { auth, firestore } from './firebase';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 import { useEffect, useState } from 'react';
 import Orders from './components/orders/orders';
+import Story from './components/story/story';
 
 function App() {
 
@@ -64,6 +65,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/our-story' element={<Story />} />
         <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
         <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
       </Routes>
