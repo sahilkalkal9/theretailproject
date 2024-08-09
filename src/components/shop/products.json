@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "Leash and collar with custom design | hand crafted",
+        "price": 300,
+        "image": "gwalk.png",
+        "class": "p1"
+    },
+    {
+        "id": 2,
+        "name": "Soft calcium bone toy of cloth",
+        "price": 200,
+        "image": "play.png",
+        "class": "p2"
+    },
+    {
+        "id": 3,
+        "name": "Dog tie hand made",
+        "price": 500,
+        "image": "wear.png",
+        "class": "p3"
+    },
+    {
+        "id": 4,
+        "name": "Dog Bed soft and hand made",
+        "price": 500,
+        "image": "bed.png",
+        "class": "p4"
+    }
+]
