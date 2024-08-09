@@ -1556,7 +1556,7 @@ h3 {
 }
 
 .contact-head {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -1693,6 +1693,48 @@ h3 {
   font-size: 16px;
 }
 
-.rf{
+.rf {
   flex-direction: row-reverse;
+}
+
+.cf{
+  flex-direction: column;
+  align-items: center;
+  gap: 2cm;
+}
+
+.wwdbox {
+  display: flex;
+  justify-content: center;
+  gap: .5cm;
+  flex-wrap: wrap;
+}
+
+.wwdimg {
+  width: 2cm;
+  height: auto;
+}
+
+.wwd{
+  width: 6cm;
+  display: flex;
+  flex-direction: column;
+  gap: .2cm;
+  align-items: center;
+  // border: 1px solid black;
+  padding: .3cm;
+ 
+}
+
+.wwdhead{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: .1cm;
+}
+
+.wwdtext{
+  text-align: center;
+  font-size: 14px;
+  
 }
