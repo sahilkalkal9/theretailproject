@@ -2080,8 +2080,10 @@ h3 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: .05cm .1cm;
+    padding: .065cm .1cm;
     cursor: pointer;
+    border-radius: 0px 5px 0px 0px;
+    background-color: rgb(238, 238, 238);
   }
 
   .addImg {
