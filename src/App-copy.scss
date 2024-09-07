@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito Sans";
+  }
+  
+  $primarycolor: #486455;
+  $secondarycolor : #e4af47;
+  
+  
+  
+  // Home Page Starts Here
+  
+  .home-upper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5cm 10vw 2cm 10vw;
+    gap: 1cm;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: $primarycolor;
+  
+      z-index: -1;
+    }
+  
+  
+  }
+  
+  
+  .husky {
+    width: 10cm;
+  }
+  
+  .brand-name-box {
+    display: flex;
+    flex-direction: column;
+    // gap: .1cm;
+  }
+  
+  .brand-name {
+    font-size: 30px;
+    font-family: "Poppins";
+    font-weight: 600;
+    color: rgba(197, 197, 197, 0.712);
+  }
+  
+  .re {
+    color: $secondarycolor;
+    font-family: "Poppins";
+  }
+  
+  .tagline {
+    font-size: 44px;
+    line-height: 1.3cm;
+    color: white;
+    margin-top: -.2cm;
+    // font-weight: 600;
+    font-family: "Platypi";
+  }
+  
+  .home-buttons {
+    margin-top: 1cm;
+  }
+  
+  .hb {
+    padding: .3cm 1cm;
+    font-size: 18px;
+    border: none;
+    background-color: $secondarycolor;
+    color: rgb(0, 0, 0);
+    border-radius: 20000px;
+    cursor: pointer;
+    transition: .2s ease;
+  
+    &:hover {
+      background-color: rgb(206, 161, 72);
+    }
+  }
+  
+  .home-lower {
+    padding: 1cm 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 2cm;
+  
+  }
+  
+  .head {
+    font-size: 26px;
+    font-weight: 600;
+  }
+  
+  .content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5cm;
+  }
+  
+  .content {
+    text-align: center;
+    font-size: 18px;
+  }
+  
+  .tag-main {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  
+  .whyc {
+    position: relative;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("whyc.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: -1;
+      opacity: .2;
+    }
+  }
+  
+  
+  .products {
+    display: flex;
+    gap: .4cm;
+    flex-wrap: wrap;
+    margin-top: .5cm;
+  }
+  
+  .product {
+    width: 6cm;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+  }
+  
+  .product-image {
+    width: 80%;
+  }
+  
+  .product-upper {
+    padding: .3cm;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(235, 235, 235);
+    background-color: rgb(245, 245, 245);
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .product-lower {
+    padding: .3cm;
+    display: flex;
+    flex-direction: column;
+  
+    gap: .1cm;
+  
+  }
+  
+  .product-caption {
+    // font-size: 18px;
+    // font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    /* Limiting to four lines */
+    text-overflow: ellipsis;
+  
+  }
+  
+  .product-buttons {
+    margin-top: .5cm;
+  }
+  
+  .product-button {
+    background-color: $secondarycolor;
+    border: none;
+    padding: .2cm 1.2cm;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  
+  .cart {
+    width: .7cm;
+    border: 1px solid rgb(207, 207, 207);
+    padding: .2cm;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s ease;
+  
+    &:hover {
+      background-color: rgb(245, 245, 245);
+    }
+  }
+  
+  .price-cart {
+    display: flex;
+    gap: .5cm;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .price {
+    font-size: 18px;
+    // font-weight: 600;
+  }
+  
+  // Home Page Ends Here
