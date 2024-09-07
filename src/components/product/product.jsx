@@ -1,8 +1,35 @@
 import "../../App.scss"
 import addImg from "./add.png"
 import minusImg from "./minus.png"
+import play from "./play.jpg"
+import bed from "./bed.png"
+import gwalk from "./gwalk.png"
+import wear from "./wear.jpg"
+import { useState } from "react"
 
 function ProductPage() {
+
+    const images = [
+        {
+            src: play
+        },
+        {
+            src: wear
+        },
+        {
+            src: bed
+        },
+        {
+            src: gwalk
+        },
+    ]
+
+    const [currentImg, setCUrrentImg] = useState(play)
+
+    const handleChangeImg = (x) => {
+        setCUrrentImg(x.src)
+    }
+
     return (
         <div className="ProductPage">
             <div className="product-page">
@@ -42,13 +69,23 @@ function ProductPage() {
 
                     <p className="product-page-category">
                         <span className="catHead">
-                            Category : 
+                            Category :
                         </span>
-                         Uncategorised
+                        Uncategorised
                     </p>
                 </div>
                 <div className="product-page-right">
+                    <div className="small-images">
+                        {
+                            images.map((i) => (
+                                <img onMouseOver={() => { handleChangeImg(i) }} className={i.src == currentImg ? "smallImg currentSmallImg" : "smallImg"} src={i.src} />
+                            ))
+                        }
+                    </div>
 
+                    <div className="currentImgBox">
+                        <img className="currImg" src={currentImg} />
+                    </div>
                 </div>
             </div>
         </div>

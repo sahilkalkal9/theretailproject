@@ -2010,7 +2010,8 @@ h3 {
 
   .product-page {
     display: flex;
-    gap: 1cm;
+    flex-direction: row-reverse;
+    gap: 1.5cm;
     align-items: flex-start;
   }
 
@@ -2024,9 +2025,12 @@ h3 {
   }
 
   .product-page-right {
-    width: 15cm;
+    width: 13cm;
     flex-shrink: 0;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+    // border: 1px solid black;
   }
 
   .product-name {
@@ -2111,5 +2115,31 @@ h3 {
     font-weight: 600;
   }
 
+  .small-images {
+    display: flex;
+    align-items: center;
+    gap: .15cm;
+    overflow-x: auto;
+  }
+
+  .smallImg {
+    width: 2cm;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 3px solid transparent;
+  }
+
+  .currentSmallImg {
+    border: 3px solid $secondarycolor;
+  }
+
+  .currentImgBox {
+    width: 100%;
+  }
+
+  .currImg {
+    width: 100%;
+  }
 
 }
