@@ -18,6 +18,7 @@ import Orders from './components/orders/orders';
 import Story from './components/story/story';
 import FAQQ from './components/faq/faq.jsx';
 import Recycle from './components/recycle/recycle.jsx';
+import ProductPage from './components/product/product.jsx';
 
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
         <Route path='/how-to-recycle' element={<Recycle />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='product' element={<ProductPage />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/login' element={<Login />} />
