@@ -2040,8 +2040,8 @@ h3 {
   }
 
   .product-price {
-    font-size: 22px;
-    color: $secondarycolor;
+    font-size: 20px;
+    color: $primarycolor;
 
   }
 
@@ -2058,8 +2058,11 @@ h3 {
   }
 
   .quant-img {
-    width: .5cm;
+    width: .4cm;
     height: auto;
+    background-color: rgb(238, 238, 238);
+    padding: 0.02cm .1cm;
+    border-radius: 0px 5px 0px 0px;
   }
 
   .product-page-quantity-box {
@@ -2071,7 +2074,7 @@ h3 {
   }
 
   .quantity-number {
-    padding: .3cm .5cm;
+    padding: .1cm .5cm;
     border-right: 1px solid rgb(177, 177, 177);
   }
 
@@ -2082,10 +2085,10 @@ h3 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: .065cm .1cm;
+    
     cursor: pointer;
     border-radius: 0px 5px 0px 0px;
-    background-color: rgb(238, 238, 238);
+    
   }
 
   .addImg {
@@ -2093,12 +2096,13 @@ h3 {
   }
 
   .product-page-add-to-cart-button {
-    background-color: $secondarycolor;
-    border: 3px solid $secondarycolor;
+    background-color: $primarycolor;
+    border: 3px solid $primarycolor;
     color: $primarycolor;
-    padding: .3cm 1cm;
+    padding: .1cm 1cm;
     font-size: 16px;
     border-radius: 5px;
+    color: $secondarycolor;
     height: 100%;
     cursor: pointer;
   }
