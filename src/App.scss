@@ -2004,6 +2004,13 @@ h3 {
     color: white;
 
   }
+
+  #dostNav {
+    cursor: pointer;
+    display: none;
+  }
+
+
 }
 
 .ProductPage {
@@ -2085,10 +2092,10 @@ h3 {
     align-items: center;
     justify-content: center;
     height: 100%;
-    
+
     cursor: pointer;
     border-radius: 0px 5px 0px 0px;
-    
+
   }
 
   .addImg {
@@ -2176,6 +2183,21 @@ h3 {
     }
   }
 }
+
+
+@media only screen and (max-width : 800px) {
+  .NavNew {
+    #dostNav {
+      display: flex;
+    }
+
+    .new-nav-lower {
+      display: none;
+    }
+  }
+}
+
+
 
 @media only screen and (max-width : 700px) {
   .ProductPage {

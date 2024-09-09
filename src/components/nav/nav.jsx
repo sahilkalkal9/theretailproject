@@ -8,6 +8,7 @@ import user from "./user.png";
 import simg from "./sig.png"
 import close from "./close.png";
 import "../../App.scss";
+import dots from "./dots.png"
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 function Nav() {
@@ -151,6 +152,7 @@ function Nav() {
                                     <p onClick={closeNav} className="menu-item login-button mainL"> Login </p>
                                 </Link>
                             )}
+                            <img className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
                         </div>
                     </div>
                 </div>
