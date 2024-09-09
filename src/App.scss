@@ -524,8 +524,10 @@ html {
 .overlay-box {
   width: 6cm;
   padding: 1cm 1.5cm;
-  left: 0;
-  height: 100%;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
   background-color: white;
 }
 
@@ -544,8 +546,9 @@ html {
   position: fixed;
   inset: 0;
   z-index: 1;
-  width: 8cm;
+  width: 100%;
   backdrop-filter: blur(10px);
+  border: 2px solid red;
 
 }
 
@@ -2169,7 +2172,7 @@ h3 {
     width: calc(100% - 10vw);
 
     .product-page {
-      width: calc(100% - 10vw);
+      width: 100%;
 
       flex-direction: column-reverse;
       gap: .5cm;
@@ -2192,6 +2195,9 @@ h3 {
     }
 
     .new-nav-lower {
+      display: none;
+    }
+    #navLoginButton{
       display: none;
     }
   }
