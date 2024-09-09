@@ -2162,6 +2162,26 @@ h3 {
     width: 100%;
   }
 
+  .imgButtonsProdPage {
+    position: relative;
+    z-index: 10;
+    // margin-top: -.8cm;
+    bottom: 0;
+    // padding: .2cm;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    gap: .5cm;
+
+    right: 0;
+
+    .lai{
+      width: 1.1cm;
+      cursor: pointer;
+    }
+
+  }
+
 }
 
 .bottom-nav {

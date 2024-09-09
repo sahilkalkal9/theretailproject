@@ -5,6 +5,8 @@ import play from "./play.jpg"
 import bed from "./bed.png"
 import gwalk from "./gwalk.png"
 import wear from "./wear.jpg"
+import lai from "./lai.png"
+import rai from "./rai.png"
 import { useState } from "react"
 
 function ProductPage() {
@@ -85,10 +87,14 @@ function ProductPage() {
 
                     <div className="currentImgBox">
                         <img className="currImg" src={currentImg} />
+                        <div className="imgButtonsProdPage">
+                            <img className="lai" src={lai} />
+                            <img className="lai" src={rai} />
+                        </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     )
 }

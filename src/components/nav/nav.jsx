@@ -184,15 +184,9 @@ function Nav() {
                                         <p className='cnum'>{nitems}</p>
                                     </div>
                                 </Link>
-                                {currentUser ? (
-                                    <Link className="cartLink" to='/profile' >
-                                        <img className="menu-item-img" src={user} alt="user" />
-                                    </Link>
-                                ) : (
-                                    <Link to='/login' >
-                                        <p id='navLoginButton' onClick={closeNav} className="menu-item login-button mainL"> Login </p>
-                                    </Link>
-                                )}
+                                <Link className="cartLink" to='/profile' >
+                                    <img className="menu-item-img" src={user} alt="user" />
+                                </Link>
                                 <img onClick={openNav} className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
                             </div>
                         </div>
