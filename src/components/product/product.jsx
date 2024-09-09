@@ -27,9 +27,31 @@ function ProductPage() {
     ]
 
     const [currentImg, setCUrrentImg] = useState(play)
+    const [currentImgSet, setCUrrentImgSet] = useState(images[0])
+
+    // console.log(currentImgSet)
 
     const handleChangeImg = (x) => {
         setCUrrentImg(x.src)
+        setCUrrentImgSet(x)
+
+        console.log(currentImgSet)
+
+
+    }
+
+    const handleNextImg = () => {
+        const currentIndex = images.findIndex(img => img.src === currentImg);
+        const nextIndex = (currentIndex + 1) % images.length;
+        setCUrrentImg(images[nextIndex].src);
+        setCUrrentImgSet(images[nextIndex]);
+    }
+
+    const handlePrevImg = () => {
+        const currentIndex = images.findIndex(img => img.src === currentImg);
+        const prevIndex = (currentIndex - 1 + images.length) % images.length;
+        setCUrrentImg(images[prevIndex].src);
+        setCUrrentImgSet(images[prevIndex]);
     }
 
     return (
@@ -88,8 +110,8 @@ function ProductPage() {
                     <div className="currentImgBox">
                         <img className="currImg" src={currentImg} />
                         <div className="imgButtonsProdPage">
-                            <img className="lai" src={lai} />
-                            <img className="lai" src={rai} />
+                            <img onClick={() => { handlePrevImg(currentImgSet) }} className="lai" src={lai} />
+                            <img onClick={() => { handleNextImg(currentImgSet) }} className="lai" src={rai} />
                         </div>
                     </div>
                 </div>
