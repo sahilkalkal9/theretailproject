@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.scss';
 import Home from './components/home/home';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Shop from './components/shop/shop';
 import Cart from './components/cart/cart';
 import Blogs from './components/blogs/blogs';
@@ -19,6 +19,10 @@ import Story from './components/story/story';
 import FAQQ from './components/faq/faq.jsx';
 import Recycle from './components/recycle/recycle.jsx';
 import ProductPage from './components/product/product.jsx';
+import store from "./store.png"
+import menuI from "./menu.png"
+import cart from "./sbag.png"
+import account from "./user.png"
 
 
 function App() {
@@ -76,6 +80,42 @@ function App() {
         <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
         <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
       </Routes>
+
+      <div className='bottom-nav'>
+        <Link to="/shop">
+          <div className='bottom-nav-item'>
+            <img className='bottom-nav-img' src={store} />
+            <p className='bottom-nav-text'>
+              Shop
+            </p>
+          </div>
+        </Link>
+        <div className='bottom-nav-item'>
+          <img className='bottom-nav-img' src={menuI} />
+          <p className='bottom-nav-text'>
+            Menu
+          </p>
+        </div>
+        <Link to="/profile">
+          <div className='bottom-nav-item'>
+            <img className='bottom-nav-img' src={account} />
+            <p className='bottom-nav-text'>
+              Account
+            </p>
+          </div>
+        </Link>
+
+        <Link to="/cart" >
+          <div className='bottom-nav-item'>
+            <img className='bottom-nav-img' src={cart} />
+            <p className='bottom-nav-text'>
+              Cart
+            </p>
+          </div>
+        </Link>
+
+
+      </div>
     </div>
   );
 }

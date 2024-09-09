@@ -278,86 +278,93 @@ function Profile({ userData, setUserData }) {
             </div>
 
             <div className="Profile">
-                <div className="profile-lower">
-                    <div className="signout-box">
-                        <p className="signout" onClick={signOut}>
-                            Sign Out
-                        </p>
-                    </div>
-                    {auth.currentUser ? (
-                        <div className="profile-box">
-                            <div className="user-box">
-                                <div className="ub-head">
-                                    <h3>Pet details</h3>
-                                    <p className="edit" onClick={openPetEdit}>
-                                        Edit
+                {
+                    auth.currentUser ?
+                        (
+                            <div className="profile-lower">
+                                <div className="signout-box">
+                                    <p className="signout" onClick={signOut}>
+                                        Sign Out
                                     </p>
                                 </div>
-                                <div className="user-dets">
-                                    <div className="user-det">
-                                        <p className="user-det-head">Name</p>
-                                        <p className="user-det-text">{userData.petname}</p>
+                                {auth.currentUser ? (
+                                    <div className="profile-box">
+                                        <div className="user-box">
+                                            <div className="ub-head">
+                                                <h3>Pet details</h3>
+                                                <p className="edit" onClick={openPetEdit}>
+                                                    Edit
+                                                </p>
+                                            </div>
+                                            <div className="user-dets">
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Name</p>
+                                                    <p className="user-det-text">{userData.petname}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">DOB</p>
+                                                    <p className="user-det-text">{userData.petdob}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Breed</p>
+                                                    <p className="user-det-text">{userData.petbreed}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Gender</p>
+                                                    <p className="user-det-text">{userData.petgender}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Age</p>
+                                                    <p className="user-det-text">
+                                                        {userData.petage
+                                                            ? `${userData.petage.years} years ${userData.petage.months} months`
+                                                            : "Age not available"}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="user-box">
+                                            <div className="ub-head">
+                                                <h3>Your details</h3>
+                                                <p onClick={openUserEdit} className="edit">
+                                                    Edit
+                                                </p>
+                                            </div>
+                                            <div className="user-dets">
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Name</p>
+                                                    <p className="user-det-text">{userData.username}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Email</p>
+                                                    <p className="user-det-text">{userData.email}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Mobile Number</p>
+                                                    <p className="user-det-text">{userData.phone}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Address</p>
+                                                    <p className="user-det-text">{userData.address}</p>
+                                                </div>
+                                                <div className="user-det">
+                                                    <p className="user-det-head">Pincode</p>
+                                                    <p className="user-det-text">{userData.pincode}</p>
+                                                    <p className="pinData">
+                                                        {userData.district}, {userData.state}
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">DOB</p>
-                                        <p className="user-det-text">{userData.petdob}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Breed</p>
-                                        <p className="user-det-text">{userData.petbreed}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Gender</p>
-                                        <p className="user-det-text">{userData.petgender}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Age</p>
-                                        <p className="user-det-text">
-                                            {userData.petage
-                                                ? `${userData.petage.years} years ${userData.petage.months} months`
-                                                : "Age not available"}
-                                        </p>
-                                    </div>
-                                </div>
+                                ) : (
+                                    <p>Loading....</p>
+                                )}
                             </div>
-                            <div className="user-box">
-                                <div className="ub-head">
-                                    <h3>Your details</h3>
-                                    <p onClick={openUserEdit} className="edit">
-                                        Edit
-                                    </p>
-                                </div>
-                                <div className="user-dets">
-                                    <div className="user-det">
-                                        <p className="user-det-head">Name</p>
-                                        <p className="user-det-text">{userData.username}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Email</p>
-                                        <p className="user-det-text">{userData.email}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Mobile Number</p>
-                                        <p className="user-det-text">{userData.phone}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Address</p>
-                                        <p className="user-det-text">{userData.address}</p>
-                                    </div>
-                                    <div className="user-det">
-                                        <p className="user-det-head">Pincode</p>
-                                        <p className="user-det-text">{userData.pincode}</p>
-                                        <p className="pinData">
-                                            {userData.district}, {userData.state}
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    ) : (
-                        <p>Loading....</p>
-                    )}
-                </div>
+                        )
+                        :
+                        <p>PLease Login or SignUp</p>
+              }
             </div>
         </>
     );
