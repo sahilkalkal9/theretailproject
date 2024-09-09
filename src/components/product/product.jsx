@@ -44,14 +44,14 @@ function ProductPage() {
         const currentIndex = images.findIndex(img => img.src === currentImg);
         const nextIndex = (currentIndex + 1) % images.length;
         setCUrrentImg(images[nextIndex].src);
-        setCUrrentImgSet(images[nextIndex]);
+        // setCUrrentImgSet(images[nextIndex]);
     }
 
     const handlePrevImg = () => {
         const currentIndex = images.findIndex(img => img.src === currentImg);
         const prevIndex = (currentIndex - 1 + images.length) % images.length;
         setCUrrentImg(images[prevIndex].src);
-        setCUrrentImgSet(images[prevIndex]);
+        // setCUrrentImgSet(images[prevIndex]);
     }
 
     return (
