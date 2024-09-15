@@ -34,9 +34,7 @@ function ProductPage() {
     const handleChangeImg = (x) => {
         setCUrrentImg(x.src)
         setCUrrentImgSet(x)
-        console.log(currentImgSet)
-
-
+        // console.log(currentImgSet)
     }
 
     const handleNextImg = () => {
