@@ -51,6 +51,8 @@ function ProductPage() {
         // setCUrrentImgSet(images[prevIndex]);
     }
 
+    
+
     return (
         <div className="ProductPage">
             <div className="product-page">
