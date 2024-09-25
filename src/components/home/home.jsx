@@ -30,7 +30,7 @@ function Home() {
             setCurrentId(prevId => {
                 const currentIndex = slides.indexOf(prevId);
                 const nextIndex = (currentIndex + 1) % slides.length;
-                return slides[nextIndex]; 
+                return slides[nextIndex];
             });
         }, 5000);
 
@@ -80,62 +80,62 @@ function Home() {
 
     return (
         <div className="Home">
+            <div className="slider-box">
+                <img onClick={handleLeftSlide} src={back} alt="" className="leftslideimg limgs" />
+                <div id="firstSlide" className="first-slide">
+                    <p className="fslide-head">
+                        Eco Fashion for Pets 1
+                    </p>
+                    <p className="fslide-tag">
+                        Get woodenly artisan chair now & get special offer
+                    </p>
 
-            <div className="home-lower">
-                <div className="slider-box">
-                    <img onClick={handleLeftSlide} src={back} alt="" className="leftslideimg limgs" />
-                    <div id="firstSlide" className="first-slide">
-                        <p className="fslide-head">
-                            Eco Fashion for Pets 1
-                        </p>
-                        <p className="fslide-tag">
-                            Get woodenly artisan chair now & get special offer
-                        </p>
-
-                        <button className="grab">
-                            Grab Now
-                        </button>
-                    </div>
-                    <div id="secondSlide" className="first-slide">
-                        <p className="fslide-head">
-                            Eco Fashion for Pets 2
-                        </p>
-                        <p className="fslide-tag">
-                            Get woodenly artisan chair now & get special offer
-                        </p>
-
-                        <button className="grab">
-                            Grab Now
-                        </button>
-                    </div>
-                    <div id="thirdSlide" className="first-slide">
-                        <p className="fslide-head">
-                            Eco Fashion for Pets 3
-                        </p>
-                        <p className="fslide-tag">
-                            Get woodenly artisan chair now & get special offer
-                        </p>
-
-                        <button className="grab">
-                            Grab Now
-                        </button>
-                    </div>
-                    <div id="fourthSlide" className="first-slide">
-                        <p className="fslide-head">
-                            Eco Fashion for Pets 4
-                        </p>
-                        <p className="fslide-tag">
-                            Get woodenly artisan chair now & get special offer
-                        </p>
-
-                        <button className="grab">
-                            Grab Now
-                        </button>
-                    </div>
-
-                    <img onClick={handleRightSlide} src={back} alt="" className="leftslideimg rimgs" />
-
+                    <button className="grab">
+                        Grab Now
+                    </button>
                 </div>
+                <div id="secondSlide" className="first-slide">
+                    <p className="fslide-head">
+                        Eco Fashion for Pets 2
+                    </p>
+                    <p className="fslide-tag">
+                        Get woodenly artisan chair now & get special offer
+                    </p>
+
+                    <button className="grab">
+                        Grab Now
+                    </button>
+                </div>
+                <div id="thirdSlide" className="first-slide">
+                    <p className="fslide-head">
+                        Eco Fashion for Pets 3
+                    </p>
+                    <p className="fslide-tag">
+                        Get woodenly artisan chair now & get special offer
+                    </p>
+
+                    <button className="grab">
+                        Grab Now
+                    </button>
+                </div>
+                <div id="fourthSlide" className="first-slide">
+                    <p className="fslide-head">
+                        Eco Fashion for Pets 4
+                    </p>
+                    <p className="fslide-tag">
+                        Get woodenly artisan chair now & get special offer
+                    </p>
+
+                    <button className="grab">
+                        Grab Now
+                    </button>
+                </div>
+
+                <img onClick={handleRightSlide} src={back} alt="" className="leftslideimg rimgs" />
+
+            </div>
+            <div className="home-lower">
+
                 {/* <div className="content-div">
                     <marquee className="marquee" direction="left" scrollamount="5" >
                         <div className="features">
@@ -150,7 +150,7 @@ function Home() {
 
                 <div className="content-div">
                     <p className="head" >Our Features</p>
-                    <marquee className="marqueea" direction="left" scrollamount="10" >
+                    {/* <marquee className="marqueea" direction="left" scrollamount="10" > */}
                         <div className="featuresM ">
 
                             <div className="featureM">
@@ -175,7 +175,7 @@ function Home() {
 
 
                         </div>
-                    </marquee>
+                    {/* </marquee> */}
 
                 </div>
 
@@ -209,36 +209,76 @@ function Home() {
 
 
                         <div className="fproducts">
-                            <div className="fprod">
-                                <img src={walk} alt="product image" className="fprodimg" />
-                                <div className="fprodlower">
-                                    <p className="fprodname">Leash and Collar</p>
-                                    <p className="fprodprice">₹350</p>
-                                    <button className="fprodcart">Add to cart</button>
+                            <div className="product">
+                                <img className="product-img" src={gwalk} />
+
+                                <div className="prod-lower">
+                                    <p className="product-name">
+                                        Collars and leash for dogs
+                                    </p>
+
+                                    <div className="price-div">
+                                        <p className="price">
+                                            ₹ 600
+                                        </p>
+                                        <p className="cut-price">
+                                            ₹ 1300
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="fprod">
-                                <img src={wear} alt="product image" className="fprodimg" />
-                                <div className="fprodlower">
-                                    <p className="fprodname">Bandana</p>
-                                    <p className="fprodprice">₹500</p>
-                                    <button className="fprodcart">Add to cart</button>
+                            <div className="product">
+                                <img className="product-img" src={gwalk} />
+
+                                <div className="prod-lower">
+                                    <p className="product-name">
+                                        Collars and leash for dogs
+                                    </p>
+
+                                    <div className="price-div">
+                                        <p className="price">
+                                            ₹ 600
+                                        </p>
+                                        <p className="cut-price">
+                                            ₹ 1300
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="fprod">
-                                <img src={play} alt="product image" className="fprodimg" />
-                                <div className="fprodlower">
-                                    <p className="fprodname">Soft Bone Toy</p>
-                                    <p className="fprodprice">₹300</p>
-                                    <button className="fprodcart">Add to cart</button>
+                            <div className="product">
+                                <img className="product-img" src={gwalk} />
+
+                                <div className="prod-lower">
+                                    <p className="product-name">
+                                        Collars and leash for dogs
+                                    </p>
+
+                                    <div className="price-div">
+                                        <p className="price">
+                                            ₹ 600
+                                        </p>
+                                        <p className="cut-price">
+                                            ₹ 1300
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="fprod">
-                                <img src={sleep} alt="product image" className="fprodimg" />
-                                <div className="fprodlower">
-                                    <p className="fprodname">Comfortable Warm Dog Bed</p>
-                                    <p className="fprodprice">₹600</p>
-                                    <button className="fprodcart">Add to cart</button>
+                            <div className="product">
+                                <img className="product-img" src={gwalk} />
+
+                                <div className="prod-lower">
+                                    <p className="product-name">
+                                        Collars and leash for dogs
+                                    </p>
+
+                                    <div className="price-div">
+                                        <p className="price">
+                                            ₹ 600
+                                        </p>
+                                        <p className="cut-price">
+                                            ₹ 1300
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 

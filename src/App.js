@@ -28,7 +28,7 @@ import account from "./user.png"
 function App() {
 
   const usersRef = firestore.collection("users");
-  const [users] = useCollectionData(usersRef);
+
 
   const [userData, setUserData] = useState({
     username: "",
@@ -71,7 +71,7 @@ function App() {
         <Route path='/how-to-recycle' element={<Recycle />} />
         <Route path='/blogs' element={<Blogs />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='product' element={<ProductPage />} />
+        <Route path='/product' element={<ProductPage />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/login' element={<Login />} />

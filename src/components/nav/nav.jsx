@@ -177,7 +177,7 @@ function Nav() {
                         </div>
                         <div className="new-nav-icons">
                             <div className="menu">
-                                <img className="menu-item-img carti simgg" src={simg} alt="cart" />
+                                {/* <img className="menu-item-img carti simgg" src={simg} alt="cart" /> */}
                                 <Link className="cartLink" to='/cart' >
                                     <div>
                                         <img className="menu-item-img carti" src={ccart} alt="cart" />

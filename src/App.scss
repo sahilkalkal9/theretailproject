@@ -953,7 +953,7 @@ html {
   margin-top: .5cm;
   column-count: 2;
   justify-content: center;
-  column-gap: .3cm;
+  column-gap: .1cm;
 
 
   // border: 1px solid black;
@@ -967,6 +967,7 @@ html {
 .collection {
   // border: 1px solid black;
   padding: .3cm;
+  
 }
 
 .fc {
@@ -974,6 +975,7 @@ html {
   height: 8cm;
   // background-color: rgb(231, 231, 231);
   position: relative;
+  border-radius: 10px;
 
   &::before {
     content: "";
@@ -985,6 +987,7 @@ html {
     background-position: center;
     filter: brightness(70%);
     z-index: -1;
+    border-radius: 10px;
   }
 
 }
@@ -993,7 +996,8 @@ html {
   width: 10cm;
   height: 5cm;
   // background-color: rgb(231, 231, 231);
-  margin-top: .3cm;
+  margin-top: .1cm;
+  border-radius: 10px;
   position: relative;
 
   &::before {
@@ -1005,6 +1009,7 @@ html {
     background-repeat: no-repeat;
     background-position: center;
     filter: brightness(80%);
+    border-radius: 10px;
     z-index: -1;
   }
 
@@ -1027,13 +1032,14 @@ html {
     background-position: center;
     filter: brightness(70%);
     z-index: -1;
+    border-radius: 10px;
   }
 
 
 }
 
 .foc {
-  margin-top: .3cm;
+  margin-top: .1cm;
   width: 10cm;
   height: 8cm;
   // background-color: rgb(231, 231, 231);
@@ -1049,6 +1055,7 @@ html {
     background-position: center;
     filter: brightness(80%);
     z-index: -1;
+    border-radius: 10px;
   }
 
 }
@@ -1071,13 +1078,13 @@ html {
 }
 
 .fprod {
-  width: 6cm;
-  background-color: rgb(238, 238, 238);
+  width: 5cm;
+  // background-color: rgb(238, 238, 238);
   padding: .5cm;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: .2cm;
+  gap: .5cm;
   justify-content: space-between;
 
 }
@@ -1089,23 +1096,38 @@ html {
 .fprodimg {
   width: 100%;
   height: auto;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.price-div {
+  display: flex;
+  gap: .3cm;
+  align-items: center;
 }
 
 .fprodname {
-  font-weight: 600;
-  font-size: 18px;
-  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  // text-align: center;
 }
 
 .fprodprice {
-  font-size: 17px;
+  font-size: 1rem;
+}
+
+.cut-price{
+  font-size: .8rem;
+  color: grey;
+  text-decoration: line-through;
 }
 
 .fprodlower {
   display: flex;
   flex-direction: column;
   gap: .1cm;
-  align-items: center;
+  // align-items: center;
 }
 
 
@@ -1117,6 +1139,7 @@ html {
   cursor: pointer;
   color: rgb(255, 255, 255);
   border-radius: 10px;
+  
 }
 
 .gramMaim {
@@ -1155,7 +1178,7 @@ html {
 .featuresM {
   display: flex;
   justify-content: center;
-  gap: .5cm;
+  gap: 1cm;
   margin-top: .5cm;
 }
 
@@ -1163,12 +1186,12 @@ html {
   // border: 1px solid black;
   display: flex;
   justify-content: center;
-  width: 4.5cm;
-  height: 4.5cm;
+  width:5cm;
+  height:5cm;
   flex-direction: column;
   align-items: center;
   gap: .2cm;
-  padding: .5cm;
+  padding: 1cm;
   border-radius: 100000px;
   background-color: $primarycolor;
 
@@ -1931,6 +1954,8 @@ h3 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  // aspect-ratio: 16/9;
+  // height: 100vh;
   position: relative;
 
 }
@@ -2175,7 +2200,7 @@ h3 {
 
     right: 0;
 
-    .lai{
+    .lai {
       width: .8cm;
       cursor: pointer;
     }
@@ -2221,6 +2246,70 @@ h3 {
 
 
 }
+
+.product {
+  width: 5cm;
+  // border: 1px solid black;
+  border: none;
+  padding: .3cm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3cm;
+  cursor: pointer;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  // background-color: #deffed;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  // box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.product-name {
+  font-size: 1rem;
+  color: $primarycolor;
+  text-align: left;
+  line-height: 1.2rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  /* Allows text wrapping */
+  color: $primarycolor;
+
+}
+
+.price-div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: .3cm;
+}
+
+.prod-lower {
+  display: flex;
+  flex-direction: column;
+  gap: .2cm;
+}
+
+.price {
+  color: $primarycolor;
+  font-weight: 500;
+}
+
+.cut-price {
+  text-decoration: line-through;
+  color: grey;
+  font-size: .875rem;
+}
+
 
 @media only screen and (max-width : 1200px) {
   .ProductPage {
@@ -2282,12 +2371,12 @@ h3 {
   }
 
 
-  
 
 
-  
 
-  
+
+
+
 
   .NavNew {
     .co-name-text {
