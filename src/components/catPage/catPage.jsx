@@ -13,7 +13,7 @@ function CatPage() {
         <div className="CatPage">
             <div className="cat-page-lower">
                 <p className="cat-head">
-                    {catid.toUpperCase()}
+                    shop/{catid}
                 </p>
                 <div className="products">
                     {
