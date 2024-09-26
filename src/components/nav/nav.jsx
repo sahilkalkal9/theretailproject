@@ -187,6 +187,7 @@ function Nav() {
                                 <Link className="cartLink" to='/profile' >
                                     <img className="menu-item-img" src={user} alt="user" />
                                 </Link>
+                                
                                 <img onClick={openNav} className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
                             </div>
                         </div>

@@ -3,6 +3,7 @@ import "../../App.scss";
 import { auth, firestore } from "../../firebase";
 import { useEffect, useState } from "react";
 import pincodes from "../signup/pincode.json";
+import Signup from "../signup/signup";
 
 function Profile({ userData, setUserData }) {
     const [isvalidpincode, setisvalidpincode] = useState(false);
@@ -363,8 +364,8 @@ function Profile({ userData, setUserData }) {
                             </div>
                         )
                         :
-                        <p>PLease Login or SignUp</p>
-              }
+                        <Signup />
+                }
             </div>
         </>
     );
