@@ -2,6 +2,7 @@
     {
         "name": "Wear",
         "image" : "catwear.png",
+        "link" : "/shop/wear",
         "products": [
             {
                 "id": 2,
@@ -36,6 +37,7 @@
     {
         "name": "Walk",
         "image" : "catwalk.png",
+        "link" : "/shop/walk",
         "products": [
             {
                 "id": 2,
@@ -70,6 +72,7 @@
     {
         "name": "Play",
         "image" : "catplay.png",
+        "link" : "/shop/play",
         "products": [
             {
                 "id": 2,
@@ -104,6 +107,7 @@
     {
         "name": "Sleep",
         "image" : "catsleep.png",
+        "link" : "/shop/sleep",
         "products": [
             {
                 "id": 2,

@@ -2319,7 +2319,12 @@ h3 {
   display: flex;
   gap: .5cm;
   justify-content: center;
-  margin-top: 1cm;
+  // margin-top: 1cm;
+  flex-wrap: wrap;
+}
+
+.shop-lower {
+  gap: 1.5cm;
 }
 
 .shop-cat {
@@ -2337,15 +2342,24 @@ h3 {
   gap: .3cm;
   cursor: pointer;
   transition: .3s ease-in-out;
+  // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-  &:hover{
-    background-color: $primarycolor;
-   
+  &:hover {
+    // background-color: $primarycolor;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
   }
 }
 
 .cat-img {
   width: 50%;
+}
+
+.shop-cat-head {
+  // border: 1px solid black;
+  font-size: 1.75rem;
+  text-align: center;
+  color: $primarycolor;
 }
 
 .cat-name {

@@ -8,6 +8,7 @@ import { auth, firestore } from "../../firebase"
 import { useState } from "react"
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import firebase from "firebase/compat/app"
+import { Link } from "react-router-dom"
 
 function Shop() {
 
@@ -106,14 +107,19 @@ function Shop() {
                 </div> */}
 
 
-                <div className="home-lower">
+                <div className="home-lower shop-lower">
+                    <p className="shop-cat-head">
+                        Categories
+                    </p>
                     <div className="shop-cats">
                         {
                             products.map((p) => (
-                                <div className="shop-cat">
-                                    <img className="cat-img" src={require(`./${p.image}`)} />
-                                    <p className="cat-name" >{p.name}</p>
-                                </div>
+                                <Link to={p.link} >
+                                    <div className="shop-cat">
+                                        <img className="cat-img" src={require(`./${p.image}`)} />
+                                        <p className="cat-name" >{p.name}</p>
+                                    </div>
+                                </Link>
                             ))
                         }
                     </div>
