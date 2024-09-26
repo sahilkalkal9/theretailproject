@@ -23,6 +23,7 @@ import store from "./store.png"
 import menuI from "./menu.png"
 import cart from "./sbag.png"
 import account from "./user.png"
+import CatPage from './components/catPage/catPage.jsx';
 
 
 function App() {
@@ -67,6 +68,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/shop/:catid' element={<CatPage />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/how-to-recycle' element={<Recycle />} />
         <Route path='/blogs' element={<Blogs />} />
