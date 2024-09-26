@@ -179,7 +179,7 @@ function Home() {
 
                 </div>
 
-                {/* <div className="content-div">
+                <div className="content-div">
                     <p className="head" >Our Collections</p>
                     <div className=" OcollectionsM ">
 
@@ -197,7 +197,7 @@ function Home() {
                         </div>
 
                     </div>
-                </div> */}
+                </div>
 
                 <div className="content-div ">
                     <p className="head" >Featured Products</p>
@@ -289,7 +289,7 @@ function Home() {
                     </div>
                 </div>
 
-                {/* <div className="content-div ">
+                <div className="content-div ">
                     <p className="head" >The Gram Fam</p>
                     <div className="content" >
                         <p className="fptext">
@@ -334,7 +334,7 @@ function Home() {
 
 
                     </div>
-                </div> */}
+                </div>
             </div>
         </div>
     )

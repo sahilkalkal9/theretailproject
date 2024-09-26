@@ -1,24 +1,138 @@
 [
-   
     {
-        "id": 2,
-        "name": "Soft calcium bone toy of cloth",
-        "price": 200,
-        "image": "gwalk.png",
-        "class": "p2"
+        "name": "Wear",
+        "image" : "catwear.png",
+        "products": [
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            }
+        ]
     },
     {
-        "id": 3,
-        "name": "Dog tie hand made",
-        "price": 500,
-        "image": "gwalk.png",
-        "class": "p3"
+        "name": "Walk",
+        "image" : "catwalk.png",
+        "products": [
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            }
+        ]
     },
     {
-        "id": 4,
-        "name": "Dog Bed soft and hand made",
-        "price": 500,
-        "image": "gwalk.png",
-        "class": "p4"
+        "name": "Play",
+        "image" : "catplay.png",
+        "products": [
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            }
+        ]
+    },
+    {
+        "name": "Sleep",
+        "image" : "catsleep.png",
+        "products": [
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            },
+            {
+                "id": 2,
+                "name": "Soft calcium bone toy of cloth",
+                "price": 200,
+                "image": "gwalk.png",
+                "class": "p2"
+            }
+        ]
     }
 ]

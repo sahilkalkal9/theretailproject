@@ -107,35 +107,15 @@ function Shop() {
 
 
                 <div className="home-lower">
-                    <div className="products">
-
-
+                    <div className="shop-cats">
                         {
                             products.map((p) => (
-
-                                <div className="product">
-                                    <img className="product-img" src={require(`./${p.image}`)} />
-
-                                    <div className="prod-lower">
-                                        <p className="product-name">
-                                           {p.name}
-                                        </p>
-
-                                        <div className="price-div">
-                                            <p className="price">
-                                                {p.price}
-                                            </p>
-                                            <p className="cut-price">
-                                                ₹1300
-                                            </p>
-                                        </div>
-                                    </div>
+                                <div className="shop-cat">
+                                    <img className="cat-img" src={require(`./${p.image}`)} />
+                                    <p className="cat-name" >{p.name}</p>
                                 </div>
                             ))
                         }
-
-
-
                     </div>
                 </div>
 

@@ -2259,6 +2259,7 @@ h3 {
   // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10px;
   // background-color: #deffed;
+  // border: 1px solid black;
 }
 
 .product-img {
@@ -2282,6 +2283,7 @@ h3 {
   white-space: normal;
   /* Allows text wrapping */
   color: $primarycolor;
+  text-align: left;
 
 }
 
@@ -2295,7 +2297,11 @@ h3 {
 .prod-lower {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
   gap: .2cm;
+  // border: 1px solid red;
+  width: 100%;
 }
 
 .price {
@@ -2307,6 +2313,44 @@ h3 {
   text-decoration: line-through;
   color: grey;
   font-size: .875rem;
+}
+
+.shop-cats {
+  display: flex;
+  gap: .5cm;
+  justify-content: center;
+  margin-top: 1cm;
+}
+
+.shop-cat {
+  width: 6cm;
+  height: auto;
+  aspect-ratio: 1/1;
+  // border: 1px solid black;
+  background-color: #d8ffea;
+  padding: .3cm;
+  border-radius: 10000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .3cm;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+
+  &:hover{
+    background-color: $primarycolor;
+   
+  }
+}
+
+.cat-img {
+  width: 50%;
+}
+
+.cat-name {
+  font-size: 1rem;
+  color: $secondarycolor;
 }
 
 
