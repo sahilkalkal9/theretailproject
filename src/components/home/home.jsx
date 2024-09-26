@@ -4,10 +4,10 @@ import wear from "./wear.png";
 import sleep from "./bed.png";
 import play from "./play.png";
 import gwalk from "./gwalk.png"
-import renewal from "./rew.png"
+import renewal from "./renewal.png"
 import hcf from "./tailoring.png"
-import csp from "./lcp.png"
-import cor from "./cor.png"
+import csp from "./scissors.png"
+import cor from "./review.png"
 import back from "./back.png"
 import { useState } from "react";
 import { useEffect } from "react";
