@@ -1193,7 +1193,7 @@ html {
   padding: 1cm;
   border-radius: 100000px;
   // background-color: $primarycolor;
-  background-color: #d3ffe7;
+  background-color: #fff3dd;
   transition: .3s;
 
   &:hover{
@@ -2348,7 +2348,7 @@ h3 {
   height: auto;
   aspect-ratio: 1/1;
   // border: 1px solid black;
-  background-color: $primarycolor;
+  background-color: #ceffe5;
   padding: .3cm;
   border-radius: 10000px;
   display: flex;
@@ -2359,7 +2359,7 @@ h3 {
   cursor: pointer;
   transition: .3s ease-in-out;
   // box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  // box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
   &:hover {
     // background-color: $primarycolor;
