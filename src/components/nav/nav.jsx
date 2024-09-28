@@ -75,7 +75,7 @@ function Nav() {
                         </div>
 
 
-                        <Link to="/account/profile">
+                        <Link to="/shop">
                             <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={shopimg} />
                                 <p className="acc-dets-text">
@@ -85,7 +85,7 @@ function Nav() {
                         </Link>
                         {
                             auth.currentUser ?
-                                <Link to="/account/profile">
+                                <Link to="/profile">
                                     <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                         <img className="acc-dets-img" src={profile} />
                                         <p className="acc-dets-text">
@@ -98,7 +98,7 @@ function Nav() {
                         {
                             auth.currentUser
                                 ?
-                                <Link to="/account/enrollments">
+                                <Link to="/pet-profile">
                                     <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
                                         <img className="acc-dets-img" src={pawimg} />
                                         <p className="acc-dets-text">
@@ -111,7 +111,7 @@ function Nav() {
                         {
                             auth.currentUser
                                 ?
-                                <Link to="/account/enrollments">
+                                <Link to="/orders">
                                     <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
                                         <img className="acc-dets-img" src={enroll} />
                                         <p className="acc-dets-text">
@@ -124,7 +124,7 @@ function Nav() {
                         {
                             auth.currentUser
                                 ?
-                                <Link to="/account/invoices">
+                                <Link to="/cart">
                                     <div onClick={closeNav} className={isActive("/account/invoices") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
                                         <img className="acc-dets-img" src={ccart} />
                                         <p className="acc-dets-text">
@@ -134,7 +134,7 @@ function Nav() {
                                 </Link>
                                 : null
                         }
-                        <Link to="/account/profile">
+                        <Link to="/about-us">
                             <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={aboutimg} />
                                 <p className="acc-dets-text">
@@ -142,7 +142,7 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        <Link to="/account/profile">
+                        <Link to="/how-to-recycle">
                             <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={recimg} />
                                 <p className="acc-dets-text">
@@ -150,7 +150,7 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        <Link to="/account/profile">
+                        <Link to="/faq">
                             <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={faq} />
                                 <p className="acc-dets-text">
