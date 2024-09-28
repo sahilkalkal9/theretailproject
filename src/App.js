@@ -77,7 +77,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/about' element={<Story />} />
+        <Route path='/about-us' element={<Story />} />
         <Route path='/faq' element={<FAQQ />} />
         <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
         <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
