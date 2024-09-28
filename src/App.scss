@@ -1196,9 +1196,7 @@ html {
   background-color: #d3ffe7;
   transition: .3s;
 
-  &:hover{
-    
-  }
+  &:hover {}
 
 }
 
@@ -1208,9 +1206,15 @@ html {
   text-align: center;
 }
 
+.login-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: .3cm;
+}
+
 .login-button {
   padding: .3cm;
-  background-color: $primarycolor;
+  background-color: $secondarycolor;
   border-radius: 10px;
   text-align: center;
   color: white;
@@ -2268,10 +2272,10 @@ h3 {
   // background-color: #deffed;
   // border: 1px solid black;
   transition: .3s all ease;
-  
 
 
-  &:hover{
+
+  &:hover {
     // background-color: #ceffe5;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
@@ -2384,12 +2388,12 @@ h3 {
   color: $secondarycolor;
 }
 
-.cat-page-lower{
+.cat-page-lower {
   padding: 1cm 10vw;
 
 }
 
-.cat-head{
+.cat-head {
   font-size: 1rem;
   // text-align: center;
 }

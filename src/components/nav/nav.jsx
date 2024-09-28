@@ -178,17 +178,30 @@ function Nav() {
                         <div className="new-nav-icons">
                             <div className="menu">
                                 {/* <img className="menu-item-img carti simgg" src={simg} alt="cart" /> */}
-                                <Link className="cartLink" to='/cart' >
+                                {/* <Link className="cartLink" to='/cart' >
                                     <div>
                                         <img className="menu-item-img carti" src={ccart} alt="cart" />
                                         <p className='cnum'>{nitems}</p>
                                     </div>
-                                </Link>
-                                <Link className="cartLink" to='/profile' >
-                                    <img className="menu-item-img" src={user} alt="user" />
-                                </Link>
-                                
-                                <img onClick={openNav} className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
+                                </Link> */}
+                                {
+                                    auth.currentUser
+                                        ? <Link className="cartLink" to='/profile' >
+                                            <img className="menu-item-img" src={user} alt="user" />
+                                        </Link>
+                                        : (
+                                            <div className='login-buttons'>
+                                                <Link to='/signup' >
+                                                    <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                                                </Link>
+                                                <Link to='/login' >
+                                                    <p onClick={closeNav} className="menu-item login-button"> Login </p>
+                                                </Link>
+                                            </div>
+                                        )
+                                }
+
+                                {/* <img onClick={openNav} className="menu-item-img carti" id='' src={dots} alt="cart" /> */}
                             </div>
                         </div>
                     </div>
@@ -203,15 +216,15 @@ function Nav() {
                             <Link to='/shop' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> Shop </p>
                             </Link>
-                            <Link to='/orders' >
+                            {/* <Link to='/orders' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> My orders </p>
-                            </Link>
-                            <Link to='/Services' >
+                            </Link> */}
+                            {/* <Link to='/Services' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> Services </p>
                             </Link>
                             <Link to='/blogs' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> Blogs </p>
-                            </Link>
+                            </Link> */}
                             <Link to='/faq' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> FAQs </p>
                             </Link>
