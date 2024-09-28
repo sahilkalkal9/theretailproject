@@ -211,16 +211,10 @@ function Nav() {
                         </div>
                         <div className="new-nav-icons">
                             <div className="menu">
-                                {/* <img className="menu-item-img carti simgg" src={simg} alt="cart" /> */}
-                                {/* <Link className="cartLink" to='/cart' >
-                                    <div>
-                                        <img className="menu-item-img carti" src={ccart} alt="cart" />
-                                        <p className='cnum'>{nitems}</p>
-                                    </div>
-                                </Link> */}
+                                
                                 {
                                     auth.currentUser
-                                        ? <Link className="cartLink" to='/profile' >
+                                        ? <Link className="cartLink" >
                                             {/* <img className="menu-item-img" src={user} alt="user" /> */}
                                             <img onClick={openNav} className="menuk" src={menuk} />
                                         </Link>
