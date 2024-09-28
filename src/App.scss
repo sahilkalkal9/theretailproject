@@ -673,7 +673,7 @@ html {
   transition: .2s all;
   overflow-y: auto;
 
-  ::-webkit-scrollbar{
+  ::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
@@ -734,6 +734,17 @@ html {
   width: .6cm;
 }
 
+.login-buttons-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: .3cm;
+  margin-top: .3cm;
+  display: none;
+
+  .login-button{
+    padding: .3cm;
+  }
+}
 
 
 
@@ -2445,7 +2456,11 @@ h3 {
   font-size: 1rem;
   // text-align: center;
 }
-
+.nav-menu-i{
+  display: flex;
+  gap: .3cm;
+  align-items: center;
+}
 
 @media only screen and (max-width : 1200px) {
   .ProductPage {
@@ -2471,25 +2486,23 @@ h3 {
 
 @media only screen and (max-width : 800px) {
   .NavNew {
-    #dostNav {
-      display: flex;
-    }
+   
 
     .login-buttons {
       display: none;
     }
 
-    .new-nav-lower {
-      display: none;
+    .login-buttons-overlay{
+      display: flex;
     }
 
-    #navLoginButton {
-      display: none;
-    }
+    
+
+   
   }
 
   .bottom-nav {
-    display: flex;
+    display: none;
   }
 
 }

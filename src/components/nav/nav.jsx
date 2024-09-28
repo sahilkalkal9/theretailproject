@@ -83,38 +83,57 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        <Link to="/account/profile">
-                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
-                                <img className="acc-dets-img" src={profile} />
-                                <p className="acc-dets-text">
-                                    My Profile
-                                </p>
-                            </div>
-                        </Link>
-                        <Link to="/account/enrollments">
-                            <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
-                                <img className="acc-dets-img" src={pawimg} />
-                                <p className="acc-dets-text">
-                                    Pet Profile
-                                </p>
-                            </div>
-                        </Link>
-                        <Link to="/account/enrollments">
-                            <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
-                                <img className="acc-dets-img" src={enroll} />
-                                <p className="acc-dets-text">
-                                    My Orders
-                                </p>
-                            </div>
-                        </Link>
-                        <Link to="/account/invoices">
-                            <div onClick={closeNav} className={isActive("/account/invoices") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
-                                <img className="acc-dets-img" src={ccart} />
-                                <p className="acc-dets-text">
-                                    Cart
-                                </p>
-                            </div>
-                        </Link>
+                        {
+                            auth.currentUser ?
+                                <Link to="/account/profile">
+                                    <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                        <img className="acc-dets-img" src={profile} />
+                                        <p className="acc-dets-text">
+                                            My Profile
+                                        </p>
+                                    </div>
+                                </Link>
+                                : null
+                        }
+                        {
+                            auth.currentUser
+                                ?
+                                <Link to="/account/enrollments">
+                                    <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                        <img className="acc-dets-img" src={pawimg} />
+                                        <p className="acc-dets-text">
+                                            Pet Profile
+                                        </p>
+                                    </div>
+                                </Link>
+                                : null
+                        }
+                        {
+                            auth.currentUser
+                                ?
+                                <Link to="/account/enrollments">
+                                    <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                        <img className="acc-dets-img" src={enroll} />
+                                        <p className="acc-dets-text">
+                                            My Orders
+                                        </p>
+                                    </div>
+                                </Link>
+                                : null
+                        }
+                        {
+                            auth.currentUser
+                                ?
+                                <Link to="/account/invoices">
+                                    <div onClick={closeNav} className={isActive("/account/invoices") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                        <img className="acc-dets-img" src={ccart} />
+                                        <p className="acc-dets-text">
+                                            Cart
+                                        </p>
+                                    </div>
+                                </Link>
+                                : null
+                        }
                         <Link to="/account/profile">
                             <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={aboutimg} />
@@ -147,12 +166,34 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        <div onClick={() => { auth.signOut(); closeNav() }} className="account-dets-menu-item">
-                            <img className="acc-dets-img" src={exiti} />
-                            <p className="acc-dets-text">
-                                Sign Out
-                            </p>
-                        </div>
+                        {
+                            auth.currentUser
+                                ?
+                                <div onClick={() => { auth.signOut(); closeNav() }} className="account-dets-menu-item">
+                                    <img className="acc-dets-img" src={exiti} />
+                                    <p className="acc-dets-text">
+                                        Sign Out
+                                    </p>
+                                </div>
+                                : null
+                        }
+
+                        {
+                            auth.currentUser
+                                ? (
+                                    null
+                                )
+                                : (
+                                    <div className="login-buttons-overlay">
+                                        <Link to='/signup' >
+                                            <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                                        </Link>
+                                        <Link to='/login' >
+                                            <p onClick={closeNav} className="menu-item login-button"> Login </p>
+                                        </Link>
+                                    </div>
+                                )
+                        }
                     </div>
                 </div>
             </div>
@@ -184,23 +225,22 @@ function Nav() {
                                             <img onClick={openNav} className="menuk" src={menuk} />
                                         </Link>
                                         : (
-                                            <div className='login-buttons'>
-                                                <Link to='/signup' >
-                                                    <p onClick={closeNav} className="menu-item login-button"> Signup </p>
-                                                </Link>
-                                                <Link to='/login' >
-                                                    <p onClick={closeNav} className="menu-item login-button"> Login </p>
-                                                </Link>
+                                            <div className="nav-menu-i">
+                                                <div className='login-buttons'>
+                                                    <Link to='/signup' >
+                                                        <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                                                    </Link>
+                                                    <Link to='/login' >
+                                                        <p onClick={closeNav} className="menu-item login-button"> Login </p>
+                                                    </Link>
+
+                                                </div>
                                                 <img onClick={openNav} className="menuk" src={menuk} />
                                             </div>
                                         )
                                 }
 
-                                {
-                                    auth.currentUser
-                                        ? null
-                                        : <img onClick={openNav} className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
-                                }
+
                             </div>
                         </div>
                     </div>
