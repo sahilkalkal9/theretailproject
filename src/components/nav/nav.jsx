@@ -55,7 +55,7 @@ function Nav() {
     }
 
     const openNav = () => {
-        document.getElementById("overlayNav").style.width = "10cm"
+        document.getElementById("overlayNav").style.width = "7cm"
     }
 
     return (

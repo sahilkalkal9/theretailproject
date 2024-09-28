@@ -672,6 +672,7 @@ html {
   z-index: 100;
   transition: .2s all;
   overflow-y: auto;
+  backdrop-filter: blur(10px);
 
   ::-webkit-scrollbar {
     width: 0;
