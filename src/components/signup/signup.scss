@@ -1,0 +1,81 @@
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+
+.SignUpNew {
+    padding: 1cm 10vw;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-new-box {
+    width: 10cm;
+    // border: 1px solid #ceffe5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+    padding: .5cm;
+    background-color: #ceffe5;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+
+}
+
+.signup-new-form {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+    width: 100%;
+   
+}
+
+.signupwithgoogle{
+    background-color: #4285F4;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    padding: .3cm;
+}
+
+
+.singup-input-new {
+    padding: .3cm;
+    border: 1px solid $primarycolor;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.singup-new-submit{
+    font-size: 1rem;
+    background-color: $primarycolor;
+    padding: .3cm;
+    border: none;
+    border-radius: 5px;
+    color: $secondarycolor;
+    cursor: pointer;
+}
+
+.signup-new-head {
+    font-size: 1.5rem;
+}
+
+.alreadyheavanaccount{
+    font-size: .8rem;
+
+}
+
+.signup-signin-button{
+    color: blue;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover{
+        text-decoration: underline;
+    }
+
+}

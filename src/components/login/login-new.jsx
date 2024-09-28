@@ -1,29 +1,29 @@
 import { Link } from "react-router-dom"
 import "./signup.scss"
 
-function SignUp() {
+function LogInNew() {
     return (
         <div className="SignUpNew">
             <div className="signup-new-box">
                 <p className="signup-new-head">
-                    Create your account
+                    Sign In to your account
                 </p>
                 <form action="" className="signup-new-form">
-                    <input type="text" className="singup-input-new" placeholder="Full name" />
+
                     <input type="email" className="singup-input-new" placeholder="Email address" />
                     <input type="password" className="singup-input-new" placeholder="Password" />
-                    <input type="submit" className="singup-new-submit" value="Sign Up" />
+                    <input type="submit" className="singup-new-submit" value="Sign In" />
                 </form>
                 <p className="or">
                     OR
                 </p>
                 <button className="signupwithgoogle">
-                    Sign Up with Google
+                    Sign In with Google
                 </button>
 
                 <p className="alreadyheavanaccount">
-                    Already have an account ? <Link to="/signin">
-                        <span className="signup-signin-button" >Sign In</span>
+                    Don't have an account ? <Link to="/signup">
+                        <span className="signup-signin-button" >Sign Up</span>
                     </Link>
                 </p>
             </div>
@@ -31,4 +31,4 @@ function SignUp() {
     )
 }
 
-export default SignUp
+export default LogInNew

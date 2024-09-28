@@ -186,10 +186,10 @@ function Nav() {
                                 : (
                                     <div className="login-buttons-overlay">
                                         <Link to='/signup' >
-                                            <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                                            <p onClick={closeNav} className="menu-item login-button"> Sign Up </p>
                                         </Link>
-                                        <Link to='/login' >
-                                            <p onClick={closeNav} className="menu-item login-button"> Login </p>
+                                        <Link to='/signin' >
+                                            <p onClick={closeNav} className="menu-item login-button"> Sign In </p>
                                         </Link>
                                     </div>
                                 )
@@ -228,10 +228,10 @@ function Nav() {
                                             <div className="nav-menu-i">
                                                 <div className='login-buttons'>
                                                     <Link to='/signup' >
-                                                        <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                                                        <p onClick={closeNav} className="menu-item login-button"> Sign Up </p>
                                                     </Link>
-                                                    <Link to='/login' >
-                                                        <p onClick={closeNav} className="menu-item login-button"> Login </p>
+                                                    <Link to='/signin' >
+                                                        <p onClick={closeNav} className="menu-item login-button"> Sign In </p>
                                                     </Link>
 
                                                 </div>

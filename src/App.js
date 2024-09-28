@@ -24,6 +24,7 @@ import menuI from "./menu.png"
 import cart from "./sbag.png"
 import account from "./user.png"
 import CatPage from './components/catPage/catPage.jsx';
+import LogInNew from './components/login/login-new.jsx';
 
 
 function App() {
@@ -76,7 +77,7 @@ function App() {
         <Route path='/product' element={<ProductPage />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/orders' element={<Orders />} />
-        <Route path='/login' element={<Login />} />
+        <Route path='/signin' element={<LogInNew />} />
         <Route path='/about-us' element={<Story />} />
         <Route path='/faq' element={<FAQQ />} />
         <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />

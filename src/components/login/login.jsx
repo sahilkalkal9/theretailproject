@@ -4,7 +4,7 @@ import { auth, firestore } from '../../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const [phoneNumber, setPhoneNumber] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState(''); 
     const [otp, setOtp] = useState('');
     const [confirmationResult, setConfirmationResult] = useState(null);
     const [isOtpSent, setIsOtpSent] = useState(false);
