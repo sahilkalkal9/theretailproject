@@ -39,6 +39,7 @@ function SignUp() {
                     await firestore.collection("users").doc(auth.currentUser.uid).set({
                         name: formData.name,
                         email: formData.email,
+                        uid: auth.currentUser.uid
 
                     }, { merge: true })
                     document.getElementsByClassName("singup-new-submit")[0].value = "Sign Up"
@@ -74,6 +75,7 @@ function SignUp() {
                     await firestore.collection("users").doc(auth.currentUser.uid).set({
                         name: auth.currentUser.displayName,
                         email: auth.currentUser.email,
+                        uid: auth.currentUser.uid
 
                     }, { merge: true })
                     document.getElementsByClassName("singup-new-submit")[0].value = "Sign Up"

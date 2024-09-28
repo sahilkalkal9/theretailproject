@@ -25,6 +25,7 @@ import cart from "./sbag.png"
 import account from "./user.png"
 import CatPage from './components/catPage/catPage.jsx';
 import LogInNew from './components/login/login-new.jsx';
+import ProfileNew from './components/profile/profile-new.jsx';
 
 
 function App() {
@@ -80,7 +81,7 @@ function App() {
         <Route path='/signin' element={<LogInNew />} />
         <Route path='/about-us' element={<Story />} />
         <Route path='/faq' element={<FAQQ />} />
-        <Route path='/profile' element={<Profile userData={userData} setUserData={setUserData} />} />
+        <Route path='/profile' element={<ProfileNew />} />
         <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
       </Routes>
 
