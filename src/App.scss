@@ -521,15 +521,7 @@ html {
 
 
 
-.overlay-box {
-  width: 6cm;
-  padding: 1cm 1.5cm;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: white;
-}
+
 
 
 .co-name-text {
@@ -542,14 +534,10 @@ html {
 }
 
 
-.overlayNav {
-  position: fixed;
-  inset: 0;
-  z-index: 1;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  border: 2px solid red;
-
+.menuk {
+  width: .7cm;
+  height: .7cm;
+  cursor: pointer;
 }
 
 .onav-head {
@@ -571,9 +559,6 @@ html {
 }
 
 
-#overlay-nav {
-  display: none;
-}
 
 
 
@@ -675,6 +660,32 @@ html {
   display: block;
 }
 
+.overlay-nav {
+  position: fixed;
+  width: 0cm;
+  // border: 1px solid black;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  // padding: 1cm .5cm;
+  background-color: #2f5340;
+  z-index: 100;
+  transition: .2s all;
+  overflow-y: auto;
+
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
+
+
+
+}
+
+.overlay-box {
+  padding: .5cm .5cm;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -687,6 +698,42 @@ html {
   // margin-left: -.7cm;
 
 }
+
+.acc-dets-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: $secondarycolor;
+}
+
+.account-dets-menu {
+  display: flex;
+  flex-direction: column;
+  gap: .1cm;
+}
+
+.account-dets-menu-item {
+  display: flex;
+  align-items: center;
+  gap: .2cm;
+  padding: .3cm;
+  cursor: pointer;
+  // border: 1px solid white;
+  border-radius: 5px;
+  background-color: transparent;
+
+  &:hover {
+    background-color: #3e5f4c;
+  }
+}
+
+.activeM {
+  background-color: #3e5f4c;
+}
+
+.acc-dets-img {
+  width: .6cm;
+}
+
 
 
 
@@ -1209,15 +1256,16 @@ html {
 .login-buttons {
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: .3cm;
 }
 
 .login-button {
-  padding: .3cm;
+  padding: .15cm .3cm;
   background-color: $secondarycolor;
-  border-radius: 10px;
+  border-radius: 5px;
   text-align: center;
-  color: white;
+  color: $primarycolor;
 }
 
 .SignUp {
@@ -2427,7 +2475,7 @@ h3 {
       display: flex;
     }
 
-    .login-buttons{
+    .login-buttons {
       display: none;
     }
 

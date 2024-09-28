@@ -9,7 +9,18 @@ import simg from "./sig.png"
 import close from "./close.png";
 import "../../App.scss";
 import dots from "./dots.png"
+import profile from "./person.png"
+import enroll from "./page.png"
+import invoices from "./dollar-sign.png"
+import support from "./support.png"
+import exiti from "./exit.png"
+import menuk from "./menuk.png"
 import { useCollectionData } from 'react-firebase-hooks/firestore';
+import shopimg from "./shop.png"
+import faq from "./faq.png"
+import aboutimg from "./about.png"
+import pawimg from "./paw.png"
+import recimg from "./recycle.png"
 
 function Nav() {
     const location = useLocation();
@@ -39,127 +50,109 @@ function Nav() {
 
     const isActive = (path) => location.pathname === path;
 
-    const openNav = () => {
-        document.getElementById("overlay-nav").style.display = "flex";
-    };
-
     const closeNav = () => {
-        document.getElementById("overlay-nav").style.display = "none";
-    };
+        document.getElementById("overlayNav").style.width = "0cm"
+    }
+
+    const openNav = () => {
+        document.getElementById("overlayNav").style.width = "10cm"
+    }
 
     return (
-        // <>
-        //     <div id="overlay-nav" className="overlayNav">
-        //         <div className="overlay-box">
-        //             <div className="onav-head">
-        //                 <img className="close" onClick={closeNav} src={close} alt="close" />
-        //             </div>
-        //             <div className="onav-menu">
 
-        //                 <Link to='/about' >
-        //                     <p onClick={closeNav} className="menu-item"> About </p>
-        //                 </Link>
-        //                 <Link to='/how-to-recycle' >
-        //                     <p onClick={closeNav} className="menu-item"> How to recycle </p>
-        //                 </Link>
-        //                 <Link to='/shop' >
-        //                     <p onClick={closeNav} className="menu-item"> Shop </p>
-        //                 </Link>
-        //                 <Link to='/orders' >
-        //                     <p onClick={closeNav} className="menu-item"> My orders </p>
-        //                 </Link>
-        //                 <Link to='/Services' >
-        //                     <p onClick={closeNav} className="menu-item"> Services </p>
-        //                 </Link>
-        //                 <Link to='/blogs' >
-        //                     <p onClick={closeNav} className="menu-item"> Blogs </p>
-        //                 </Link>
-        //                 <Link to='/faq' >
-        //                     <p onClick={closeNav} className="menu-item"> FAQs </p>
-        //                 </Link>
-        //                 <Link to='/contact' >
-        //                     <p onClick={closeNav} className="menu-item"> Contact us </p>
-        //                 </Link>
-
-        //                 <Link to='/signup' >
-        //                     <p onClick={closeNav} className="menu-item login-button"> Signup </p>
-        //                 </Link>
-        //                 <Link to='/login' >
-        //                     <p onClick={closeNav} className="menu-item login-button"> Login </p>
-        //                 </Link>
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <div className="Nav">
-        //         <div className="nav-box">
-        //             <div className="logo">
-        //                 <Link to='/'>
-        //                     <img className="logo-image-paw" onClick={openNav} src={logo} alt="logo" />
-        //                 </Link>
-        //             </div>
-        //             <div className="co-name">
-        //                 <p className="co-name-text">
-        //                     The <span className="re-text">Re</span>Tail Project
-        //                 </p>
-        //             </div>
-        //             <div className="menu">
-        //                 <Link className="cartLink" to='/cart' >
-        //                     <div>
-        //                         <img className="menu-item-img carti" src={ccart} alt="cart" />
-        //                         <p className='cnum'>{nitems}</p>
-        //                     </div>
-        //                 </Link>
-        //                 {currentUser ? (
-        //                     <Link className="cartLink" to='/profile' >
-        //                         <img className="menu-item-img" src={user} alt="user" />
-        //                     </Link>
-        //                 ) : (
-        //                     <Link to='/login' >
-        //                         <p onClick={closeNav} className="menu-item login-button mainL"> Login </p>
-        //                     </Link>
-        //                 )}
-        //             </div>
-        //         </div>
-        //     </div>
-        // </>
         <>
-            <div id="overlay-nav" className="overlayNav">
+            <div id="overlayNav" className="overlay-nav">
                 <div className="overlay-box">
-                    <div className="onav-head">
-                        <img className="close" onClick={closeNav} src={close} alt="close" />
+                    <div className="close-div">
+                        {/* <img className="close-img" src={cross} onClick={closeNav} /> */}
                     </div>
-                    <div className="onav-menu">
+                    <div className="account-dets-menu">
+                        <div onClick={() => { closeNav() }} className="account-dets-menu-item">
+                            {/* <img className="acc-dets-img" src={cross} /> */}
+                            <p className="acc-dets-text">
+                                Close
+                            </p>
+                        </div>
 
-                        <Link to='/about' >
-                            <p onClick={closeNav} className="menu-item"> About </p>
+
+                        <Link to="/account/profile">
+                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={shopimg} />
+                                <p className="acc-dets-text">
+                                    Shop
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/how-to-recycle' >
-                            <p onClick={closeNav} className="menu-item"> How to recycle </p>
+                        <Link to="/account/profile">
+                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={profile} />
+                                <p className="acc-dets-text">
+                                    My Profile
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/shop' >
-                            <p onClick={closeNav} className="menu-item"> Shop </p>
+                        <Link to="/account/enrollments">
+                            <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                <img className="acc-dets-img" src={pawimg} />
+                                <p className="acc-dets-text">
+                                    Pet Profile
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/orders' >
-                            <p onClick={closeNav} className="menu-item"> My orders </p>
+                        <Link to="/account/enrollments">
+                            <div onClick={closeNav} className={isActive("/account/enrollments") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                <img className="acc-dets-img" src={enroll} />
+                                <p className="acc-dets-text">
+                                    My Orders
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/Services' >
-                            <p onClick={closeNav} className="menu-item"> Services </p>
+                        <Link to="/account/invoices">
+                            <div onClick={closeNav} className={isActive("/account/invoices") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                <img className="acc-dets-img" src={ccart} />
+                                <p className="acc-dets-text">
+                                    Cart
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/blogs' >
-                            <p onClick={closeNav} className="menu-item"> Blogs </p>
+                        <Link to="/account/profile">
+                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={aboutimg} />
+                                <p className="acc-dets-text">
+                                    About Us
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/faq' >
-                            <p onClick={closeNav} className="menu-item"> FAQs </p>
+                        <Link to="/account/profile">
+                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={recimg} />
+                                <p className="acc-dets-text">
+                                    How to Recycle
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/contact' >
-                            <p onClick={closeNav} className="menu-item"> Contact us </p>
+                        <Link to="/account/profile">
+                            <div onClick={closeNav} className={isActive("/account") || isActive("/account/profile") || isActive("/account/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={faq} />
+                                <p className="acc-dets-text">
+                                    FAQs
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/signup' >
-                            <p onClick={closeNav} className="menu-item login-button"> Signup </p>
+                        <Link to='/contact'>
+                            <div onClick={closeNav} className={isActive("/contact") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                <img className="acc-dets-img" src={support} />
+                                <p className="acc-dets-text">
+                                    Helpdesk
+                                </p>
+                            </div>
                         </Link>
-                        <Link to='/login' >
-                            <p onClick={closeNav} className="menu-item login-button"> Login </p>
-                        </Link>
+                        <div onClick={() => { auth.signOut(); closeNav() }} className="account-dets-menu-item">
+                            <img className="acc-dets-img" src={exiti} />
+                            <p className="acc-dets-text">
+                                Sign Out
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -187,7 +180,8 @@ function Nav() {
                                 {
                                     auth.currentUser
                                         ? <Link className="cartLink" to='/profile' >
-                                            <img className="menu-item-img" src={user} alt="user" />
+                                            {/* <img className="menu-item-img" src={user} alt="user" /> */}
+                                            <img onClick={openNav} className="menuk" src={menuk} />
                                         </Link>
                                         : (
                                             <div className='login-buttons'>
@@ -197,6 +191,7 @@ function Nav() {
                                                 <Link to='/login' >
                                                     <p onClick={closeNav} className="menu-item login-button"> Login </p>
                                                 </Link>
+                                                <img onClick={openNav} className="menuk" src={menuk} />
                                             </div>
                                         )
                                 }
@@ -209,7 +204,7 @@ function Nav() {
                             </div>
                         </div>
                     </div>
-                    <div className="new-nav-lower">
+                    {/* <div className="new-nav-lower">
                         <div className="new-nav-menu">
                             <Link to='/about' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> About </p>
@@ -220,15 +215,7 @@ function Nav() {
                             <Link to='/shop' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> Shop </p>
                             </Link>
-                            {/* <Link to='/orders' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> My orders </p>
-                            </Link> */}
-                            {/* <Link to='/Services' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> Services </p>
-                            </Link>
-                            <Link to='/blogs' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> Blogs </p>
-                            </Link> */}
+                          
                             <Link to='/faq' >
                                 <p onClick={closeNav} className="new-nav-menu-item"> FAQs </p>
                             </Link>
@@ -238,7 +225,7 @@ function Nav() {
 
 
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </>
