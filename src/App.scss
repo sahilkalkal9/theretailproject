@@ -526,7 +526,7 @@ html {
 
 .co-name-text {
   color: white;
-  font-size: 24px;
+  font-size: 1.3rem;
 }
 
 .re-text {
@@ -2414,7 +2414,8 @@ h3 {
   height: auto;
   aspect-ratio: 1/1;
   // border: 1px solid black;
-  background-color: #ceffe5;
+  // background-color: #ceffe5;
+  background-color: $primarycolor;
   padding: .3cm;
   border-radius: 10000px;
   display: flex;
