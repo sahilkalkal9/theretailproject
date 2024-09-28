@@ -201,7 +201,11 @@ function Nav() {
                                         )
                                 }
 
-                                {/* <img onClick={openNav} className="menu-item-img carti" id='' src={dots} alt="cart" /> */}
+                                {
+                                    auth.currentUser
+                                        ? null
+                                        : <img onClick={openNav} className="menu-item-img carti" id='dostNav' src={dots} alt="cart" />
+                                }
                             </div>
                         </div>
                     </div>
