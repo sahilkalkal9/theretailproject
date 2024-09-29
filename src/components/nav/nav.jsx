@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { auth, firestore } from "../../firebase";
 import logo from "./pawb.png";
@@ -25,17 +25,17 @@ import recimg from "./recycle.png"
 function Nav() {
     const location = useLocation();
     const [currentUser, setCurrentUser] = useState(null);
-    const [nitems, setnitems] = useState(0);
+    // const [nitems, setnitems] = useState(0);
 
     const navigate = useNavigate()
 
     // Set up cart reference only if user is authenticated
-    const cartRef = auth.currentUser
-        ? firestore.collection("users").doc(auth.currentUser.uid).collection("cart")
-        : null;
+    // const cartRef = auth.currentUser
+    //     ? firestore.collection("users").doc(auth.currentUser.uid).collection("cart")
+    //     : null;
 
     // Using the cartRef only if it's defined
-    const [cart] = useCollectionData(cartRef, { idField: 'id' });
+    // const [cart] = useCollectionData(cartRef, { idField: 'id' });
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -44,11 +44,30 @@ function Nav() {
         return () => unsubscribe();
     }, []);
 
+    // useEffect(() => {
+    //     if (cart && Array.isArray(cart)) {
+    //         setnitems(cart.length);
+    //     }
+    // }, [cart]);
+
+    const overlayRef = useRef(null);
+
     useEffect(() => {
-        if (cart && Array.isArray(cart)) {
-            setnitems(cart.length);
-        }
-    }, [cart]);
+        // Function to handle click events
+        const handleClickOutside = (event) => {
+            if (overlayRef.current && !overlayRef.current.contains(event.target)) {
+                closeNav(); // Call the closeNav function if clicked outside
+            }
+        };
+
+        // Add event listener to detect outside clicks
+        document.addEventListener("mousedown", handleClickOutside);
+
+        return () => {
+            // Cleanup the event listener on unmount
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     const isActive = (path) => location.pathname === path;
 
@@ -63,7 +82,7 @@ function Nav() {
     return (
 
         <>
-            <div id="overlayNav" className="overlay-nav">
+            <div ref={overlayRef} id="overlayNav" className="overlay-nav">
                 <div className="overlay-box">
                     <div className="close-div">
                         {/* <img className="close-img" src={cross} onClick={closeNav} /> */}
@@ -103,7 +122,7 @@ function Nav() {
                         {
                             auth.currentUser ?
                                 <Link to="/profile">
-                                    <div  onClick={closeNav} className={isActive("/profile") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"} >
+                                    <div onClick={closeNav} className={isActive("/profile") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"} >
                                         <img className="acc-dets-img" src={profile} />
                                         <p className="acc-dets-text">
                                             My Profile
