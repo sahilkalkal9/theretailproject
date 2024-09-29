@@ -73,7 +73,22 @@ function Nav() {
                                 Close
                             </p>
                         </div>
-
+                        <Link to="/about-us">
+                            <div onClick={closeNav} className={isActive("/about-us") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={aboutimg} />
+                                <p className="acc-dets-text">
+                                    About Us
+                                </p>
+                            </div>
+                        </Link>
+                        <Link to="/how-to-recycle">
+                            <div onClick={closeNav} className={isActive("/how-to-recycle") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={recimg} />
+                                <p className="acc-dets-text">
+                                    How to Recycle
+                                </p>
+                            </div>
+                        </Link>
 
                         <Link to="/shop">
                             <div onClick={closeNav} className={isActive("/shop") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
@@ -83,7 +98,7 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        {
+                        {/* {
                             auth.currentUser ?
                                 <Link to="/profile">
                                     <div onClick={closeNav} className={isActive("/profile") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
@@ -94,7 +109,7 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        }
+                        } */}
                         {
                             auth.currentUser
                                 ?
@@ -121,7 +136,7 @@ function Nav() {
                                 </Link>
                                 : null
                         }
-                        {
+                        {/* {
                             auth.currentUser
                                 ?
                                 <Link to="/cart">
@@ -133,23 +148,8 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        }
-                        <Link to="/about-us">
-                            <div onClick={closeNav} className={isActive("/about-us") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
-                                <img className="acc-dets-img" src={aboutimg} />
-                                <p className="acc-dets-text">
-                                    About Us
-                                </p>
-                            </div>
-                        </Link>
-                        <Link to="/how-to-recycle">
-                            <div onClick={closeNav} className={isActive("/how-to-recycle") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
-                                <img className="acc-dets-img" src={recimg} />
-                                <p className="acc-dets-text">
-                                    How to Recycle
-                                </p>
-                            </div>
-                        </Link>
+                        } */}
+
                         <Link to="/faq">
                             <div onClick={closeNav} className={isActive("/faq") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={faq} />
@@ -211,13 +211,20 @@ function Nav() {
                         </div>
                         <div className="new-nav-icons">
                             <div className="menu">
-                                
+
                                 {
                                     auth.currentUser
-                                        ? <Link className="cartLink" >
-                                            {/* <img className="menu-item-img" src={user} alt="user" /> */}
+                                        ?
+                                        <div className="nav-menu-bar">
+                                            <Link className='nav-linkk' to="/cart">
+                                                <img className="menuk" src={ccart} />
+                                            </Link>
+                                            <Link className='nav-linkk' to="/profile">
+                                                <img className="menuk" src={profile} />
+                                            </Link>
                                             <img onClick={openNav} className="menuk" src={menuk} />
-                                        </Link>
+                                        </div>
+
                                         : (
                                             <div className="nav-menu-i">
                                                 <div className='login-buttons'>

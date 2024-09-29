@@ -734,6 +734,7 @@ html {
 
 .acc-dets-img {
   width: .6cm;
+  height: .6cm;
 }
 
 .login-buttons-overlay {
@@ -748,7 +749,16 @@ html {
   }
 }
 
+.nav-menu-bar {
+  display: flex;
+  align-items: center;
+  gap: .3cm;
+}
 
+.nav-linkk {
+  display: flex;
+  // align-items: center;
+}
 
 
 // Navigation Ends Here
