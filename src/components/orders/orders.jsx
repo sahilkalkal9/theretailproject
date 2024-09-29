@@ -20,32 +20,38 @@ function Orders() {
 
                 <div className="orders-lower">
                     {
-                        orders && orders.map((o) => (
-                            <div className="order">
-                                <div className="order-left">
-                                    <img className="oImg" src={require(`../shop/${o.image}`)} />
-                                </div>
-                                <div className="order-right">
-                                    <p className="order-name">
-                                        {o.name}
-                                    </p>
-                                    <p className="order-text">
-                                        Quantity : {o.quantity}
-                                    </p>
-                                    <p className="order-text">
-                                        ₹ {o.price}
-                                    </p>
-                                    <p className="order-text">
-                                        Ordered on {new Date(o.timestamp.toDate()).toLocaleDateString()}
-                                    </p>
+                        orders && orders == 0
+                            ? <p className="noorder">
+                                No orders currently
+                            </p>
+                            : (
+                                orders && orders.map((o) => (
+                                    <div className="order">
+                                        <div className="order-left">
+                                            <img className="oImg" src={require(`../shop/${o.image}`)} />
+                                        </div>
+                                        <div className="order-right">
+                                            <p className="order-name">
+                                                {o.name}
+                                            </p>
+                                            <p className="order-text">
+                                                Quantity : {o.quantity}
+                                            </p>
+                                            <p className="order-text">
+                                                ₹ {o.price}
+                                            </p>
+                                            <p className="order-text">
+                                                Ordered on {new Date(o.timestamp.toDate()).toLocaleDateString()}
+                                            </p>
 
-                                    <p className="order-arriving">
-                                        Arriving on {o.deliveryDate}
-                                    </p>
+                                            <p className="order-arriving">
+                                                Arriving on {o.deliveryDate}
+                                            </p>
 
-                                </div>
-                            </div>
-                        ))
+                                        </div>
+                                    </div>
+                                ))
+                            )
                     }
                 </div>
 
