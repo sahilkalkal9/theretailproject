@@ -93,6 +93,13 @@ function PetProfile() {
     }
 
 
+    const [loading, setLoading] = useState(true)
+
+    setTimeout(() => {
+        setLoading(false)
+    }, 1000)
+
+
     return (
         <>
             <div id="overlayAddPet" className="overlay-add-pet">
@@ -124,80 +131,86 @@ function PetProfile() {
                         Pet Profile(s)
                     </p>
 
-                    <div className="pet-profiles">
-                        {
-                            users == 0
-                                ?
-                                <p>
-                                    No pet profiles
-                                </p>
-                                : (
-                                    users && users.map((u) => (
+                    {
+                        loading
+                            ? <p className="load">Loading..</p>
+                            : (
+                                <div className="pet-profiles">
+                                    {
+                                        users == 0
+                                            ?
+                                            <p>
+                                                No pet profiles
+                                            </p>
+                                            : (
+                                                users && users.map((u) => (
 
-                                        <div className="profile-box-dets">
-                                            <div className="profile-box-det">
-                                                <div className="profile-det-head">
-                                                    <p className="profile-det-label">
-                                                        Name
-                                                    </p>
-                                                    <p className="profile-det-text">
-                                                        {u.name}
-                                                    </p>
-                                                </div>
-                                                <img className="write" src={pencil} />
-                                            </div>
-                                            <div className="profile-box-det">
-                                                <div className="profile-det-head">
-                                                    <p className="profile-det-label">
-                                                        DOB
-                                                    </p>
-                                                    <p className="profile-det-text">
-                                                        {u.dob}
-                                                    </p>
-                                                </div>
-                                                <img className="write" src={checkMark} />
-                                            </div>
-                                            <div className="profile-box-det">
-                                                <div className="profile-det-head">
-                                                    <p className="profile-det-label">
-                                                        Breed
-                                                    </p>
-                                                    <p className="profile-det-text">
-                                                        {u.breed}
-                                                    </p>
-                                                </div>
-                                                <img className="write" src={pencil} />
-                                            </div>
-                                            <div className="profile-box-det">
-                                                <div className="profile-det-head">
-                                                    <p className="profile-det-label">
-                                                        Gender
-                                                    </p>
-                                                    <p className="profile-det-text">
-                                                        {u.gender}
-                                                    </p>
-                                                </div>
-                                                <img className="write" src={pencil} />
-                                            </div>
-                                            <div className="profile-box-det">
-                                                <div className="profile-det-head">
-                                                    <p className="profile-det-label">
-                                                        Age
-                                                    </p>
-                                                    <p className="profile-det-text">
-                                                        {u.age}
-                                                    </p>
-                                                </div>
-                                                <img className="write" src={pencil} />
-                                            </div>
-                                        </div>
+                                                    <div className="profile-box-dets">
+                                                        <div className="profile-box-det">
+                                                            <div className="profile-det-head">
+                                                                <p className="profile-det-label">
+                                                                    Name
+                                                                </p>
+                                                                <p className="profile-det-text">
+                                                                    {u.name}
+                                                                </p>
+                                                            </div>
+                                                            <img className="write" src={pencil} />
+                                                        </div>
+                                                        <div className="profile-box-det">
+                                                            <div className="profile-det-head">
+                                                                <p className="profile-det-label">
+                                                                    DOB
+                                                                </p>
+                                                                <p className="profile-det-text">
+                                                                    {u.dob}
+                                                                </p>
+                                                            </div>
+                                                            <img className="write" src={checkMark} />
+                                                        </div>
+                                                        <div className="profile-box-det">
+                                                            <div className="profile-det-head">
+                                                                <p className="profile-det-label">
+                                                                    Breed
+                                                                </p>
+                                                                <p className="profile-det-text">
+                                                                    {u.breed}
+                                                                </p>
+                                                            </div>
+                                                            <img className="write" src={pencil} />
+                                                        </div>
+                                                        <div className="profile-box-det">
+                                                            <div className="profile-det-head">
+                                                                <p className="profile-det-label">
+                                                                    Gender
+                                                                </p>
+                                                                <p className="profile-det-text">
+                                                                    {u.gender}
+                                                                </p>
+                                                            </div>
+                                                            <img className="write" src={pencil} />
+                                                        </div>
+                                                        <div className="profile-box-det">
+                                                            <div className="profile-det-head">
+                                                                <p className="profile-det-label">
+                                                                    Age
+                                                                </p>
+                                                                <p className="profile-det-text">
+                                                                    {u.age}
+                                                                </p>
+                                                            </div>
+                                                            <img className="write" src={pencil} />
+                                                        </div>
+                                                    </div>
 
-                                    ))
+                                                ))
 
 
-                                )
-                        }
-                    </div>
+                                            )
+                                    }
+                                </div>
+                            )
+                    }
                     <button onClick={openAddPet} className="add-pet">
                         Add Pet Profile
                     </button>

@@ -27,6 +27,7 @@ import CatPage from './components/catPage/catPage.jsx';
 import LogInNew from './components/login/login-new.jsx';
 import ProfileNew from './components/profile/profile-new.jsx';
 import PetProfile from './components/pet-profile/profile-new.jsx';
+import { UserProvider } from './UserContext.js';
 
 
 function App() {
@@ -66,63 +67,67 @@ function App() {
 
 
   return (
-    <div className="App">
-      <Nav />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/shop' element={<Shop />} />
-        <Route path='/shop/:catid' element={<CatPage />} />
-        <Route path='/cart' element={<Cart />} />
-        <Route path='/how-to-recycle' element={<Recycle />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/product' element={<ProductPage />} />
-        <Route path='/signup' element={<Signup />} />
-        <Route path='/orders' element={<Orders />} />
-        <Route path='/signin' element={<LogInNew />} />
-        <Route path='/about-us' element={<Story />} />
-        <Route path='/faq' element={<FAQQ />} />
-        <Route path='/profile' element={<ProfileNew />} />
-        <Route path='/pet-profile' element={<PetProfile />} />
-        <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
-      </Routes>
+    <UserProvider>
+      <div className="App">
+        <Nav />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/shop/:catid' element={<CatPage />} />
+          <Route path='/cart' element={<Cart />} />
+          <Route path='/how-to-recycle' element={<Recycle />} />
+          <Route path='/blogs' element={<Blogs />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/product' element={<ProductPage />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/orders' element={<Orders />} />
+          <Route path='/signin' element={<LogInNew />} />
+          <Route path='/about-us' element={<Story />} />
+          <Route path='/faq' element={<FAQQ />} />
 
-      <div className='bottom-nav'>
-        <Link to="/shop">
+          <Route path='/profile' element={<ProfileNew />} />
+
+          <Route path='/pet-profile' element={<PetProfile />} />
+          <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
+        </Routes>
+
+        <div className='bottom-nav'>
+          <Link to="/shop">
+            <div className='bottom-nav-item'>
+              <img className='bottom-nav-img' src={store} />
+              <p className='bottom-nav-text'>
+                Shop
+              </p>
+            </div>
+          </Link>
           <div className='bottom-nav-item'>
-            <img className='bottom-nav-img' src={store} />
+            <img className='bottom-nav-img' src={menuI} />
             <p className='bottom-nav-text'>
-              Shop
+              Menu
             </p>
           </div>
-        </Link>
-        <div className='bottom-nav-item'>
-          <img className='bottom-nav-img' src={menuI} />
-          <p className='bottom-nav-text'>
-            Menu
-          </p>
+          <Link to="/profile">
+            <div className='bottom-nav-item'>
+              <img className='bottom-nav-img' src={account} />
+              <p className='bottom-nav-text'>
+                Account
+              </p>
+            </div>
+          </Link>
+
+          <Link to="/cart" >
+            <div className='bottom-nav-item'>
+              <img className='bottom-nav-img' src={cart} />
+              <p className='bottom-nav-text'>
+                Cart
+              </p>
+            </div>
+          </Link>
+
+
         </div>
-        <Link to="/profile">
-          <div className='bottom-nav-item'>
-            <img className='bottom-nav-img' src={account} />
-            <p className='bottom-nav-text'>
-              Account
-            </p>
-          </div>
-        </Link>
-
-        <Link to="/cart" >
-          <div className='bottom-nav-item'>
-            <img className='bottom-nav-img' src={cart} />
-            <p className='bottom-nav-text'>
-              Cart
-            </p>
-          </div>
-        </Link>
-
-
       </div>
-    </div>
+    </UserProvider>
   );
 }
 
