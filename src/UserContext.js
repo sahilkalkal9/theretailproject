@@ -6,11 +6,7 @@ export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
     const [userData, setUserData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        pan: "",
-        address: "",
+
     });
 
     const [petData, setPetData] = useState([]);

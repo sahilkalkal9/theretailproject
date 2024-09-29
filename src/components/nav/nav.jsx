@@ -112,7 +112,7 @@ function Nav() {
                                 </Link>
                                 : null
                         } */}
-                        {
+                        {/* {
                             auth.currentUser
                                 ?
                                 <Link to="/pet-profile">
@@ -124,8 +124,8 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        }
-                        {
+                        } */}
+                        {/* {
                             auth.currentUser
                                 ?
                                 <Link to="/orders">
@@ -137,7 +137,7 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        }
+                        } */}
                         {/* {
                             auth.currentUser
                                 ?
@@ -224,6 +224,12 @@ function Nav() {
                                             <Link className='nav-linkk' to="/profile">
                                                 <img className="menuk" src={profile} />
                                             </Link>
+                                            <Link className='nav-linkk' to="/pet-profile">
+                                                <img className="menuk" src={pawimg} />
+                                            </Link>
+                                            <Link className='nav-linkk' to="/orders">
+                                                <img className="menuk" src={enroll} />
+                                            </Link>
                                             <img onClick={openNav} className="menuk" src={menuk} />
                                         </div>
 
@@ -247,28 +253,7 @@ function Nav() {
                             </div>
                         </div>
                     </div>
-                    {/* <div className="new-nav-lower">
-                        <div className="new-nav-menu">
-                            <Link to='/about' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> About </p>
-                            </Link>
-                            <Link to='/how-to-recycle' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> How to recycle </p>
-                            </Link>
-                            <Link to='/shop' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> Shop </p>
-                            </Link>
-                          
-                            <Link to='/faq' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> FAQs </p>
-                            </Link>
-                            <Link to='/contact' >
-                                <p onClick={closeNav} className="new-nav-menu-item"> Contact us </p>
-                            </Link>
 
-
-                        </div>
-                    </div> */}
                 </div>
             </div>
         </>
