@@ -112,14 +112,7 @@ function Cart() {
 
     return (
         <div className="Home">
-            <div className="home-upper-main">
-                <div className="home-upper">
-                    <div className="page-head-box">
-                        <p className="page-head">Cart</p>
-                        <p className="page-path">home/cart</p>
-                    </div>
-                </div>
-            </div>
+
 
             {
                 auth.currentUser ?
