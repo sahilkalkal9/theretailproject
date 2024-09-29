@@ -64,7 +64,7 @@ const Login = () => {
         if (confirmationResult) {
             confirmationResult.confirm(otp)
                 .then(result => {
-                    navigate("/profile");
+                    navigate("/");
                     console.log("User signed in successfully:", result.user);
                 })
                 .catch(error => {

@@ -30,7 +30,7 @@ export const UserProvider = ({ children }) => {
                         .where("uid", "==", uid)
                         .get();
 
-                    if (!userSnapshot.empty) {
+                    
                         const userDoc = userSnapshot.docs[0].data();
                         setUserData({
                             name: userDoc.name,
@@ -56,9 +56,7 @@ export const UserProvider = ({ children }) => {
                         const fetchedOrders = ordersSnapshot.docs.map((doc) => doc.data())
                         await setOrderData(fetchedOrders)
 
-                    } else {
-                        console.warn("No user data found for the current user.");
-                    }
+                   
                 } catch (error) {
                     console.error("Error fetching user or pet data:", error);
                 }
@@ -85,7 +83,7 @@ export const UserProvider = ({ children }) => {
         });
 
         return () => unsubscribe(); // Cleanup listener on unmount
-    }, []); // Run only once when the component mounts
+    }, [auth.currentUser]); // Run only once when the component mounts
 
     return (
         <UserContext.Provider value={{ userData, petData, orderData }}>

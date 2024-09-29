@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { auth, firestore } from "../../firebase";
 import logo from "./pawb.png";
 import fullLogo from "./full-logo.jpg";
@@ -26,6 +26,8 @@ function Nav() {
     const location = useLocation();
     const [currentUser, setCurrentUser] = useState(null);
     const [nitems, setnitems] = useState(0);
+
+    const navigate = useNavigate()
 
     // Set up cart reference only if user is authenticated
     const cartRef = auth.currentUser
@@ -169,7 +171,7 @@ function Nav() {
                         {
                             auth.currentUser
                                 ?
-                                <div onClick={() => { auth.signOut(); closeNav() }} className="account-dets-menu-item">
+                                <div onClick={() => { auth.signOut(); closeNav(); navigate("/signin") }} className="account-dets-menu-item">
                                     <img className="acc-dets-img" src={exiti} />
                                     <p className="acc-dets-text">
                                         Sign Out

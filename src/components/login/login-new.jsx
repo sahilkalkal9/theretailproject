@@ -37,7 +37,7 @@ function LogInNew() {
                 .then(() => {
 
                     document.getElementsByClassName("singup-new-submit")[0].value = "Sign In"
-                    navigate("/profile")
+                    navigate("/")
                 })
 
 
@@ -72,7 +72,7 @@ function LogInNew() {
                         email: auth.currentUser.email,
 
                     }, { merge: true })
-                    navigate("/profile")
+                    navigate("/")
                 })
         }
         catch (error) {
