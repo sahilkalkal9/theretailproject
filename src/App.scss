@@ -2481,6 +2481,14 @@ h3 {
   align-items: center;
 }
 
+.hidemi {
+  display: none;
+}
+
+.hideoii {
+  display: flex;
+}
+
 @media only screen and (max-width : 1200px) {
   .ProductPage {
     padding: 1cm 5vw;
@@ -2545,7 +2553,15 @@ h3 {
   }
 
 
+  @media only screen and (max-width : 600px) {
+    .hidemi {
+      display: flex;
+    }
 
+    .hideoii {
+      display: none;
+    }
+  }
 
 
 

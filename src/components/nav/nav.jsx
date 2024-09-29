@@ -100,10 +100,10 @@ function Nav() {
                                 </p>
                             </div>
                         </Link>
-                        {/* {
+                        {
                             auth.currentUser ?
                                 <Link to="/profile">
-                                    <div onClick={closeNav} className={isActive("/profile") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                    <div  onClick={closeNav} className={isActive("/profile") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"} >
                                         <img className="acc-dets-img" src={profile} />
                                         <p className="acc-dets-text">
                                             My Profile
@@ -111,12 +111,12 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        } */}
-                        {/* {
+                        }
+                        {
                             auth.currentUser
                                 ?
                                 <Link to="/pet-profile">
-                                    <div onClick={closeNav} className={isActive("/pet-profile") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                    <div onClick={closeNav} className={isActive("/pet-profile") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"}>
                                         <img className="acc-dets-img" src={pawimg} />
                                         <p className="acc-dets-text">
                                             Pet Profile
@@ -124,12 +124,12 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        } */}
-                        {/* {
+                        }
+                        {
                             auth.currentUser
                                 ?
                                 <Link to="/orders">
-                                    <div onClick={closeNav} className={isActive("/orders") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                    <div onClick={closeNav} className={isActive("/orders") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"}>
                                         <img className="acc-dets-img" src={enroll} />
                                         <p className="acc-dets-text">
                                             My Orders
@@ -137,12 +137,12 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        } */}
-                        {/* {
+                        }
+                        {
                             auth.currentUser
                                 ?
                                 <Link to="/cart">
-                                    <div onClick={closeNav} className={isActive("/cart") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
+                                    <div onClick={closeNav} className={isActive("/cart") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"}>
                                         <img className="acc-dets-img" src={ccart} />
                                         <p className="acc-dets-text">
                                             Cart
@@ -150,7 +150,7 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        } */}
+                        }
 
                         <Link to="/faq">
                             <div onClick={closeNav} className={isActive("/faq") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
@@ -219,16 +219,16 @@ function Nav() {
                                         ?
                                         <div className="nav-menu-bar">
                                             <Link className='nav-linkk' to="/cart">
-                                                <img className="menuk" src={ccart} />
+                                                <img className="menuk hideoii" src={ccart} />
                                             </Link>
                                             <Link className='nav-linkk' to="/profile">
-                                                <img className="menuk" src={profile} />
+                                                <img className="menuk hideoii" src={profile} />
                                             </Link>
                                             <Link className='nav-linkk' to="/pet-profile">
-                                                <img className="menuk" src={pawimg} />
+                                                <img className="menuk hideoii" src={pawimg} />
                                             </Link>
                                             <Link className='nav-linkk' to="/orders">
-                                                <img className="menuk" src={enroll} />
+                                                <img className="menuk hideoii" src={enroll} />
                                             </Link>
                                             <img onClick={openNav} className="menuk" src={menuk} />
                                         </div>
