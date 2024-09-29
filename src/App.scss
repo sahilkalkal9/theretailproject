@@ -742,7 +742,7 @@ html {
   margin-top: .3cm;
   display: none;
 
-  .login-button{
+  .login-button {
     padding: .3cm;
   }
 }
@@ -2460,7 +2460,8 @@ h3 {
   font-size: 1rem;
   // text-align: center;
 }
-.nav-menu-i{
+
+.nav-menu-i {
   display: flex;
   gap: .3cm;
   align-items: center;
@@ -2490,19 +2491,21 @@ h3 {
 
 @media only screen and (max-width : 800px) {
   .NavNew {
-   
+
 
     .login-buttons {
       display: none;
     }
 
-    .login-buttons-overlay{
-      display: flex;
-    }
 
-    
 
-   
+
+
+
+  }
+
+  .login-buttons-overlay {
+    display: flex;
   }
 
   .bottom-nav {
