@@ -3,36 +3,40 @@ import { auth, firestore } from "../../firebase";
 import pencil from "./write.png";
 import checkMark from "./check-mark.png";
 import "./profile.scss";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext, useUserContext } from "../../UserContext";
 
 function ProfileNew() {
-    const usersRef = firestore.collection("users");
-    const [users] = useCollectionData(usersRef);
-    const [userData, setUserData] = useState({
-        name: "",
-        email: "",
-        phone: "",
-        pan: "",
-        address: ""
-    });
+    // const usersRef = firestore.collection("users");
+    // const [users] = useCollectionData(usersRef);
+    // const [userData, setUserData] = useState({
+    //     name: "",
+    //     email: "",
+    //     phone: "",
+    //     pan: "",
+    //     address: ""
+    // });
 
-    useEffect(() => {
-        // Ensure the user is authenticated
-        const currentUser = auth.currentUser;
+    // useEffect(() => {
+    //     // Ensure the user is authenticated
+    //     const currentUser = auth.currentUser;
 
-        if (currentUser && users) {
-            const user = users.find(u => u.uid === currentUser.uid);
-            if (user) {
-                setUserData({
-                    name: user.name,
-                    email: user.email,
-                    phone: user.phone,
-                    pan: user.pan,
-                    address: user.address
-                });
-            }
-        }
-    }, [users]); // Only run when `users` changes
+    //     if (currentUser && users) {
+    //         const user = users.find(u => u.uid === currentUser.uid);
+    //         if (user) {
+    //             setUserData({
+    //                 name: user.name,
+    //                 email: user.email,
+    //                 phone: user.phone,
+    //                 pan: user.pan,
+    //                 address: user.address
+    //             });
+    //         }
+    //     }
+    // }, [users]); // Only run when `users` changes
+
+
+    const { userData, petData } = useUserContext();
 
     return (
         <div className="ProfileNew">
