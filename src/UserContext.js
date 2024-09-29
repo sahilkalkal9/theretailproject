@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect } from "react";
-import { auth, firestore } from "./firebase"; // Make sure your Firebase config is imported
+import { auth, firestore } from "./firebase"; // Ensure Firebase is correctly configured
 import { onAuthStateChanged } from "firebase/auth";
 
 export const UserContext = createContext();
@@ -13,50 +13,29 @@ export const UserProvider = ({ children }) => {
         address: "",
     });
 
-
-
     const [petData, setPetData] = useState([]);
-
-    const [orderData, setOrderData] = useState([])
+    const [orderData, setOrderData] = useState([]);
 
     useEffect(() => {
-        // Function to fetch user and pet data
         const fetchUserData = async (uid) => {
             if (uid) {
                 try {
                     // Fetch user data
-                    const usersRef = firestore.collection("users");
-                    const userSnapshot = await usersRef
-                        .where("uid", "==", uid)
-                        .get();
-
-                    
-                        const userDoc = userSnapshot.docs[0].data();
-                        setUserData({
-                            name: userDoc.name,
-                            email: userDoc.email,
-                            phone: userDoc.phone,
-                            pan: userDoc.pan,
-                            address: userDoc.address,
-                        });
+                    const userDoc = await firestore.collection("users").doc(uid).get();
+                    if (userDoc.exists) {
+                        const userData = userDoc.data();
+                        setUserData(userData);
 
                         // Fetch pet data from subcollection
-                        const petsRef = usersRef.doc(uid).collection("pets");
-                        const petsSnapshot = await petsRef.get();
+                        const petsSnapshot = await firestore.collection("users").doc(uid).collection("pets").get();
                         const fetchedPets = petsSnapshot.docs.map((doc) => doc.data());
+                        setPetData(fetchedPets);
 
-
-                        // Update local state with fetched pets
-                        await setPetData(fetchedPets);
-
-
-                        // Fetch order data from sub collection
-                        const ordersRef = usersRef.doc(uid).collection("orders")
-                        const ordersSnapshot = await ordersRef.get();
-                        const fetchedOrders = ordersSnapshot.docs.map((doc) => doc.data())
-                        await setOrderData(fetchedOrders)
-
-                   
+                        // Fetch order data from subcollection
+                        const ordersSnapshot = await firestore.collection("users").doc(uid).collection("orders").get();
+                        const fetchedOrders = ordersSnapshot.docs.map((doc) => doc.data());
+                        setOrderData(fetchedOrders);
+                    }
                 } catch (error) {
                     console.error("Error fetching user or pet data:", error);
                 }
@@ -79,11 +58,12 @@ export const UserProvider = ({ children }) => {
                     address: "",
                 });
                 setPetData([]); // Clear pet data when user is logged out
+                setOrderData([]); // Clear order data when user is logged out
             }
         });
 
         return () => unsubscribe(); // Cleanup listener on unmount
-    }, [auth.currentUser]); // Run only once when the component mounts
+    }, []); // Run only once when the component mounts
 
     return (
         <UserContext.Provider value={{ userData, petData, orderData }}>
