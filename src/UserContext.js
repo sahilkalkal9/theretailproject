@@ -13,7 +13,11 @@ export const UserProvider = ({ children }) => {
         address: "",
     });
 
+
+
     const [petData, setPetData] = useState([]);
+
+    const [orderData, setOrderData] = useState([])
 
     useEffect(() => {
         // Function to fetch user and pet data
@@ -41,8 +45,17 @@ export const UserProvider = ({ children }) => {
                         const petsSnapshot = await petsRef.get();
                         const fetchedPets = petsSnapshot.docs.map((doc) => doc.data());
 
+
                         // Update local state with fetched pets
-                        setPetData(fetchedPets);
+                        await setPetData(fetchedPets);
+
+
+                        // Fetch order data from sub collection
+                        const ordersRef = usersRef.doc(uid).collection("orders")
+                        const ordersSnapshot = await ordersRef.get();
+                        const fetchedOrders = ordersSnapshot.docs.map((doc) => doc.data())
+                        await setOrderData(fetchedOrders)
+
                     } else {
                         console.warn("No user data found for the current user.");
                     }
@@ -75,7 +88,7 @@ export const UserProvider = ({ children }) => {
     }, []); // Run only once when the component mounts
 
     return (
-        <UserContext.Provider value={{ userData, petData }}>
+        <UserContext.Provider value={{ userData, petData, orderData }}>
             {children} {/* Ensure data is loaded before rendering children */}
         </UserContext.Provider>
     );

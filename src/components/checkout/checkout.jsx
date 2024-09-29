@@ -69,7 +69,7 @@ function Checkout({ userData, setUserData }) {
 
         script.onload = () => {
             const options = {
-                key: 'rzp_test_UyHOHDyb2q16qi', // Replace with your Razorpay Key ID
+                key: 'rzp_test_weoJG7e0Pl1Evf', // Replace with your Razorpay Key ID
                 amount: (totalPrice + 80) * 100, // amount in paisa
                 currency: 'INR',
                 name: 'The ReTail Project',

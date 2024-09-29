@@ -4,11 +4,12 @@ import pencil from "./write.png"
 import checkMark from "./check-mark.png"
 import "./profile.scss"
 import { useState } from "react"
+import { useUserContext } from "../../UserContext"
 
 function PetProfile() {
 
-    const usersRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("pets")
-    const [users] = useCollectionData(usersRef)
+    // const usersRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("pets")
+    // const [users] = useCollectionData(usersRef)
 
     const openAddPet = () => {
         document.getElementById("overlayAddPet").style.display = "flex"
@@ -93,11 +94,13 @@ function PetProfile() {
     }
 
 
-    const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(false)
 
-    setTimeout(() => {
-        setLoading(false)
-    }, 1000)
+    // setTimeout(() => {
+    //     setLoading(false)
+    // }, 1000)
+
+    const { userData, petData } = useUserContext();
 
 
     return (
@@ -132,18 +135,16 @@ function PetProfile() {
                     </p>
 
                     {
-                        loading
-                            ? <p className="load">Loading..</p>
-                            : (
+                       
                                 <div className="pet-profiles">
                                     {
-                                        users == 0
+                                        petData == 0
                                             ?
                                             <p>
                                                 No pet profiles
                                             </p>
                                             : (
-                                                users && users.map((u) => (
+                                                petData && petData.map((u) => (
 
                                                     <div className="profile-box-dets">
                                                         <div className="profile-box-det">
@@ -209,7 +210,7 @@ function PetProfile() {
                                             )
                                     }
                                 </div>
-                            )
+                            
                     }
                     <button onClick={openAddPet} className="add-pet">
                         Add Pet Profile

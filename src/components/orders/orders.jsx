@@ -1,12 +1,15 @@
 import { useCollectionData } from "react-firebase-hooks/firestore"
 import "../../App.scss"
 import { auth, firestore } from "../../firebase"
+import { UserContext, useUserContext } from "../../UserContext"
 
 function Orders() {
 
 
-    const ordersRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("orders").orderBy("timestamp")
-    const [orders] = useCollectionData(ordersRef)
+    // const ordersRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("orders").orderBy("timestamp")
+    // const [orders] = useCollectionData(ordersRef)
+
+    const { orderData } = useUserContext()
 
 
 
@@ -20,12 +23,12 @@ function Orders() {
 
                 <div className="orders-lower">
                     {
-                        orders && orders == 0
+                        orderData && orderData == 0
                             ? <p className="noorder">
                                 No orders currently
                             </p>
                             : (
-                                orders && orders.map((o) => (
+                                orderData && orderData.map((o) => (
                                     <div className="order">
                                         <div className="order-left">
                                             <img className="oImg" src={require(`../shop/${o.image}`)} />
