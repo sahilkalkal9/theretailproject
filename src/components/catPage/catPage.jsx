@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../../App.scss"
 
 import products from "../shop/products.json"
@@ -21,24 +21,26 @@ function CatPage() {
                             p.name.toLowerCase() == catid
                                 ? (
                                     p.products.map((cp) => (
-                                        <div className="product">
-                                            <img className="product-img" src={require(`../shop/${cp.image}`)} />
+                                        <Link to="/product">
+                                            <div className="product">
+                                                <img className="product-img" src={require(`../shop/${cp.image}`)} />
 
-                                            <div className="prod-lower">
-                                                <p className="product-name">
-                                                    {cp.name}
-                                                </p>
+                                                <div className="prod-lower">
+                                                    <p className="product-name">
+                                                        {cp.name}
+                                                    </p>
 
-                                                <div className="price-div">
-                                                    <p className="price">
-                                                        ₹ {cp.price}
-                                                    </p>
-                                                    <p className="cut-price">
-                                                        ₹ 1300
-                                                    </p>
+                                                    <div className="price-div">
+                                                        <p className="price">
+                                                            ₹ {cp.price}
+                                                        </p>
+                                                        <p className="cut-price">
+                                                            ₹ 1300
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </Link>
                                     ))
                                 )
                                 : null
