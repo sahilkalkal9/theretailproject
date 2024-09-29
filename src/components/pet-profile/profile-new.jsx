@@ -85,7 +85,8 @@ function PetProfile() {
             dob: formdata.dob,
             breed: formdata.breed,
             gender: formdata.gender,
-            age: formdata.age
+            age: formdata.age,
+            pid : docId
         })
         closeAddPet()
         document.getElementsByClassName("add-pet-submit")[0].value = "Add Pet Profile"
