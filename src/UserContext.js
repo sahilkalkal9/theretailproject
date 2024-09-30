@@ -20,6 +20,7 @@ export const UserProvider = ({ children }) => {
                     const userDoc = await firestore.collection("users").doc(uid).get();
                     if (userDoc.exists) {
                         const userData = userDoc.data();
+                        
                         setUserData(userData);
 
                         // Fetch pet data from subcollection
