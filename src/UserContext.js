@@ -67,7 +67,9 @@ export const UserProvider = ({ children }) => {
             {children} {/* Ensure data is loaded before rendering children */}
         </UserContext.Provider>
     );
-};
+};  
+
+
 
 // Custom hook for using the UserContext
 export const useUserContext = () => {
