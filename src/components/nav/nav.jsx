@@ -135,7 +135,7 @@ function Nav() {
                             auth.currentUser
                                 ?
                                 <Link to="/pet-profile">
-                                    <div onClick={closeNav} className={isActive("/pet-profile") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"}>
+                                    <div onClick={closeNav} className={isActive("/pet-profile") ? "account-dets-menu-item activeM " : "account-dets-menu-item "}>
                                         <img className="acc-dets-img" src={pawimg} />
                                         <p className="acc-dets-text">
                                             Pet Profile
@@ -148,7 +148,7 @@ function Nav() {
                             auth.currentUser
                                 ?
                                 <Link to="/orders">
-                                    <div onClick={closeNav} className={isActive("/orders") ? "account-dets-menu-item activeM hidemi" : "account-dets-menu-item hidemi"}>
+                                    <div onClick={closeNav} className={isActive("/orders") ? "account-dets-menu-item activeM " : "account-dets-menu-item "}>
                                         <img className="acc-dets-img" src={enroll} />
                                         <p className="acc-dets-text">
                                             My Orders
@@ -243,12 +243,12 @@ function Nav() {
                                             <Link className='nav-linkk' to="/profile">
                                                 <img className="menuk hideoii" src={profile} />
                                             </Link>
-                                            <Link className='nav-linkk' to="/pet-profile">
+                                            {/* <Link className='nav-linkk' to="/pet-profile">
                                                 <img className="menuk hideoii" src={pawimg} />
-                                            </Link>
-                                            <Link className='nav-linkk' to="/orders">
+                                            </Link> */}
+                                            {/* <Link className='nav-linkk' to="/orders">
                                                 <img className="menuk hideoii" src={enroll} />
-                                            </Link>
+                                            </Link> */}
                                             <img onClick={openNav} className="menuk" src={menuk} />
                                         </div>
 
