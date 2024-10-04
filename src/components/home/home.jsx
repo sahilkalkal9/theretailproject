@@ -15,63 +15,60 @@ import { useEffect } from "react";
 function Home() {
 
 
-    const [currentId, setCurrentId] = useState("firstSlide")
+    const slides = [
+        {
+            id: 'firstSlide',
+            heading: 'Eco Fashion for Pets 1',
+            tag: 'Get woodenly artisan chair now & get special offer',
+            buttonText: 'Grab Now',
+        },
+        {
+            id: 'secondSlide',
+            heading: 'Eco Fashion for Pets 2',
+            tag: 'Get woodenly artisan chair now & get special offer',
+            buttonText: 'Grab Now',
+        },
+        {
+            id: 'thirdSlide',
+            heading: 'Eco Fashion for Pets 3',
+            tag: 'Get woodenly artisan chair now & get special offer',
+            buttonText: 'Grab Now',
+        },
+        {
+            id: 'fourthSlide',
+            heading: 'Eco Fashion for Pets 4',
+            tag: 'Get woodenly artisan chair now & get special offer',
+            buttonText: 'Grab Now',
+        }
+    ];
 
-    let i = 0;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [fade, setFade] = useState(false);
 
-    const slides = ["firstSlide", "secondSlide", "thirdSlide", "fourthSlide"]
-
+    // Auto-slide every 5 seconds
     useEffect(() => {
         const interval = setInterval(() => {
-            // Hide the current slide
-            document.getElementById(currentId).style.display = "none";
-
-            // Update the currentId to the next slide
-            setCurrentId(prevId => {
-                const currentIndex = slides.indexOf(prevId);
-                const nextIndex = (currentIndex + 1) % slides.length;
-                return slides[nextIndex];
-            });
+            handleNext(); // Trigger next slide on interval
         }, 5000);
 
-        return () => clearInterval(interval);
-    }, [currentId, slides]);
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, []);
 
-    // Show the current slide whenever currentId changes
-    useEffect(() => {
-        document.getElementById(currentId).style.display = "flex";
-        if (currentId == "firstSlide") {
-            document.getElementsByClassName("limgs")[0].style.display = "none"
-            document.getElementsByClassName("rimgs")[0].style.display = "flex"
-        }
-        else if (currentId == "fourthSlide") {
-            document.getElementsByClassName("rimgs")[0].style.display = "none"
-            document.getElementsByClassName("limgs")[0].style.display = "flex"
-        }
-        else {
-            document.getElementsByClassName("limgs")[0].style.display = "flex"
-            document.getElementsByClassName("rimgs")[0].style.display = "flex"
-        }
-    }, [currentId]);
+    const handleNext = () => {
+        setFade(true);
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+            setFade(false);
+        }, 300); // Duration matches the fade-out duration
+    };
 
-
-    const handleRightSlide = () => {
-        document.getElementById(currentId).style.display = "none";
-        setCurrentId(prevId => {
-            const currentIndex = slides.indexOf(prevId);
-            const nextIndex = (currentIndex + 1) % slides.length;
-            return slides[nextIndex];
-        });
-    }
-
-    const handleLeftSlide = () => {
-        document.getElementById(currentId).style.display = "none";
-        setCurrentId(prevId => {
-            const currentIndex = slides.indexOf(prevId);
-            const nextIndex = (currentIndex - 1) % slides.length;
-            return slides[nextIndex];
-        });
-    }
+    const handlePrevious = () => {
+        setFade(true);
+        setTimeout(() => {
+            setCurrentIndex((prevIndex) => (prevIndex - 1 + slides.length) % slides.length);
+            setFade(false);
+        }, 300); // Duration matches the fade-out duration
+    };
 
 
 
@@ -81,60 +78,19 @@ function Home() {
     return (
         <div className="Home">
             <div className="slider-box">
-                <img onClick={handleLeftSlide} src={back} alt="" className="leftslideimg limgs" />
-                <div id="firstSlide" className="first-slide">
-                    <p className="fslide-head">
-                        Eco Fashion for Pets 1
-                    </p>
-                    <p className="fslide-tag">
-                        Get woodenly artisan chair now & get special offer
-                    </p>
+                <img onClick={handlePrevious} src="left-arrow.png" alt="Previous" className="leftslideimg" />
 
-                    <button className="grab">
-                        Grab Now
-                    </button>
-                </div>
-                <div id="secondSlide" className="first-slide">
-                    <p className="fslide-head">
-                        Eco Fashion for Pets 2
-                    </p>
-                    <p className="fslide-tag">
-                        Get woodenly artisan chair now & get special offer
-                    </p>
-
-                    <button className="grab">
-                        Grab Now
-                    </button>
-                </div>
-                <div id="thirdSlide" className="first-slide">
-                    <p className="fslide-head">
-                        Eco Fashion for Pets 3
-                    </p>
-                    <p className="fslide-tag">
-                        Get woodenly artisan chair now & get special offer
-                    </p>
-
-                    <button className="grab">
-                        Grab Now
-                    </button>
-                </div>
-                <div id="fourthSlide" className="first-slide">
-                    <p className="fslide-head">
-                        Eco Fashion for Pets 4
-                    </p>
-                    <p className="fslide-tag">
-                        Get woodenly artisan chair now & get special offer
-                    </p>
-
-                    <button className="grab">
-                        Grab Now
-                    </button>
+                <div className={`first-slide ${fade ? 'fade-out' : 'fade-in'}`}>
+                    <p className="fslide-head">{slides[currentIndex].heading}</p>
+                    <p className="fslide-tag">{slides[currentIndex].tag}</p>
+                    <button className="grab">{slides[currentIndex].buttonText}</button>
                 </div>
 
-                <img onClick={handleRightSlide} src={back} alt="" className="leftslideimg rimgs" />
-
+                <img onClick={handleNext} src="right-arrow.png" alt="Next" className="rightslideimg" />
             </div>
             <div className="home-lower">
+
+                
 
                 {/* <div className="content-div">
                     <marquee className="marquee" direction="left" scrollamount="5" >
@@ -151,30 +107,30 @@ function Home() {
                 <div className="content-div">
                     <p className="head" >Our Features</p>
                     {/* <marquee className="marqueea" direction="left" scrollamount="10" > */}
-                        <div className="featuresM ">
+                    <div className="featuresM ">
 
-                            <div className="featureM">
-                                <img className="fmimg" src={renewal} />
-                                <p className="ftext">Sustainable</p>
-                            </div>
-                            <div className="featureM">
-                                <img className="fmimg" src={hcf} />
-                                <p className="ftext">Handcrafted</p>
-                            </div>
-                            <div className="featureM">
-                                <img className="fmimg" src={csp} />
-                                <p className="ftext">Local Craftsmenship</p>
-                            </div>
-                            <div className="featureM">
-                                <img className="fmimg" src={cor} />
-                                <p className="ftext">Custom Order</p>
-                            </div>
-
-
-
-
-
+                        <div className="featureM">
+                            <img className="fmimg" src={renewal} />
+                            <p className="ftext">Sustainable</p>
                         </div>
+                        <div className="featureM">
+                            <img className="fmimg" src={hcf} />
+                            <p className="ftext">Handcrafted</p>
+                        </div>
+                        <div className="featureM">
+                            <img className="fmimg" src={csp} />
+                            <p className="ftext">Local Craftsmenship</p>
+                        </div>
+                        <div className="featureM">
+                            <img className="fmimg" src={cor} />
+                            <p className="ftext">Custom Order</p>
+                        </div>
+
+
+
+
+
+                    </div>
                     {/* </marquee> */}
 
                 </div>
