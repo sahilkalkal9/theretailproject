@@ -68,6 +68,7 @@ function Recycle() {
                             The ReTail Process
                         </p>
                         <br />
+                        
 
                         <p className="rec-text">
                             At ReTail Project, we've streamlined the process of transforming customers' old fabrics or blankets into new, eco-friendly delights for their pets. Here's how it works:

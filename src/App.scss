@@ -11,10 +11,7 @@ $headFont : Quattrocento;
   margin: 0;
 }
 
-/* Hide the arrows in Firefox */
-.no-arrows[type='number'] {
-  -moz-appearance: textfield;
-}
+
 
 
 
@@ -282,19 +279,14 @@ html {
 
 
 .heart {
-  // border: 1px solid transparent;
+
   width: .6cm;
-  // border-radius: 10px;
-  // padding: .2cm;
   cursor: pointer;
   height: auto;
   transition: .25s;
   backdrop-filter: blur(5px);
 
 
-  &:hover {
-    // background-color: rgb(233, 233, 233);
-  }
 }
 
 
@@ -1224,15 +1216,15 @@ html {
   row-gap: .5cm;
   column-gap: .2cm;
   // background-color: purple;
-  width: fit-content;
+  width : fit-content;
 }
 
 .gram {
-  width: 8cm;
+  width : 8cm;
 }
 
 .gramImg {
-  width: 100%;
+  width : 100%;
   filter: brightness(70%);
   transition: .15s;
   cursor: pointer;
@@ -2002,7 +1994,8 @@ h3 {
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: opacity 0.3s ease; /* Smooth transition */
+  transition: opacity 0.3s ease;
+  /* Smooth transition */
 }
 
 .first-slide::before {
@@ -2038,7 +2031,8 @@ h3 {
   cursor: pointer;
 }
 
-.leftslideimg, .rightslideimg {
+.leftslideimg,
+.rightslideimg {
   width: 1.2cm;
   position: absolute;
   z-index: 10;
@@ -2055,13 +2049,13 @@ h3 {
 }
 
 /* Animations */
-.fade-in {
-  opacity: 1;
-}
+// .fade-in {
+//   opacity: 1;
+// }
 
-.fade-out {
-  opacity: 0;
-}
+// .fade-out {
+//   opacity: 0.5;
+// }
 
 
 .NavNew {
