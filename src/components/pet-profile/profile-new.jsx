@@ -128,8 +128,8 @@ function PetProfile() {
                 </div>
 
             </div>
-            <div className="ProfileNew">
-                <div className="profile-new-box pet-p">
+            <div className="">
+                <div className="">
 
                     <p className="profile-head">
                         Pet Profile(s)

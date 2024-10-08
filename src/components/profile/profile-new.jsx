@@ -5,6 +5,7 @@ import checkMark from "./check-mark.png";
 import "./profile.scss";
 import { useContext, useEffect, useState } from "react";
 import { UserContext, useUserContext } from "../../UserContext";
+import PetProfile from "../pet-profile/profile-new";
 
 function ProfileNew() {
     // const usersRef = firestore.collection("users");
@@ -79,6 +80,8 @@ function ProfileNew() {
                         <img className="write" src={pencil} alt="Edit" />
                     </div>
                 </div>
+                <br />  <br />
+                <PetProfile />
             </div>
         </div>
     );
