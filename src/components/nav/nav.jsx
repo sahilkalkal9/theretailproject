@@ -131,7 +131,7 @@ function Nav() {
                                 </Link>
                                 : null
                         }
-                        {
+                        {/* {
                             auth.currentUser
                                 ?
                                 <Link to="/pet-profile">
@@ -143,7 +143,7 @@ function Nav() {
                                     </div>
                                 </Link>
                                 : null
-                        }
+                        } */}
                         {
                             auth.currentUser
                                 ?
