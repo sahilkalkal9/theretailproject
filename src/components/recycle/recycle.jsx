@@ -7,58 +7,63 @@ function Recycle() {
     return (
         <div className="RecyclePage">
             <div className="recycle-lower">
-                <p className="contact-head rhh">
-                    How to Recycle ?
-                </p>
-                <div className="recycle-content">
-                    <div className="recycle-intro">
-                        <p className="rec-head">
-                            Recycle what ?
-                        </p>
-                        <p className="rec-text">
-                            We proudly recycle a variety of items, including blankets, T-shirts/shirts, Indian wear, denims, sweatshirts, socks, towels and more.
-                            Join us in giving new life to old memories and creating a positive impact on the environment.
-                        </p>
-                    </div>
 
-                    <div className="recycle-process">
-                        <div className="rec-left">
-                            <div className="rec-img-box">
-                                <img className="rec-img" src={one} />
-                            </div>
-                            <div className="rec-process-text">
-                                <p className="rec-head">
-                                    Step 1 : SEND
-                                </p>
-                                <p className="rec-text">
-                                    Send us any material that holds sentimental value or is simply lying around unused. We encourage you to send it to us and begin the recycling process.
-                                </p>
-                            </div>
+                <div className="recycle-content">
+
+                    <div>
+                        <p className="contact-head rhh">
+                            How to Recycle ?
+                        </p>
+                        <br />
+                        <div className="recycle-intro">
+                            <p className="rec-head">
+                                Recycle what ?
+                            </p>
+                            <p className="rec-text">
+                                We proudly recycle a variety of items, including blankets, T-shirts/shirts, Indian wear, denims, sweatshirts, socks, towels and more.
+                                Join us in giving new life to old memories and creating a positive impact on the environment.
+                            </p>
                         </div>
-                        <div className="rec-left rr">
-                            <div className="rec-img-box">
-                                <img className="rec-img" src={two} />
+
+                        <div className="recycle-process">
+                            <div className="rec-left">
+                                <div className="rec-img-box">
+                                    <img className="rec-img" src={one} />
+                                </div>
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 1 : SEND
+                                    </p>
+                                    <p className="rec-text">
+                                        Send us any material that holds sentimental value or is simply lying around unused. We encourage you to send it to us and begin the recycling process.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="rec-process-text">
-                                <p className="rec-head">
-                                    Step 2 : STYLE
-                                </p>
-                                <p className="rec-text">
-                                    We discuss various options, considering factors such as functionality, aesthetics, and the specific requirements of the pet. Whether it's a cozy bed, a durable toy, or a stylish accessory, we work closely with you to ensure that the final design reflects your vision and exceeds expectations.
-                                </p>
+                            <div className="rec-left rr">
+                                <div className="rec-img-box">
+                                    <img className="rec-img" src={two} />
+                                </div>
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 2 : STYLE
+                                    </p>
+                                    <p className="rec-text">
+                                        We discuss various options, considering factors such as functionality, aesthetics, and the specific requirements of the pet. Whether it's a cozy bed, a durable toy, or a stylish accessory, we work closely with you to ensure that the final design reflects your vision and exceeds expectations.
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="rec-left">
-                            <div className="rec-img-box">
-                                <img className="rec-img" src={three} />
-                            </div>
-                            <div className="rec-process-text">
-                                <p className="rec-head">
-                                    Step 3 : SMILE
-                                </p>
-                                <p className="rec-text">
-                                    As you unwrap the package, you are greeted with a custom creation, crafted with care and creativity. It's a heartwarming moment that highlights the joy of sustainable pet ownership and the happiness that comes from giving old materials new life.
-                                </p>
+                            <div className="rec-left">
+                                <div className="rec-img-box">
+                                    <img className="rec-img" src={three} />
+                                </div>
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 3 : SMILE
+                                    </p>
+                                    <p className="rec-text">
+                                        As you unwrap the package, you are greeted with a custom creation, crafted with care and creativity. It's a heartwarming moment that highlights the joy of sustainable pet ownership and the happiness that comes from giving old materials new life.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -68,7 +73,7 @@ function Recycle() {
                             The ReTail Process
                         </p>
                         <br />
-                        
+
 
                         <p className="rec-text">
                             At ReTail Project, we've streamlined the process of transforming customers' old fabrics or blankets into new, eco-friendly delights for their pets. Here's how it works:
