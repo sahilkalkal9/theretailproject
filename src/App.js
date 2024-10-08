@@ -87,7 +87,7 @@ function App() {
 
           <Route path='/profile' element={<ProfileNew />} />
 
-          <Route path='/pet-profile' element={<PetProfile />} />
+          {/* <Route path='/pet-profile' element={<PetProfile />} /> */}
           <Route path='/checkout' element={<Checkout userData={userData} setUserData={setUserData} />} />
         </Routes>
 
