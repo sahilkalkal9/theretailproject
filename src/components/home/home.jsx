@@ -90,7 +90,7 @@ function Home() {
             </div>
             <div className="home-lower">
 
-                
+
 
                 {/* <div className="content-div">
                     <marquee className="marquee" direction="left" scrollamount="5" >
@@ -110,19 +110,30 @@ function Home() {
                     <div className="featuresM ">
 
                         <div className="featureM">
-                            <img className="fmimg" src={renewal} />
+                            <div className="fmimgbox">
+                                <img className="fmimg" src={renewal} />
+                            </div>
                             <p className="ftext">Sustainable</p>
                         </div>
                         <div className="featureM">
-                            <img className="fmimg" src={hcf} />
+
+                            <div className="fmimgbox">
+                                <img className="fmimg" src={hcf} />
+                            </div>
                             <p className="ftext">Handcrafted</p>
                         </div>
                         <div className="featureM">
-                            <img className="fmimg" src={csp} />
+
+                            <div className="fmimgbox">
+                                <img className="fmimg" src={csp} />
+                            </div>
                             <p className="ftext">Local Craftsmenship</p>
                         </div>
                         <div className="featureM">
-                            <img className="fmimg" src={cor} />
+
+                            <div className="fmimgbox">
+                                <img className="fmimg" src={cor} />
+                            </div>
                             <p className="ftext">Custom Order</p>
                         </div>
 

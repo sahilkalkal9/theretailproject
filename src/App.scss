@@ -1218,15 +1218,15 @@ html {
   row-gap: .5cm;
   column-gap: .2cm;
   // background-color: purple;
-  width : fit-content;
+  width: fit-content;
 }
 
 .gram {
-  width : 8cm;
+  width: 8cm;
 }
 
 .gramImg {
-  width : 100%;
+  width: 100%;
   filter: brightness(70%);
   transition: .15s;
   cursor: pointer;
@@ -1236,31 +1236,39 @@ html {
   }
 }
 
+.fmimgbox {
+  width: 2cm;
+  height: 2cm;
+  background-color: #d3ffe7;
+  padding: .7cm;
+  border-radius: 50%;
+}
+
 .fmimg {
-  width: 2.5cm;
+  width: 100%;
+  height: 100%;
 }
 
 .featuresM {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1cm;
+  gap: 1.5cm;
   margin-top: .5cm;
 }
 
 .featureM {
-  // border: 1px solid black;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
-  width: 5cm;
-  height: 5cm;
+
   flex-direction: column;
   align-items: center;
-  gap: .3cm;
-  padding: 1cm;
-  border-radius: 100000px;
+  gap: .15cm;
+  // padding: 1cm;
+  // border-radius: 100000px;
   // background-color: $primarycolor;
-  background-color: #d3ffe7;
+  // background-color: #d3ffe7;
   transition: .3s;
 
   &:hover {}
@@ -1269,7 +1277,7 @@ html {
 
 .ftext {
   color: black;
-  font-size: 1rem;
+  font-size: 14px;
   text-align: center;
 }
 
