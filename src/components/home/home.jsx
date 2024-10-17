@@ -119,7 +119,7 @@ function Home() {
 
                             <div className="fmimgbox">
                                 <img className="fmimg" src={hcf} />
-                            </div>
+                            </div> 
                             <p className="ftext">Handcrafted</p>
                         </div>
                         <div className="featureM">
