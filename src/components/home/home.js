@@ -108,7 +108,28 @@ function Home() {
 
                     <div className="collection-box">
                         <p className="home-main-head" >Our Collections</p>
-                       
+                        <div className="collections">
+                            <div className="collection">
+                                <p className="coltext">
+                                    WEAR
+                                </p>
+                            </div>
+                            <div className="collection walk">
+                                <p className="coltext ">
+                                    WALK
+                                </p>
+                            </div>
+                            <div className="collection coplay">
+                                <p className="coltext ">
+                                    PLAY
+                                </p>
+                            </div>
+                            <div className="collection sleep">
+                                <p className="coltext ">
+                                    SLEEP
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
 

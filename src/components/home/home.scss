@@ -37,7 +37,7 @@ $secondarycolor : #e4af47;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        filter: brightness(60%);
+        filter: brightness(55%);
     }
 }
 
@@ -207,6 +207,7 @@ $secondarycolor : #e4af47;
 
 .collection-box {
     margin-top: 3cm;
+    padding: 0cm 10vw;
 
 }
 
@@ -323,4 +324,51 @@ $secondarycolor : #e4af47;
     width: fit-content;
     padding: .1cm .4cm;
     border-radius: 1000px;
+}
+
+.collections {
+    margin-top: 1cm;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .7cm;
+}
+
+.collection {
+    padding: 1cm;
+    width: 5cm;
+    height: 5cm;
+    // border: 1px solid black;
+    border-radius: 10px;
+    background-color: pink;
+    width: fit-content;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 91, 118);
+    cursor: pointer;
+    transition: .3s all ease;
+}
+
+.coltext {
+    font-size: 60px;
+    font-weight: 900;
+
+}
+
+.walk {
+    background-color: rgb(220, 183, 255);
+    color: rgb(145, 28, 255);
+}
+
+.coplay {
+    background-color: rgb(173, 240, 173);
+    color: forestgreen;
+}
+
+.sleep {
+    background-color: rgb(187, 204, 255);
+    color: rgb(31, 83, 238);
 }
