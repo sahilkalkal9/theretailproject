@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=:wght@400;700&display=swap');
+
+$headFont : Quattrocento;
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+* {
+    text-decoration: none;
+    padding: none;
+    margin: 0;
+}
+
+.Slider {
+    background-color: $primarycolor;
+    width: 100%;
+    aspect-ratio: 16/9;
+    // height: 2cm;
+}
+
+.Hero {
+    padding: 3cm 10vw;
+}
+
+.home-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6cm;
+}
+
+.home-main-div {
+    display: flex;
+    gap: 4cm;
+}
+
+.home-main-div-left {
+    width: 11cm;
+    // border: 1px solid black;
+    position: relative;
+    // z-index: 100;
+
+    &::before {
+        content: "";
+        top: 30%;
+        left: 55%;
+        bottom: 0;
+        right: 0;
+        width: 7cm ;
+        height: auto;
+        aspect-ratio: 9/16;
+        position: absolute;
+        background-image: url("./imageT.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 7cm auto;
+        // z-index: 10;
+    }
+}
+
+.hmlt {
+    width: 11cm;
+    // border: 1px solid black;
+    position: relative;
+    // z-index: 100;
+
+    &::before {
+        content: "";
+        top: 30%;
+        
+        bottom: 0;
+        left: -20%;
+        width: 7cm ;
+        height: auto;
+        aspect-ratio: 9/16;
+        position: absolute;
+        background-image: url("./imageT.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 7cm auto;
+        // z-index: 10;
+    }
+}
+
+.home-main-div-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3cm;
+    // border: 1px solid black;
+    width: 10cm;
+}
+
+.main-div-back {
+    width: 100%;
+}
+
+.home-main-head {
+    font-family: $headFont;
+    font-size: 2.5rem;
+    color: $primarycolor;
+    // font-weight: 500;
+}
+
+.main-text{
+    // font-size: 18px;
+    text-align: left;
+    font-family: Poppins;
+}
+
+
+.read-more{
+    padding: .35cm .7cm;
+    font-size: 17px;
+    margin-top: .3cm;
+    background-color: transparent;
+    border: 1px solid $primarycolor;
+    transition: .3s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: $primarycolor;
+        color: white;
+    }
+}
