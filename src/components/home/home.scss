@@ -134,6 +134,7 @@ $secondarycolor : #e4af47;
     margin-top: 6cm;
     justify-content: space-between;
     background-color: #dfffeebd;
+    
 
 }
 
@@ -147,7 +148,9 @@ $secondarycolor : #e4af47;
     flex-wrap: wrap;
     padding: 1cm;
     gap: .5cm;
+    // border: 1px solid black;
     justify-content: space-around;
+    align-items: center;
 }
 
 .feature-back-img {
