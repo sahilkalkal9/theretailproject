@@ -106,6 +106,12 @@ function Home() {
                     </div>
 
 
+                    <div className="collection-box">
+                        <p className="home-main-head" >Our Collections</p>
+                       
+                    </div>
+
+
 
 
 

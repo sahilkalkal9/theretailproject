@@ -14,9 +14,31 @@ $secondarycolor : #e4af47;
 
 .Slider {
     background-color: $primarycolor;
-    width: 100%;
+    // width: 100%;
     aspect-ratio: 16/9;
     // height: 2cm;
+    padding: 1cm 10vw 2cm 10vw;
+
+}
+
+.slider-box {
+    // border: 1px solid white;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-image: url("./gwalk.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: brightness(60%);
+    }
 }
 
 .Hero {
@@ -101,7 +123,7 @@ $secondarycolor : #e4af47;
 
 .home-main-head {
     font-family: $headFont;
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: $primarycolor;
     // font-weight: 500;
 }
@@ -174,11 +196,131 @@ $secondarycolor : #e4af47;
 
 .fname {
     font-family: $headFont;
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     margin-top: .2cm;
     color: $primarycolor;
 }
 
 .ftext {
     font-size: 1rem;
+}
+
+.collection-box {
+    margin-top: 3cm;
+
+}
+
+.OcollectionsM {
+    margin-top: 1cm;
+    column-count: 2;
+    justify-content: center;
+    column-gap: .15cm;
+
+
+
+}
+
+.collection {
+    // border: 1px solid black;
+    padding: .3cm;
+
+}
+
+.fc {
+    width: 10cm;
+    height: 8cm;
+    // background-color: rgb(231, 231, 231);
+    position: relative;
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./wear.png");
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(70%);
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+}
+
+.sc {
+    width: 10cm;
+    height: 5cm;
+    // background-color: rgb(231, 231, 231);
+    margin-top: .15cm;
+    border-radius: 10px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./play.png");
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(80%);
+        border-radius: 10px;
+        z-index: -1;
+    }
+
+
+}
+
+.tc {
+    width: 10cm;
+    height: 5cm;
+    // background-color: rgb(231, 231, 231);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./bed.png");
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(70%);
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+
+}
+
+.foc {
+    margin-top: .15cm;
+    width: 10cm;
+    height: 8cm;
+    // background-color: rgb(231, 231, 231);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("./walk.png");
+        inset: 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        filter: brightness(80%);
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+}
+
+.ctext {
+    color: white;
+    background-color: $primarycolor;
+    font-size: 15px;
+    width: fit-content;
+    padding: .1cm .4cm;
+    border-radius: 1000px;
 }
