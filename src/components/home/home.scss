@@ -47,7 +47,7 @@ $secondarycolor : #e4af47;
         left: 55%;
         bottom: 0;
         right: 0;
-        width: 7cm ;
+        width: 7cm;
         height: auto;
         aspect-ratio: 9/16;
         position: absolute;
@@ -68,10 +68,10 @@ $secondarycolor : #e4af47;
     &::before {
         content: "";
         top: 30%;
-        
+
         bottom: 0;
         left: -20%;
-        width: 7cm ;
+        width: 7cm;
         height: auto;
         aspect-ratio: 9/16;
         position: absolute;
@@ -103,14 +103,14 @@ $secondarycolor : #e4af47;
     // font-weight: 500;
 }
 
-.main-text{
+.main-text {
     // font-size: 18px;
     text-align: left;
     font-family: Poppins;
 }
 
 
-.read-more{
+.read-more {
     padding: .35cm .7cm;
     font-size: 17px;
     margin-top: .3cm;
@@ -119,8 +119,54 @@ $secondarycolor : #e4af47;
     transition: .3s;
     cursor: pointer;
 
-    &:hover{
+    &:hover {
         background-color: $primarycolor;
         color: white;
     }
+}
+
+.home-features {
+    display: flex;
+    gap: 1cm;
+    margin-top: 6cm;
+    justify-content: space-between;
+    background-color: #dfffeebd;
+
+}
+
+.home-features-right {
+    width: 12cm;
+    flex-shrink: 0;
+}
+
+.home-features-left{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1cm;
+    gap: .5cm;
+    justify-content: space-around;
+}
+
+.feature-back-img {
+    width: 100%;
+}
+
+.feature {
+    // border: 1px solid black;
+    width: 7cm;
+    height: fit-content;
+}
+
+.fimg {
+    width: 1.5cm;
+}
+
+.fname{
+    font-family: $headFont;
+    font-size: 2.3rem;
+    color: $primarycolor;
+}
+
+.ftext{
+    font-size: 1rem;
 }

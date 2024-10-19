@@ -1,6 +1,10 @@
 import "./home.scss"
 import backOne from "./imageO.webp"
 import backTwo from "./imageT.webp"
+import csp from "./scissors.png"
+import sustainable from "./renewal.png"
+import corder from "./review.png"
+import handc from "./tailoring.png"
 
 
 function Home() {
@@ -56,6 +60,57 @@ function Home() {
 
                         </div>
                     </div>
+
+                    <div className="home-features">
+                        <div className="home-features-left">
+                            <div className="feature">
+                                <img className="fimg" src={sustainable} />
+                                <p className="fname">
+                                    Sustainable
+                                </p>
+                                <p className="ftext">
+                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                </p>
+                            </div>
+                            <div className="feature">
+                                <img className="fimg" src={handc} />
+                                <p className="fname">
+                                    Handcrafted
+                                </p>
+                                <p className="ftext">
+                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                </p>
+                            </div>
+                            <div className="feature">
+                                <img className="fimg" src={csp} />
+                                <p className="fname">
+                                    Craftsmenship
+                                </p>
+                                <p className="ftext">
+                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                </p>
+                            </div>
+                            <div className="feature">
+                                <img className="fimg" src={corder} />
+                                <p className="fname">
+                                    Custom Order
+                                </p>
+                                <p className="ftext">
+                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                </p>
+                            </div>
+                        </div>
+                        <div className="home-features-right">
+                            <img className="feature-back-img" src={backOne} />
+                        </div>
+                    </div>
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
