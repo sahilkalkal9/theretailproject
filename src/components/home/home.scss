@@ -20,7 +20,7 @@ $secondarycolor : #e4af47;
 }
 
 .Hero {
-    padding: 3cm 10vw;
+    // padding: 3cm 10vw;
 }
 
 .home-main {
@@ -28,11 +28,14 @@ $secondarycolor : #e4af47;
     flex-direction: column;
     align-items: center;
     gap: 6cm;
+    padding: 3cm 10vw 0cm 10vw;
 }
 
 .home-main-div {
     display: flex;
     gap: 4cm;
+    
+
 }
 
 .home-main-div-left {
