@@ -63,41 +63,45 @@ function Home() {
 
                     <div className="home-features">
                         <div className="home-features-left">
-                            <div className="feature">
-                                <img className="fimg" src={sustainable} />
-                                <p className="fname">
-                                    Sustainable
-                                </p>
-                                <p className="ftext">
-                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                </p>
+                            <div className="home-features-left-one">
+                                <div className="feature">
+                                    <img className="fimg" src={sustainable} />
+                                    <p className="fname">
+                                        Sustainable
+                                    </p>
+                                    <p className="ftext">
+                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                    </p>
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={handc} />
+                                    <p className="fname">
+                                        Handcrafted
+                                    </p>
+                                    <p className="ftext">
+                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                    </p>
+                                </div>
                             </div>
-                            <div className="feature">
-                                <img className="fimg" src={handc} />
-                                <p className="fname">
-                                    Handcrafted
-                                </p>
-                                <p className="ftext">
-                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                </p>
-                            </div>
-                            <div className="feature">
-                                <img className="fimg" src={csp} />
-                                <p className="fname">
-                                    Craftsmenship
-                                </p>
-                                <p className="ftext">
-                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                </p>
-                            </div>
-                            <div className="feature">
-                                <img className="fimg" src={corder} />
-                                <p className="fname">
-                                    Custom Order
-                                </p>
-                                <p className="ftext">
-                                    Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                </p>
+                            <div className="home-features-left-two">
+                                <div className="feature">
+                                    <img className="fimg" src={csp} />
+                                    <p className="fname">
+                                        Craftsmenship
+                                    </p>
+                                    <p className="ftext">
+                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                    </p>
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={corder} />
+                                    <p className="fname">
+                                        Custom Order
+                                    </p>
+                                    <p className="ftext">
+                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <div className="home-features-right">

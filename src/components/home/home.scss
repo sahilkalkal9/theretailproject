@@ -168,10 +168,23 @@ $secondarycolor : #e4af47;
 
 .home-features-left {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     padding: 1cm;
     gap: .5cm;
-    // border: 1px solid black;
+    border: 1px solid black;
+    width: 100%;
+    justify-content: space-around;
+    // align-items: center;
+    
+}
+
+.home-features-left-one,
+.home-features-left-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1cm;
     justify-content: space-around;
     align-items: center;
 }
