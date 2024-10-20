@@ -176,7 +176,7 @@ $secondarycolor : #e4af47;
     width: 100%;
     justify-content: space-around;
     // align-items: center;
-    
+
 }
 
 .home-features-left-one,
@@ -350,8 +350,8 @@ $secondarycolor : #e4af47;
 
 .collection {
     padding: 1cm;
-    width: 4cm;
-    height: 4cm;
+    width: 5cm;
+    height: 5cm;
     // border: 1px solid black;
     border-radius: 10px;
     background-color: pink;
@@ -362,28 +362,94 @@ $secondarycolor : #e4af47;
     justify-content: center;
     color: rgb(248, 60, 92);
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     transition: .3s all ease;
+
+    &:active {
+        box-shadow: none;
+    }
 }
 
 .coltext {
-    font-size: 50px;
+    font-size: 55px;
     font-weight: bolder;
     letter-spacing: .1cm;
-    font-family: Kdam Thmor Pro;
+    font-family: Saira Stencil One;
 
+
+
+}
+
+.wear {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./wear.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: .15;
+    }
 }
 
 .walk {
     background-color: rgb(224, 191, 255);
     color: rgb(134, 13, 247);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./walk.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: .15;
+    }
 }
 
 .coplay {
     background-color: rgb(173, 240, 173);
     color: forestgreen;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./play.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: .15;
+    }
 }
 
 .sleep {
     background-color: rgb(187, 204, 255);
     color: rgb(31, 83, 238);
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("./bed.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: -1;
+        opacity: .15;
+    }
 }

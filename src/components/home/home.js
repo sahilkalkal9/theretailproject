@@ -113,7 +113,7 @@ function Home() {
                     <div className="collection-box">
                         <p className="home-main-head" >Our Collections</p>
                         <div className="collections">
-                            <div className="collection">
+                            <div className="collection wear">
                                 <p className="coltext">
                                     WEAR
                                 </p>
