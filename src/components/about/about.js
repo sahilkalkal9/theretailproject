@@ -128,8 +128,12 @@ function About() {
                             Get 10% Discount For Subscriber
                         </p>
                         <p className="about-four-text">
-
+                            Lorem ipsum dolor consectetur adipisicing accusantium
                         </p>
+                    </div>
+                    <div className="newsletter-box">
+                        <input type="text" className="news-inp" placeholder="Enter Email Address Here" />
+                        <input type="submit" value="Subscribe" className="news-submit" />
                     </div>
                 </div>
 

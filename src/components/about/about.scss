@@ -14,7 +14,7 @@ $secondarycolor : #e4af47;
 }
 
 .About {
-    padding: 2cm 10vw;
+    padding: 2cm 0vw;
 }
 
 .about-lower {
@@ -26,6 +26,7 @@ $secondarycolor : #e4af47;
 
 .about-one {
     display: flex;
+    padding: 0cm 10vw;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1cm;
@@ -74,6 +75,7 @@ $secondarycolor : #e4af47;
 
 .about-two {
     display: flex;
+    padding: 0cm 10vw;
     justify-content: center;
     align-items: flex-start;
     gap: 2cm;
@@ -137,6 +139,7 @@ $secondarycolor : #e4af47;
     display: flex;
     flex-direction: column;
     gap: 1.5cm;
+    padding: 0cm 10vw;
     align-items: center;
 }
 
@@ -177,4 +180,75 @@ $secondarycolor : #e4af47;
 .about-point-text {
     text-align: left;
     margin-top: .2cm;
+}
+
+.about-four {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1cm;
+    border: 1px solid black;
+    position: relative;
+    // width: 100%;
+    padding: 2cm 10vw;
+    width: calc(100% - (20vw + 2px));
+
+    &::before {
+        content: "";
+        inset: 0;
+        background-image: url("./slider-back.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        z-index: -1;
+        filter: brightness(45%);
+    }
+}
+
+.about-four-head {
+    font-size: 32px;
+    // font-weight: 600;
+    text-align: left;
+    color: white;
+}
+
+.about-four-text {
+    color: white;
+    text-align: left;
+}
+
+.newsletter-box {
+    border: 1px solid white;
+    padding: .3cm .3cm;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: .3cm;
+    // opacity: .85;
+}
+
+.news-inp {
+    width: 10cm;
+    border: none;
+    font-size: 16px;
+    color: $primarycolor;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+
+}
+
+.news-submit {
+    padding: .3cm .5cm;
+    border: none;
+    background-color: $primarycolor;
+    color: $secondarycolor;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
 }
