@@ -137,6 +137,52 @@ function About() {
                     </div>
                 </div>
 
+                <div className="about-five">
+                    <div className="about-five-box">
+                        <div className="about-five-point">
+                            <img className="about-five-img" src={require("./truck.png")} />
+
+                            <div className="about-fiv-point-desc">
+                                <p className="about-five-point-name">
+                                    Easy Home Delivery
+                                </p>
+                                <p className="about-five-point-text">
+                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="about-five-point">
+                            <img className="about-five-img" src={require("./support.png")} />
+
+                            <div className="about-fiv-point-desc">
+                                <p className="about-five-point-name">
+                                    Quick Support System
+                                </p>
+                                <p className="about-five-point-text">
+                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div className="about-five-point">
+                            <img className="about-five-img" src={require("./secure.png")} />
+
+                            <div className="about-fiv-point-desc">
+                                <p className="about-five-point-name">
+                                    Secure Payment Way
+                                </p>
+                                <p className="about-five-point-text">
+                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                </p>
+                            </div>
+                        </div>
+
+                        
+                        
+                    </div>
+                </div>
+
 
             </div>
         </div>

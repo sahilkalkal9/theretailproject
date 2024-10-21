@@ -21,7 +21,7 @@ $secondarycolor : #e4af47;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5cm;
+    gap: 2cm;
 }
 
 .about-one {
@@ -79,6 +79,7 @@ $secondarycolor : #e4af47;
     justify-content: center;
     align-items: flex-start;
     gap: 2cm;
+    margin-top: 3cm;
     // border: 1px solid black;
 }
 
@@ -141,6 +142,7 @@ $secondarycolor : #e4af47;
     gap: 1.5cm;
     padding: 0cm 10vw;
     align-items: center;
+    margin-top: 3cm;
 }
 
 .about-three-head {
@@ -251,4 +253,49 @@ $secondarycolor : #e4af47;
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
+}
+
+
+
+.about-five {
+    padding: 0cm 10vw;
+    width: calc(100% - 20vw);
+    // border: 1px solid red;
+
+}
+
+.about-five-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1cm;
+    justify-content: space-between;
+    // border: 1px solid black;
+    width: 100%;
+}
+.about-five-point{
+    display: flex;
+    align-items: flex-start;
+    width: 7cm;
+    // border: 1px solid black;
+    gap: .5cm;
+    
+}
+.about-fiv-point-desc{
+    display: flex;
+    flex-direction: column;
+    gap: .1cm;
+
+}
+
+.about-five-point-name{
+    text-align: left;
+    font-size: 18px;
+}
+.about-five-point-text{
+    text-align: left;
+    font-size: 14px;
+}
+.about-five-img{
+    width: 1cm;
 }
