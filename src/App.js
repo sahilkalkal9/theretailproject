@@ -8,6 +8,7 @@ import About from './components/about/about';
 import SignUp from './components/signup/signup';
 import Login from './components/login/login';
 import LogInNew from './components/login/login-new';
+import Recycle from './components/recycle/recycle';
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/how-to-recycle' element={<Recycle />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/shop' element={<Shop />} />
         <Route path='/signup' element={<SignUp />} />

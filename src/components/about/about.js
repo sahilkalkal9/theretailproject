@@ -39,7 +39,7 @@ function About() {
 
                 <div className="about-two">
                     <div className="about-two-left">
-                        <img className="founder-img" src={require("./01.jpg")} />
+                        <img className="founder-img" src={require("./founder.jpg")} />
                     </div>
                     <div className="about-two-right">
                         <img className="qoute" src={require("./quote.png")} />

@@ -94,10 +94,10 @@ function LogInNew() {
             <div className="signup-new-box">
                 <div className="signup-head">
                     <p className="signup-new-head">
-                       Welcome!
+                        Welcome!
                     </p>
                     <p className="singup-new-text">
-                       Use your credentials to access
+                        Use your credentials to access
                     </p>
                 </div>
                 <form onSubmit={handleSubmit} className="signup-new-form">
