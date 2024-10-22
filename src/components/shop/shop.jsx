@@ -1,388 +1,375 @@
-import "../../app.scss"
+import "./shop.scss"
 import gwalk from "./gwalknp.png"
 
 function Shop() {
     return (
         <div className="Shop">
             <div className="shop-box">
-                <div className="products">
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
+                <div className="nproducts">
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
                                 </p>
-                                <p className="cut-price">
-                                    ₹1300
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
                         </div>
                     </div>
 
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
                                 </p>
-                                <p className="cut-price">
-                                    ₹1300
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
                                 </p>
                             </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
                         </div>
                     </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
 
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
                                 </p>
-                                <p className="cut-price">
-                                    ₹1300
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
                                 </p>
                             </div>
                         </div>
-                    </div> <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
                         </div>
                     </div>
-                    <div className="product">
-                        <img className="product-img" src={gwalk} />
 
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
                                 </p>
-                                <p className="cut-price">
-                                    ₹1300
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
                                 </p>
                             </div>
                         </div>
-                    </div> <div className="product">
-                        <img className="product-img" src={gwalk} />
-
-                        <div className="prod-lower">
-                            <p className="product-name">
-                                Collar & Leash for dogs of all sizes
-                            </p>
-
-                            <div className="price-div">
-                                <p className="price">
-                                    ₹ 600
-                                </p>
-                                <p className="cut-price">
-                                    ₹1300
-                                </p>
-                            </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
                         </div>
                     </div>
+
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+                    <div className="fproduct">
+                        <div className="fprod-upper">
+                            <img className="prodimg" src={require("./product.png")} />
+                            <div className="prod-desc">
+                                <p className="prod-cat">
+                                    Wear
+                                </p>
+                                <p className="prod-name">
+                                    Leash and collar combo for every sized dog
+                                </p>
+                                <p className="prod-price">
+                                    Rs. 600.00
+                                </p>
+                            </div>
+                        </div>
+                        <div className="fprod-lower">
+                            <button className="add-cart" >
+                                ADD TO CART
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
