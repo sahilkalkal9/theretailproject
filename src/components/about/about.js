@@ -56,11 +56,8 @@ function About() {
 
                         <div className="founder-desc">
                             <p className="founder-text">
-                                As the founder of The ReTail Project, this journey is deeply personal to me. My love for pets and my commitment to sustainable living are at the heart of everything we do. Each product is not just a step towards a more eco-friendly world, but also a reflection of the unconditional love and joy that pets bring into our lives.
-                                <br /> <br />
-                                This project is especially meaningful as it is dedicated to the memory of my brother, who shared my passion for animals and the environment. His spirit continues to inspire me every day, pushing me to create something beautiful that honors both pets and the planet.
-                                <br /> <br />
-                                Thank you for being part of this journey with us. Together, we can make a difference—for our pets, our planet, and the ones we love.
+                                My love for pets and my commitment to sustainable living are at the heart of everything we do. Each product is not just a step towards a more eco-friendly world, but also a reflection of the unconditional love and joy that pets bring into our lives.
+
 
                             </p>
 
@@ -75,6 +72,58 @@ function About() {
                         </div>
                     </div>
                 </div>
+
+
+
+                <div className="about-misc">
+                    <p className="about-misc-head">
+                        Our Story
+                    </p>
+                    <p className="about-story-text" >
+                        The ReTail Project: A Tale of Love, Recycling, and Compassion
+                        <br /><br />
+                        Once upon a time,in a world where passion met purpose,there existed a
+                        profound bond between siblings,Saurabh and Mahima.Their shared love for 
+                        animals ignited a flame that burned brightly in their hearts.When tragedy
+                        struck and Saurabh transcended to another realm, Mahima was left with a
+                        void, yet also with a determination to honour his memory in a meaningful
+                        way.
+                        <br /><br />
+                        In the depths of grief, inspiration blossomed The ReTail Project.Mahima 
+                        found solace and purpose in merging her fervour for recycling waste
+                        materials with the unconditional love shared with her pets.Thus, the ReTail
+                        project was born — a testament to the enduring bond between humans and
+                        animals, and a tribute to the legacy of Saurabh Bhaiya, Chloe and Brida who
+                        continue to inspire her with their unwavering spirit.
+                        <br /><br />
+                        Fuelled by passion and driven by a desire to make a positive impact, I
+                        embarked on a journey to turn waste into wonder. Through innovative
+                        recycling techniques and a commitment to sustainability, The ReTail Project
+                        transformed discarded materials into high - quality pet products, each in fused
+                        with love and compassion.
+                        <br /><br />
+                        But The ReTail Project is more than just a business — it is a beacon of hope, a
+                        symbol of resilience, and a reminder that even in the face of loss, love endures.
+                        With each purchase, customers not only gain a product but also become part
+                        of a larger movement — a movement fueled by love for animals, respect for
+                        the environment, and a shared commitment to making the world a better
+                        place.
+                        <br /><br />
+                        As the story of The ReTail Project unfolded, it became clear that its success
+                        was not measured solely by profits, but by the lives touched, the smiles
+                        created, and the memories cherished. For in the tapestry of life, every thread — no matter how small — holds the potential to weave a story of love,
+                        compassion, and hope. And in the hearts of those who dared to dream, The
+                        ReTail Project would forever remain a testament to the power of love to
+                        overcome even the greatest of challenges.
+
+                    </p>
+                </div>
+
+
+
+
+
+
                 <div className="about-three">
                     <p className="about-three-head">
                         Why Choose Us ?
