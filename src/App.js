@@ -12,6 +12,9 @@ import Recycle from './components/recycle/recycle';
 import FAQQ from './components/faq/faq.jsx';
 import Contact from './components/contact/contact.js';
 
+import ProfileNew from './components/profile/profile-new.jsx';
+import { UserProvider } from './UserContext.js';
+
 function App() {
 
 
@@ -24,26 +27,29 @@ function App() {
 
 
   return (
-    <div className="App">
-      {
-        isActive("/signup") || isActive("/signin") ? null : <Nav />
-      }
+    <UserProvider>
+      <div className="App">
+        {
+          isActive("/signup") || isActive("/signin") ? null : <Nav />
+        }
 
 
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/how-to-recycle' element={<Recycle />} />
-        <Route path='/about-us' element={<About />} />
-        <Route path='/shop' element={<Shop />} />
-        <Route path='/signup' element={<SignUp />} />
-        <Route path='/signin' element={<LogInNew />} />
-        <Route path='/faq' element={<FAQQ />} />
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/profile' element={<ProfileNew />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/how-to-recycle' element={<Recycle />} />
+          <Route path='/about-us' element={<About />} />
+          <Route path='/shop' element={<Shop />} />
+          <Route path='/signup' element={<SignUp />} />
+          <Route path='/signin' element={<LogInNew />} />
+          <Route path='/faq' element={<FAQQ />} />
+        </Routes>
 
 
 
-    </div>
+      </div>
+    </UserProvider>
   );
 }
 
