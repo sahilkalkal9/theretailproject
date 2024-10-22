@@ -9,6 +9,7 @@ import SignUp from './components/signup/signup';
 import Login from './components/login/login';
 import LogInNew from './components/login/login-new';
 import Recycle from './components/recycle/recycle';
+import FAQQ from './components/faq/faq.jsx';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path='/shop' element={<Shop />} />
         <Route path='/signup' element={<SignUp />} />
         <Route path='/signin' element={<LogInNew />} />
+        <Route path='/faq' element={<FAQQ />} />
       </Routes>
 
 

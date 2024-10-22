@@ -1,0 +1,68 @@
+[
+    {
+        "id": "firstq",
+        "checkId": "firstc",
+        "question": "What is The ReTail Project?",
+        "answer": "The ReTail Project is an initiative that focuses on providing high-quality, handcrafted products made by local artisans. Our mission is to support local craftsmanship, promote sustainability, and give back to our community through various charitable efforts."
+    },
+    {
+        "id": "secondq",
+        "checkId": "secondc",
+        "question": "Where are your products made?",
+        "answer": "All our products are proudly made in India, crafted by skilled local artisans who use traditional techniques combined with modern designs."
+    },
+    {
+        "id": "thirdq",
+        "checkId": "thirdc",
+        "question": "How does The ReTail Project support local artisans?",
+        "answer": "We collaborate directly with local craftsmen and artisans, ensuring fair wages and ethical working conditions. By purchasing our products, you help sustain these artisans' livelihoods and preserve traditional crafts."
+    },
+    {
+        "id": "fourthq",
+        "checkId": "fourthc",
+        "question": "Do you ship internationally?",
+        "answer": "Yes, The ReTail Project proudly ships products to various countries around the world. We aim to bring our unique, handcrafted items to a global audience."
+    },
+    {
+        "id": "fifthq",
+        "checkId": "fifthc",
+        "question": "What sustainable practices do you follow?",
+        "answer": "We are committed to sustainability through eco-friendly materials, biodegradable packaging, and minimizing waste in our production processes. Our goal is to reduce our environmental footprint while delivering high-quality products."
+    },
+    {
+        "id": "sixthq",
+        "checkId": "sixthc",
+        "question": "Can I customize my order?",
+        "answer": "Yes, we offer customization options for many of our products. You can personalize your items to suit your preferences. Please contact our customer service team for more details on customization options."
+    },
+    {
+        "id": "seventhq",
+        "checkId": "seventhc",
+        "question": "How does my purchase contribute to community causes?",
+        "answer": "A portion of our earnings is dedicated to charitable initiatives such as feeding stray animals, providing medical care, and supporting local community projects. Your purchase directly helps fund these efforts."
+    },
+    {
+        "id": "eighthq",
+        "checkId": "eighthc",
+        "question": "What is your return policy?",
+        "answer": "We strive for 100% customer satisfaction. If you are not completely satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please refer to our return policy page for detailed information."
+    },
+    {
+        "id": "ninthq",
+        "checkId": "ninthc",
+        "question": "Do you offer a warranty on your products?",
+        "answer": "No. warranty on select products, ensuring their quality and durability. Check the product details for warranty information."
+    },
+    {
+        "id": "tenthq",
+        "checkId": "tenthc",
+        "question": "How can I contact customer service?",
+        "answer": "You can reach our customer service team via email at support@theretailproject.com or call us at [Your Contact Number]. We are available Monday to Friday, 9 AM to 6 PM."
+    },
+    {
+        "id": "eleventhq",
+        "checkId": "eleventhc",
+        "question": "How can I stay updated with The ReTail Project?",
+        "answer": "Follow us on social media platforms [insert social media handles] and subscribe to our newsletter for the latest updates, promotions, and stories about our artisans and community efforts."
+    }
+]
