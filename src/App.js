@@ -10,6 +10,7 @@ import Login from './components/login/login';
 import LogInNew from './components/login/login-new';
 import Recycle from './components/recycle/recycle';
 import FAQQ from './components/faq/faq.jsx';
+import Contact from './components/contact/contact.js';
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/how-to-recycle' element={<Recycle />} />
         <Route path='/about-us' element={<About />} />
         <Route path='/shop' element={<Shop />} />
