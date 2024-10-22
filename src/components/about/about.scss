@@ -27,15 +27,24 @@ $secondarycolor : #e4af47;
 
 .about-one {
     display: flex;
+    // border: 1px solid black;
     padding: 0cm 10vw;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1cm;
 }
 
+.about-one-left{
+    // border: 1px solid black;
+    width: 100%;
+}
+
 .about-one-right {
     display: flex;
-    width: 16cm;
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 15cm;
     flex-shrink: 0;
     gap: .3cm;
     flex-wrap: wrap;
@@ -56,6 +65,7 @@ $secondarycolor : #e4af47;
 .about-desc {
     display: flex;
     flex-direction: column;
+   
     gap: .1cm;
     margin-top: .5cm;
 }
