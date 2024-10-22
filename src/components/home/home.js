@@ -28,7 +28,9 @@ function Home() {
                                     Who We Are ?
                                 </p>
                                 <p className="main-text">
-                                    Morbi tempus iaculis urna id volutpat lacus laoreet. Odio morbi quis commodo odio Ut porttitor leo a diam.
+                                    The ReTail Project is a conscious pet brand that customizes pet clothing, accessories, bedding and toys offering eco-friendly, personalized designs.
+                                    <br />
+                                    With our own product range and a focus on upcycling, we bring sustainability and style together for pet parents who care about the planet.
                                 </p>
 
                                 <button className="read-more" >
@@ -45,7 +47,7 @@ function Home() {
                                     What We Do ?
                                 </p>
                                 <p className="main-text">
-                                    Morbi tempus iaculis urna id volutpat lacus laoreet. Odio morbi quis commodo odio Ut porttitor leo a diam.
+                                    The ReTail Project is all about giving pet parents the opportunity to breathe new life into their pre-owned items by transforming them into customized, eco-friendly products for their pets. We take materials that would otherwise go unused and upcycle them into unique, tailor-made pet products. This way, we not only help reduce waste but also create a stronger connection with our community, as each product is personal and sustainable.
                                 </p>
 
                                 <button className="read-more" >

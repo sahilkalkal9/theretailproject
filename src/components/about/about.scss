@@ -11,7 +11,7 @@ $secondarycolor : #e4af47;
     text-decoration: none;
     padding: none;
     margin: 0;
-    color: #486455 ;
+    color: #486455;
 }
 
 .About {
@@ -95,6 +95,12 @@ $secondarycolor : #e4af47;
     padding: .2cm;
     flex-shrink: 0;
 
+}
+
+.about-head-main {
+    font-size: 3rem;
+    color: $primarycolor;
+    font-family: $headFont;
 }
 
 .founder-img {
@@ -275,29 +281,33 @@ $secondarycolor : #e4af47;
     // border: 1px solid black;
     width: 100%;
 }
-.about-five-point{
+
+.about-five-point {
     display: flex;
     align-items: flex-start;
     width: 7cm;
     // border: 1px solid black;
     gap: .5cm;
-    
+
 }
-.about-fiv-point-desc{
+
+.about-fiv-point-desc {
     display: flex;
     flex-direction: column;
     gap: .1cm;
 
 }
 
-.about-five-point-name{
+.about-five-point-name {
     text-align: left;
     font-size: 18px;
 }
-.about-five-point-text{
+
+.about-five-point-text {
     text-align: left;
     font-size: 14px;
 }
-.about-five-img{
+
+.about-five-img {
     width: 1cm;
 }

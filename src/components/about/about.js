@@ -4,6 +4,9 @@ function About() {
     return (
         <div className="About">
             <div className="about-lower">
+                <p className="about-head-main">
+                    About Us
+                </p>
                 <div className="about-one">
                     <div className="about-one-left">
                         {/* <p className="small-head">
