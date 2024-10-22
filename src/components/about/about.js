@@ -54,9 +54,9 @@ function About() {
                         <div className="founder-desc">
                             <p className="founder-text">
                                 As the founder of The ReTail Project, this journey is deeply personal to me. My love for pets and my commitment to sustainable living are at the heart of everything we do. Each product is not just a step towards a more eco-friendly world, but also a reflection of the unconditional love and joy that pets bring into our lives.
-                                <br />
+                                <br /> <br />
                                 This project is especially meaningful as it is dedicated to the memory of my brother, who shared my passion for animals and the environment. His spirit continues to inspire me every day, pushing me to create something beautiful that honors both pets and the planet.
-                                <br />
+                                <br /> <br />
                                 Thank you for being part of this journey with us. Together, we can make a difference—for our pets, our planet, and the ones we love.
 
                             </p>
