@@ -79,7 +79,7 @@ $secondarycolor : #e4af47;
     padding: 0cm 10vw;
     justify-content: center;
     align-items: flex-start;
-    gap: 2cm;
+    gap: 1cm;
     margin-top: 3cm;
     // border: 1px solid black;
 }
@@ -106,17 +106,17 @@ $secondarycolor : #e4af47;
 .about-two-right {
     display: flex;
     flex-direction: column;
-    gap: 1cm;
+    gap: .5cm;
     justify-content: space-between;
     // border: 1px solid black;
     // height: 100%;
     align-items: flex-start;
-    width: 16cm;
+    // width: 16cm;
 }
 
 .founder-text {
     text-align: left;
-    font-size: 22px;
+    font-size: 20px;
     font-family: Poppins;
     color: $primarycolor;
 }
