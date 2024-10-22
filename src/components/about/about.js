@@ -14,15 +14,22 @@ function About() {
                         </p>
                         <div className="about-desc">
                             <p className="about-text">
+
                                 We offer eco-friendly, customizable pet products, meticulously crafted from
                                 recycled materials to suit your furry friend's unique style and needs.
                             </p>
                             <p className="about-text">
+                                <br />
+                                <b>Our Vision</b>
+                                <br />
                                 We aspire to weave a narrative of love, sustainability,and the enduring
                                 connection we share with our animal companions.
 
                             </p>
                             <p className="about-text">
+                                <br />
+                                <b>Our Mission</b>
+                                <br />
                                 Our mission is to revolutionize the pet industry by promoting sustainability,
                                 creativity,and compassion.
 
@@ -67,7 +74,7 @@ function About() {
                 </div>
                 <div className="about-three">
                     <p className="about-three-head">
-                        Why People Choose Their Pet Comfort With Us
+                        Why Choose Us ?
                     </p>
 
                     <div className="about-three-points">
