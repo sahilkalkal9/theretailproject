@@ -14,7 +14,7 @@ import Contact from './components/contact/contact.js';
 
 import ProfileNew from './components/profile/profile-new.jsx';
 import { UserProvider } from './UserContext.js';
-import Cart from './components/cart/cart.js';
+import Footer from './components/footer/footer.js';
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
           isActive("/signup") || isActive("/signin") ? null : <Nav />
         }
 
-        
+
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<ProfileNew />} />
@@ -47,7 +47,7 @@ function App() {
           <Route path='/faq' element={<FAQQ />} />
         </Routes>
 
-
+        <Footer />
 
       </div>
     </UserProvider>
