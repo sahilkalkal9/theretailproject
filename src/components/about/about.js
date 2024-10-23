@@ -83,13 +83,13 @@ function About() {
                         The ReTail Project: A Tale of Love, Recycling, and Compassion
                         <br /><br />
                         Once upon a time,in a world where passion met purpose,there existed a
-                        profound bond between siblings,Saurabh and Mahima.Their shared love for 
+                        profound bond between siblings,Saurabh and Mahima.Their shared love for
                         animals ignited a flame that burned brightly in their hearts.When tragedy
                         struck and Saurabh transcended to another realm, Mahima was left with a
                         void, yet also with a determination to honour his memory in a meaningful
                         way.
                         <br /><br />
-                        In the depths of grief, inspiration blossomed The ReTail Project.Mahima 
+                        In the depths of grief, inspiration blossomed The ReTail Project.Mahima
                         found solace and purpose in merging her fervour for recycling waste
                         materials with the unconditional love shared with her pets.Thus, the ReTail
                         project was born — a testament to the enduring bond between humans and
@@ -134,10 +134,11 @@ function About() {
                             <img className="about-point-img" src={require("./quality.png")} />
                             <div className="about-point-right">
                                 <p className="about-point-head">
-                                    Quality
+                                    Sustainability at Our Core
                                 </p>
                                 <p className="about-point-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis
+                                    We upcycle pre-owned materials to create eco-friendly products, reducing waste and promoting a healthier planet.
+
                                 </p>
                             </div>
 
@@ -147,10 +148,11 @@ function About() {
                             <img className="about-point-img" src={require("./planning.png")} />
                             <div className="about-point-right">
                                 <p className="about-point-head">
-                                    Planning
+                                    Customization with Care
                                 </p>
                                 <p className="about-point-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis
+                                    Each item is personalized to reflect your pet’s unique personality, crafted with love and attention to detail.
+
                                 </p>
                             </div>
 
@@ -160,10 +162,11 @@ function About() {
                             <img className="about-point-img" src={require("./designing.png")} />
                             <div className="about-point-right">
                                 <p className="about-point-head">
-                                    Designing
+                                    Community-Driven
                                 </p>
                                 <p className="about-point-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis
+                                    We are a passionate community of pet lovers dedicated to compassion and sustainability, connecting with fellow pet parents.
+
                                 </p>
                             </div>
 
@@ -173,10 +176,11 @@ function About() {
                             <img className="about-point-img" src={require("./production.png")} />
                             <div className="about-point-right">
                                 <p className="about-point-head">
-                                    Production
+                                    Transparency and Quality
                                 </p>
                                 <p className="about-point-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing tempora pariatur provident animi error dignissimo cumque minus facere dolores cupiditate debitis
+                                    Our commitment to high-quality materials and transparent practices ensures your pet receives the best.
+
                                 </p>
                             </div>
 

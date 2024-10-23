@@ -11,6 +11,7 @@ export const UserProvider = ({ children }) => {
 
     const [petData, setPetData] = useState([]);
     const [orderData, setOrderData] = useState([]);
+    const [cartData, setCartData] = useState([])
 
     useEffect(() => {
         const fetchUserData = async (uid) => {
@@ -20,7 +21,7 @@ export const UserProvider = ({ children }) => {
                     const userDoc = await firestore.collection("users").doc(uid).get();
                     if (userDoc.exists) {
                         const userData = userDoc.data();
-                        
+
                         setUserData(userData);
 
                         // Fetch pet data from subcollection
@@ -32,6 +33,10 @@ export const UserProvider = ({ children }) => {
                         const ordersSnapshot = await firestore.collection("users").doc(uid).collection("orders").get();
                         const fetchedOrders = ordersSnapshot.docs.map((doc) => doc.data());
                         setOrderData(fetchedOrders);
+
+                        const cartSnapshot = await firestore.collection("users").doc(uid).collection("cart").get()
+                        const fetchCartData = await cartSnapshot.docs.map((doc) => doc.data());
+                        setCartData(fetchCartData)
                     }
                 } catch (error) {
                     console.error("Error fetching user or pet data:", error);
@@ -63,11 +68,11 @@ export const UserProvider = ({ children }) => {
     }, []); // Run only once when the component mounts
 
     return (
-        <UserContext.Provider value={{ userData, petData, orderData }}>
+        <UserContext.Provider value={{ userData, petData, orderData, cartData }}>
             {children} {/* Ensure data is loaded before rendering children */}
         </UserContext.Provider>
     );
-};  
+};
 
 
 

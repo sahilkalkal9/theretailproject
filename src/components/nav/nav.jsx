@@ -21,6 +21,7 @@ import faq from "./faq.png"
 import aboutimg from "./about.png"
 import pawimg from "./paw.png"
 import recimg from "./recycle.png"
+import "./cart.scss"
 
 function Nav() {
     const location = useLocation();
@@ -78,6 +79,15 @@ function Nav() {
     const openNav = () => {
         document.getElementById("overlayNav").style.width = "7cm"
     }
+
+    const closeCart = () => {
+        document.getElementById("cartNew").style.width = "0cm"
+    }
+
+    const openCart = () => {
+        document.getElementById("cartNew").style.width = "12cm"
+    }
+
 
     return (
 
@@ -218,6 +228,408 @@ function Nav() {
                     </div>
                 </div>
             </div>
+
+
+            <div id="cartNew" className="Cart-new">
+                <div className="cart-box-new">
+                    <div className="cart-head-new">
+                        <div className="cart-head-left-new">
+                            <p className="cart-total-text">
+                                Total Item (12)
+                            </p>
+                        </div>
+                        <div className="cart-head-right">
+                            <p onClick={closeCart} className="closeCart">
+                                Close
+                            </p>
+                        </div>
+                    </div>
+                    <div className="cart-prods-list">
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                        <div className="cart-prod-new">
+                            <div className="cart-prod-new-left">
+                                <img className="cart-prod-new-img" src={require("./product.png")} />
+                            </div>
+                            <div className="cart-prod-new-right">
+                                <p className="cart-prod-new-name">
+                                    Existing Product Name
+                                </p>
+                                <p className="cart-prod-new-price">
+                                    ₹300.00
+                                </p>
+
+                                <div className="cart-new-quantity-box">
+                                    <p className="cart-minus-new">
+                                        -
+                                    </p>
+                                    <p className="cart-quantity-new">
+                                        10
+                                    </p>
+                                    <p className="cart-plus-new">
+                                        +
+                                    </p>
+
+                                </div>
+
+                                <p className="cart-del-new">
+                                    Delete
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="cart-checkout-new">
+                        <div className="checkout-coupon">
+                            <input className="coup-inp" type="text" placeholder="Enter Coupon Code" />
+                            <input className="coup-sub" type="submit" value="Apply" />
+                        </div>
+                        <div className="checkout-final">
+                            <p className="checout-text">
+                                Proceed to Checkout
+                            </p>
+                            <p>
+                                |
+                            </p>
+
+                            <p className="checout-price">
+                                ₹360.00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
             <div className="NavNew">
                 <div className="new-nav-box">
                     <div className="new-nav-upper">
@@ -237,9 +649,9 @@ function Nav() {
                                     auth.currentUser
                                         ?
                                         <div className="nav-menu-bar">
-                                            <Link className='nav-linkk' to="/cart">
-                                                <img className="menuk hideoii" src={ccart} />
-                                            </Link>
+
+                                            <img onClick={openCart} className="menuk hideoii" src={ccart} />
+
                                             <Link className='nav-linkk' to="/profile">
                                                 <img className="menuk hideoii" src={profile} />
                                             </Link>
