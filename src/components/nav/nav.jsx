@@ -98,12 +98,7 @@ function Nav() {
                         {/* <img className="close-img" src={cross} onClick={closeNav} /> */}
                     </div>
                     <div className="account-dets-menu">
-                        <div onClick={() => { closeNav() }} className="account-dets-menu-item">
-                            {/* <img className="acc-dets-img" src={cross} /> */}
-                            <p className="acc-dets-text">
-                                Close
-                            </p>
-                        </div>
+
                         <Link to="/about-us">
                             <div onClick={closeNav} className={isActive("/about-us") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={aboutimg} />
@@ -225,6 +220,13 @@ function Nav() {
                                     </div>
                                 )
                         }
+
+                        <div onClick={() => { closeNav() }} className="account-dets-menu-item">
+                            {/* <img className="acc-dets-img" src={cross} /> */}
+                            <p className="acc-dets-text">
+                                Close
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
