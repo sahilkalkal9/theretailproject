@@ -87,7 +87,7 @@ function LogInNew() {
                 <div className="signup-head-upn">
                     <img className="signup-logon" src={require("./pawb.png")} />
                     <p className="signup-head-textn">
-                        The ReTail Project
+                        The <span className="re-text">Re</span>Tail Project
                     </p>
                 </div>
             </Link>
