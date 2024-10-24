@@ -1,6 +1,6 @@
 import "./home.scss"
-import backOne from "./imageO.webp"
-import backTwo from "./imageT.webp"
+import backOne from "./home-back-one.jpg"
+import backTwo from "./home-back-two.jpg"
 import csp from "./scissors.png"
 import sustainable from "./renewal.png"
 import corder from "./review.png"
@@ -22,7 +22,7 @@ function Home() {
                     <div className="home-main">
                         <div className="home-main-div">
                             <div className="home-main-div-left">
-                                <img className="main-div-back" src={backOne} />
+                                <img className="main-div-back hbone" src={backOne} />
                             </div>
                             <div className="home-main-div-right">
                                 <p className="home-main-head">
@@ -30,7 +30,7 @@ function Home() {
                                 </p>
                                 <p className="main-text">
                                     The ReTail Project is a conscious pet brand that customizes pet clothing, accessories, bedding and toys offering eco-friendly, personalized designs.
-                                    <br />
+                                    <br /><br />
                                     With our own product range and a focus on upcycling, we bring sustainability and style together for pet parents who care about the planet.
                                 </p>
 
@@ -48,15 +48,16 @@ function Home() {
                                     What We Do ?
                                 </p>
                                 <p className="main-text">
-                                    The ReTail Project is all about giving pet parents the opportunity to breathe new life into their pre-owned items by transforming them into customized, eco-friendly products for their pets. We take materials that would otherwise go unused and upcycle them into unique, tailor-made pet products. This way, we not only help reduce waste but also create a stronger connection with our community, as each product is personal and sustainable.
+                                    The ReTail Project is all about giving pet parents the opportunity to breathe new life into their pre-owned items by transforming them into customized, eco-friendly products for their pets.
+                                    <br /><br />We take materials that would otherwise go unused and upcycle them into unique, tailor-made pet products. This way, we not only help reduce waste but also create a stronger connection with our community, as each product is personal and sustainable.
                                 </p>
 
-                                <button className="read-more" >
+                                <button className="read-more">
                                     Read more
                                 </button>
                             </div>
                             <div className="home-main-div-left hmlt">
-                                <img className="main-div-back" src={backOne} />
+                                <img className="main-div-back" src={backTwo} />
                             </div>
 
 
@@ -65,51 +66,58 @@ function Home() {
                     </div>
 
                     <div className="home-features">
-                        <div className="home-features-left">
-                            <div className="home-features-left-one">
-                                <div className="feature">
-                                    <img className="fimg" src={sustainable} />
-                                    <p className="fname">
-                                        Sustainable
-                                    </p>
-                                    <p className="ftext">
-                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                    </p>
+
+
+                        <div className="home-features-left-box">
+                            <p className="home-main-head">Our Features</p>
+                            <div className="home-features-left">
+                                <div className="home-features-left-one">
+                                    <div className="feature">
+                                        <img className="fimg" src={sustainable} />
+                                        <p className="fname">
+                                            Sustainable
+                                        </p>
+                                        <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
+                                    <div className="feature">
+                                        <img className="fimg" src={handc} />
+                                        <p className="fname">
+                                            Handcrafted
+                                        </p>
+                                        <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="feature">
-                                    <img className="fimg" src={handc} />
-                                    <p className="fname">
-                                        Handcrafted
-                                    </p>
-                                    <p className="ftext">
-                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="home-features-left-two">
-                                <div className="feature">
-                                    <img className="fimg" src={csp} />
-                                    <p className="fname">
-                                        Craftsmenship
-                                    </p>
-                                    <p className="ftext">
-                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                    </p>
-                                </div>
-                                <div className="feature">
-                                    <img className="fimg" src={corder} />
-                                    <p className="fname">
-                                        Custom Order
-                                    </p>
-                                    <p className="ftext">
-                                        Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                    </p>
+                                <div className="home-features-left-two">
+                                    <div className="feature">
+                                        <img className="fimg" src={csp} />
+                                        <p className="fname">
+                                            Craftsmenship
+                                        </p>
+                                        <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
+                                    <div className="feature">
+                                        <img className="fimg" src={corder} />
+                                        <p className="fname">
+                                            Custom Order
+                                        </p>
+                                        <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                         <div className="home-features-right">
-                            <img className="feature-back-img" src={backOne} />
+                            <img className="feature-back-img" src={require("./fbimg.jpg")} />
                         </div>
+
                     </div>
 
 
