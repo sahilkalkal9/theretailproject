@@ -7,6 +7,7 @@ import corder from "./review.png"
 import handc from "./tailoring.png"
 
 
+
 function Home() {
     return (
         <div className="Home">
