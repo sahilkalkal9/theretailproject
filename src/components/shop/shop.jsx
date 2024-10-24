@@ -11,7 +11,7 @@ function Shop() {
                             <img className="prodimg" src={require("./product.png")} />
                             <div className="prod-desc">
                                 <p className="prod-cat">
-                                    Wear
+                                    Sleep
                                 </p>
                                 <p className="prod-name">
                                     Leash and collar combo for every sized dog
@@ -36,10 +36,10 @@ function Shop() {
                                     Wear
                                 </p>
                                 <p className="prod-name">
-                                    Leash and collar combo for every sized dog
+                                    Festive Frock 
                                 </p>
                                 <p className="prod-price">
-                                    Rs. 600.00
+                                    
                                 </p>
                             </div>
                         </div>

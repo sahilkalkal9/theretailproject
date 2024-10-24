@@ -637,13 +637,17 @@ function Nav() {
                     <div className="new-nav-upper">
 
                         <div className="new-nav-logo">
-                            <Link className='new-nav-logo-box' to='/'>
-                                <img className="logo-image-paw" src={logo} alt="logo" />
-                                <p className="co-name-text">
-                                    The <span className="re-text">Re</span>Tail Project
-                                </p>
-                            </Link>
+
+                            <img onClick={openNav} className="logo-image-paw" src={logo} alt="logo" />
+
+
                         </div>
+                        <Link className='new-nav-logo-box' to='/'>
+                            <p className="co-name-text">
+                                The <span className="re-text">Re</span>Tail Project
+                            </p>
+                        </Link>
+
                         <div className="new-nav-icons">
                             <div className="menu">
 
@@ -663,7 +667,7 @@ function Nav() {
                                             {/* <Link className='nav-linkk' to="/orders">
                                                 <img className="menuk hideoii" src={enroll} />
                                             </Link> */}
-                                            <img onClick={openNav} className="menuk" src={menuk} />
+                                            {/* <img onClick={openNav} className="menuk" src={logo} /> */}
                                         </div>
 
                                         : (

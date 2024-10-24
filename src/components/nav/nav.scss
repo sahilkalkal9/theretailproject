@@ -24,7 +24,7 @@ $headFont : Quattrocento;
 
 .co-name-text {
   color: white;
-  font-size: 1.5rem;
+  font-size: 4rem;
 }
 
 
@@ -35,8 +35,8 @@ $headFont : Quattrocento;
 
 
 .menuk {
-  width: .7cm;
-  height: .7cm;
+  width: 1.5cm;
+  height: 1.5cm;
   cursor: pointer;
 }
 
@@ -73,7 +73,8 @@ $headFont : Quattrocento;
 }
 
 .logo-image-paw {
-  width: 1cm;
+  width: 2cm;
+  cursor: pointer;
 
 }
 
@@ -1413,7 +1414,7 @@ h3 {
 
 
   .new-nav-box {
-    padding: .5cm 10vw .7cm 10vw;
+    padding: .5cm 10vw 0cm 10vw;
   }
 
   .new-nav-logo-box {
