@@ -1621,6 +1621,9 @@ function Home() {
                     </div>
 
 
+                    
+
+
 
                     <div className="featured-products-box">
                         <div className="home-main-head">

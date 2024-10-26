@@ -1,10 +1,5 @@
-import em from "./em.png"
-import pc from "./pc.png"
-import dis from "./whatsapp.png"
-import ig from "./ig.png"
-import email from "./email.png"
+
 import { Link } from "react-router-dom"
-import tw from "./twitter.png"
 import "./footer.scss"
 
 function Footer() {

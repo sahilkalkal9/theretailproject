@@ -14,7 +14,7 @@ import Contact from './components/contact/contact.js';
 
 import ProfileNew from './components/profile/profile-new.jsx';
 import { UserProvider } from './UserContext.js';
-import Footer from './components/footer/footer.jsx';
+import Footer from './components/footer/footer.js';
 
 function App() {
 

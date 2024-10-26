@@ -721,10 +721,7 @@ $secondarycolor : #e4af47;
 
 }
 
-.transformed {
-    width: 1.5cm;
-    height: 1.5cm;
-}
+
 
 .slide.prev {
     animation: slideOut 0.5s forwards;
@@ -762,4 +759,9 @@ $secondarycolor : #e4af47;
 .transformed,
 .slide-right img {
     transition: transform 0.3s ease;
+}
+
+.transformed {
+    width: 1.5cm;
+    height: 1.5cm;
 }
