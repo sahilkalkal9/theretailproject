@@ -230,7 +230,7 @@ function Nav() {
                     </div>
                 </div>
             </div>
-
+ 
 
             <div id="cartNew" className="Cart-new">
                 <div className="cart-box-new">
@@ -628,8 +628,6 @@ function Nav() {
                     </div>
                 </div>
             </div>
-
-
 
 
             <div className="NavNew">

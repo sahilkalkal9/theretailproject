@@ -5,10 +5,39 @@ import csp from "./scissors.png"
 import sustainable from "./renewal.png"
 import corder from "./review.png"
 import handc from "./tailoring.png"
+import { useEffect, useState } from "react"
 
 
 
 function Home() {
+
+
+    const [currentId, setCurrentId] = useState(0)
+
+    var pid = 0
+
+
+    // Auto-slide functionality
+    useEffect(() => {
+        const slideInterval = setInterval(() => {
+            pid = currentId
+            setCurrentId((prevId) => (prevId + 1) % 2) // Assuming 2 slides; update to number of slides
+           
+            // console.log(currentId - 1)
+
+            // console.log(currentId, pid);
+
+
+        }, 3000) // Change slide every 3 seconds
+
+
+        return () => clearInterval(slideInterval) // Clear interval on component unmount
+    }, [])
+
+
+
+
+
     return (
         <div className="Home">
             <div className="Slider">
@@ -1440,8 +1469,8 @@ function Home() {
                                         </p> */}
                                     </div>
 
-                                    
-                                    
+
+
 
                                 </div>
                             </marquee>
@@ -1480,6 +1509,53 @@ function Home() {
                         </div>
                     </div>
 
+                    <div className="transformations">
+                        <p className="home-main-head">
+                            Our Transformations
+                        </p>
+
+                        <div className="transformations-slider">
+                            <div id="0" className={`slide ${currentId === 0 ? "active" : ""}`}
+                                style={{ display: currentId === 0 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-one-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-one-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div id="1" className={`slide ${currentId === 1 ? "active" : ""}`}
+                                style={{ display: currentId === 1 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-two-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-two-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
 
 
                     <div className="featured-products-box">
@@ -1502,11 +1578,11 @@ function Home() {
                                         </p>
                                     </div>
                                 </div>
-                                {/* <div className="fprod-lower">
+                                <div className="fprod-lower">
                                     <button className="add-cart" >
-                                        ADD TO CART
+                                        View
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
 
                             <div className="fproduct">
@@ -1524,11 +1600,11 @@ function Home() {
                                         </p>
                                     </div>
                                 </div>
-                                {/* <div className="fprod-lower">
+                                <div className="fprod-lower">
                                     <button className="add-cart" >
-                                        ADD TO CART
+                                        View
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
 
                             <div className="fproduct">
@@ -1546,11 +1622,11 @@ function Home() {
                                         </p>
                                     </div>
                                 </div>
-                                {/* <div className="fprod-lower">
+                                <div className="fprod-lower">
                                     <button className="add-cart" >
-                                        ADD TO CART
+                                        View
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
 
                             <div className="fproduct">
@@ -1568,11 +1644,11 @@ function Home() {
                                         </p>
                                     </div>
                                 </div>
-                                {/* <div className="fprod-lower">
+                                <div className="fprod-lower">
                                     <button className="add-cart" >
-                                        ADD TO CART
+                                        View
                                     </button>
-                                </div> */}
+                                </div>
                             </div>
 
 
