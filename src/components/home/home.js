@@ -14,22 +14,12 @@ function Home() {
 
     const [currentId, setCurrentId] = useState(0)
 
-    var pid = 0
-
 
     // Auto-slide functionality
     useEffect(() => {
         const slideInterval = setInterval(() => {
-            pid = currentId
-            setCurrentId((prevId) => (prevId + 1) % 2) // Assuming 2 slides; update to number of slides
-           
-            // console.log(currentId - 1)
-
-            // console.log(currentId, pid);
-
-
+            setCurrentId((prevId) => (prevId + 1) % 6) // Assuming 2 slides; update to number of slides
         }, 3000) // Change slide every 3 seconds
-
 
         return () => clearInterval(slideInterval) // Clear interval on component unmount
     }, [])
@@ -1511,11 +1501,11 @@ function Home() {
 
                     <div className="transformations">
                         <p className="home-main-head">
-                            Our Transformations
+                            Out Transformations
                         </p>
 
                         <div className="transformations-slider">
-                            <div id="0" className={`slide ${currentId === 0 ? "active" : ""}`}
+                            <div className={`slide ${currentId === 0 ? "active" : ""}`}
                                 style={{ display: currentId === 0 ? "flex" : "none" }}>
 
                                 <div className="slide-left">
@@ -1534,7 +1524,7 @@ function Home() {
                                 </div>
                             </div>
 
-                            <div id="1" className={`slide ${currentId === 1 ? "active" : ""}`}
+                            <div className={`slide ${currentId === 1 ? "active" : ""}`}
                                 style={{ display: currentId === 1 ? "flex" : "none" }}>
 
                                 <div className="slide-left">
@@ -1552,6 +1542,80 @@ function Home() {
                                     </p>
                                 </div>
                             </div>
+
+                            <div className={`slide ${currentId === 2 ? "active" : ""}`}
+                                style={{ display: currentId === 2 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-three-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-three-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`slide ${currentId === 3 ? "active" : ""}`}
+                                style={{ display: currentId === 3 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-four-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-four-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`slide ${currentId === 4 ? "active" : ""}`}
+                                style={{ display: currentId === 4 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-five-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-five-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+                            <div className={`slide ${currentId === 5 ? "active" : ""}`}
+                                style={{ display: currentId === 5 ? "flex" : "none" }}>
+
+                                <div className="slide-left">
+                                    <img className="slide-left-img" src={require("./slide-six-before.jpg")} />
+                                    <p className="before">
+                                        Before
+                                    </p>
+                                </div>
+
+                                {/* <img className="transformed" src={require("./next.png")} /> */}
+                                <div className="slide-right">
+                                    <img className="slide-left-img" src={require("./slide-six-after.jpg")} />
+                                    <p className="after">
+                                        After
+                                    </p>
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
