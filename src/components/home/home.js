@@ -19,7 +19,7 @@ function Home() {
     useEffect(() => {
         const slideInterval = setInterval(() => {
             setCurrentId((prevId) => (prevId + 1) % 6) // Assuming 2 slides; update to number of slides
-        }, 3000) // Change slide every 3 seconds
+        }, 5000) // Change slide every 3 seconds
 
         return () => clearInterval(slideInterval) // Clear interval on component unmount
     }, [])

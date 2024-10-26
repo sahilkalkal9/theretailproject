@@ -636,7 +636,7 @@ $secondarycolor : #e4af47;
 
     padding: .5cm;
     margin-top: 1cm;
-    border: 1px solid rgb(221, 221, 221);
+    // border: 1px solid rgb(221, 221, 221);
 
 }
 
@@ -648,8 +648,8 @@ $secondarycolor : #e4af47;
     gap: .5cm;
     align-items: center;
     // height: auto;
-    // opacity: 0;
-    // transition: opacity 0.7s ease;
+    opacity: 0;
+    transition: opacity 0.7s ease;
 }
 
 .slide.active {
