@@ -6,39 +6,60 @@ import sustainable from "./renewal.png"
 import corder from "./review.png"
 import handc from "./tailoring.png"
 import { useEffect, useState } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Autoplay } from "swiper/modules"
+
+
+
+function NextArrow(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed" />
+    );
+}
+
+function PrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed transformedR" />
+    );
+}
+
 
 
 
 function Home() {
 
 
-    const [currentId, setCurrentId] = useState(0)
 
 
-    // Auto-slide functionality
-    useEffect(() => {
-        const slideInterval = setInterval(() => {
-            setCurrentId((prevId) => (prevId + 1) % 6) // Assuming 2 slides; update to number of slides
-        }, 5000) // Change slide every 3 seconds
+    const slides = [
+        { img: "slide-one-before.jpg", img2: "slide-one-after.jpg" },
+        { img: "slide-two-before.jpg", img2: "slide-two-after.jpg" },
+        { img: "slide-three-before.jpg", img2: "slide-three-after.jpg" },
+        { img: "slide-four-before.jpg", img2: "slide-four-after.jpg" },
+        { img: "slide-five-before.jpg", img2: "slide-five-after.jpg" },
+        { img: "slide-six-before.jpg", img2: "slide-six-after.jpg" }
+    ];
+    const settings = {
+       
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
 
-        return () => clearInterval(slideInterval) // Clear interval on component unmount
-    }, [])
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
 
 
-    const transformRight = () => {
-        setCurrentId((prevId) => (prevId + 1) % 6)
+
     }
 
-    const transformLeft = () => {
-        setCurrentId((prevId) => (prevId - 1 + 6) % 6);
-        document.getElementsByClassName("slide")[currentId].classList.remove("activeR")
-        document.getElementsByClassName("slide")[currentId].classList.remove("activeL")
 
-    }
-
-
-
-    
 
 
     return (
@@ -1514,128 +1535,42 @@ function Home() {
 
                     <div className="transformations">
                         <p className="home-main-head">
-                            Out Transformations
+                            Our Transformations
                         </p>
 
-                        <div className="transformations-box">
-                            <img onClick={transformRight} className="transformed transformedR" src={require("./next.png")} />
-                            <div className="transformations-slider">
-                                <div className={`slide ${currentId === 0 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 0 ? "flex" : "none" }}>
 
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-one-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
+
+
+                        <Slider {...settings} className="slick-slider-custom" >
+                            {
+                                slides.map((s) => (
+                                    <div className="slick-slide-custom">
+
+
+                                        <div className="slide-left">
+                                            <img className="slide-left-img" src={require(`./${s.img}`)} />
+                                            <p className="before">
+                                                Before
+                                            </p>
+                                        </div>
+
+                                        {/* <img className="transformed" src={require("./next.png")} /> */}
+                                        <div className="slide-right">
+                                            <img className="slide-left-img" src={require(`./${s.img2}`)} />
+                                            <p className="after">
+                                                After
+                                            </p>
+                                        </div>
                                     </div>
+                                ))
+                            }
+                        </Slider>
 
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-one-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div className={`slide ${currentId === 1 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 1 ? "flex" : "none" }}>
 
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-two-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-two-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className={`slide ${currentId === 2 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 2 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-three-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-three-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 3 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 3 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-four-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-four-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 4 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 4 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-five-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-five-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 5 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 5 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-six-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-six-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <img onClick={transformLeft} className="transformed" src={require("./next.png")} />
-                        </div>
 
                     </div>
+
 
 
 

@@ -628,15 +628,14 @@ $secondarycolor : #e4af47;
 .transformations-slider {
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 20cm;
-    position: relative;
+    // position: relative;
     overflow: hidden;
-
-
+    height: 12cm;
     padding: .5cm;
     margin-top: 1cm;
-    // border: 1px solid rgb(221, 221, 221);
+    border: 1px solid rgb(221, 221, 221);
 
 }
 
@@ -648,36 +647,25 @@ $secondarycolor : #e4af47;
     gap: .5cm;
     align-items: center;
     // height: auto;
-    opacity: 0;
-    transition: opacity 0.7s ease;
+    // opacity: 0;
+    // transition: opacity 0.7s ease;
 }
 
-.slide.activeR {
-    opacity: 1;
-    animation: slideIn 1s forwards;
-}
-
-.slide.activeL {
-    opacity: 1;
-    animation: slideOut 1s backwards;
-}
 
 .slide-left {
     // border: 1px solid black;
-    width: 10cm;
+    width: 50%;
     // aspect-ratio: 9/16;
     height: fit-content;
-    flex-shrink: 0;
-    flex-grow: 0;
+
     position: relative;
 }
 
 .slide-right {
     // border: 1px solid black;
-    width: 10cm;
+    width: 50%;
     // aspect-ratio: 9/16;
-    flex-shrink: 0;
-    flex-grow: 0;
+
     height: fit-content;
     position: relative;
 }
@@ -728,43 +716,11 @@ $secondarycolor : #e4af47;
 
 
 
-.slide.prev {
-    animation: slideOut 0.5s forwards;
-}
 
 
-@keyframes slideIn {
-    from {
-        transform: translateX(200%);
-        // opacity: 0;
-    }
 
-    to {
-        // opacity: 1;
-        transform: translateX(0);
 
-    }
-}
 
-@keyframes slideOut {
-    from {
-        // opacity: 1;
-        transform: translateX(0);
-
-    }
-
-    to {
-        // opacity: 0;
-        transform: translateX(-200%);
-
-    }
-}
-
-.slide-left-img,
-.transformed,
-.slide-right img {
-    transition: transform 0.3s ease;
-}
 
 .transformed {
     width: 1cm;
@@ -782,9 +738,30 @@ $secondarycolor : #e4af47;
     transform: rotate(180deg);
 }
 
-.transformations-box {
-    // border: 1px solid black;
-    display: flex;
-    align-items: center;
+
+
+
+.slick-slider-custom {
+    margin: 0cm;
+    width: 21.5cm;
+    height: 13.5cm;
+    display: flex !important;
     gap: .3cm;
+    align-items: center;
+    justify-content: flex-start;
+    // border: 1px solid red;
+    // position: relative;
+}
+
+.slick-slide-custom {
+    // Optional slide styling
+    display: flex !important;
+    gap: .3cm;
+    justify-content: flex-start;
+    // height: 13.1cm;
+
+}
+
+.slick-slide-img-custom {
+    width: 10cm;
 }
