@@ -28,6 +28,21 @@ function PrevArrow(props) {
 }
 
 
+function NextArrowHome(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed transformedR thh" />
+    );
+}
+
+function PrevArrowHome(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed  thh thhr" />
+    );
+}
+
+
 
 
 function Home() {
@@ -64,8 +79,13 @@ function Home() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
-        speed: 500
+      
+        speed: 500,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
+        nextArrow: <NextArrowHome />,
+        prevArrow: <PrevArrowHome />
 
     }
 
