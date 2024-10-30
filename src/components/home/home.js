@@ -69,16 +69,46 @@ function Home() {
 
     }
 
+    const mainSlider = [
+        {
+            img: require("./home-one.jpg"),
+            title: "Custom Tailoring"
+        },
+        {
+            img: require("./home-two.JPG"),
+            title: "Preserve Memories"
+        },
+        {
+            img: require("./home-three.jpg"),
+            title: "Sustainable Pet Fashion"
+        },
+        {
+            img: require("./home-four.jpg"),
+            title: "Made with Love & Care"
+        },
+    ]
+
 
 
 
     return (
         <div className="Home">
-            <div className="Slider">
-                <div className="slider-box">
+            <Slider {...settingsF} className="SliderCusHome">
 
-                </div>
-            </div>
+                {
+                    mainSlider.map((m) => (
+                        <div className="slider-maincus">
+                            <img src={m.img} alt="" className="slider-main-imgcus" />
+                            <p className="main-slider-captioncus">
+                                {
+                                    m.title
+                                }
+                            </p>
+                        </div>
+                    ))
+                }
+
+            </Slider>
 
             <div className="Hero">
                 <div className="hero-lower">
@@ -134,44 +164,44 @@ function Home() {
                         <div className="home-features-left-box">
                             <p className="home-main-head fhmm">Our Features</p>
                             {/* <Slider {...settingsF} > */}
-                                <div className="home-features-new-ssd">
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
+                            <div className="home-features-new-ssd">
+                                <div className="feature">
+                                    <img className="fimg" src={sustainable} />
+                                    <p className="fname">
+                                        Sustainable
+                                    </p>
+                                    {/* <p className="ftext">
                                             Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
                                         </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
                                 </div>
+                                <div className="feature">
+                                    <img className="fimg" src={handc} />
+                                    <p className="fname">
+                                        Handcrafted
+                                    </p>
+                                    {/* <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p> */}
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={csp} />
+                                    <p className="fname">
+                                        Craftsmenship
+                                    </p>
+                                    {/* <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p> */}
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={corder} />
+                                    <p className="fname">
+                                        Custom Order
+                                    </p>
+                                    {/* <p className="ftext">
+                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
+                                        </p> */}
+                                </div>
+                            </div>
                             {/* </Slider> */}
                         </div>
 

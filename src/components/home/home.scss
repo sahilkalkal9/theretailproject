@@ -12,40 +12,61 @@ $secondarycolor : #e4af47;
     margin: 0;
 }
 
-::-webkit-scrollbar-thumb {
-    border-radius: 100px;
-    background-color: #486455;
-}
 
-.Slider {
-    background-color: $primarycolor;
+
+.SliderCusHome {
+    // background-color: $primarycolor;
     // width: 100%;
     aspect-ratio: 16/9;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
     // height: 2cm;
-    padding: 0.5cm 0vw 0cm 0vw;
+
+    // padding: 0.5cm 0vw 0cm 0vw;
 
 }
 
-.slider-box {
+.slider-maincus {
     // border: 1px solid white;
-    height: 100%;
     width: 100%;
+    height: 100%;
+    // padding: 0.5cm 0vw 0cm 0vw;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    display: flex !important;
+    flex-shrink: 0;
+    align-items: center;
     position: relative;
-    z-index: 1;
 
-    &::before {
-        content: "";
+    img {
+        width: 100%;
+        height: auto;
+        filter: brightness(40%);
         position: absolute;
-        inset: 0;
         z-index: -1;
-        background-image: url("./gwalk.png");
-        background-position: center;
-        background-repeat: no-repeat;
 
-        background-size: cover;
-        filter: brightness(55%);
     }
 }
+
+.main-slider-captioncus {
+    position: relative;
+    color: white;
+    // border: 1px solid white;
+    width: 100%;
+    font-size: 5rem;
+    font-family: Saira Stencil One;
+
+    &::before {
+        position: absolute;
+        content: "";
+
+        z-index: 100;
+
+
+    }
+}
+
 
 .Hero {
     padding: 0cm 0cm 3cm 0cm;
@@ -781,10 +802,6 @@ $secondarycolor : #e4af47;
 }
 
 
-::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-}
 
 .slick-two-slider-new {
     border: 1px solid red;
