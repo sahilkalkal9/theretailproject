@@ -175,7 +175,7 @@ $secondarycolor : #e4af47;
 }
 
 .fhead-main-new {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 100%;
     // border: 1px solid black;
     font-style: $headFont;
@@ -193,7 +193,7 @@ $secondarycolor : #e4af47;
     align-items: center;
     //    padding: .5cm 0cm;
     // justify-content: space-evenly;
-    gap: 2cm;
+    gap: 1cm;
     // border: 1px solid red;
     width: 100%;
 }
@@ -241,12 +241,12 @@ $secondarycolor : #e4af47;
 }
 
 .fimg {
-    width: 3cm;
+    width: 2cm;
 }
 
 .fname {
     font-family: $headFont;
-    font-size: 2rem;
+    font-size: 18px;
     margin-top: .2cm;
     color: $secondarycolor;
 }
@@ -764,4 +764,31 @@ $secondarycolor : #e4af47;
 
 .slick-slide-img-custom {
     width: 10cm;
+}
+
+.home-features-new-ssd {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2cm;
+    // width: 100%;
+    width: 20cm !important;
+    overflow: auto;
+    // border: 1px solid white;
+
+
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+
+.slick-two-slider-new {
+    border: 1px solid red;
+    width: 100%;
+    display: flex !important;
+
 }
