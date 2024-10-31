@@ -30,9 +30,9 @@ $secondarycolor : #e4af47;
 .slider-maincus {
     // border: 1px solid white;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     // padding: 0.5cm 0vw 0cm 0vw;
-    aspect-ratio: 16/7;
+    
     overflow: hidden;
     display: flex !important;
     flex-shrink: 0;
@@ -42,7 +42,7 @@ $secondarycolor : #e4af47;
     img {
         width: 100%;
         height: auto;
-        filter: brightness(40%);
+        filter: brightness(60%);
         position: absolute;
         z-index: -1;
 
@@ -811,7 +811,7 @@ $secondarycolor : #e4af47;
 }
 
 .thh {
-    position: fixed;
+    position: absolute;
     z-index: 1000;
     opacity: 1;
     padding: .3cm 1cm;
