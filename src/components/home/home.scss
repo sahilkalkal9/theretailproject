@@ -30,9 +30,9 @@ $secondarycolor : #e4af47;
 .slider-maincus {
     // border: 1px solid white;
     width: 100%;
-    height: 100vh;
+    height: 100svh;
     // padding: 0.5cm 0vw 0cm 0vw;
-    
+
     overflow: hidden;
     display: flex !important;
     flex-shrink: 0;
@@ -51,7 +51,7 @@ $secondarycolor : #e4af47;
 
 .main-slider-captioncus {
     position: relative;
-    color: white;
+    color: $secondarycolor;
     // border: 1px solid white;
     width: 100%;
     font-size: 5rem;
@@ -817,6 +817,6 @@ $secondarycolor : #e4af47;
     padding: .3cm 1cm;
 }
 
-.thhr{
-   right: 0;
+.thhr {
+    right: 0;
 }

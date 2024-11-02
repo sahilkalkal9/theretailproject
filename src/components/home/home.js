@@ -79,7 +79,7 @@ function Home() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-
+        rtl: true,
         speed: 500,
         autoplay: true,
         speed: 1000,
@@ -88,6 +88,10 @@ function Home() {
         prevArrow: <PrevArrowHome />
 
     }
+
+
+
+    
 
     const mainSlider = [
         {
