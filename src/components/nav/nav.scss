@@ -7,7 +7,7 @@ $headFont : Quattrocento;
 
 
 
-*{
+* {
   text-decoration: none;
   padding: none;
   margin: 0;
@@ -161,7 +161,8 @@ $headFont : Quattrocento;
   position: fixed;
   width: 0cm;
   // border: 1px solid black;
-  right: 0;
+  // right: 0;
+  left: 0;
   bottom: 0;
   top: 0;
   // padding: 1cm .5cm;
