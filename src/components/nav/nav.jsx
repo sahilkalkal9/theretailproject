@@ -679,7 +679,7 @@ function Nav() {
                                                     </Link>
 
                                                 </div>
-                                                <img onClick={openNav} className="menuk" src={menuk} />
+                                                {/* <img onClick={openNav} className="menuk" src={menuk} /> */}
                                             </div>
                                         )
                                 }
