@@ -79,11 +79,10 @@ function Home() {
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
-        rtl: true,
-        speed: 500,
+
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 6000,
+        autoplaySpeed: 5000,
         nextArrow: <NextArrowHome />,
         prevArrow: <PrevArrowHome />
 
@@ -91,7 +90,7 @@ function Home() {
 
 
 
-    
+
 
     const mainSlider = [
         {
