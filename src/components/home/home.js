@@ -74,6 +74,10 @@ function Home() {
 
     }
 
+
+
+    
+
     const settingsF = {
         dots: true,
         infinite: true,
