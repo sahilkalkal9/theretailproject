@@ -23,10 +23,6 @@ function App() {
   const isActive = (path) => location.pathname === path;
 
 
-
-
-
-
   return ( 
     <UserProvider>
       <div className="App">
