@@ -30,7 +30,6 @@ function App() {
           isActive("/signup") || isActive("/signin") ? null : <Nav />
         }
 
-
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/profile' element={<ProfileNew />} />
