@@ -76,7 +76,7 @@ function Home() {
 
 
 
-    
+
 
     const settingsF = {
         dots: true,
@@ -93,7 +93,7 @@ function Home() {
     }
 
 
-    
+
 
 
 
@@ -187,58 +187,48 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="home-features">
+                    {/* <div className="home-features">
 
 
                         <div className="home-features-left-box">
                             <p className="home-main-head fhmm">Our Features</p>
-                            {/* <Slider {...settingsF} > */}
+
                             <div className="home-features-new-ssd">
                                 <div className="feature">
                                     <img className="fimg" src={sustainable} />
                                     <p className="fname">
                                         Sustainable
                                     </p>
-                                    {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
+
                                 </div>
                                 <div className="feature">
                                     <img className="fimg" src={handc} />
                                     <p className="fname">
                                         Handcrafted
                                     </p>
-                                    {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
+
                                 </div>
                                 <div className="feature">
                                     <img className="fimg" src={csp} />
                                     <p className="fname">
                                         Craftsmenship
                                     </p>
-                                    {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
+
                                 </div>
                                 <div className="feature">
                                     <img className="fimg" src={corder} />
                                     <p className="fname">
                                         Custom Order
                                     </p>
-                                    {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
+
                                 </div>
                             </div>
-                            {/* </Slider> */}
+
                         </div>
 
-                        {/* <div className="home-features-right">
-                            <img className="feature-back-img" src={require("./fbimg.jpg")} />
-                        </div> */}
 
-                    </div>
+
+                    </div> */}
 
 
                     <div className="collection-box">
