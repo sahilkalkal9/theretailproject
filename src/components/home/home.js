@@ -178,8 +178,8 @@ function Home() {
                                     Read more
                                 </button>
                             </div>
-                            <div className="home-main-div-left hmlt">
-                                <img className="main-div-back" src={backTwo} />
+                            <div className="home-main-div-left hmltt">
+                                <img className="main-div-back hbone" src={backTwo} />
                             </div>
 
 

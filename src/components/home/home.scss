@@ -42,7 +42,7 @@ $secondarycolor : #e4af47;
     img {
         width: 100%;
         height: auto;
-        filter: brightness(60%);
+        filter: brightness(35%);
         position: absolute;
         z-index: -1;
 
@@ -88,56 +88,59 @@ $secondarycolor : #e4af47;
 }
 
 .hbone {
-    transform: scaleX(-1);
+    // transform: scaleX(-1);
     border: 10px solid $primarycolor;
+    // border-radius: 10px;
 }
 
 .home-main-div-left {
     width: 11cm;
-    // border: 1px solid black;
-    position: relative;
-    // z-index: 100;
+    border-radius: 10px;
+    // position: relative;
 
-    &::before {
-        content: "";
-        top: 35%;
-        left: 55%;
-        bottom: 0;
-        right: 0;
-        width: 7cm;
-        height: auto;
-        aspect-ratio: 9/16;
-        position: absolute;
-        background-image: url("./home-one-sub.png");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 7cm auto;
-        z-index: 10;
-    }
+
+    // &::before {
+    //     content: "";
+    //     top: 45%;
+    //     left: 55%;
+    //     bottom: 0;
+    //     right: 0;
+    //     width: 7cm;
+    //     // height: auto;
+    //     // aspect-ratio: 9/16;
+    //     position: absolute;
+    //     background-image: url("./home-one-sub.png");
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     border: 2px solid black;
+    //     background-size: 7cm auto;
+    //     z-index: 100;
+    // }
 }
 
-.hmlt {
-    width: 11cm;
-    border: 10px solid $primarycolor;
-    position: relative;
-    // z-index: 100;
+.hmltt {
 
-    &::before {
-        content: "";
-        top: 40%;
+    // position: relative;
+    // height: auto;
 
-        bottom: 0;
-        left: -20%;
-        width: 7cm;
-        height: auto;
-        aspect-ratio: 9/16;
-        position: absolute;
-        background-image: url("./home-two-sub.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 7cm auto;
-        // z-index: 10;
-    }
+
+    // &::before {
+    //     content: "";
+    //     top: 40%;
+
+    //     bottom: 0;
+    //     left: -20%;
+    //     width: 7cm;
+    //     height: auto;
+    //     // aspect-ratio: 9/16;
+    //     border: 2px solid black;
+    //     position: absolute;
+    //     background-image: url("./home-two-sub.jpg");
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-size: 7cm auto;
+    //     // z-index: 10;
+    // }
 }
 
 .home-main-div-right {
@@ -151,6 +154,8 @@ $secondarycolor : #e4af47;
 
 .main-div-back {
     width: 100%;
+    height: fit-content;
+   
 }
 
 .home-main-head {
