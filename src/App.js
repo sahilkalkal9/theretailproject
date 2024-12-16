@@ -80,7 +80,7 @@ function App() {
           <Route path='/about-us' element={<About />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/signup' element={<SignUp />} />
-          <Route path='/signin' element={<LogInNew />} />
+          <Route path='/signin' element={<Login />} />
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/product' element={<ProductPage />} />
         </Routes>

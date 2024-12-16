@@ -4,7 +4,7 @@ import { auth, firestore } from '../../firebase';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    const [phoneNumber, setPhoneNumber] = useState(''); 
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [otp, setOtp] = useState('');
     const [confirmationResult, setConfirmationResult] = useState(null);
     const [isOtpSent, setIsOtpSent] = useState(false);
@@ -19,7 +19,7 @@ const Login = () => {
                 console.log("Captcha Resolved");
             },
             'expired-callback': () => {
-               console.log("not verified")
+                console.log("not verified")
             },
 
             defaultCountry: "IN",
@@ -30,7 +30,7 @@ const Login = () => {
     const handleSendOtp = (e) => {
         e.preventDefault();
 
-        
+
         const phoneNumberWithCountryCode = `+91${phoneNumber}`;
         const appVerifier = window.recaptchaVerifier;
 
@@ -77,46 +77,70 @@ const Login = () => {
     };
 
     return (
-        <div className='SignUp'>
-            <h2>Login</h2>
-            <br /><br />
+
+        <div className='SignUpNew'>
+            <Link to="/">
+                <div className="signup-head-upn">
+                    <img className="signup-logon" src={require("./pawb.png")} />
+                    <p className="signup-head-textn">
+                        The <span className="re-text">Re</span>Tail Project
+                    </p>
+                </div>
+            </Link>
+
             <p>{notification}</p>
-            {
-                isOtpSent
-                    ? <form className='register-box' onSubmit={handleVerifyOtp}>
-                        <input
-                            type="text"
-                            placeholder="OTP"
-                            value={otp}
-                            className='regInp'
-                            onChange={(e) => setOtp(e.target.value)}
-                        />
-                        
-                        <button className='regInp subInp' type="submit">Verify OTP</button>
-                    </form>
-                    :
-                    <form className='register-box' onSubmit={handleSendOtp}>
-                        <input
-                            type="text"
-                            inputMode="numeric"
-                            pattern="[0-9]*"
-                            placeholder="Phone Number"
-                            value={phoneNumber}
-                            onChange={(e) => {
-                                if (e.target.value.length <= 10) {
-                                    setPhoneNumber(e.target.value);
-                                }
-                            }}
-                            className='regInp no-arrows'
-                            required
-                        />
-                        <div id="recaptcha-container"></div>
-                        <button type="submit" className='regInp subInp'>Send OTP</button>
-                        <Link to="/signup">
-                            <p className='st'>Signup</p>
-                        </Link>
-                    </form>
-            }
+
+            <div className="signup-new-box">
+                <div className="signup-head">
+                    <p className="signup-new-head">
+                        Welcome!
+                    </p>
+                    <p className="singup-new-text">
+                        Use your credentials to access
+                    </p>
+                </div>
+
+
+                {
+                    isOtpSent
+                        ? <form className='signup-new-form' onSubmit={handleVerifyOtp}>
+                            <input
+                                type="text"
+                                placeholder="OTP"
+                                value={otp}
+                                className='singup-input-new'
+                                onChange={(e) => setOtp(e.target.value)}
+                            />
+
+                            <button className='singup-new-submit' type="submit">Verify OTP</button>
+                        </form>
+                        :
+                        <form className='signup-new-form' onSubmit={handleSendOtp}>
+                            <input
+                                type="text"
+                                inputMode="numeric"
+                                pattern="[0-9]*"
+                                placeholder="Phone Number"
+                                value={phoneNumber}
+                                onChange={(e) => {
+                                    if (e.target.value.length <= 10) {
+                                        setPhoneNumber(e.target.value);
+                                    }
+                                }}
+                                className='singup-input-new no-arrows'
+                                required
+                            />
+                            <div id="recaptcha-container"></div>
+                            <button type="submit" className='singup-new-submit'>Send OTP</button>
+
+                        </form>
+                }
+                <p className="alreadyheavanaccount">
+                    Don't have an account ? <Link to="/signup">
+                        <span className="signup-signin-button" >Sign Up</span>
+                    </Link>
+                </p>
+            </div>
         </div>
     );
 };
