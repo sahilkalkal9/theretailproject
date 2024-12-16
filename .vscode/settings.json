@@ -1,0 +1,5 @@
+{
+    "files.autoSaveWhenNoErrors": true,
+    "files.autoSaveWorkspaceFilesOnly": true,
+    "files.refactoring.autoSave": true
+}

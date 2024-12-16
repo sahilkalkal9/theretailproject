@@ -192,10 +192,10 @@ function About() {
                 <div className="about-four">
                     <div className="about-four-text-sec">
                         <p className="about-four-head">
-                            Get 10% Discount For Subscriber
+                            Enjoy up to 25% off on all upcycling services
                         </p>
                         <p className="about-four-text">
-                            Lorem ipsum dolor consectetur adipisicing accusantium
+                            Give your old favorites a sustainable makeover!
                         </p>
                     </div>
                     <div className="newsletter-box">
@@ -214,7 +214,7 @@ function About() {
                                     Easy Home Delivery
                                 </p>
                                 <p className="about-five-point-text">
-                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                    Seamless home delivery experiece and real-time tracking.
                                 </p>
                             </div>
                         </div>
@@ -227,7 +227,7 @@ function About() {
                                     Quick Support System
                                 </p>
                                 <p className="about-five-point-text">
-                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                    We provide fast assistance through chat, email, or calls,
                                 </p>
                             </div>
                         </div>
@@ -240,7 +240,7 @@ function About() {
                                     Secure Payment Way
                                 </p>
                                 <p className="about-five-point-text">
-                                    Lorem ipsum dolor sit amet adipisicing elit nobis.
+                                Offering secure payment methods with encrypted transactions and options like credit/debit cards, upi for a safe shopping experience.
                                 </p>
                             </div>
                         </div>

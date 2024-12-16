@@ -27,7 +27,6 @@ $secondarycolor : #e4af47;
 
 .about-one {
     display: flex;
-    // border: 1px solid black;
     padding: 0cm 10vw;
     justify-content: space-between;
     align-items: flex-start;
@@ -35,13 +34,10 @@ $secondarycolor : #e4af47;
 }
 
 .about-one-left {
-    // border: 1px solid black;
     width: 100%;
 }
 
 .about-one-right {
-    display: flex;
-    // border: 1px solid black;
     display: flex;
     justify-content: center;
     width: 15cm;
@@ -60,12 +56,12 @@ $secondarycolor : #e4af47;
     font-family: $headFont;
     color: $primarycolor;
     text-align: left;
+    font-weight: 600;
 }
 
 .about-desc {
     display: flex;
     flex-direction: column;
-
     gap: .1cm;
     margin-top: .5cm;
 }
@@ -110,6 +106,7 @@ $secondarycolor : #e4af47;
 .about-head-main {
     font-size: 2rem;
     color: $primarycolor;
+    font-weight: 600;
     font-family: $headFont;
 }
 
@@ -166,7 +163,8 @@ $secondarycolor : #e4af47;
 
 .about-misc-head {
     font-size: 3rem;
-    font-family: $headFont; 
+    font-family: $headFont;
+    font-weight: 600;
 
 }
 
@@ -185,6 +183,7 @@ $secondarycolor : #e4af47;
     font-size: $headFontSize;
     font-family: $headFont;
     width: 15cm;
+    font-weight: 600;
     // border: 1px solid black;
 }
 
@@ -247,6 +246,7 @@ $secondarycolor : #e4af47;
 
 .about-four-head {
     font-size: 32px;
+    line-height: 1.15cm;
     // font-weight: 600;
     text-align: left;
     color: white;
@@ -255,6 +255,7 @@ $secondarycolor : #e4af47;
 .about-four-text {
     color: white;
     text-align: left;
+    margin-top: .3cm;
 }
 
 .newsletter-box {
@@ -303,7 +304,7 @@ $secondarycolor : #e4af47;
 .about-five-box {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 1cm;
     justify-content: space-between;
     // border: 1px solid black;

@@ -111,7 +111,7 @@ function Nav() {
                             <div onClick={closeNav} className={isActive("/how-to-recycle") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={recimg} />
                                 <p className="acc-dets-text">
-                                    How to Recycle
+                                    How to Upcycle
                                 </p>
                             </div>
                         </Link>
@@ -188,7 +188,7 @@ function Nav() {
                             <div onClick={closeNav} className={isActive("/contact") ? "account-dets-menu-item activeM" : "account-dets-menu-item"}>
                                 <img className="acc-dets-img" src={support} />
                                 <p className="acc-dets-text">
-                                    Helpdesk
+                                    Contact Us
                                 </p>
                             </div>
                         </Link>
@@ -230,7 +230,7 @@ function Nav() {
                     </div>
                 </div>
             </div>
- 
+
 
             <div id="cartNew" className="Cart-new">
                 <div className="cart-box-new">

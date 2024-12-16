@@ -17,11 +17,11 @@ $secondarycolor : #e4af47;
 .SliderCusHome {
     // background-color: $primarycolor;
     // width: 100%;
-    aspect-ratio: 16/7;
+    aspect-ratio: 16/6;
     display: flex !important;
     align-items: center !important;
     justify-content: flex-start !important;
-    // height: 2cm;
+    // height: cover;
 
     // padding: 0.5cm 0vw 0cm 0vw;
 
@@ -42,7 +42,7 @@ $secondarycolor : #e4af47;
     img {
         width: 100%;
         height: auto;
-        filter: brightness(35%);
+        filter: brightness(50%);
         position: absolute;
         z-index: -1;
 
@@ -163,7 +163,7 @@ $secondarycolor : #e4af47;
     font-size: 3rem;
     color: $primarycolor;
     // font-weight: 500;
-    // font-weight: 600;
+    font-weight: 600;
 }
 
 .main-text {

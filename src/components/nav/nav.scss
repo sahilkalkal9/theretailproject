@@ -160,14 +160,11 @@ $headFont : Quattrocento;
 .overlay-nav {
   position: fixed;
   width: 0cm;
-  // border: 1px solid black;
-  // right: 0;
   left: 0;
   bottom: 0;
   top: 0;
-  // padding: 1cm .5cm;
   background-color: #2f5340;
-  z-index: 100;
+  z-index: 10000;
   transition: .2s all;
   overflow-y: auto;
   backdrop-filter: blur(10px);
@@ -1813,86 +1810,8 @@ h3 {
 }
 
 @media only screen and (max-width : 1200px) {
-  .ProductPage {
-    padding: 1cm 5vw;
-    width: calc(100% - 10vw);
-
-    .product-page {
-      width: 100%;
-
-      flex-direction: column-reverse;
-      gap: .5cm;
-    }
-
-    .product-page-left {
-
-      width: 100%;
-      // border: 1px solid black;
-      // flex-shrink: 1;
-    }
-  }
-}
-
-
-@media only screen and (max-width : 800px) {
-  .NavNew {
-
-
-    .login-buttons {
-      display: none;
-    }
-
-
-
-
-
-
+  .co-name-text {
+    font-size: 25px;
   }
 
-  .login-buttons-overlay {
-    display: flex;
-  }
-
-  .bottom-nav {
-    display: none;
-  }
-
-}
-
-
-
-@media only screen and (max-width : 700px) {
-  .ProductPage {
-    padding: 1cm 5vw;
-    width: calc(100% - 10vw);
-
-
-    .product-page-right {
-      width: 100%;
-      // border: 1px solid black;
-      // flex-shrink: 1;
-    }
-  }
-
-
-  @media only screen and (max-width : 600px) {
-    .hidemi {
-      display: flex;
-    }
-
-    .hideoii {
-      display: none;
-    }
-  }
-
-
-
-
-
-
-  .NavNew {
-    .co-name-text {
-      display: none;
-    }
-  }
 }

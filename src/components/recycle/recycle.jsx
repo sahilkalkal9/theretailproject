@@ -1,7 +1,9 @@
 import "./recycle.scss"
-import one from "./one.png"
-import two from "./two.png"
-import three from "./three.png"
+import one from "./send.png"
+import two from "./style.png"
+import three from "./smile.png"
+import prc from "./prc.jpg"
+
 
 function Recycle() {
     return (
@@ -12,22 +14,61 @@ function Recycle() {
 
                     <div>
                         <p className="recycle-head">
-                            How to Recycle ?
+                            Steps to upcycle
                         </p>
                         <br />
                         <div className="recycle-intro">
-                           
+
                             <p className="rec-text rct">
-                                We proudly recycle a variety of items, including blankets, T-shirts/shirts, Indian wear, denims, sweatshirts, socks, towels and more.
+                                We proudly recycle a variety of items, including blankets, old clothing (T-shirts/shirts, Indian wear, denims, sweatshirts, socks), towels and more.
                                 Join us in giving new life to old memories and creating a positive impact on the environment.
                             </p>
                         </div>
 
-                        <div className="recycle-process">
-                            <div className="rec-left">
-                                <div className="rec-img-box">
-                                    <img className="rec-img" src={one} />
+                        <div className="rec-imgs">
+                            <div className="rec-new-box">
+                                <img className="rec-img" src={one} />
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 1 : SEND
+                                    </p>
+                                    <p className="rec-text">
+                                        Customers send us their old materials, pet clothes, or any fabric they wish to upcycle. This could be items that hold sentimental value or simply things no longer in use.
+                                        <br />
+                                        Once received, we carefully assess the items to determine the best way to repurpose, redesign, or alter them into something fresh, sustainable, and unique for your pet.
+
+                                    </p>
                                 </div>
+                            </div>
+                            <div className="rec-new-box">
+                                <img className="rec-img scc" src={two} />
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 2 : STYLE
+                                    </p>
+                                    <p className="rec-text">
+                                        After receiving the materials, we creatively design and style them based on your preferences.
+                                        <br />
+                                        Whether it’s repurposing fabrics into customized pet clothing, accessories, or other products, we focus on making each item unique, stylish, and functional while maintaining sustainability.
+
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="rec-new-box">
+                                <img className="rec-img" src={three} />
+                                <div className="rec-process-text">
+                                    <p className="rec-head">
+                                        Step 3 : SMILE
+                                    </p>
+                                    <p className="rec-text">
+                                        Once your upcycled item is ready, we deliver it back to you, bringing joy and satisfaction with a one-of-a-kind, eco-friendly creation that you and your pet will love!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        {/* <div className="recycle-process">
+                            <div className="rec-left">
+
                                 <div className="rec-process-text">
                                     <p className="rec-head">
                                         Step 1 : SEND
@@ -38,9 +79,7 @@ function Recycle() {
                                 </div>
                             </div>
                             <div className="rec-left rr">
-                                <div className="rec-img-box">
-                                    <img className="rec-img" src={two} />
-                                </div>
+
                                 <div className="rec-process-text">
                                     <p className="rec-head">
                                         Step 2 : STYLE
@@ -51,9 +90,7 @@ function Recycle() {
                                 </div>
                             </div>
                             <div className="rec-left">
-                                <div className="rec-img-box">
-                                    <img className="rec-img" src={three} />
-                                </div>
+
                                 <div className="rec-process-text">
                                     <p className="rec-head">
                                         Step 3 : SMILE
@@ -63,7 +100,7 @@ function Recycle() {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="rec-details">
@@ -72,6 +109,12 @@ function Recycle() {
                         </p>
                         <br />
 
+                        <div className="recycle-iframe-box">
+
+                        </div>
+
+
+                        <img className="prc" src={prc} />
 
                         <p className="rec-text rct">
                             At ReTail Project, we've streamlined the process of transforming customers' old fabrics or blankets into new, eco-friendly delights for their pets. Here's how it works:

@@ -51,7 +51,15 @@ function Contact() {
                     </p>
 
                     <p className="con-content">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        We’d love to hear from you!
+                        <br />
+                        Whether you’re looking to upcycle your old materials or want to discuss a large-scale collaboration, we’re here to help.
+                        <br /><br />
+                        <b>
+                            For customers:</b> Feel free to reach out with any questions or to send us your items for upcycling.
+                        <br />
+                        <b>For big companies:</b> Let’s work together on large-scale upcycling projects and make a positive environmental impact.
+
                     </p>
 
                     <div className="socials">
@@ -61,16 +69,16 @@ function Contact() {
                         </p>
                         <p className="st">
                             <b>Phone: </b><br />
-                            +91 0123456789
+                            +91 96641 49148
                         </p>
                     </div>
 
                 </div>
                 <div className="con-right">
                     <form className="con-form">
-                        <input className="conInp"  type="text" name="name" placeholder="Full Name" required />
-                        <input className="conInp" type="email" name="email" placeholder="E-mail address"  required />
-                        <input className="conInp" type="text" name="subject" placeholder="Subject"  required />
+                        <input className="conInp" type="text" name="name" placeholder="Full Name" required />
+                        <input className="conInp" type="email" name="email" placeholder="E-mail address" required />
+                        <input className="conInp" type="text" name="subject" placeholder="Subject" required />
                         <textarea className="conMess" placeholder="Message" >
 
                         </textarea>
