@@ -18,6 +18,7 @@ import { UserProvider } from './UserContext.js';
 import Footer from './components/footer/footer.js';
 import ProductPage from './components/product/product.jsx';
 import { useEffect, useState } from 'react';
+import SignUpNew from './components/signup/signup-new.jsx';
 
 function App() {
 
@@ -79,7 +80,7 @@ function App() {
           <Route path='/how-to-recycle' element={<Recycle />} />
           <Route path='/about-us' element={<About />} />
           <Route path='/shop' element={<Shop />} />
-          <Route path='/signup' element={<SignUp />} />
+          <Route path='/signup' element={<SignUpNew />} />
           <Route path='/signin' element={<Login />} />
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/product' element={<ProductPage />} />
