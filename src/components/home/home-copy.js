@@ -6,48 +6,131 @@ import sustainable from "./renewal.png"
 import corder from "./review.png"
 import handc from "./tailoring.png"
 import { useEffect, useState } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { Autoplay } from "swiper/modules"
+
+
+
+function NextArrow(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed" />
+    );
+}
+
+function PrevArrow(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed transformedR" />
+    );
+}
+
+
+function NextArrowHome(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed transformedR thh" />
+    );
+}
+
+function PrevArrowHome(props) {
+    const { onClick } = props;
+    return (
+        <img src={require("./next.png")} onClick={onClick} alt="" className="transformed  thh thhr" />
+    );
+}
+
 
 
 
 function Home() {
 
 
-    const [currentId, setCurrentId] = useState(0)
 
 
-    // Auto-slide functionality
-    useEffect(() => {
-        const slideInterval = setInterval(() => {
-            setCurrentId((prevId) => (prevId + 1) % 6) // Assuming 2 slides; update to number of slides
-        }, 5000) // Change slide every 3 seconds
-
-        return () => clearInterval(slideInterval) // Clear interval on component unmount
-    }, [])
-
-
-    const transformRight = () => {
-        setCurrentId((prevId) => (prevId + 1) % 6)
-    }
-
-    const transformLeft = () => {
-        setCurrentId((prevId) => (prevId - 1 + 6) % 6);
-        document.getElementsByClassName("slide")[currentId].classList.remove("activeR")
-        document.getElementsByClassName("slide")[currentId].classList.remove("activeL")
-
+    const slides = [
+        { img: "slide-one-before.jpg", img2: "slide-one-after.jpg" },
+        { img: "slide-two-before.jpg", img2: "slide-two-after.jpg" },
+        { img: "slide-three-before.jpg", img2: "slide-three-after.jpg" },
+        { img: "slide-four-before.jpg", img2: "slide-four-after.jpg" },
+        { img: "slide-five-before.jpg", img2: "slide-five-after.jpg" },
+        { img: "slide-six-before.jpg", img2: "slide-six-after.jpg" }
+    ];
+    const settingsT = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
     }
 
 
+
+
+
+    const settingsF = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
+        arrows: false
+    }
+
+
+
+
+
+
+
+    const mainSlider = [
+        {
+            img: require("./home-one.jpg"),
+            title: "Custom Tailoring"
+        },
+        {
+            img: require("./home-two.JPG"),
+            title: "Preserve Memories"
+        },
+        {
+            img: require("./home-three.jpg"),
+            title: "Sustainable Pet Fashion"
+        },
+        {
+            img: require("./home-four.jpg"),
+            title: "Made with Love & Care"
+        },
+    ]
 
 
 
 
     return (
         <div className="Home">
-            <div className="Slider">
-                <div className="slider-box">
+            <Slider {...settingsF} className="SliderCusHome">
 
-                </div>
-            </div>
+                {
+                    mainSlider.map((m) => (
+                        <div className="slider-maincus">
+                            <img src={m.img} alt="" className="slider-main-imgcus" />
+                            <p className="main-slider-captioncus">
+                                {
+                                    m.title
+                                }
+                            </p>
+                        </div>
+                    ))
+                }
+
+            </Slider>
 
             <div className="Hero">
                 <div className="hero-lower">
@@ -74,7 +157,7 @@ function Home() {
 
                         </div>
 
-                        <div className="home-main-div ">
+                        <div className="home-main-div htwoow">
                             <div className="home-main-div-right">
                                 <p className="home-main-head">
                                     What We Do ?
@@ -88,8 +171,8 @@ function Home() {
                                     Read more
                                 </button>
                             </div>
-                            <div className="home-main-div-left hmlt">
-                                <img className="main-div-back" src={backTwo} />
+                            <div className="home-main-div-left hmltt">
+                                <img className="main-div-back hbone" src={backTwo} />
                             </div>
 
 
@@ -97,1393 +180,48 @@ function Home() {
                         </div>
                     </div>
 
-                    <div className="home-features">
+                    {/* <div className="home-features">
 
 
                         <div className="home-features-left-box">
                             <p className="home-main-head fhmm">Our Features</p>
-                            <marquee>
-                                <div className="home-features-left">
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div> <div className="feature">
-                                        <img className="fimg" src={sustainable} />
-                                        <p className="fname">
-                                            Sustainable
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={handc} />
-                                        <p className="fname">
-                                            Handcrafted
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={csp} />
-                                        <p className="fname">
-                                            Craftsmenship
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
-                                    <div className="feature">
-                                        <img className="fimg" src={corder} />
-                                        <p className="fname">
-                                            Custom Order
-                                        </p>
-                                        {/* <p className="ftext">
-                                            Rhuese uyeres seres dolor sit amet consectetur adipiscing elitsed do eiusmod tempor incididunt ut
-                                        </p> */}
-                                    </div>
 
-
-
+                            <div className="home-features-new-ssd">
+                                <div className="feature">
+                                    <img className="fimg" src={sustainable} />
+                                    <p className="fname">
+                                        Sustainable
+                                    </p>
 
                                 </div>
-                            </marquee>
+                                <div className="feature">
+                                    <img className="fimg" src={handc} />
+                                    <p className="fname">
+                                        Handcrafted
+                                    </p>
+
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={csp} />
+                                    <p className="fname">
+                                        Craftsmenship
+                                    </p>
+
+                                </div>
+                                <div className="feature">
+                                    <img className="fimg" src={corder} />
+                                    <p className="fname">
+                                        Custom Order
+                                    </p>
+
+                                </div>
+                            </div>
+
                         </div>
 
-                        {/* <div className="home-features-right">
-                            <img className="feature-back-img" src={require("./fbimg.jpg")} />
-                        </div> */}
 
-                    </div>
+
+                    </div> */}
 
 
                     <div className="collection-box">
@@ -1514,127 +252,47 @@ function Home() {
 
                     <div className="transformations">
                         <p className="home-main-head">
-                            Out Transformations
+                            Our Transformations
                         </p>
 
-                        <div className="transformations-box">
-                            <img onClick={transformRight} className="transformed transformedR" src={require("./next.png")} />
-                            <div className="transformations-slider">
-                                <div className={`slide ${currentId === 0 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 0 ? "flex" : "none" }}>
 
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-one-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
+
+
+                        <Slider {...settingsT} className="slick-slider-custom" >
+                            {
+                                slides.map((s) => (
+                                    <div className="slick-slide-custom">
+
+
+                                        <div className="slide-left">
+                                            <img className="slide-left-img" src={require(`./${s.img}`)} />
+                                            <p className="before">
+                                                Before
+                                            </p>
+                                        </div>
+
+
+                                        <div className="slide-right">
+                                            <img className="slide-left-img" src={require(`./${s.img2}`)} />
+                                            <p className="after">
+                                                After
+                                            </p>
+                                        </div>
                                     </div>
+                                ))
+                            }
+                        </Slider>
 
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-one-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
 
-                                <div className={`slide ${currentId === 1 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 1 ? "flex" : "none" }}>
 
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-two-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-two-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className={`slide ${currentId === 2 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 2 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-three-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-three-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 3 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 3 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-four-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-four-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 4 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 4 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-five-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-
-                                    {/* <img className="transformed" src={require("./next.png")} /> */}
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-five-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className={`slide ${currentId === 5 ? "activeR" : ""}`}
-                                    style={{ display: currentId === 5 ? "flex" : "none" }}>
-
-                                    <div className="slide-left">
-                                        <img className="slide-left-img" src={require("./slide-six-before.jpg")} />
-                                        <p className="before">
-                                            Before
-                                        </p>
-                                    </div>
-                                    
-                                    <div className="slide-right">
-                                        <img className="slide-left-img" src={require("./slide-six-after.jpg")} />
-                                        <p className="after">
-                                            After
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <img onClick={transformLeft} className="transformed" src={require("./next.png")} />
-                        </div>
 
                     </div>
+
+
+
+
+
+
 
                     <div className="featured-products-box">
                         <div className="home-main-head">
@@ -1662,6 +320,7 @@ function Home() {
                                     </button>
                                 </div>
                             </div>
+
                             <div className="fproduct">
                                 <div className="fprod-upper">
                                     <img className="prodimg" src={require("./btwo.jpg")} />
@@ -1683,6 +342,7 @@ function Home() {
                                     </button>
                                 </div>
                             </div>
+
                             <div className="fproduct">
                                 <div className="fprod-upper">
                                     <img className="prodimg" src={require("./bthree.jpg")} />
@@ -1704,6 +364,7 @@ function Home() {
                                     </button>
                                 </div>
                             </div>
+
                             <div className="fproduct">
                                 <div className="fprod-upper">
                                     <img className="prodimg" src={require("./bfour.jpg")} />
@@ -1725,8 +386,17 @@ function Home() {
                                     </button>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
+
+
+
+
+
+
+
                 </div>
             </div>
         </div >

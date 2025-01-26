@@ -4,7 +4,7 @@ import "./app.scss"
 import Nav from './components/nav/nav';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Shop from './components/shop/shop.jsx';
-import Home from './components/home/home';
+import Home from './components/home/home.js';
 import About from './components/about/about';
 import SignUp from './components/signup/signup';
 import Login from './components/login/login';
