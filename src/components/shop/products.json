@@ -1,0 +1,20 @@
+[
+    {
+        "sku": "TRP-01",
+        "item-name": "Bandana",
+        "brand-name": "The ReTail Project",
+        "material": "Silk",
+        "colors": [
+            "Rustic",
+            "Red",
+            "Green",
+            "Peach",
+            "Green",
+            "Red",
+            "Magenta"
+        ],
+        "price" : "₹222",
+        "mrp" : 249,
+        "sdp" : 222
+    }
+]

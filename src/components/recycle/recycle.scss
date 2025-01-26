@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=:wght@400;700&display=swap');
+
+$headFont : Quattrocento;
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+* {
+    text-decoration: none;
+    padding: none;
+    margin: 0;
+}
+
+.recycle-lower {
+    padding: 1cm 10vw 2cm 10vw;
+}
+
+.recycle-intro {
+    display: flex;
+    flex-direction: column;
+    gap: .2cm;
+}
+
+.rec-head {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    flex-shrink: 0;
+    // text-align: left;
+    // border: 1px solid black;
+    color: $primarycolor;
+}
+
+.rec-text {
+    text-align: center;
+    font-size: 16px;
+    color: $primarycolor;
+
+}
+
+.rec-process-text {
+    // border: 1px solid black;
+    height: 100%;
+}
+
+
+
+.rct {
+    text-align: center;
+}
+
+.recycle-head {
+    font-size: 3rem;
+    font-family: $headFont;
+    color: $primarycolor;
+    font-weight: 600;
+}
+
+.prc {
+    width: 15cm;
+    border-radius: 10px;
+    margin-bottom: 1cm;
+}
+
+.recycle-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4cm;
+    margin-top: .5cm;
+}
+
+.rec-img-box {
+    width: 4cm;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.rec-new-box {
+    width: 9cm;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+    gap: 1cm;
+    align-items: center;
+    border: 2.5px solid $primarycolor;
+    border-radius: 10px;
+    padding: .3cm;
+    // height: 100%;
+
+}
+
+
+.rec-imgs {
+    display: flex;
+    align-items: stretch;
+    gap: 2cm;
+    margin-top: 1cm;
+    justify-content: space-between;
+}
+
+.rec-img {
+    width: 4cm;
+    // border-radius: 50%;
+    // border: 1px solid black;
+    border-radius: 10px;
+
+}
+
+.recycle-process {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5cm;
+    margin-top: 1.5cm;
+}
+
+.rec-left {
+    display: flex;
+    align-items: flex-start;
+    gap: 1cm;
+
+}
+
+.rr {
+    flex-direction: row-reverse;
+}
+
+.rhh {
+    text-align: center;
+}
+
+.rec-det-box {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+    margin-top: .5cm;
+}
+
+.rec-det {
+    display: flex;
+    flex-direction: row;
+    gap: .2cm;
+    align-items: flex-start;
+}
+
+.rlt {
+    text-align: left;
+}

@@ -1,0 +1,43 @@
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+
+.Shop {
+    padding: 2cm 10vw;
+}
+
+.nproducts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1cm;
+}
+
+.shop-cats-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1cm;
+    gap: .5cm;
+}
+
+.shop-cat-name {
+    border: 2px solid $primarycolor;
+    padding: .2cm .8cm;
+    font-size: 16px;
+    border-radius: 8px;
+    color: $primarycolor;
+    cursor: pointer;
+    transition: .3s;
+
+
+    // &:hover{
+    //     background-color: transparent;
+    //     color: $primarycolor;
+    // }
+
+}
+
+.activeCat {
+    background-color: $primarycolor;
+    color: $secondarycolor;
+}

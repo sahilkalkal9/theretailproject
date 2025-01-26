@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins|Quattrocento:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=:wght@400;700&display=swap');
+
+$headFont : Quattrocento;
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+
+
+
+
+
+.Footer {
+    margin-top: 2cm;
+    background-color: $primarycolor ;
+
+    padding: 0.3cm 10vw 0cm 10vw;
+
+}
+
+
+.footer-logo-text {
+    color: $secondarycolor;
+
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.footer-reach {
+    margin-top: .5cm;
+    font-size: 17px;
+    font-weight: 600;
+    color: $secondarycolor;
+    text-align: left;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    margin-top: .2cm;
+}
+
+.logoText {
+    font-size: 30px;
+    color: #e9feff;
+    letter-spacing: .03cm;
+    font-family: Madimi One;
+    cursor: pointer;
+}
+
+.footer-head-sub {
+    font-size: 17px;
+    font-weight: 600;
+    color: $secondarycolor;
+}
+
+.footer-icons {
+    display: flex;
+    margin-top: .1cm;
+    align-items: center;
+    column-gap: .15cm;
+}
+
+.footer-email {
+    // font-weight: 600;
+    color: $secondarycolor;
+    // padding: .15cm .3cm;
+    border-bottom: 1px solid transparent;
+    // border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+    transition: .3s;
+
+
+    &:hover {
+
+        border-bottom: 1px solid #e9feff;
+
+    }
+}
+
+.footer-icon {
+    width: .7cm;
+    height: auto;
+}
+
+
+.footer-box {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding-bottom: .3cm;
+    gap: 1cm;
+    border-bottom: thin solid $secondarycolor;
+
+
+}
+
+.second-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1cm;
+
+}
+
+.social-medias {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: .3cm;
+
+}
+
+
+.smimg {
+    width: 1cm;
+    cursor: pointer;
+}
+
+.copyright{
+    color: $secondarycolor;
+}
+
+
+.spds {
+    display: flex;
+    gap: 1cm;
+}
+
+
+.company-footer {
+    width: 10cm;
+
+}
+
+.footer-logo {
+    font-family: Kalam;
+    font-size: 30px;
+}
+
+.footer-about {
+    font-size: 15px;
+    margin-top: .1cm;
+    // color: rgb(48, 48, 48);
+    color: $secondarycolor;
+    text-align: left;
+
+
+}
+
+.footer-email {
+    a {
+        color: $secondarycolor;
+        word-break: break-all;
+    }
+}
+
+
+.footer-lower-txt {
+    font-size: 15px;
+    color: rgb(48, 48, 48);
+
+
+}
+
+.lower-footer-icons {
+    display: flex;
+    align-items: center;
+    column-gap: .13cm;
+}
+
+.lower-footer-icon {
+    width: .6cm;
+    height: auto;
+    cursor: pointer;
+    transition: .2s all;
+
+    &:hover {
+        margin-top: -0.07cm;
+    }
+}
+
+.lower-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: .3cm;
+    padding: .2cm 0cm .2cm 0cm;
+}
+
+.footer-menuItem {
+    font-size: 15px;
+    cursor: pointer;
+    // color: rgb(48, 48, 48);
+    color: $secondarycolor;
+    text-align: left;
+
+
+
+}
+
+.spd {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media only screen and (max-width : 800px){
+    .footer-box{
+        flex-direction: column;
+    }
+    .company-footer{
+        width: 100%;
+    }
+}

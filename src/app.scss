@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins|Quattrocento:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=:wght@400;700&display=swap');
+
+$headFont : Quattrocento;
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+.discount-popup-box-main {
+    position: fixed;
+    z-index: 100000;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+}
+
+.discount-popup-main {
+    width: 15cm;
+    height: auto;
+    // background-color: white;
+    padding: 1cm;
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+    position: relative;
+    border-radius: 10px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        border-radius: 10px;
+        inset: 0;
+        background-image: url("./pheobe.jpg");
+        filter: brightness(45%);
+        z-index: -1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+
+    }
+}
+
+#dpMain {
+    display: none;
+}
+
+.dp-close {
+    font-size: 14px;
+    color: white;
+    text-align: right;
+    cursor: pointer;
+}
+
+.dp-head {
+    font-size: 2rem;
+    color: white;
+}
+
+.dp-text {
+    font-size: 12px;
+    color: rgb(182, 182, 182);
+}
+
+.dp-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .3cm;
+    margin-top: .5cm;
+}
+
+.dp-inp {
+    padding: .3cm;
+    width: 10cm;
+    font-size: 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+
+}
+
+.dp-submit {
+    background-color: $primarycolor;
+    border: 1px solid $primarycolor;
+    color: $secondarycolor;
+    padding: .3cm .6cm;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+}

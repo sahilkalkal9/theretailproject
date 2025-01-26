@@ -1,0 +1,116 @@
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+
+.SignUpNew {
+    padding: 1.5cm 10vw;
+    display: flex;
+    // justify-content: center;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5cm;
+}
+
+.signup-new-box {
+    width: 12cm;
+    // border: 1px solid #ceffe5;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+    padding: .5cm;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    align-items: center;
+    height: fit-content;
+
+}
+
+.signup-logon {
+    width: 1.2cm;
+}
+
+.signup-head-upn {
+    display: flex;
+    align-items: center;
+    gap: .2cm;
+    margin-top: 0;
+}
+
+.signup-head-textn {
+    font-size: 24px;
+    color: $primarycolor;
+}
+
+.signup-new-form {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+    width: 100%;
+
+}
+
+.signupwithgoogle {
+    background-color: #4285F4;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 1rem;
+    padding: .3cm;
+}
+
+
+.singup-input-new {
+    padding: .3cm;
+    border: 1px solid $primarycolor;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.singup-new-submit {
+    font-size: 1rem;
+    background-color: $primarycolor;
+    padding: .3cm;
+    border: none;
+    border-radius: 5px;
+    color: $secondarycolor;
+    cursor: pointer;
+}
+
+.signup-new-head {
+    font-size: 2rem;
+    color: $primarycolor;
+    font-weight: 600;
+    // border: 1px solid black;
+}
+
+.re-text {
+    color: $secondarycolor;
+}
+
+.alreadyheavanaccount {
+    font-size: .8rem;
+
+}
+
+.signup-new-text {
+    font-size: 1rem;
+
+}
+
+.signup-signin-button {
+    color: blue;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+}
