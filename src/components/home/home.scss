@@ -858,6 +858,20 @@ $secondarycolor : #e4af47;
         width: 4cm;
         height: 4cm;
     }
+
+    .fproduct {
+        width: 6cm;
+        gap: .2cm;
+    }
+
+    .fprod-upper {
+        padding: .3cm;
+    }
+
+    .prod-name {
+        font-size: 16px;
+        line-height: .5cm;
+    }
 }
 
 
@@ -884,6 +898,31 @@ $secondarycolor : #e4af47;
 
     .home-main-head {
         font-size: 40px;
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .fproduct {
+        width: 5cm;
+        gap: .2cm;
+    }
+
+    .nproducts {
+        gap: .5cm .3cm;
+    }
+
+    .fprod-upper {
+        padding: .3cm;
+    }
+
+    .prod-name {
+        font-size: 14px;
+        line-height: .5cm;
+    }
+
+    .add-cart {
+        padding: .15cm;
+        font-size: 14px;
     }
 }
 
@@ -979,6 +1018,23 @@ $secondarycolor : #e4af47;
 
     .coltext {
         font-size: 32px;
+    }
+
+    .nproducts {
+        gap: 1cm;
+    }
+
+    .fproduct {
+        width: 100%;
+    }
+
+    .prod-name {
+        font-size: 16px;
+    }
+
+    .add-cart {
+        font-size: 16px;
+        padding: .3cm;
     }
 }
 

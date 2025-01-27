@@ -3,7 +3,7 @@ $secondarycolor : #e4af47;
 
 
 .Shop {
-    padding: 2cm 10vw;
+    padding: 1cm 5vw;
 }
 
 .nproducts {
@@ -16,6 +16,8 @@ $secondarycolor : #e4af47;
 .shop-cats-box {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-bottom: 1cm;
     gap: .5cm;
 }
@@ -44,6 +46,12 @@ $secondarycolor : #e4af47;
 
 
 
-@media only screen and (max-width : 1200px){
-    
+@media only screen and (max-width : 600px) {
+    .shop-cat-name {
+        font-size: 14px;
+    }
+
+    .shop-cats-box {
+        gap: .2cm;
+    }
 }

@@ -85,8 +85,14 @@ function Nav() {
     }
 
     const openCart = () => {
-        document.getElementById("cartNew").style.width = "12cm"
-    }
+        const cartElement = document.getElementById("cartNew");
+        if (window.innerWidth < 700) {
+            cartElement.style.width = "100%";
+        } else {
+            cartElement.style.width = "12cm";
+        }
+    };
+
 
 
     return (

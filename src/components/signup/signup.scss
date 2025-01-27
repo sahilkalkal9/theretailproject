@@ -3,7 +3,7 @@ $secondarycolor : #e4af47;
 
 
 .SignUpNew {
-    padding: 1.5cm 10vw;
+    padding: 1.5cm 5vw;
     display: flex;
     // justify-content: center;
     background-color: whitesmoke;
@@ -113,4 +113,33 @@ $secondarycolor : #e4af47;
         text-decoration: underline;
     }
 
+}
+
+
+@media only screen and (max-width : 700px) {
+    .signup-new-box {
+        width: calc(100% - 10vw);
+    }
+
+    .signup-new-head {
+        font-size: 26px;
+    }
+
+    .signup-new-text {
+        font-size: 14px;
+    }
+
+    .signup-head-textn {
+        font-size: 20px;
+    }
+
+    .signup-logon {
+        width: 1cm;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .singup-input-new {
+        font-size: 14px;
+    }
 }
