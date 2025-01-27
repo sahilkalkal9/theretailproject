@@ -15,11 +15,13 @@ $secondarycolor : #e4af47;
 .overlay-add-pet {
     position: fixed;
     inset: 0;
-    backdrop-filter: blur(5px);
+    // backdrop-filter: brightness(30%);
+    backdrop-filter: blur(5px) brightness(30%);
     padding: 1cm 5vw;
     display: flex;
     justify-content: center;
     display: none;
+    z-index: 100;
 
 }
 
@@ -99,4 +101,12 @@ $secondarycolor : #e4af47;
     border: 1px solid rgb(221, 221, 221);
     padding: 0cm .25cm;
     border-radius: 5px;
+}
+
+
+@media only screen and (max-width : 800px) {
+    .overlay-add-pet-box {
+        width: calc(100%);
+        border: 1px solid black;
+    }
 }
