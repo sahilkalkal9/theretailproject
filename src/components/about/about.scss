@@ -295,8 +295,8 @@ $secondarycolor : #e4af47;
 
 
 .about-five {
-    padding: 0cm 10vw;
-    width: calc(100% - 20vw);
+    padding: 0cm 5vw;
+    width: calc(100% - 10vw);
     // border: 1px solid red;
 
 }
@@ -487,7 +487,7 @@ $secondarycolor : #e4af47;
     .about-four-head {
         font-size: 28px;
     }
-    
+
 
 }
 
@@ -657,8 +657,22 @@ $secondarycolor : #e4af47;
         font-size: 35px;
     }
 
+    .about-three {
+        width: calc(100% - 10vw);
+    }
+
+    .about-three-points {
+        width: 100%;
+    }
+
     .about-three-point {
-        width: auto;
+        width: 100%;
+    }
+
+    .about-three-head {
+        // border: 1px solid black;
+        width: fit-content;
+        // font-size: 20px;
     }
 
     .news-inp {
@@ -805,12 +819,49 @@ $secondarycolor : #e4af47;
     .news-inp {
         width: 100%;
     }
+
+    .about-three-head {
+        font-size: 26px;
+    }
+
+    .about-three {
+        gap: 1cm;
+    }
+
+    .about-three-point {
+        gap: .2cm;
+    }
+
+    .about-three-points {
+        gap: 1cm;
+    }
 }
 
 @media only screen and (max-width : 450px) {
     .about-one-img {
         width: 4cm;
     }
+
+    .about-point-head {
+        font-size: 16px;
+    }
+
+    .about-point-img {
+        width: .78cm;
+    }
+
+    .about-five-point-name {
+        font-size: 16px;
+    }
+
+    .about-five-img {
+        width: .8cm;
+    }
+
+    .about-five-point {
+        gap: .2cm;
+    }
+
 }
 
 @media only screen and (max-width : 350px) {
