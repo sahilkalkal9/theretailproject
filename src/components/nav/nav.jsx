@@ -220,9 +220,9 @@ function Nav() {
                                 )
                                 : (
                                     <div className="login-buttons-overlay">
-                                        <Link to='/signup' >
+                                        {/* <Link to='/signup' >
                                             <p onClick={closeNav} className="menu-item login-button"> Sign Up </p>
-                                        </Link>
+                                        </Link> */}
                                         <Link to='/signin' >
                                             <p onClick={closeNav} className="menu-item login-button"> Sign In </p>
                                         </Link>
@@ -680,9 +680,9 @@ function Nav() {
                                         : (
                                             <div className="nav-menu-i">
                                                 <div className='login-buttons'>
-                                                    <Link to='/signup' >
+                                                    {/* <Link to='/signup' >
                                                         <p onClick={closeNav} className="menu-item login-button"> Sign Up </p>
-                                                    </Link>
+                                                    </Link> */}
                                                     <Link to='/signin' >
                                                         <p onClick={closeNav} className="menu-item login-button"> Sign In </p>
                                                     </Link>

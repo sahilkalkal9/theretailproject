@@ -59,7 +59,7 @@ $headFont : Quattrocento;
 
 
 .Nav {
-  padding: .5cm 10vw;
+  padding: .5cm 5vw;
   background-color: $primarycolor;
 }
 
@@ -1408,7 +1408,7 @@ h3 {
 
 
   .new-nav-box {
-    padding: .3cm 10vw 0.3cm 10vw;
+    padding: .3cm 5vw 0.3cm 5vw;
   }
 
   .new-nav-logo-box {
@@ -1830,6 +1830,7 @@ h3 {
   }
 
   .menuk {
-    width: .5;
+    width: .5cm;
+    height: .5cm;
   }
 }

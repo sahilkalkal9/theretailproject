@@ -1,11 +1,14 @@
 import "./shop.scss"
 import gwalk from "./gwalknp.png"
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 function Shop() {
 
 
-    
+    const location = useLocation();
+
+
+    const isActive = (path) => location.pathname === path;
 
 
 
@@ -16,22 +19,22 @@ function Shop() {
                 <div className="shop-cats-box">
 
                     <Link to='/shop/wear'>
-                        <p className="shop-cat-name activeCat">
+                        <p className={isActive("/shop/wear") || isActive("/shop") ? "shop-cat-name activeCat" : "shop-cat-name"}>
                             Wear
                         </p>
                     </Link>
                     <Link to='/shop/walk'>
-                        <p className="shop-cat-name activeCat">
+                        <p className={isActive("/shop/walk") ? "shop-cat-name activeCat" : "shop-cat-name"}>
                             Walk
                         </p>
                     </Link>
                     <Link to='/shop/play'>
-                        <p className="shop-cat-name activeCat">
+                        <p className={isActive("/shop/play") ? "shop-cat-name activeCat" : "shop-cat-name"}>
                             Play
                         </p>
                     </Link>
                     <Link to='/shop/sleep'>
-                        <p className="shop-cat-name activeCat">
+                        <p className={isActive("/shop/sleep") ? "shop-cat-name activeCat" : "shop-cat-name"}>
                             Sleep
                         </p>
                     </Link>

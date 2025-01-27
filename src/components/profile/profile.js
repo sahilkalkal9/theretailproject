@@ -44,7 +44,7 @@ function Profile({ userData, setUserData }) {
         document.getElementById("editUser").style.display = "flex";
     };
 
-    const closeUserEdit = () => {
+    const closeUserEdit = () => { 
         document.getElementById("editUser").style.display = "none";
     };
 

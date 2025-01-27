@@ -2,12 +2,12 @@ $primarycolor: #486455;
 $secondarycolor : #e4af47;
 
 .ProfileNew {
-    padding: 1cm 10vw;
+    padding: 1cm 0vw;
 }
 
 .profile-new-box {
     // border: 1px solid rgb(221, 221, 221);
-    padding: .5cm;
+    padding: 0cm 5vw;
     border-radius: 5px;
 
 }
@@ -23,7 +23,7 @@ $secondarycolor : #e4af47;
     gap: .2cm;
     justify-content: space-between;
     border-bottom: 1px solid rgb(230, 230, 230);
-    padding: .5cm 0cm;
+    padding: .3cm 0cm;
 }
 
 .write {
@@ -63,9 +63,11 @@ $secondarycolor : #e4af47;
     color: black;
 }
 
+
 @media only screen and (max-width:800px) {
     .profile-det-head {
         flex-direction: column;
+        gap: .2cm;
 
     }
 
