@@ -13,9 +13,13 @@ $secondarycolor : #e4af47;
 }
 
 
+.faq-box {
+    padding: 1cm 5vw;
+}
+
 
 .faq-head-n {
-    font-size: 3rem;
+    font-size: 45px;
     color: $primarycolor;
     font-family: $headFont;
     // font-weight: 600;
@@ -23,4 +27,30 @@ $secondarycolor : #e4af47;
 
 .faq-ans {
     text-align: left;
+}
+
+.faq {
+    width: calc(100% - 1cm);
+}
+
+
+@media only screen and (max-width : 800px) {
+    .faq-head-n {
+        font-size: 40px;
+    }
+
+    .faq-ques {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .faq-ans {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .faq-head-n {
+        font-size: 32px;
+    }
 }

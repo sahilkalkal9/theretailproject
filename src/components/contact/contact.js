@@ -60,7 +60,7 @@ function Contact() {
                         <br />
                         <b>For big companies:</b> Let’s work together on large-scale upcycling projects and make a positive environmental impact.
 
-                    </p>
+                    </p> 
 
                     <div className="socials">
                         <p className="st">

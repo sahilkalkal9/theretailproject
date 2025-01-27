@@ -99,6 +99,15 @@ function Nav() {
                     </div>
                     <div className="account-dets-menu">
 
+                        <Link to="/">
+                            <div onClick={closeNav} className={isActive("/") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
+                                <img className="acc-dets-img" src={aboutimg} />
+                                <p className="acc-dets-text">
+                                    Home
+                                </p>
+                            </div>
+                        </Link>
+
                         <Link to="/about-us">
                             <div onClick={closeNav} className={isActive("/about-us") ? "account-dets-menu-item activeM" : "account-dets-menu-item"} >
                                 <img className="acc-dets-img" src={aboutimg} />

@@ -14,21 +14,121 @@ $secondarycolor : #e4af47;
 
 
 .ContactBox {
-    padding: 2cm 10vw;
+    padding: 2cm 5vw;
 }
 
-.chh{
+.chh {
     text-align: left;
 }
 
-.con-tag{
+.con-tag {
     text-align: left;
 }
 
-.con-content{
+.con-content {
     text-align: left;
 }
 
-.st{
+.st {
     text-align: left;
+}
+
+.con-left {
+    // border: 1px solid black;
+
+}
+
+.con-low {
+    gap: .5cm;
+}
+
+@media only screen and (max-width :1300px) {
+
+    .con-left {
+        width: 15cm;
+    }
+}
+
+@media only screen and (max-width :1200px) {
+
+    .con-left {
+        width: 13cm;
+    }
+
+    .chh {
+        font-size: 40px;
+    }
+}
+
+
+@media only screen and (max-width :1100px) {
+
+    .con-left {
+        width: 12cm;
+
+
+    }
+
+    .chh {
+        font-size: 36px;
+    }
+
+    .con-content {
+        font-size: 14px;
+    }
+
+    .st {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width :1000px) {
+
+    .con-left {
+        width: 11cm;
+
+
+    }
+
+    .chh {
+        font-size: 36px;
+    }
+
+    .con-content {
+        font-size: 14px;
+    }
+
+    .st {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width : 900px) {
+    .con-low {
+        flex-direction: column;
+        gap: 1.5cm;
+    }
+
+    .chh {
+        font-size: 32px;
+    }
+
+    .con-left {
+        width: 100%;
+
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .con-form {
+        input {
+            font-size: 14px;
+        }
+
+        textarea {
+            font-size: 14px;
+        }
+    }
 }

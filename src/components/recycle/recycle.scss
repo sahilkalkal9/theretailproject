@@ -13,7 +13,7 @@ $secondarycolor : #e4af47;
 }
 
 .recycle-lower {
-    padding: 1cm 10vw 2cm 10vw;
+    padding: 1cm 5vw 2cm 5vw;
 }
 
 .recycle-intro {
@@ -66,7 +66,7 @@ $secondarycolor : #e4af47;
 .recycle-content {
     display: flex;
     flex-direction: column;
-    gap: 4cm;
+    gap: 3cm;
     margin-top: .5cm;
 }
 
@@ -77,9 +77,10 @@ $secondarycolor : #e4af47;
 }
 
 .rec-new-box {
-    width: 9cm;
+    width: 10cm;
     display: flex;
     flex-direction: column;
+    height: fit-content;
 
     justify-content: space-between;
     gap: 1cm;
@@ -95,9 +96,10 @@ $secondarycolor : #e4af47;
 .rec-imgs {
     display: flex;
     align-items: stretch;
-    gap: 2cm;
+    gap: 1cm;
     margin-top: 1cm;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .rec-img {
@@ -146,4 +148,106 @@ $secondarycolor : #e4af47;
 
 .rlt {
     text-align: left;
+}
+
+
+@media only screen and (max-width : 1500px) {
+    .recycle-head {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .rec-new-box {
+        width: 8.5cm;
+    }
+
+    .rec-img {
+        width: 3cm;
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .rec-new-box {
+        width: 8cm;
+    }
+
+    .rec-img {
+        width: 2.6cm;
+    }
+
+    .recycle-head {
+        font-size: 36px;
+    }
+
+    .prc {
+        width: 13cm;
+    }
+}
+
+
+@media only screen and (max-width : 800px) {
+    .rec-new-box {
+        width: 7cm;
+    }
+
+    .rec-img {
+        width: 2cm;
+    }
+
+    .rec-text {
+        font-size: 14px;
+    }
+
+    .rec-head {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width : 700px) {
+    .rec-imgs {
+        gap: .5cm;
+    }
+
+    .rec-new-box {
+        width: 100%;
+        gap: .5cm;
+    }
+
+    .prc {
+        width: 12cm;
+    }
+
+    .recycle-head {
+        font-size: 32px;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .prc {
+        width: 100%;
+    }
+
+    .rec-det {
+        flex-direction: column;
+    }
+
+    .rec-img {
+        width: 1.5cm;
+    }
+
+    .recycle-content {
+        gap: 2cm;
+
+    }
+
+    .recycle-lower {
+        padding: 0cm 5vw;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .recycle-head {
+        font-size: 28px;
+    }
 }

@@ -17,7 +17,7 @@ function FAQQ() {
                 document.getElementById(f.id).style.display = "none"
                 document.getElementById(f.checkId).style.rotate = "0deg"
             }
-        })
+        })  
 
     }, [openfaqs])
 

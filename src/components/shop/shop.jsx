@@ -1,52 +1,44 @@
 import "./shop.scss"
 import gwalk from "./gwalknp.png"
+import { Link, Outlet } from "react-router-dom";
 
 function Shop() {
+
+
+    
+
+
+
     return (
         <div className="Shop">
             <div className="shop-box">
 
                 <div className="shop-cats-box">
-                    <p className="shop-cat-name activeCat">
-                        All
-                    </p>
-                    <p className="shop-cat-name">
-                        Wear
-                    </p>
-                    <p className="shop-cat-name">
-                        Walk
-                    </p>
-                    <p className="shop-cat-name">
-                        Play
-                    </p>
-                    <p className="shop-cat-name">
-                        Sleep
-                    </p>
+
+                    <Link to='/shop/wear'>
+                        <p className="shop-cat-name activeCat">
+                            Wear
+                        </p>
+                    </Link>
+                    <Link to='/shop/walk'>
+                        <p className="shop-cat-name activeCat">
+                            Walk
+                        </p>
+                    </Link>
+                    <Link to='/shop/play'>
+                        <p className="shop-cat-name activeCat">
+                            Play
+                        </p>
+                    </Link>
+                    <Link to='/shop/sleep'>
+                        <p className="shop-cat-name activeCat">
+                            Sleep
+                        </p>
+                    </Link>
+
                 </div>
 
-                <div className="nproducts">
-                    <div className="fproduct">
-                        <div className="fprod-upper">
-                            <img className="prodimg" src={require("./product.png")} />
-                            <div className="prod-desc">
-                                <p className="prod-cat">
-                                    Sleep
-                                </p>
-                                <p className="prod-name">
-                                    Leash and collar combo for every sized dog
-                                </p>
-                                <p className="prod-price">
-                                    Rs. 600.00
-                                </p>
-                            </div>
-                        </div>
-                        <div className="fprod-lower">
-                            <button className="add-cart" >
-                                ADD TO CART
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                <Outlet />
             </div>
         </div>
     )

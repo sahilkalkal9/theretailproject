@@ -124,7 +124,7 @@ function About() {
 
 
 
-                <div className="about-three">
+                {/* <div className="about-three">
                     <p className="about-three-head">
                         Why Choose Us ?
                     </p>
@@ -186,7 +186,7 @@ function About() {
 
                         </div>
                     </div>
-                </div>
+                </div> */}
 
 
                 <div className="about-four">

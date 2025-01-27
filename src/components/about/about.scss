@@ -155,7 +155,7 @@ $secondarycolor : #e4af47;
     display: flex;
     flex-direction: column;
     gap: 1.5cm;
-    padding: 0cm 10vw;
+    padding: 0cm 5;
     align-items: center;
     margin-top: 2cm;
 
@@ -487,6 +487,7 @@ $secondarycolor : #e4af47;
     .about-four-head {
         font-size: 28px;
     }
+    
 
 }
 
@@ -657,7 +658,7 @@ $secondarycolor : #e4af47;
     }
 
     .about-three-point {
-        width: 8cm;
+        width: auto;
     }
 
     .news-inp {
@@ -729,13 +730,9 @@ $secondarycolor : #e4af47;
         font-size: 35px;
     }
 
-    .about-three-point {
-        width: 8cm;
-    }
 
-    .news-inp {
-        width: 4cm;
-    }
+
+
 
     .about-point-head {
         font-size: 18px;
@@ -754,10 +751,70 @@ $secondarycolor : #e4af47;
         line-height: 1cm;
     }
 
+    .about-five-point {
+        width: 100%;
+    }
+
 }
 
-@media only screen and (max-width : 500px) {
-    .about-one-img {
+@media only screen and (max-width : 600px) {
+    .about-head {
+        font-size: 32px;
+    }
+
+    .about-text {
+        font-size: 14px;
+    }
+
+    .about-two {
+        margin-top: 0.5cm;
+    }
+
+    .about-two-left {
+        width: 6cm;
+    }
+
+    .founder-text {
+        font-size: 16px;
+    }
+
+    .qoute {
+        width: .8cm;
+    }
+
+    .about-two-right {
+        gap: .3cm;
+    }
+
+    .about-misc {
+        margin-top: .5cm;
+    }
+
+    .about-story-text {
+        font-size: 14px;
+    }
+
+    .about-four {
+        padding: 1cm 5vw;
+    }
+
+    .newsletter-box {
+        width: calc(100% - 10vw);
+    }
+
+    .news-inp {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width : 450px) {
+    .about-one-img {
+        width: 4cm;
+    }
+}
+
+@media only screen and (max-width : 350px) {
+    .about-one-img {
+        width: 3cm;
     }
 }

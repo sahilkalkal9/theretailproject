@@ -19,6 +19,10 @@ import Footer from './components/footer/footer.js';
 import ProductPage from './components/product/product.jsx';
 import { useEffect, useState } from 'react';
 import SignUpNew from './components/signup/signup-new.jsx';
+import { Wear } from './components/shop/wear.jsx';
+import { Walk } from './components/shop/walk.jsx';
+import { Play } from './components/shop/play.jsx';
+import { Sleep } from './components/shop/sleep.jsx';
 
 function App() {
 
@@ -79,7 +83,13 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/how-to-recycle' element={<Recycle />} />
           <Route path='/about-us' element={<About />} />
-          <Route path='/shop' element={<Shop />} />
+          <Route path='/shop' element={<Shop />} >
+            <Route index path='/shop/' element={<Wear />} />
+            <Route index path='/shop/wear' element={<Wear />} />
+            <Route index path='/shop/walk' element={<Walk />} />
+            <Route index path='/shop/play' element={<Play />} />
+            <Route index path='/shop/sleep' element={<Sleep />} />
+          </Route>
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<LogInNew />} />
           <Route path='/faq' element={<FAQQ />} />

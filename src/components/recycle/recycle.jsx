@@ -25,7 +25,7 @@ function Recycle() {
                             </p>
                         </div>
 
-                        <div className="rec-imgs">
+                        <div className="rec-imgs"> 
                             <div className="rec-new-box">
                                 <img className="rec-img" src={one} />
                                 <div className="rec-process-text">
