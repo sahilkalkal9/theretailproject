@@ -13,7 +13,7 @@ $secondarycolor : #e4af47;
     display: flex;
     align-items: center;
     justify-content: center;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px) brightness(30%);
 }
 
 .discount-popup-main {
@@ -33,7 +33,7 @@ $secondarycolor : #e4af47;
         border-radius: 10px;
         inset: 0;
         background-image: url("./pheobe.jpg");
-        filter: brightness(45%);
+        filter: brightness(40%);
         z-index: -1;
         background-position: center;
         background-repeat: no-repeat;

@@ -35,15 +35,15 @@ function App() {
     document.getElementById("dpMain").style.display = "none"
   }
 
-  // if (showdp) {
-  //   setTimeout(() => {
-  //     document.getElementById("dpMain").style.display = "flex"
+  if (showdp) {
+    setTimeout(() => {
+      document.getElementById("dpMain").style.display = "flex"
 
-  //   }, 10000)
+    }, 10000)
 
-  //   setshowdp(false)
+    setshowdp(false)
 
-  // }
+  }
 
 
   return (
