@@ -30,9 +30,16 @@ $secondarycolor : #e4af47;
 }
 
 .faq {
-    width: calc(100% - 1cm);
+    width: calc(100% - .7cm);
+    box-sizing: padding-box;
+    box-shadow: none;
 }
 
+.faqs {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+}
 
 @media only screen and (max-width : 800px) {
     .faq-head-n {
@@ -52,5 +59,23 @@ $secondarycolor : #e4af47;
 @media only screen and (max-width : 600px) {
     .faq-head-n {
         font-size: 32px;
+    }
+
+    .faq-box {
+        padding: .5cm .5cm;
+    }
+
+    .faq-ques {
+        font-size: 14px;
+        text-align: left;
+    }
+
+    .faq {
+        padding: .2cm .3cm;
+        border-radius: 5px;
+    }
+
+    .showimg {
+        width: .3cm;
     }
 }

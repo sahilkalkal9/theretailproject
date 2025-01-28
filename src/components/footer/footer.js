@@ -16,9 +16,9 @@ function Footer() {
                                                         </p> */}
 
                                                 </div>
-                                                <p className="footer-about" >The ReTail Project is a conscious pet brand that customizes pet clothing, accessories, bedding and toys offering eco-friendly, personalized designs.</p>
+                                                <p className="footer-about" >A conscious pet brand that upcycles and customises pet clothing, accessories, bedding and toys offering eco-friendly, personalized designs.</p>
                                                 <p className="footer-reach">Reach out to us</p>
-                                                <p className="footer-about" >Get your questions answered about WPCCF</p>
+                                                <p className="footer-about" >Get your questions answered about TRP</p>
                                                 <div className="footer-icons">
 
                                                         <p className="footer-email" ><a href="mailto:theretailproject.in@gmail.com" >theretailproject.in@gmail.com</a></p>
@@ -41,9 +41,9 @@ function Footer() {
                                                                         <Link to="/about-us">
                                                                                 <p className="footer-menuItem">About us</p>
                                                                         </Link>
-                                                                        <Link to="/blogs">
+                                                                        {/* <Link to="/blogs">
                                                                                 <p className="footer-menuItem">Blogs</p>
-                                                                        </Link>
+                                                                        </Link> */}
                                                                         <Link to="/shop">
                                                                                 <p className="footer-menuItem">Shop</p>
                                                                         </Link>
@@ -84,14 +84,14 @@ function Footer() {
                                                 <div className="social-medias">
                                                         <img className="smimg" src={require("./instagram.png")} />
                                                         <img className="smimg" src={require("./facebook.png")} />
-                                                        <img className="smimg" src={require("./google.png")} />
+                                                        <img className="smimg" src={require("./wt.png")} />
                                                 </div>
 
                                         </div>
                                 </div>
                                 <div className="lower-footer">
                                         <p className="copyright" >
-                                                &copy; 2023
+                                                The ReTail Project &copy; 2023
                                         </p>
 
                                 </div>

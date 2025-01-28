@@ -8,24 +8,24 @@ import prc from "./prc.jpg"
 function Recycle() {
     return (
         <div className="RecyclePage">
-            <div className="recycle-lower">
+            <div className="upcycle-lower">
 
-                <div className="recycle-content">
+                <div className="upcycle-content">
 
                     <div>
-                        <p className="recycle-head">
+                        <p className="upcycle-head">
                             Steps to upcycle
                         </p>
                         <br />
-                        <div className="recycle-intro">
+                        <div className="upcycle-intro">
 
                             <p className="rec-text rct">
-                                We proudly recycle a variety of items, including blankets, old clothing (T-shirts/shirts, Indian wear, denims, sweatshirts, socks), towels and more.
+                                We proudly upcycle a variety of items, including blankets, old clothing (T-shirts/shirts, Indian wear, denims, sweatshirts, socks), towels and more.
                                 Join us in giving new life to old memories and creating a positive impact on the environment.
                             </p>
                         </div>
 
-                        <div className="rec-imgs"> 
+                        <div className="rec-imgs">
                             <div className="rec-new-box">
                                 <img className="rec-img" src={one} />
                                 <div className="rec-process-text">
@@ -66,7 +66,7 @@ function Recycle() {
                                 </div>
                             </div>
                         </div>
-                        {/* <div className="recycle-process">
+                        {/* <div className="upcycle-process">
                             <div className="rec-left">
 
                                 <div className="rec-process-text">
@@ -104,12 +104,12 @@ function Recycle() {
                     </div>
 
                     <div className="rec-details">
-                        <p className="recycle-head">
+                        <p className="upcycle-head">
                             The ReTail Process
                         </p>
                         <br />
 
-                        <div className="recycle-iframe-box">
+                        <div className="upcycle-iframe-box">
 
                         </div>
 
@@ -126,7 +126,7 @@ function Recycle() {
                                     1. Submission :
                                 </p>
                                 <p className="rec-text rlt">
-                                    Customers send us their old raw materials, such as fabrics or blankets, expressing their desire to recycle and repurpose them.
+                                    Customers send us their old raw materials, such as fabrics or blankets, expressing their desire to upcycle and repurpose them.
                                 </p>
                             </div>
                             <div className="rec-det">

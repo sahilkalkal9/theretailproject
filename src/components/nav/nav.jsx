@@ -653,10 +653,14 @@ function Nav() {
 
                             <img onClick={openNav} className="logo-image-paw" src={logo} alt="logo" />
 
-
+                            <Link className='new-nav-logo-box' to='/'>
+                                <p className="co-name-text" id='phoneLogo'>
+                                    The <span className="re-text">Re</span>Tail Project
+                                </p>
+                            </Link>
                         </div>
                         <Link className='new-nav-logo-box' to='/'>
-                            <p className="co-name-text">
+                            <p className="co-name-text " id='deskLogo'>
                                 The <span className="re-text">Re</span>Tail Project
                             </p>
                         </Link>

@@ -1417,10 +1417,17 @@ h3 {
     gap: .2cm;
   }
 
+  .new-nav-logo {
+    display: flex;
+    align-items: center;
+    gap: .2cm;
+  }
+
   .simgg {
     width: .55cm;
     transform: rotate(10deg);
   }
+
 
   .new-nav-menu {
     display: flex;
@@ -1820,6 +1827,12 @@ h3 {
 
 }
 
+@media only screen and (min-width : 700px) {
+  #phoneLogo {
+    display: none;
+  }
+}
+
 @media only screen and (max-width : 700px) {
   .co-name-text {
     font-size: 20px;
@@ -1832,6 +1845,14 @@ h3 {
   .menuk {
     width: .65cm;
     height: .65cm;
+  }
+
+  // #phoneLogo {
+  //   display: flex;
+  // }
+
+  #deskLogo {
+    display: none;
   }
 }
 
