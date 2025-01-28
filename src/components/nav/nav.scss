@@ -1822,7 +1822,7 @@ h3 {
 
 @media only screen and (max-width : 700px) {
   .co-name-text {
-    display: none;
+    font-size: 20px;
   }
 
   .logo-image-paw {
@@ -1832,5 +1832,26 @@ h3 {
   .menuk {
     width: .65cm;
     height: .65cm;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  .co-name-text {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width : 500px) {
+  .co-name-text {
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@media only screen and (max-width : 400px) {
+  .co-name-text {
+    font-size: 15px;
+    text-align: left;
   }
 }

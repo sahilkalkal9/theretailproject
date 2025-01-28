@@ -109,9 +109,10 @@ $secondarycolor : #e4af47;
 
 .checkout-final {
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: space-between;
-    gap: 1cm;
+    gap: .3cm;
     width: calc(100% - .6cm);
     background-color: $primarycolor;
     padding: .3cm;
@@ -119,7 +120,7 @@ $secondarycolor : #e4af47;
 
     p {
         color: $secondarycolor;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 

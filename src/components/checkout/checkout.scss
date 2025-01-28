@@ -1,0 +1,200 @@
+.checkout-box {
+    width: 16cm;
+    height: auto;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+
+}
+
+.CheckoutNew {
+    padding: 1cm 5vw;
+}
+
+$headFont : Quattrocento;
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.checkout-h {
+    font-size: 32px;
+    font-family: $headFont;
+    text-align: center;
+    // border: 1px solid black;
+    margin-bottom: 1cm;
+    font-weight: 600;
+}
+
+
+.checkout-container {
+
+    display: flex;
+    // flex-direction: row;
+    flex-wrap: wrap;
+    gap: .5cm;
+    justify-content: center;
+    // border: 1px solid green;
+}
+
+.personal-dets {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    border-radius: 5px;
+    padding: .5cm;
+    // align-items: flex-start;
+    // border: 1px solid black;
+
+
+}
+
+.check-head {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: .3cm;
+}
+
+.check-input {
+    // width: 100%;
+    padding: .3cm;
+    font-size: 16px;
+
+    border-radius: 5px;
+    border: 1px solid #8fbba4;
+
+
+}
+
+.tip-box {
+    display: flex;
+    // border: 1px solid $primarycolor;
+    // width: fit-content;
+    gap: .3cm;
+    justify-content: center;
+
+}
+
+.tip-per {
+    padding: .3cm;
+    border: 1px solid $primarycolor;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.active-tip {
+    background-color: $primarycolor;
+    color: $secondarycolor;
+}
+
+.tip-input {
+    padding: .3cm;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #8fbba4;
+
+}
+
+.payi {
+    display: flex;
+    justify-content: space-between;
+    gap: .3cm;
+}
+
+.payment-info {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+}
+
+.pay-button {
+    padding: .3cm;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: $primarycolor;
+    color: $secondarycolor;
+    border: 2px solid $primarycolor;
+    margin-top: 1cm;
+    cursor: pointer;
+}
+
+@media only screen and (max-width : 1400px) {
+    .checkout-box {
+        width: 14cm;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .checkout-box {
+        width: 12cm;
+    }
+
+    .checkout-h {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width : 1100px) {
+    .checkout-box {
+        width: 11cm;
+    }
+}
+
+@media only screen and (max-width : 1000px) {
+    .checkout-box {
+        width: 10cm;
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .checkout-box {
+        width: 9cm;
+    }
+
+    .check-input {
+        font-size: 14px;
+    }
+
+    .check-head {
+        font-size: 16px;
+    }
+
+    .personal-dets {
+        padding: .3cm;
+    }
+
+    .tip-input {
+        font-size: 14px;
+    }
+
+    .tip-per {
+        font-size: 14px;
+    }
+
+    .payi {
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+@media only screen and (max-width : 800px) {
+    .checkout-box {
+        width: 8cm;
+    }
+}
+
+@media only screen and (max-width : 700px) {
+    .checkout-box {
+        width: 100%;
+    }
+}

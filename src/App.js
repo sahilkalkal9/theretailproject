@@ -23,6 +23,9 @@ import { Wear } from './components/shop/wear.jsx';
 import { Walk } from './components/shop/walk.jsx';
 import { Play } from './components/shop/play.jsx';
 import { Sleep } from './components/shop/sleep.jsx';
+import { firestore } from './firebase.js';
+import CheckoutP from './components/checkout/checkout.jsx';
+
 
 function App() {
 
@@ -35,13 +38,18 @@ function App() {
     document.getElementById("dpMain").style.display = "none"
   }
 
-  if (showdp) {
-    setTimeout(() => {
-      document.getElementById("dpMain").style.display = "flex"
+  // if (showdp) {
+  //   setTimeout(() => {
+  //     document.getElementById("dpMain").style.display = "flex"
 
-    }, 10000)
+  //   }, 10000)
 
-    setshowdp(false)
+  //   setshowdp(false)
+
+  // }
+
+
+  const addToCart = (p) => {
 
   }
 
@@ -94,6 +102,7 @@ function App() {
           <Route path='/signin' element={<LogInNew />} />
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/product' element={<ProductPage />} />
+          <Route path='/checkout' element={<CheckoutP />} />
         </Routes>
         <Footer />
 
