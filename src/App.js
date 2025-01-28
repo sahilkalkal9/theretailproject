@@ -25,6 +25,7 @@ import { Play } from './components/shop/play.jsx';
 import { Sleep } from './components/shop/sleep.jsx';
 import { firestore } from './firebase.js';
 import CheckoutP from './components/checkout/checkout.jsx';
+import Orders from './components/orders/orders.jsx';
 
 
 function App() {
@@ -103,6 +104,7 @@ function App() {
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/product' element={<ProductPage />} />
           <Route path='/checkout' element={<CheckoutP />} />
+          <Route path='/orders' element={<Orders />} />
         </Routes>
         <Footer />
 

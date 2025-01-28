@@ -1,0 +1,158 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+.oimg {
+    width: 4cm;
+    border-radius: 5px;
+}
+
+.OrdersNew {
+    padding: 1cm 5vw;
+    background-color: whitesmoke;
+}
+
+.orders-box-new {
+
+    display: flex;
+    // flex: 1 1 auto;
+    // flex-basis: 12cm;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5cm;
+}
+
+.order-new {
+    // border: 1px solid black;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+    width: 15cm;
+    display: flex;
+    align-items: flex-start;
+    gap: .5cm;
+    background-color: white;
+    padding: .3cm;
+    border-radius: 5px;
+}
+
+.order-right {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    // border: 1px solid black;
+    // height: 100%;
+    gap: 1cm;
+}
+
+.oname {
+    font-size: 20px;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.oqty {
+    text-align: left;
+    font-size: 16px;
+    // margin-top: .2cm;
+}
+
+.order-right-current {
+    display: flex;
+    // flex-direction: column;
+    gap: .5cm;
+}
+
+.order-right-delivered {
+    display: flex;
+    flex-direction: column;
+    gap: .2cm;
+    // width: fit-content;
+    // justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.track-new {
+    padding: .15cm .7cm;
+    // font-size: 16px;
+    border-radius: 5px;
+    background-color: $primarycolor;
+    color: white;
+    border: 2px solid $primarycolor;
+    cursor: pointer;
+}
+
+.cancel-new {
+    padding: .15cm .7cm;
+    // font-size: 16px;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    cursor: pointer;
+}
+
+.down-invoice {
+    padding: .2cm .8cm;
+    border: 2px solid $primarycolor;
+    background-color: $primarycolor;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-delivered-opt {
+    display: flex;
+    align-items: center;
+    gap: .3cm;
+}
+
+.odt {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media only screen and (max-width : 1400px) {
+    .order-new {
+        width: 13cm;
+    }
+}
+
+@media only screen and (max-width : 1200px) {
+    .order-new {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 600px) {
+    .oname {
+        font-size: 16px;
+        line-height: .5cm;
+    }
+
+    .order-new {
+        gap: .3cm;
+    }
+
+    .oqty {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width : 500px) {
+    .oimg {
+        width: 3cm;
+    }
+
+    .order-new {
+        flex-direction: column;
+    }
+}

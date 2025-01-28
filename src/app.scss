@@ -6,6 +6,10 @@ $headFont : Quattrocento;
 $primarycolor: #486455;
 $secondarycolor : #e4af47;
 
+.App {
+    background-color: whitesmoke;
+}
+
 .discount-popup-box-main {
     position: fixed;
     z-index: 100000;

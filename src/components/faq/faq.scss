@@ -30,7 +30,7 @@ $secondarycolor : #e4af47;
 }
 
 .faq {
-    width: calc(100% - .7cm);
+    width: calc(100% - 1cm);
     box-sizing: padding-box;
     box-shadow: none;
 }
@@ -61,6 +61,8 @@ $secondarycolor : #e4af47;
         font-size: 32px;
     }
 
+
+
     .faq-box {
         padding: .5cm .5cm;
     }
@@ -73,6 +75,7 @@ $secondarycolor : #e4af47;
     .faq {
         padding: .2cm .3cm;
         border-radius: 5px;
+        width: calc(100% - .7cm);
     }
 
     .showimg {
