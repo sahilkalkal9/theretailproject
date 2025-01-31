@@ -107,7 +107,7 @@ function App() {
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/checkout' element={<CheckoutP />} />
           <Route path='/orders' element={<Orders />} />
-          <Route path="/product" element={<ProductPage />} />
+          <Route path="/shop/:pid" element={<ProductPage />} />
         </Routes>
         <Footer />
 

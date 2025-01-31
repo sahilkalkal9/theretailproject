@@ -24,6 +24,7 @@ $secondarycolor : #e4af47;
   padding: .2cm .5cm;
   display: flex;
   flex-direction: column;
+  // border-radius: 10px;
   gap: .3cm;
   // border: 1px solid black;
 }
@@ -37,6 +38,8 @@ $secondarycolor : #e4af47;
   gap: .1cm;
   height: auto;
   padding-bottom: .15cm;
+  // border-radius: 10px;
+
 
 }
 
@@ -70,6 +73,7 @@ $secondarycolor : #e4af47;
   flex: 1;
   flex-shrink: 0;
   height: auto;
+  border-radius: 10px;
 }
 
 .product-right {
