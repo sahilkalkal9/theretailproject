@@ -100,6 +100,7 @@ function Orders() {
                             <p className="oqty">
                                 Ordered on 28 Jan 2025
                             </p>
+
                         </div>
 
                         <div className="order-right-lower">

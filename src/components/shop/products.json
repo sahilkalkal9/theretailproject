@@ -1,20 +1,23 @@
 [
     {
-        "sku": "TRP-01",
-        "item-name": "Bandana",
-        "brand-name": "The ReTail Project",
-        "material": "Silk",
-        "colors": [
-            "Rustic",
-            "Red",
-            "Green",
-            "Peach",
-            "Green",
-            "Red",
-            "Magenta"
+        "id": 0,
+        "multiple": false,
+        "name": "Honey Bee Chrochet Toy",
+        "brand-name": "The ReTail Proect",
+        "weight": "100 grams",
+        "price": 250,
+        "dimensions": [
+            "L",
+            "B",
+            "H"
         ],
-        "price" : "₹222",
-        "mrp" : 249,
-        "sdp" : 222
+        "images": [
+            "https://i.postimg.cc/J0W1Xv6j/IMG-9153.jpg",
+            "https://i.postimg.cc/5yqfSgTT/IMG-9155.jpg",
+            "https://i.postimg.cc/T2r2x210/IMG-9156.jpg",
+            "https://i.postimg.cc/WbTN1RJv/IMG-9157.jpg",
+            "https://i.postimg.cc/Wb82D9MJ/IMG-9158.jpg"
+        ],
+        "thumbnail": "https://i.postimg.cc/J0W1Xv6j/IMG-9153.jpg"
     }
 ]

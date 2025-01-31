@@ -2,7 +2,7 @@ import { createContext, useContext, useState, useEffect } from "react";
 import { auth, firestore } from "./firebase"; // Ensure Firebase is correctly configured
 import { onAuthStateChanged } from "firebase/auth";
 
-export const UserContext = createContext();
+const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
     const [userData, setUserData] = useState({

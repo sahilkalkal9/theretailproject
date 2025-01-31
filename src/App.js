@@ -16,7 +16,7 @@ import Contact from './components/contact/contact.js';
 import ProfileNew from './components/profile/profile-new.jsx';
 import { UserProvider } from './UserContext.js';
 import Footer from './components/footer/footer.js';
-import ProductPage from './components/product/product.jsx';
+
 import { useEffect, useState } from 'react';
 import SignUpNew from './components/signup/signup-new.jsx';
 import { Wear } from './components/shop/wear.jsx';
@@ -26,6 +26,7 @@ import { Sleep } from './components/shop/sleep.jsx';
 import { firestore } from './firebase.js';
 import CheckoutP from './components/checkout/checkout.jsx';
 import Orders from './components/orders/orders.jsx';
+import ProductPage from './components/productPage/productPage.js';
 
 
 function App() {
@@ -58,6 +59,8 @@ function App() {
   return (
     <UserProvider>
       <>
+
+
 
         <div id='dpMain' className='discount-popup-box-main'>
           <div className='discount-popup-main'>
@@ -102,9 +105,9 @@ function App() {
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<LogInNew />} />
           <Route path='/faq' element={<FAQQ />} />
-          <Route path='/product' element={<ProductPage />} />
           <Route path='/checkout' element={<CheckoutP />} />
           <Route path='/orders' element={<Orders />} />
+          <Route path="/product" element={<ProductPage />} />
         </Routes>
         <Footer />
 

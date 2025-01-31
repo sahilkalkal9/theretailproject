@@ -20,7 +20,7 @@ function Recycle() {
                         <div className="recycle-intro">
 
                             <p className="rec-text rct">
-                                We proudly recycle a variety of items, including blankets, old clothing (T-shirts/shirts, Indian wear, denims, sweatshirts, socks), towels and more.
+                                We proudly upcycle a variety of items, including blankets, old clothing (T-shirts/shirts, Indian wear, denims, sweatshirts, socks), towels and more.
                                 Join us in giving new life to old memories and creating a positive impact on the environment.
                             </p>
                         </div>
