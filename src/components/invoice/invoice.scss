@@ -3,10 +3,7 @@
     margin: 0;
 }
 
-p {
-    text-align: left;
-    font-size: 18px;
-}
+
 
 .Invoice {
     padding: 1cm 10vw;
@@ -20,7 +17,7 @@ p {
 }
 
 .invoice-upper {
-    width: calc(100% - 3cm);
+    width: calc(100% - 20vw);
     height: 20%;
 
     background-color: #fff0d4;
@@ -28,7 +25,7 @@ p {
     justify-content: space-between;
     gap: 1cm;
     align-items: center;
-    padding: 1cm 1.5cm;
+    padding: 1cm 10vw;
 
 }
 
@@ -47,10 +44,10 @@ p {
 }
 
 .invoice-head {
-    font-size: 34px;
+    font-size: 40px;
     font-weight: 600;
 }
 
 .in-logo {
-    width: 1.5cm;
+    width: 1.7cm;
 }

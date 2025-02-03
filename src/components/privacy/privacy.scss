@@ -39,6 +39,10 @@ $secondarycolor : #e4af47;
 
 }
 
+.mailto{
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 @media screen and (max-width:900px) {
     .privacy-head {

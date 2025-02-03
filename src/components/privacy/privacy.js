@@ -6,7 +6,7 @@ function PrivacyT() {
 
     return (
         <div className="AcetoaceticOne">
-            
+
             <div className="content-rxn" id="aceto-synt" >
                 <h1 className="privacy-head">Privacy Policy</h1>
 
@@ -39,7 +39,9 @@ function PrivacyT() {
                     How do I withdraw my consent?
 
                     <br /><br />
-                    If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at contact@Chemictionary.com.
+                    If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at <a href="mailto:contact@theretailproject.in" className="mailto">
+                        contact@theretailproject.in
+                    </a>
 
                 </p>
                 <br /><br />
@@ -115,7 +117,9 @@ function PrivacyT() {
 
                 <h2 className="privacy-tag" >QUESTIONS AND CONTACT INFORMATION </h2>
                 <p className="privacy-text" >
-                    if you would like to: access, correct, amend or delete any personal information we have about you, contact our Privacy Compliance Officer at contact@Chemictionary.com.
+                    if you would like to: access, correct, amend or delete any personal information we have about you, contact our Privacy Compliance Officer at <a href="mailto:contact@theretailproject.in" className="mailto">
+                        contact@theretailproject.in
+                    </a>
                     <br /><br />
 
 

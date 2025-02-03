@@ -60,12 +60,14 @@ function Contact() {
                         <br />
                         <b>For big companies:</b> Let’s work together on large-scale upcycling projects and make a positive environmental impact.
 
-                    </p> 
+                    </p>
 
                     <div className="socials">
                         <p className="st">
                             <b>Email: </b><br />
-                            theretailproject.in@gmail.com
+                            <a href="mailto:contact@theretailproject.in" className="">
+                                contact@theretailproject.in
+                            </a>
                         </p>
                         <p className="st">
                             <b>Phone: </b><br />
