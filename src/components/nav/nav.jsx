@@ -370,7 +370,7 @@ function Nav() {
                                 </div>
 
 
-                                <div onClick={openCheckout} className="checkout-final">
+                                <div onClick={!doingWork ? openCheckout : null} className="checkout-final">
                                     <p className="checout-text">
                                         Proceed to Checkout
                                     </p>

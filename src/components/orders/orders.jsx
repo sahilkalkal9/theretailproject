@@ -116,40 +116,7 @@ function Orders() {
                     </div>
                 </div>
 
-                <div className="order-new">
-                    <div className="order-left-new">
-                        <img className="oimg" src={require("./bed.png")} alt="" />
-
-                    </div>
-                    <div className="order-right">
-                        <div className="order-right-upper">
-                            <p className="oname">
-                            Multiple products
-                            </p>
-                            <p className="oqty">
-                                Total 3 products
-                            </p>
-                            <p className="oqty">
-                                Total amount ₹ 1500
-                            </p>
-                            <p className="oqty">
-                                Ordered on 28 Jan 2025
-                            </p>
-
-                        </div>
-
-                        <div className="order-right-lower">
-                            <div className="order-right-current">
-                                <button className="track-new">
-                                    Track
-                                </button>
-                                <button className="cancel-new">
-                                    Cancel
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+             
                 
                 <div className="order-new">
                     <div className="order-left-new">

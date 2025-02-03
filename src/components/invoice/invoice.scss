@@ -1,31 +1,35 @@
 * {
     padding: 0;
     margin: 0;
+    color: #486455;
 }
 
 
 
 .Invoice {
     padding: 1cm 10vw;
+
+
 }
 
 .invoice-box {
     width: auto;
     // height: 80svh;
     aspect-ratio: 1/1.414;
-    border: 1px solid black;
+    // border: 1px solid black;
 }
 
 .invoice-upper {
-    width: calc(100% - 20vw);
+    width: calc(100% - 10vw);
     height: 20%;
 
-    background-color: #fff0d4;
+    background-color: #486455;
     display: flex;
     justify-content: space-between;
     gap: 1cm;
     align-items: center;
-    padding: 1cm 10vw;
+    padding: 1cm 5vw;
+
 
 }
 
@@ -44,10 +48,147 @@
 }
 
 .invoice-head {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 600;
+    color: #e4af47;
 }
 
 .in-logo {
     width: 1.7cm;
+}
+
+.in-text {
+    text-align: left;
+
+    color: #e4af47;
+    font-size: 20px;
+}
+
+.invoice-lower {
+    // border: 1px solid black;
+    height: calc(80% - 6.1cm);
+    padding: 2cm 5vw;
+    display: flex;
+    gap: 2cm;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.payable-box {
+    // margin-top: 2cm;
+
+}
+
+.payable-to {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 17cm;
+    // border: 1px solid black;
+}
+
+.payable-to-text {
+    font-size: 24px;
+    font-weight: 600;
+    // color: black;
+    text-align: left;
+}
+
+.normal-text {
+    font-size: 22px;
+    // color: black;
+    text-align: left;
+}
+
+.idbox {
+    display: flex;
+    justify-content: space-between;
+    gap: 1cm;
+    align-items: flex-start;
+    margin-top: 4cm;
+}
+
+.qty {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2cm;
+
+}
+
+.iname {
+    margin-top: .2cm;
+}
+
+.qty-sec {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5cm;
+    width: fit-content;
+}
+
+.total-sec {
+    display: flex;
+    flex-direction: column;
+    gap: .2cm;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-top: .3cm;
+}
+
+.tbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // border: 1px solid black;
+
+
+}
+
+.tboxmain {
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+}
+
+.payment-mode {
+    margin-top: 1cm;
+}
+
+.sub-text {
+    font-size: 20px;
+}
+
+.sociali {
+    display: flex;
+    gap: .3cm;
+    align-items: center;
+
+
+}
+
+.siimg {
+    width: .8cm;
+}
+
+.socialsi {
+    display: flex;
+    flex-direction: column;
+    gap: .3cm;
+}
+
+.thanks-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.thanks {
+    width: 10cm;
+
+    p {
+        text-align: left;
+    }
 }

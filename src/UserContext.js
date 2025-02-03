@@ -57,6 +57,14 @@ export const UserProvider = ({ children }) => {
                             }
                         });
 
+                        const cartDataRef = firestore.collection("users").doc(uid).collection("cart");
+                        cartDataRef.onSnapshot((doc) => {
+                            if (doc.exists) {
+                                const updatedCartData = doc.data();
+                                setUserData(updatedCartData)
+                            }
+                        });
+
                     }
                 } catch (error) {
                     console.error("Error fetching user or pet data:", error);
@@ -121,7 +129,7 @@ export const UserProvider = ({ children }) => {
     }
 
     return (
-        <UserContext.Provider value={{ userData, petData, orderData, cartData, addToCart, checkoutAmt, setCheckoutAmt, doingWork, setDoingWork }}>
+        <UserContext.Provider value={{ userData, petData, orderData, cartData, addToCart, checkoutAmt, setCheckoutAmt, doingWork, setDoingWork, setCartData }}>
             {children} {/* Ensure data is loaded before rendering children */}
         </UserContext.Provider>
     );
