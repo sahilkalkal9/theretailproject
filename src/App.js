@@ -14,7 +14,7 @@ import FAQQ from './components/faq/faq.jsx';
 import Contact from './components/contact/contact.js';
 
 import ProfileNew from './components/profile/profile-new.jsx';
-import { UserProvider } from './UserContext.js';
+import { UserProvider, useUserContext } from './UserContext.js';
 import Footer from './components/footer/footer.js';
 
 import { useEffect, useState } from 'react';
@@ -23,10 +23,16 @@ import { Wear } from './components/shop/wear.jsx';
 import { Walk } from './components/shop/walk.jsx';
 import { Play } from './components/shop/play.jsx';
 import { Sleep } from './components/shop/sleep.jsx';
-import { firestore } from './firebase.js';
+import { auth, firestore } from './firebase.js';
 import CheckoutP from './components/checkout/checkout.jsx';
 import Orders from './components/orders/orders.jsx';
 import ProductPage from './components/productPage/productPage.js';
+import { useCollectionData } from 'react-firebase-hooks/firestore';
+import PrivacyT from './components/privacy/privacy.js';
+import Terms from './components/terms/terms.js';
+import Refund from './components/refund/refund.js';
+import Invoice from './components/invoice/invoice.jsx';
+
 
 
 function App() {
@@ -51,9 +57,11 @@ function App() {
   // }
 
 
-  const addToCart = (p) => {
 
-  }
+
+
+
+
 
 
   return (
@@ -107,7 +115,12 @@ function App() {
           <Route path='/faq' element={<FAQQ />} />
           <Route path='/checkout' element={<CheckoutP />} />
           <Route path='/orders' element={<Orders />} />
-          <Route path="/shop/:pid" element={<ProductPage />} />
+          <Route path="/shop/:category/:pid" element={<ProductPage />} />
+          <Route path='/privacy-policy' element={<PrivacyT />} />
+          <Route path='/terms' element={<Terms />} />
+          <Route path='/invoice' element={<Invoice />} />
+          <Route path='/refund-policy' element={<Refund />} />
+
         </Routes>
         <Footer />
 

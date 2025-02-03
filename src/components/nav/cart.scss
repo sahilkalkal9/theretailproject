@@ -194,6 +194,7 @@ $secondarycolor : #e4af47;
     color: $secondarycolor;
     font-size: 20px;
     cursor: pointer;
+    border: 1px solid $primarycolor;
 }
 
 .cart-quantity-new {

@@ -573,7 +573,7 @@ $secondarycolor : #e4af47;
     flex-direction: column;
     justify-content: space-between;
 
-    gap: .5cm;
+    gap: .3cm;
 }
 
 .prodimg {
@@ -628,6 +628,7 @@ $secondarycolor : #e4af47;
 .prod-cat {
     font-size: 12px;
     color: white;
+    margin-bottom: .2cm;
     // color: rgba(255, 255, 255, 0.623);
 
 }

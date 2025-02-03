@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+p {
+    text-align: left;
+    font-size: 18px;
+}
+
+.Invoice {
+    padding: 1cm 10vw;
+}
+
+.invoice-box {
+    width: auto;
+    // height: 80svh;
+    aspect-ratio: 1/1.414;
+    border: 1px solid black;
+}
+
+.invoice-upper {
+    width: calc(100% - 3cm);
+    height: 20%;
+
+    background-color: #fff0d4;
+    display: flex;
+    justify-content: space-between;
+    gap: 1cm;
+    align-items: center;
+    padding: 1cm 1.5cm;
+
+}
+
+.invoice-upper-left {
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+}
+
+.invoice-upper-right {}
+
+.in-logo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.invoice-head {
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.in-logo {
+    width: 1.5cm;
+}

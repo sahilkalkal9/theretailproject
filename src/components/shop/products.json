@@ -21,5 +21,28 @@
         "thumbnail": "https://i.postimg.cc/J0W1Xv6j/IMG-9153.jpg",
         "product-card-img": "https://i.postimg.cc/sxj3K8SS/IMG-9153-removebg-preview.png",
         "category": "play"
+    },
+    {
+        "id": 1,
+        "multiple": false,
+        "name": "Soft Bone Chrochet Toy",
+        "brand-name": "The ReTail Proect",
+        "weight": "100 grams",
+        "price": 250,
+        "dimensions": [
+            "L",
+            "B",
+            "H"
+        ],
+        "images": [
+            "https://i.postimg.cc/3N3jHjmH/IMG-9251.avif",
+            "https://i.postimg.cc/Bv1B5n4R/IMG-9252.avif",
+            "https://i.postimg.cc/85Rd3XFH/IMG-9254.avif",
+            "https://i.postimg.cc/pLSBnFbD/IMG-9255.avif",
+            "https://i.postimg.cc/LXKBxFs5/IMG-9256.avif"
+        ],
+        "thumbnail": "https://i.postimg.cc/9QsGfHZb/IMG-9264.jpg",
+        "product-card-img": "https://i.postimg.cc/sxj3K8SS/IMG-9153-removebg-preview.png",
+        "category": "play"
     }
 ]

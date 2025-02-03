@@ -1,6 +1,12 @@
 import "./shop.scss"
 import gwalk from "./gwalknp.png"
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import { auth, firestore } from "../../firebase";
+import { Wear } from "./wear";
+import { Walk } from "./walk";
+import { Sleep } from "./sleep";
+import { Play } from "./play";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 
 function Shop() {
 
@@ -8,7 +14,11 @@ function Shop() {
     const location = useLocation();
 
 
+
     const isActive = (path) => location.pathname === path;
+
+
+
 
 
 
@@ -41,7 +51,12 @@ function Shop() {
 
                 </div>
 
-                <Outlet />
+                <Routes>
+                    <Route path="/wear" element={<Wear />} />
+                    <Route path="/walk" element={<Walk />} />
+                    <Route path="/play" element={<Play />} />
+                    <Route path="/sleep" element={<Sleep />} />
+                </Routes>
             </div>
         </div>
     )

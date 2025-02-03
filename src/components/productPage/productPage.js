@@ -2,9 +2,12 @@ import { useParams } from "react-router-dom"
 import "./productPage.scss"
 import products from "../shop/products.json"
 import { useState } from "react";
+import { useUserContext } from "../../UserContext";
 
 
 function ProductPage() {
+
+    const { addToCart, doingWork } = useUserContext();
 
 
     const { pid } = useParams();
@@ -70,7 +73,7 @@ function ProductPage() {
                                     </p>
 
                                     <div className="product-page-buttons">
-                                        <button className="pp-button">
+                                        <button onClick={() => { addToCart(p) }} className="pp-button" disabled={doingWork ? true : false}>
                                             Add to Cart
                                         </button>
                                         <button className="pp-button">
@@ -82,7 +85,7 @@ function ProductPage() {
                                 </div>
                             </div>
                             : null
-                        : <p>No product found</p>
+                        : null
 
                 ))
             }

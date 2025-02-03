@@ -10,6 +10,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Autoplay } from "swiper/modules"
+import { Link } from "react-router-dom"
 
 
 
@@ -227,26 +228,34 @@ function Home() {
                     <div className="collection-box">
                         <p className="home-main-head" >Our Collections</p>
                         <div className="collections">
-                            <div className="collection wear">
-                                <p className="coltext">
-                                    WEAR
-                                </p>
-                            </div>
-                            <div className="collection walk">
-                                <p className="coltext ">
-                                    WALK
-                                </p>
-                            </div>
-                            <div className="collection coplay">
-                                <p className="coltext ">
-                                    PLAY
-                                </p>
-                            </div>
-                            <div className="collection sleep">
-                                <p className="coltext ">
-                                    SLEEP
-                                </p>
-                            </div>
+                            <Link to="/shop/wear">
+                                <div className="collection wear">
+                                    <p className="coltext">
+                                        WEAR
+                                    </p>
+                                </div>
+                            </Link>
+                            <Link to="/shop/walk">
+                                <div className="collection walk">
+                                    <p className="coltext ">
+                                        WALK
+                                    </p>
+                                </div>
+                            </Link>
+                            <Link to='/shop/play'>
+                                <div className="collection coplay">
+                                    <p className="coltext ">
+                                        PLAY
+                                    </p>
+                                </div>
+                            </Link>
+                            <Link to='/shop/sleep'>
+                                <div className="collection sleep">
+                                    <p className="coltext ">
+                                        SLEEP
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
 
@@ -315,9 +324,11 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="fprod-lower">
-                                    <button className="add-cart" >
-                                        View
-                                    </button>
+                                    <Link to='/shop/sleep'>
+                                        <button className="add-cart" >
+                                            View
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -337,9 +348,11 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="fprod-lower">
-                                    <button className="add-cart" >
-                                        View
-                                    </button>
+                                    <Link to='/shop/wear'>
+                                        <button className="add-cart" >
+                                            View
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -359,9 +372,11 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="fprod-lower">
-                                    <button className="add-cart" >
-                                        View
-                                    </button>
+                                    <Link to='/shop/play'>
+                                        <button className="add-cart" >
+                                            View
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 
@@ -381,9 +396,11 @@ function Home() {
                                     </div>
                                 </div>
                                 <div className="fprod-lower">
-                                    <button className="add-cart" >
-                                        View
-                                    </button>
+                                    <Link to='/shop/walk'>
+                                        <button className="add-cart" >
+                                            View
+                                        </button>
+                                    </Link>
                                 </div>
                             </div>
 

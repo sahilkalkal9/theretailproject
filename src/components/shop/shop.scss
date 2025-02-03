@@ -45,6 +45,12 @@ $secondarycolor : #e4af47;
 }
 
 
+button:disabled {
+    opacity: .2;
+}
+
+
+
 
 @media only screen and (max-width : 600px) {
     .shop-cat-name {

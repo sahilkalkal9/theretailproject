@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=:wght@400;700&display=swap');
+
+$headFont : Quattrocento;
+
+$primarycolor: #486455;
+$secondarycolor : #e4af47;
+
+*{
+    color: $primarycolor;
+}
+
+.privacy-head {
+    font-size: 40px;
+    font-weight: 600;
+    font-family: $headFont;
+    // color: #2c3941;
+    text-align: left;
+}
+
+.AcetoaceticOne {
+    padding: 1cm 5vw;
+
+    
+}
+
+.privacy-tags {
+    font-weight: 500;
+    text-align: left;
+}
+
+.privacy-tag {
+    font-weight: 600;
+    text-align: left;
+
+}
+.privacy-text{
+    text-align: left;
+
+}
+
+
+@media screen and (max-width:900px) {
+    .privacy-head {
+        font-size: 40px;
+    }
+
+    .privacy-tag {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .privacy-head {
+        font-size: 35px;
+    }
+
+    .privacy-tag {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .privacy-head {
+        font-size: 32px;
+    }
+
+    .privacy-tag {
+        font-size: 20px;
+    }
+
+    .privacy-tags {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .privacy-head {
+        font-size: 27px;
+    }
+
+    .privacy-tag {
+        font-size: 18px;
+    }
+
+    .privacy-tags {
+        font-size: 20px;
+    }
+
+    .privacy-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .privacy-head {
+        font-size: 25px;
+    }
+
+    .privacy-tag {
+        font-size: 18px;
+    }
+
+    .privacy-tags {
+        font-size: 20px;
+    }
+
+    .privacy-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .privacy-head {
+        font-size: 22px;
+    }
+
+    .privacy-tag {
+        font-size: 17px;
+    }
+
+    .privacy-tags {
+        font-size: 20px;
+    }
+
+    .privacy-text {
+        font-size: 13px;
+    }
+}

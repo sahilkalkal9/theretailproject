@@ -1,6 +1,7 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { auth, firestore } from "./firebase"; // Ensure Firebase is correctly configured
 import { onAuthStateChanged } from "firebase/auth";
+import { useCollectionData } from "react-firebase-hooks/firestore";
 
 const UserContext = createContext();
 
@@ -12,6 +13,9 @@ export const UserProvider = ({ children }) => {
     const [petData, setPetData] = useState([]);
     const [orderData, setOrderData] = useState([]);
     const [cartData, setCartData] = useState([])
+    const [checkoutAmt, setCheckoutAmt] = useState(0)
+
+    const [doingWork, setDoingWork] = useState(false)
 
     useEffect(() => {
         const fetchUserData = async (uid) => {
@@ -23,6 +27,13 @@ export const UserProvider = ({ children }) => {
                         const userData = userDoc.data();
 
                         setUserData(userData);
+
+                        // const unsubscribeCheckoutAmt = userDoc.onSnapshot((doc) => {
+                        //     if (doc.exists) {
+                        //         const data = doc.data();
+                        //         setCheckoutAmt(data.checkoutAmt || 0); 
+                        //     }
+                        // });
 
                         // Fetch pet data from subcollection
                         const petsSnapshot = await firestore.collection("users").doc(uid).collection("pets").get();
@@ -37,6 +48,15 @@ export const UserProvider = ({ children }) => {
                         const cartSnapshot = await firestore.collection("users").doc(uid).collection("cart").get()
                         const fetchCartData = await cartSnapshot.docs.map((doc) => doc.data());
                         setCartData(fetchCartData)
+
+                        const checkoutAmtRef = firestore.collection("users").doc(uid);
+                        checkoutAmtRef.onSnapshot((doc) => {
+                            if (doc.exists) {
+                                const updatedUserData = doc.data();
+                                setUserData(updatedUserData)
+                            }
+                        });
+
                     }
                 } catch (error) {
                     console.error("Error fetching user or pet data:", error);
@@ -58,6 +78,7 @@ export const UserProvider = ({ children }) => {
                     phone: "",
                     pan: "",
                     address: "",
+                    checkoutAmt: 0
                 });
                 setPetData([]); // Clear pet data when user is logged out
                 setOrderData([]); // Clear order data when user is logged out
@@ -67,8 +88,40 @@ export const UserProvider = ({ children }) => {
         return () => unsubscribe(); // Cleanup listener on unmount
     }, []); // Run only once when the component mounts
 
+    const cartRef = firestore.collection("users").doc(auth.currentUser?.uid).collection("cart")
+    const [cart] = useCollectionData(cartRef)
+
+    const addToCart = async (p) => {
+        const cartProdId = firestore.collection("users").doc(auth.currentUser?.uid).collection("cart").doc().id
+
+        if (cart && cart.some(product => product.itemId == p.id)) {
+            alert("Item is already in cart, increase quantity in cart")
+        }
+        else {
+            await setDoingWork(true)
+            await firestore.collection("users").doc(auth.currentUser?.uid).collection("cart").doc(cartProdId).set({
+                "docId": cartProdId,
+                "name": p.name,
+                "thumbnail": p.thumbnail,
+                "link": `/shop/${p.category}/${p.id}`,
+                "price": p.price,
+                "quantity": 1,
+                "itemId": p.id
+            })
+                .then(async () => {
+                    const newAmt = userData.checkoutAmt + Number(p.price);
+                    setCheckoutAmt(newAmt)
+                    await firestore.collection("users").doc(auth.currentUser?.uid).update({
+                        "checkoutAmt": newAmt
+                    }, { merge: true })
+                    alert("product added to cart")
+                    await setDoingWork(false)
+                })
+        }
+    }
+
     return (
-        <UserContext.Provider value={{ userData, petData, orderData, cartData }}>
+        <UserContext.Provider value={{ userData, petData, orderData, cartData, addToCart, checkoutAmt, setCheckoutAmt, doingWork, setDoingWork }}>
             {children} {/* Ensure data is loaded before rendering children */}
         </UserContext.Provider>
     );
