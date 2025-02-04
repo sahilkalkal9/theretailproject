@@ -15,6 +15,7 @@ export const UserProvider = ({ children }) => {
     const [cartData, setCartData] = useState([])
     const [checkoutAmt, setCheckoutAmt] = useState(0)
 
+
     const [doingWork, setDoingWork] = useState(false)
 
     useEffect(() => {
@@ -62,6 +63,14 @@ export const UserProvider = ({ children }) => {
                             if (doc.exists) {
                                 const updatedCartData = doc.data();
                                 setUserData(updatedCartData)
+                            }
+                        });
+
+                        const orderRef = firestore.collection("users").doc(uid).collection("orders");
+                        orderRef.onSnapshot((doc) => {
+                            if (doc.exists) {
+                                const updatedOrderData = doc.data();
+                                setUserData(updatedOrderData)
                             }
                         });
 

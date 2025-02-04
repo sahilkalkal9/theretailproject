@@ -3,6 +3,7 @@ import { auth, firestore, firebase } from "../../firebase";
 import { useUserContext } from "../../UserContext";
 import "./checkout.scss";
 
+
 const CheckoutP = () => {
     const { userData, doingWork, setDoingWork, cartData, setCartData } = useUserContext();
 
@@ -43,6 +44,8 @@ const CheckoutP = () => {
         setTip(0); // Ensure predefined tip selection is removed when custom tip is entered
     };
 
+
+    const [printing, setPrinting] = useState(false)
 
 
     const handlePayment = async (e, bprice, name, cdesc) => {
@@ -141,6 +144,7 @@ const CheckoutP = () => {
         }
     };
 
+    
 
 
     return (
@@ -256,6 +260,8 @@ const CheckoutP = () => {
                     </div>
                     : <p>Add items in cart to checkout</p>
             }
+
+           
         </div>
     );
 };

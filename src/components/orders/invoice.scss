@@ -1,0 +1,587 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #486455;
+}
+
+
+
+.Invoice {
+    padding: 1cm 5vw;
+
+
+
+}
+
+.invoice-box {
+    width: 21cm;
+    height: 29.7cm;
+    // border: 1px solid black;
+    background-color: #fff3dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.invoice-upper {
+    // width: calc(100% - 10vw);
+    // height: 20%;
+
+    background-color: #486455;
+    display: flex;
+    justify-content: space-between;
+    gap: 1cm;
+    align-items: center;
+    padding: 1cm;
+
+
+}
+
+.invoice-upper-left {
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+}
+
+.invoice-upper-right {}
+
+.in-logo-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.invoice-head {
+    font-size: 28px;
+    font-weight: 600;
+    color: #e4af47;
+    text-align: left;
+}
+
+.in-logo {
+    width: 1cm;
+}
+
+.in-text {
+    text-align: left;
+
+    color: #e4af47;
+    font-size: 14px;
+}
+
+
+
+.payable-box {
+    // margin-top: 2cm;
+    padding: 0cm 1cm;
+
+}
+
+.payable-to {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 60%;
+    // border: 1px solid black;
+}
+
+.payable-to-text {
+    font-size: 18px;
+    font-weight: 600;
+    // color: black;
+    text-align: left;
+}
+
+.normal-text {
+    font-size: 16px;
+    // color: black;
+    text-align: left;
+}
+
+.idbox {
+    display: flex;
+    justify-content: space-between;
+    gap: .5cm;
+    align-items: flex-start;
+    // margin-top: 4cm;
+}
+
+.qty {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .2cm;
+
+}
+
+.iname {
+    margin-top: .2cm;
+}
+
+.qty-sec {
+    display: flex;
+    flex-direction: row;
+    gap: 2cm;
+    width: fit-content;
+}
+
+.total-sec {
+    display: flex;
+    flex-direction: column;
+    gap: .2cm;
+    width: 100%;
+    border-top: 1px solid black;
+    padding-top: .3cm;
+}
+
+.tbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // border: 1px solid black;
+
+
+}
+
+.tboxmain {
+    display: flex;
+    flex-direction: column;
+    gap: .5cm;
+}
+
+.payment-mode {
+    margin-top: 1cm;
+}
+
+.sub-text {
+    font-size: 14px;
+}
+
+.sociali {
+    display: flex;
+    gap: .2cm;
+    align-items: center;
+
+
+}
+
+.siimg {
+    width: .5cm;
+}
+
+.socialsi {
+    display: flex;
+    flex-direction: column;
+    gap: .2cm;
+}
+
+.thanks-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0cm 1cm 1cm 1cm;
+}
+
+.thanks {
+    width: 7.7cm;
+
+    p {
+        text-align: left;
+    }
+}
+
+// @media only screen and (max-width : 1500px) {
+//     .in-text {
+//         font-size: 18px;
+//     }
+
+//     .invoice-head {
+//         font-size: 40px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 22px;
+//     }
+
+//     .normal-text {
+//         font-size: 20px;
+//     }
+
+//     .sub-text {
+//         font-size: 18px;
+//     }
+
+// }
+
+// @media only screen and (max-width : 1200px) {
+//     .in-text {
+//         font-size: 16px;
+//     }
+
+//     .invoice-head {
+//         font-size: 30px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 20px;
+//     }
+
+//     .normal-text {
+//         font-size: 18px;
+//     }
+
+//     .sub-text {
+//         font-size: 16px;
+//     }
+
+//     .siimg {
+//         width: .7cm;
+//     }
+
+//     .in-logo {
+//         width: 1.3cm;
+//     }
+
+//     .qty-sec {
+//         gap: 2cm;
+//     }
+
+//     .thanks {
+//         width: 8cm;
+//     }
+
+//     .idbox {
+//         margin-top: 3cm;
+//     }
+
+//     .invoice-lower {
+//         padding: 1cm 5vw;
+//         height: calc(80% - 4.1cm);
+//     }
+
+// }
+
+// @media only screen and (max-width : 900px) {
+//     .in-text {
+//         font-size: 14px;
+//     }
+
+//     .invoice-head {
+//         font-size: 25px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 18px;
+//     }
+
+//     .normal-text {
+//         font-size: 16px;
+//     }
+
+//     .sub-text {
+//         font-size: 14px;
+//     }
+
+//     .siimg {
+//         width: .7cm;
+//     }
+
+//     .in-logo {
+//         width: 1.3cm;
+//     }
+
+//     .qty-sec {
+//         gap: 1.3cm;
+//     }
+
+//     .thanks {
+//         width: 6.2cm;
+//     }
+
+//     .idbox {
+//         margin-top: 2cm;
+//     }
+// }
+
+// @media only screen and (max-width : 800px) {
+//     .in-text {
+//         font-size: 12px;
+//     }
+
+//     .invoice-head {
+//         font-size: 22px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 16px;
+//     }
+
+//     .normal-text {
+//         font-size: 14px;
+//     }
+
+//     .sub-text {
+//         font-size: 12px;
+//     }
+
+//     .siimg {
+//         width: .5cm;
+//     }
+
+//     .in-logo {
+//         width: 1.3cm;
+//     }
+
+//     .qty-sec {
+//         gap: 1cm;
+//     }
+
+//     .thanks {
+//         width: 5.2cm;
+//     }
+
+//     .in-logo {
+//         width: 1cm;
+//     }
+
+//     .idbox {
+//         margin-top: 1cm;
+//     }
+
+//     .invoice-upper-left {
+//         gap: .3cm;
+//     }
+
+// }
+
+// @media only screen and (max-width : 700px) {
+//     .in-text {
+//         font-size: 10px;
+//     }
+
+//     .invoice-head {
+//         font-size: 18px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 14px;
+//     }
+
+//     .normal-text {
+//         font-size: 12px;
+//     }
+
+//     .sub-text {
+//         font-size: 10px;
+//     }
+
+//     .siimg {
+//         width: .5cm;
+//     }
+
+//     .in-logo {
+//         width: 1cm;
+//     }
+
+//     .qty-sec {
+//         gap: .5cm;
+//     }
+
+//     .thanks {
+//         width: 4cm;
+//     }
+
+//     .in-logo {
+//         width: 1cm;
+//     }
+
+//     .socialsi {
+//         gap: .1cm;
+//     }
+
+//     .sociali {
+//         gap: .1cm;
+//     }
+
+//     .idbox {
+//         margin-top: .5cm;
+//     }
+
+// }
+
+// @media only screen and (max-width : 650px) {
+//     .in-text {
+//         font-size: 8px;
+//     }
+
+//     .invoice-upper {
+//         height: 15%;
+//     }
+
+//     .invoice-head {
+//         font-size: 16px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 12px;
+//     }
+
+//     .normal-text {
+//         font-size: 10px;
+//     }
+
+//     .sub-text {
+//         font-size: 8px;
+//     }
+
+//     .siimg {
+//         width: .2cm;
+//     }
+
+//     .invoice-lower {
+//         height: calc(80% - 3.5cm);
+//     }
+
+
+//     .in-logo {
+//         width: .8cm;
+//     }
+
+//     .qty-sec {
+//         gap: .5cm;
+//     }
+
+//     .thanks {
+//         width: 4cm;
+//     }
+
+//     .in-logo {
+//         width: 1cm;
+//     }
+
+// }
+
+// @media only screen and (max-width : 600px) {
+//     .in-text {
+//         font-size: 8px;
+//     }
+
+
+
+//     .invoice-head {
+//         font-size: 14px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 10px;
+//     }
+
+//     .normal-text {
+//         font-size: 8px;
+//     }
+
+//     .sub-text {
+//         font-size: 8px;
+//     }
+
+
+//     .in-logo {
+//         width: .6cm;
+//     }
+
+//     .qty-sec {
+//         gap: .5cm;
+//     }
+
+//     .thanks {
+//         width: 3cm;
+//     }
+
+
+
+// }
+
+
+
+
+// @media only screen and (max-width : 450px) {
+//     .iname {
+//         margin-top: 0cm;
+//     }
+
+//     .qty {
+//         gap: 0cm;
+//     }
+
+//     .tboxmain {
+//         gap: 0.1cm;
+//     }
+
+//     .total-sec {
+//         padding-top: .1cm;
+//         gap: .1cm;
+//     }
+
+
+//     .invoice-lower {
+//         justify-content: flex-start;
+//         gap: 1cm;
+//     }
+//     .in-text {
+//         font-size: 6px;
+//     }
+
+
+
+//     .invoice-head {
+//         font-size: 12px;
+//     }
+
+//     .payable-to-text {
+//         font-size: 8px;
+//     }
+
+//     .normal-text {
+//         font-size: 6px;
+//     }
+
+//     .sub-text {
+//         font-size: 6px;
+//     }
+//     .thanks{
+//         width: 2.5cm;
+//     }
+//     .in-logo {
+//         width: .5cm;
+//     }
+// }
+
+// @media only screen and (max-width : 400px) {
+//     .iname {
+//         margin-top: 0cm;
+//     }
+//     .invoice-upper{
+//         height: 10%;
+//     }
+
+//     .qty {
+//         gap: 0cm;
+//     }
+
+//     .tboxmain {
+//         gap: 0.1cm;
+//     }
+
+//     .total-sec {
+//         padding-top: .1cm;
+//         gap: .1cm;
+//     }
+
+
+//     .invoice-lower {
+//         justify-content: flex-start;
+//         gap: .5cm;
+//     }
+// }
