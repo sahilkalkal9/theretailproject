@@ -31,12 +31,18 @@ $secondarycolor : #e4af47;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 
     width: 15cm;
+
+    // border-radius: 5px;
+    padding: .12cm;
+    border: 3px solid $primarycolor;
+}
+
+.order-box-card {
     display: flex;
     align-items: flex-start;
     gap: .5cm;
-    background-color: white;
+    background-color: #486455;
     padding: .3cm;
-    border-radius: 5px;
 }
 
 .order-right {
@@ -50,19 +56,23 @@ $secondarycolor : #e4af47;
 
 .oname {
     font-size: 20px;
-    font-weight: 600;
+    // font-weight: 600;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
+    color: white;
+    // color: $secondarycolor;
 }
 
 .oqty {
     text-align: left;
     font-size: 16px;
     // margin-top: .2cm;
+    color: $secondarycolor;
+    color: white;
 }
 
 .order-right-current {
@@ -84,9 +94,9 @@ $secondarycolor : #e4af47;
     padding: .15cm .7cm;
     // font-size: 16px;
     border-radius: 5px;
-    background-color: $primarycolor;
-    color: white;
-    border: 2px solid $primarycolor;
+    background-color: $secondarycolor;
+    color: $primarycolor;
+    border: 2px solid $secondarycolor;
     cursor: pointer;
 }
 
@@ -95,16 +105,16 @@ $secondarycolor : #e4af47;
     // font-size: 16px;
     border-radius: 5px;
     background-color: red;
-    color: white;
+    color: $primarycolor;
     border: 2px solid red;
     cursor: pointer;
 }
 
 .down-invoice {
     padding: .2cm .8cm;
-    border: 2px solid $primarycolor;
-    background-color: $primarycolor;
-    color: white;
+    border: 2px solid $secondarycolor;
+    background-color: $secondarycolor;
+    color: $primarycolor;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -117,6 +127,7 @@ $secondarycolor : #e4af47;
 
 .odt {
     cursor: pointer;
+    color: rgb(199, 199, 199);
     font-size: 14px;
 }
 

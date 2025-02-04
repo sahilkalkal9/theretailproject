@@ -60,7 +60,7 @@ $secondarycolor : #e4af47;
 }
 
 .closeCart {
-    background-color: red;
+    background-color: $primarycolor;
     padding: .15cm .6cm;
     border-radius: 10px;
     color: white;
@@ -139,7 +139,9 @@ $secondarycolor : #e4af47;
 
 .cart-prod-new-left {
     width: 2.5cm;
-    padding: .3cm;
+    // padding: .3cm;
+    padding: .2cm;
+    background-color: $primarycolor;
     flex-shrink: 0;
 }
 
@@ -149,18 +151,23 @@ $secondarycolor : #e4af47;
 
 .cart-prod-new {
     display: flex;
-    align-items: flex-start;
-    gap: .2cm;
-    background-color: #fff0d2;
-    padding: .2cm;
-    border-radius: 10px;
+    align-items: stretch;
+    // gap: .2cm;
+    // background-color: $primarycolor;
+    padding: .12cm;
+    border: 3px solid $primarycolor;
+
+    // border-radius: 10px;
 }
 
 .cart-prod-new-right {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: $primarycolor;
     gap: .2cm;
+    padding: .2cm;
+    width: 100%;
 }
 
 .cart-new-quantity-box {
@@ -173,6 +180,7 @@ $secondarycolor : #e4af47;
     font-size: 18px;
     // font-weight: 600;
     text-align: left;
+    color: white;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     /* Limit to 2 lines */
@@ -184,6 +192,7 @@ $secondarycolor : #e4af47;
 
 .cart-prod-new-price {
     // font-weight: 600;
+    color: white;
 }
 
 .cart-minus-new,
@@ -194,18 +203,19 @@ $secondarycolor : #e4af47;
     color: $secondarycolor;
     font-size: 20px;
     cursor: pointer;
-    border: 1px solid $primarycolor;
+    border: 1px solid $secondarycolor;
 }
 
 .cart-quantity-new {
     background-color: $primarycolor;
     color: white;
+    border: 1px solid $secondarycolor;
     padding: 0.1cm .5cm;
     border-radius: 5px;
 }
 
 .cart-del-new {
-    color: red;
+    color: $secondarycolor;
     font-size: 14px;
     cursor: pointer;
     transition: .3s;

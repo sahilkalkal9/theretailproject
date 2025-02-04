@@ -62,17 +62,16 @@ export const UserProvider = ({ children }) => {
                         cartDataRef.onSnapshot((doc) => {
                             if (doc.exists) {
                                 const updatedCartData = doc.data();
-                                setUserData(updatedCartData)
+                                setCartData(updatedCartData)
                             }
                         });
 
                         const orderRef = firestore.collection("users").doc(uid).collection("orders");
-                        orderRef.onSnapshot((doc) => {
-                            if (doc.exists) {
-                                const updatedOrderData = doc.data();
-                                setUserData(updatedOrderData)
-                            }
+                        orderRef.onSnapshot((snapshot) => {
+                            const updatedOrders = snapshot.docs.map(doc => doc.data()); // No need to include doc.id
+                            setOrderData(updatedOrders);
                         });
+
 
                     }
                 } catch (error) {

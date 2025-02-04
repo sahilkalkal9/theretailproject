@@ -34,6 +34,9 @@ export const Play = () => {
                                 <button className="add-cart" onClick={() => { addToCart(p) }} disabled={doingWork ? true : false}  >
                                     ADD TO CART
                                 </button>
+                                <div className="heart-box">
+                                    <img className="heart" src={require("./like.png")} alt="" />
+                                </div>
                             </div>
                         </div>
                         : null

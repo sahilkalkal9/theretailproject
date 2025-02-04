@@ -329,7 +329,7 @@ function Nav() {
 
                                     <div className="cart-prod-new">
                                         <div className="cart-prod-new-left">
-                                            <img className="cart-prod-new-img" src={require("./product.png")} />
+                                            <img className="cart-prod-new-img" src={c.thumbnail} />
                                         </div>
                                         <div className="cart-prod-new-right">
                                             <p className="cart-prod-new-name">

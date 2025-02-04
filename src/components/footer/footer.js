@@ -82,9 +82,15 @@ function Footer() {
                                                 </div>
 
                                                 <div className="social-medias">
-                                                        <img className="smimg" src={require("./instagram.png")} />
-                                                        <img className="smimg" src={require("./facebook.png")} />
-                                                        <img className="smimg" src={require("./wt.png")} />
+                                                        <a href="https://instagram.com/the_retail_project" target="blank">
+                                                                <img className="smimg" src={require("./instagram.png")} />
+                                                        </a>
+                                                        <a>
+                                                                <img className="smimg" src={require("./facebook.png")} />
+                                                        </a>
+                                                        <a>
+                                                                <img className="smimg" src={require("./wt.png")} />
+                                                        </a>
                                                 </div>
 
                                         </div>

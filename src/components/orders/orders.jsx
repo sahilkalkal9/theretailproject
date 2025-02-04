@@ -94,45 +94,7 @@ function Orders() {
                     orderData && orderData.map((o) => (
                         o.type == "Processing"
                             ? <div className="order-new">
-                                <div className="order-left-new">
-                                    <img className="oimg" src={require("./bed.png")} alt="" />
-
-                                </div>
-                                <div className="order-right">
-                                    <div className="order-right-upper">
-                                        <p className="oname">
-                                            {o.name}
-                                        </p>
-                                        <p className="oqty">
-                                            Qty. : {o.quantity}
-                                        </p>
-                                        <p className="oqty">
-                                            Price :  ₹ {o.price}
-                                        </p>
-                                        <p className="oqty">
-                                            Ordered on {o.orderedAt.toDate().toLocaleDateString()}
-                                        </p>
-                                        <p className="oqty">
-                                            {o.status}
-                                        </p>
-                                    </div>
-
-                                    <div className="order-right-lower">
-                                        <div className="order-right-current">
-                                            <button className="track-new">
-                                                Track
-                                            </button>
-                                            <button className="cancel-new">
-                                                Cancel
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            :
-                            o.type == "Processed"
-                                ? <div className="order-new">
+                                <div className="order-box-card">
                                     <div className="order-left-new">
                                         <img className="oimg" src={require("./bed.png")} alt="" />
 
@@ -143,7 +105,7 @@ function Orders() {
                                                 {o.name}
                                             </p>
                                             <p className="oqty">
-                                                Qty. {o.quantity}
+                                                Qty. : {o.quantity}
                                             </p>
                                             <p className="oqty">
                                                 Price :  ₹ {o.price}
@@ -152,24 +114,66 @@ function Orders() {
                                                 Ordered on {o.orderedAt.toDate().toLocaleDateString()}
                                             </p>
                                             <p className="oqty">
-                                                Delivered on {o.deliveredAt.toDate().toLocaleDateString()}
+                                                {o.status}
                                             </p>
                                         </div>
 
                                         <div className="order-right-lower">
-                                            <div className="order-right-delivered">
-                                                <button className="down-invoice" onClick={() => { createPDF(o) }}>
-                                                    Invoice
+                                            <div className="order-right-current">
+                                                <button className="track-new">
+                                                    Track
                                                 </button>
+                                                <button className="cancel-new">
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                                <div className="order-delivered-opt">
-                                                    <p className="odt">
-                                                        Get Support
-                                                    </p>
-                                                    <p className="odt">
-                                                        Review product
-                                                    </p>
+                            :
+                            o.type == "Processed"
+                                ? <div className="order-new">
+                                    <div className="order-box-card">
+                                        <div className="order-left-new">
+                                            <img className="oimg" src={require("./bed.png")} alt="" />
 
+                                        </div>
+                                        <div className="order-right">
+                                            <div className="order-right-upper">
+                                                <p className="oname">
+                                                    {o.name}
+                                                </p>
+                                                <p className="oqty">
+                                                    Qty. {o.quantity}
+                                                </p>
+                                                <p className="oqty">
+                                                    Price :  ₹ {o.price}
+                                                </p>
+                                                <p className="oqty">
+                                                    Ordered on {o.orderedAt.toDate().toLocaleDateString()}
+                                                </p>
+                                                <p className="oqty">
+                                                    Delivered on {o.deliveredAt.toDate().toLocaleDateString()}
+                                                </p>
+                                            </div>
+
+                                            <div className="order-right-lower">
+                                                <div className="order-right-delivered">
+                                                    <button className="down-invoice" onClick={() => { createPDF(o) }}>
+                                                        Invoice
+                                                    </button>
+
+                                                    <div className="order-delivered-opt">
+                                                        <p className="odt">
+                                                            Get Support
+                                                        </p>
+                                                        <p className="odt">
+                                                            Review product
+                                                        </p>
+
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -292,7 +296,7 @@ function Orders() {
                                                 Sub Total
                                             </p>
                                             <p className="normal-text">
-                                                ₹ 1000
+                                                ₹ {orderInvoice.price}
                                             </p>
                                         </div>
                                         <div className="tbox">

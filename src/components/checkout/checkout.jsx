@@ -2,6 +2,7 @@ import { useState } from "react";
 import { auth, firestore, firebase } from "../../firebase";
 import { useUserContext } from "../../UserContext";
 import "./checkout.scss";
+import { useNavigate } from "react-router-dom";
 
 
 const CheckoutP = () => {
@@ -96,6 +97,8 @@ const CheckoutP = () => {
         };
     };
 
+    const navigate = useNavigate()
+
     const proceedToPay = async () => {
         if (cartData) {
             console.log("Starting proceedToPay");
@@ -106,7 +109,7 @@ const CheckoutP = () => {
 
 
                 return (
-                    firestore.collection("users").doc(auth.currentUser?.uid).collection("orders").doc(orderId).set({
+                    await firestore.collection("users").doc(auth.currentUser?.uid).collection("orders").doc(orderId).set({
                         "orderId": orderId,
                         "paymentId": "XYZ",
                         "itemId": cd.itemId,
@@ -116,7 +119,9 @@ const CheckoutP = () => {
                         "thumbnail": cd.thumbnail,
                         "link": cd.link,
                         "status": "Processing",
-                        "orderedAt": firebase.firestore.Timestamp.now()
+                        "orderedAt": firebase.firestore.Timestamp.now(),
+                        "type": "Processing",
+                        "status": "Preparing to dispatch"
                     })
                         .then(() => {
                             console.log("Order added for item:", cd.itemId)
@@ -127,6 +132,8 @@ const CheckoutP = () => {
                             }
                             firestore.collection("users").doc(auth.currentUser?.uid).collection("cart").doc(cd.docId).delete();
                             console.log("Cart item deleted for item:", cd.itemId)
+
+                            
 
                         })
                 )
@@ -144,7 +151,7 @@ const CheckoutP = () => {
         }
     };
 
-    
+
 
 
     return (
@@ -251,7 +258,8 @@ const CheckoutP = () => {
                                         <p className="payiname">Total</p>
                                         <p className="payival">₹ {userData.checkoutAmt + 80 + calculatedTip}</p>
                                     </div>
-                                    <button className="pay-button" disabled={doingWork} onClick={proceedToPay}>
+                                    <button className="pay-button" 
+                                     onClick={proceedToPay}>
                                         Proceed to Pay
                                     </button>
                                 </div>
@@ -261,7 +269,7 @@ const CheckoutP = () => {
                     : <p>Add items in cart to checkout</p>
             }
 
-           
+
         </div>
     );
 };

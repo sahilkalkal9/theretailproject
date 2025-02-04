@@ -50,7 +50,7 @@ function App() {
   //   setTimeout(() => {
   //     document.getElementById("dpMain").style.display = "flex"
 
-  //   }, 10000)
+  //   }, 5000)
 
   //   setshowdp(false)
 

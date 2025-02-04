@@ -60,7 +60,7 @@ function Home() {
         { img: "slide-six-before.jpg", img2: "slide-six-after.jpg" }
     ];
     const settingsT = {
-        dots: false,
+        dots: true,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -308,29 +308,6 @@ function Home() {
                             Our Bestsellers
                         </div>
                         <div className="featured-products">
-                            <div className="fproduct">
-                                <div className="fprod-upper">
-                                    <img className="prodimg" src={require("./bone.jpg")} />
-                                    <div className="prod-desc">
-                                        <p className="prod-cat">
-                                            SLEEP
-                                        </p>
-                                        <p className="prod-name">
-                                            Patch Pet Bed
-                                        </p>
-                                        <p className="prod-price">
-                                            ₹ 999 - ₹ 2499
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="fprod-lower">
-                                    <Link to='/shop/sleep'>
-                                        <button className="add-cart" >
-                                            View
-                                        </button>
-                                    </Link>
-                                </div>
-                            </div>
 
                             <div className="fproduct">
                                 <div className="fprod-upper">
@@ -349,6 +326,30 @@ function Home() {
                                 </div>
                                 <div className="fprod-lower">
                                     <Link to='/shop/wear'>
+                                        <button className="add-cart" >
+                                            View
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="fproduct">
+                                <div className="fprod-upper">
+                                    <img className="prodimg" src={require("./bfour.jpg")} />
+                                    <div className="prod-desc">
+                                        <p className="prod-cat">
+                                            WALK
+                                        </p>
+                                        <p className="prod-name">
+                                            Harness and leash set
+                                        </p>
+                                        <p className="prod-price">
+                                            ₹ 850 - ₹ 1200
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="fprod-lower">
+                                    <Link to='/shop/walk'>
                                         <button className="add-cart" >
                                             View
                                         </button>
@@ -380,29 +381,32 @@ function Home() {
                                 </div>
                             </div>
 
+
+
                             <div className="fproduct">
                                 <div className="fprod-upper">
-                                    <img className="prodimg" src={require("./bfour.jpg")} />
+                                    <img className="prodimg" src={require("./bone.jpg")} />
                                     <div className="prod-desc">
                                         <p className="prod-cat">
-                                            WALK
+                                            SLEEP
                                         </p>
                                         <p className="prod-name">
-                                            Harness and leash set
+                                            Patch Pet Bed
                                         </p>
                                         <p className="prod-price">
-                                            ₹ 850 - ₹ 1200
+                                            ₹ 999 - ₹ 2499
                                         </p>
                                     </div>
                                 </div>
                                 <div className="fprod-lower">
-                                    <Link to='/shop/walk'>
+                                    <Link to='/shop/sleep'>
                                         <button className="add-cart" >
                                             View
                                         </button>
                                     </Link>
                                 </div>
                             </div>
+
 
 
                         </div>
