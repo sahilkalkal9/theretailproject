@@ -60,7 +60,7 @@ function Home() {
         { img: "slide-six-before.jpg", img2: "slide-six-after.jpg" }
     ];
     const settingsT = {
-        dots: true,
+        dots: false,
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

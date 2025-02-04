@@ -364,10 +364,7 @@ function Nav() {
                     {
                         userData.checkoutAmt && userData.checkoutAmt > 0
                             ? <div className="cart-checkout-new">
-                                <div className="checkout-coupon">
-                                    <input className="coup-inp" type="text" placeholder="Enter Coupon Code" />
-                                    <input className="coup-sub" type="submit" value="Apply" />
-                                </div>
+                                
 
 
                                 <div onClick={!doingWork ? openCheckout : null} className="checkout-final">

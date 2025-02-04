@@ -254,5 +254,17 @@ $secondarycolor : #e4af47;
 @media only screen and (max-width : 400px) {
     .cart-prod-new {
         flex-direction: column;
+
+    }
+
+    .cart-prod-new-right {
+        width: calc(100% - .4cm);
+    }
+
+    .cart-prod-new-left {
+        width: calc(100% - 0.4cm);
+        display: flex;
+        align-items: flex-start;
+        padding: .2cm;
     }
 }
