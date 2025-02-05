@@ -7,6 +7,7 @@ import { Walk } from "./walk";
 import { Sleep } from "./sleep";
 import { Play } from "./play";
 import { useCollectionData } from "react-firebase-hooks/firestore";
+import Preserve from "./preserve";
 
 function Shop() {
 
@@ -49,6 +50,12 @@ function Shop() {
                         </p>
                     </Link>
 
+                    <Link to='/shop/preserve'>
+                        <p className={isActive("/shop/preserve") ? "shop-cat-name activeCat" : "shop-cat-name"}>
+                            Preserve
+                        </p>
+                    </Link>
+
                 </div>
 
                 <Routes>
@@ -56,6 +63,7 @@ function Shop() {
                     <Route path="/walk" element={<Walk />} />
                     <Route path="/play" element={<Play />} />
                     <Route path="/sleep" element={<Sleep />} />
+                    <Route path="/preserve" element={<Preserve />} />
                 </Routes>
             </div>
         </div>

@@ -31,6 +31,7 @@ import { useCollectionData } from 'react-firebase-hooks/firestore';
 import PrivacyT from './components/privacy/privacy.js';
 import Terms from './components/terms/terms.js';
 import Refund from './components/refund/refund.js';
+import Preserve from './components/shop/preserve.jsx';
 // import Invoice from './components/invoice/invoice.jsx';
 
 
@@ -109,6 +110,7 @@ function App() {
             <Route index path='/shop/walk' element={<Walk />} />
             <Route index path='/shop/play' element={<Play />} />
             <Route index path='/shop/sleep' element={<Sleep />} />
+            <Route index path='/shop/preserve' element={<Preserve />} />
           </Route>
           <Route path='/signup' element={<SignUp />} />
           <Route path='/signin' element={<LogInNew />} />

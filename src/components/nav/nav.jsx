@@ -362,27 +362,27 @@ function Nav() {
 
                     </div>
                     {
-                        userData.checkoutAmt && userData.checkoutAmt > 0
-                            ? <div className="cart-checkout-new">
-                                
+
+                        <div className="cart-checkout-new">
 
 
-                                <div onClick={!doingWork ? openCheckout : null} className="checkout-final">
-                                    <p className="checout-text">
-                                        Proceed to Checkout
-                                    </p>
-                                    <p>
-                                        |
-                                    </p>
 
-                                    <p className="checout-price">
-                                        ₹ {userData.checkoutAmt}
-                                    </p>
-                                </div>
+                            <div onClick={!doingWork && userData.checkoutAmt && userData.checkoutAmt > 0 ? openCheckout : null} className="checkout-final">
+                                <p className="checout-text">
+                                    Proceed to Checkout
+                                </p>
+                                <p>
+                                    |
+                                </p>
 
-
+                                <p className="checout-price">
+                                    ₹ {userData.checkoutAmt}
+                                </p>
                             </div>
-                            : null
+
+
+                        </div>
+
                     }
                 </div>
             </div>
