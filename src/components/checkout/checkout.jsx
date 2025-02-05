@@ -212,6 +212,9 @@ const CheckoutP = () => {
 
                             <div className="personal-dets">
                                 <p className="check-head">Add tip</p>
+                                <p className="tip-text">
+                                    Show your support for the team at The ReTail Project
+                                </p>
                                 <div className="tip-box">
                                     {[0, 10, 20, 30].map((tipValue) => (
                                         <p
@@ -236,6 +239,9 @@ const CheckoutP = () => {
                                 <button className="add-tip" onClick={calculateTip} disabled={doingWork}>
                                     Add tip
                                 </button>
+                                <p className="tip-text">
+                                    Thanks, we appreciate!
+                                </p>
                             </div>
                         </div>
                         <div className="checkout-box">

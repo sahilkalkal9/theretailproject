@@ -143,6 +143,12 @@ button:disabled {
     opacity: .3;
 }
 
+.tip-text{
+    text-align: left;
+    // font-weight: 600;
+    // margin-bottom: .2cm;
+}
+
 @media only screen and (max-width : 1400px) {
     .checkout-box {
         width: 14cm;
