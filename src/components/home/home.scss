@@ -559,7 +559,7 @@ $secondarycolor : #e4af47;
     gap: .7cm;
     padding: .3cm;
     margin-top: .5cm;
-    justify-content: center;
+    justify-content: flex-start;
 
 
 }
@@ -657,7 +657,7 @@ $secondarycolor : #e4af47;
     color: white;
     display: flex;
     align-items: center;
-    justify-content: c;
+    justify-content: center;
     height: 100%;
 
     &:hover {
@@ -867,6 +867,7 @@ $secondarycolor : #e4af47;
 .fprod-lower {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: row-reverse;
     height: 1.2cm;
     gap: .2cm;
@@ -888,6 +889,25 @@ $secondarycolor : #e4af47;
     height: auto;
 }
 
+
+.view-button {
+
+    padding: 0.2cm .5cm;
+    // width: 100%;
+    background-color: $primarycolor;
+    border: 3px solid $primarycolor;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: .3s all ease;
+    color: white;
+
+
+
+    &:hover {
+        background-color: transparent;
+        color: $primarycolor;
+    }
+}
 
 
 @media only screen and (max-width : 1200px) {

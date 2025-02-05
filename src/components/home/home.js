@@ -256,6 +256,13 @@ function Home() {
                                     </p>
                                 </div>
                             </Link>
+                            <Link to='/shop/preserve'>
+                                <div className="collection sleep">
+                                    <p className="coltext ">
+                                        PRESERVE
+                                    </p>
+                                </div>
+                            </Link>
                         </div>
                     </div>
 
@@ -326,7 +333,7 @@ function Home() {
                                 </div>
                                 <div className="fprod-lower">
                                     <Link to='/shop/wear'>
-                                        <button className="add-cart" >
+                                        <button className=" view-button" >
                                             View
                                         </button>
                                     </Link>
@@ -350,7 +357,7 @@ function Home() {
                                 </div>
                                 <div className="fprod-lower">
                                     <Link to='/shop/walk'>
-                                        <button className="add-cart" >
+                                        <button className=" view-button" >
                                             View
                                         </button>
                                     </Link>
@@ -374,7 +381,7 @@ function Home() {
                                 </div>
                                 <div className="fprod-lower">
                                     <Link to='/shop/play'>
-                                        <button className="add-cart" >
+                                        <button className=" view-button" >
                                             View
                                         </button>
                                     </Link>
@@ -400,7 +407,31 @@ function Home() {
                                 </div>
                                 <div className="fprod-lower">
                                     <Link to='/shop/sleep'>
-                                        <button className="add-cart" >
+                                        <button className=" view-button" >
+                                            View
+                                        </button>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="fproduct">
+                                <div className="fprod-upper">
+                                    <img className="prodimg" src={require("./bone.jpg")} />
+                                    <div className="prod-desc">
+                                        <p className="prod-cat">
+                                            PRESERVE
+                                        </p>
+                                        <p className="prod-name">
+                                            Keepsakes
+                                        </p>
+                                        <p className="prod-price">
+                                            ₹ 999 - ₹ 2499
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="fprod-lowerw">
+                                    <Link to='/shop/preserve'>
+                                        <button className="view-button" >
                                             View
                                         </button>
                                     </Link>
