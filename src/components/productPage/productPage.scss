@@ -152,6 +152,17 @@ $secondarycolor : #e4af47;
   margin-top: .3cmo;
 }
 
+.shareb {
+  text-align: left;
+  margin-top: .2cm;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 @media only screen and (max-width : 1300px) {
   .product-left {
     width: 11cm;

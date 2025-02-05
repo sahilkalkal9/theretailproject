@@ -20,7 +20,8 @@
         ],
         "thumbnail": "https://i.postimg.cc/J0W1Xv6j/IMG-9153.jpg",
         "product-card-img": "https://i.postimg.cc/sxj3K8SS/IMG-9153-removebg-preview.png",
-        "category": "play"
+        "category": "play",
+        "shareLink": "https://theretailproject.in/shop/play/0"
     },
     {
         "id": 1,
@@ -43,6 +44,7 @@
         ],
         "thumbnail": "https://i.postimg.cc/9QsGfHZb/IMG-9264.jpg",
         "product-card-img": "https://i.postimg.cc/sxj3K8SS/IMG-9153-removebg-preview.png",
-        "category": "play"
+        "category": "play",
+        "shareLink": "https://theretailproject.in/shop/play/1"
     }
 ]

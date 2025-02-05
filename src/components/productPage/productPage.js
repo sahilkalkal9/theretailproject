@@ -21,6 +21,23 @@ function ProductPage() {
         setCurrentImg(x)
     }
 
+    const handleShare = async (url) => {
+        try {
+            if (navigator.share) {
+                await navigator.share({
+                    title: 'Check this out!',
+                    text: 'I found an amazing project at The ReTail Project',
+                    url: url,
+                });
+                console.log('Content shared successfully');
+            } else {
+                console.log('Web Share API is not supported in your browser.');
+            }
+        } catch (error) {
+            console.error('Error sharing:', error);
+        }
+    };
+
 
 
 
@@ -80,6 +97,10 @@ function ProductPage() {
                                             Buy Now
                                         </button>
                                     </div>
+
+                                    <p className="shareb" onClick={() => { handleShare(p.shareLink) }}>
+                                        Share Product
+                                    </p>
 
 
                                 </div>
